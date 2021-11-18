@@ -3,6 +3,14 @@ tab:nice-tab
 prerequisites
 intro
 literature
+probability
+introduction
+another-subsection
+sample-questions-here
+and-vs-or
+sample-questions-here-1
+conditional-probability
+sample-questions-here-2
 methods
 math-example
 applications
