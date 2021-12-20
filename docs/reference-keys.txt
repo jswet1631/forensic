@@ -6,11 +6,11 @@ literature
 probability
 introduction
 another-subsection
-sample-questions-here
+sample-questions
 and-vs-or
-sample-questions-here-1
+sample-questions-1
 conditional-probability
-sample-questions-here-2
+sample-questions-2
 methods
 math-example
 applications
