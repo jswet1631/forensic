@@ -1,0 +1,17 @@
+--- 
+title: "Statistics and Forensic Science"
+author: "Jeff Holt"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: jswet1631/forensic
+description: "This is a work in progress by the University of Virginia as an introduction to statistics in the practice of forensic science."
+---
+
+# Prerequisites
+
+This is a sample book that is currently a work in progress by the *University of Virginia*. This is not a finished product.
