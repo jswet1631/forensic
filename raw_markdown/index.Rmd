@@ -1,6 +1,6 @@
 --- 
-title: "Statistics and Forensic Science"
-author: "Jeff Holt"
+title: "Forensic Science and Statistics: Version 1"
+author: "Jeff Holt and Joseph Swetonic"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
@@ -8,10 +8,36 @@ documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-github-repo: jswet1631/forensic
-description: "This is a work in progress by the University of Virginia as an introduction to statistics in the practice of forensic science."
+github-repo: rstudio/bookdown-demo
+description: "This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook."
 ---
 
-# Prerequisites
+# Introduction
 
-This is a sample book that is currently a work in progress by the *University of Virginia*. This is not a finished product.
+**This is a draft version of a work in progress.  It is not intended for
+circulation**
+
+This book introduces statistical methods that are of use
+in forensic science.  In some cases the methods are currently used, 
+in others the methods are described but not generally in use, although they
+could be!  
+
+We assume that the reader has a basic understanding of mathematics, but
+no prior knowledge of statistics is required.  We will provide a modest
+description of forensic science methods, but as many of these are highly
+nuanced we do not attempt to provide a deep treatment of them here.
+However, when possible we will try to provide references to more 
+information.
+
+There are portions of this book that borrow from the treatment of 
+probability and statistics given in the online materials:
+
+Online Statistics Education: A Multimedia Course of Study
+(http://onlinestatbook.com/). 
+Project Leader: David M. Lane, Rice University.
+
+This site provides a comprehansive introduction to probability and
+statistics, and is worth referencing when you would like additional 
+information.  We appreciate their willingness to allow the use of their work.
+
+
