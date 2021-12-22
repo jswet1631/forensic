@@ -1,0 +1,84 @@
+# Introduction to Probability
+
+## A Initial Example
+
+We start this introduction to probability with an example that has been 
+simplified in many ways:
+Suppose that there is a late-night break-in at a closed convenience store.
+No one is present to see the perpetrator, but there is low-quality
+CCTV footage. Unfortunately, the *only* thing that can be discerned from 
+the video is the color of the perpetrator's hair.
+
+Now consider two possible versions of what comes next:
+
+**Version 1**: The video shows that the perpetrator has brown hair.  
+The day after the robbery, police see a person with brown hair walking down 
+the street.  The person is arrested on suspicion of committing the break-in.
+
+**Version 2**: The video shows that the perpetrator has green hair.  
+The day after the robbery, police see a person with green hair walking down 
+the street.  The person is arrested on suspicion of committing the break-in.
+
+For the sake of this simplified example, in both versions 
+we assume that the color of the 
+hair is the *only* reason the police suspect the person arrested.
+
+**Question**: In which version do you think it is more likely that
+the police have arrested the person who committed the break-in?
+
+Answering the question requires considering the likelihood that the police have
+the correct person in both versions, and deciding which is greater.  
+
+A **probability** is a number between 0 and 1 that provides a measure of
+the likelihood that something occurs, with a larger number indicating
+increased likelihood.  In probability terminology, 
+the thing occurring is called an *event*.  In our question, the event is
+the police arresting the correct person.
+
+Coming back to our question, we need to decide which version has the
+greater probability. In most communities, people with brown hair 
+outnumber people with green hair -- let's assume that is the case 
+here. Thus it seems reasonable to expect that the probability of Version 2 
+is greater than that of Version 1: Brown-haired people are relatively
+common, so in Version 1
+the probability of arresting the correct brown-haired person 
+is low.  On the other hand, green-haired people are rare so
+in Version 2 the probability of arresting the correct person is higher.
+
+Two important points:
+
+1) Just because the probability of the correct arrest is greater in Version
+2 than in Version 1 does not mean that the probability in Version 2 is high.
+It's possible that there are more brown-haired people than green-haired people
+while still having a lot of green-haird people, making both 
+probabilities small. (Consider if we replace "green" with "blond".)
+
+2) While the above discussion is interesting, it is important to have a
+better sense of the actual value of the probability.  We start in that
+direction in the next section.
+
+## Calculating Probabilities From Data
+
+Let's suppose that the crime described above takes place on an
+island that has 1000 people.  The number of people with each hair
+color is given in the table below.
+
+$$
+\begin{array}{c|c}
+ \mathrm{Color} & \mathrm{Count} \\ \hline
+\mathrm{Brown} & 670  \\ 
+\mathrm{Blond} & 180  \\ 
+\mathrm{Red} & 110  \\ 
+\mathrm{Green} & 40  \\ 
+\end{array}\\
+\mbox{Table 1: Hair Color Counts}
+$$
+
+Now suppose that we select a person from this population at random.
+To compute the **probability** that this person has brown hair,
+we take the number with brown hair and divide by the number of 
+people:
+
+$$\mbox{P(Brown hair)} = \frac{670}{1000} = 0.67$$
+
+$$\mbox{This space will get examples and a probability table}$$

@@ -1,0 +1,131 @@
+# Joint Probability
+
+Suppose that we have a population of 1000 people, each classified
+by gender (Female or Male) and blood type (A, AB, B, or O).  The number of
+people of each combination of gender and blood type is
+shown in the table below.
+
+$$
+\begin{array}{c|c|c}
+           & \mathrm{F} & \mathrm{M}\\ \hline
+\mathrm{A} & 175 & 235 \\ 
+\mathrm{AB} & 16 & 24 \\ 
+\mathrm{B} & 37 & 63 \\ 
+\mathrm{O} & 202 & 248 \\ 
+\end{array}\\
+\mbox{Gender and blood type counts}
+$$
+
+Suppose that we select one of the people at random, and note that person's gender and blood type.  There are various possibilities for outcomes, such 
+as the person selected is female with Type A blood.  The chance that this
+outcome occurs is called the **probability** of this outcome.  As 175 out 
+of the 1000 people are female of blood type A, the probability of
+selecting such a person is
+
+$$\mbox{P(Female and Type A)} = \frac{175}{1000} = 0.175$$
+
+Here P(Female and Type A) stands for the probability that the person
+selected is Female **and** has Type A blood. A sample of other probabilities
+that come directly from the table are
+
+$$\begin{array}{rcccl}
+\mbox{P(Female and Type O)} & = & {\displaystyle\frac{202}{1000}} & = & 0.202 \\[5pt]
+\mbox{P(Male and Type AB)} & = & {\displaystyle\frac{24}{1000}} & = & 0.024 \\[5pt]
+\mbox{P(Male and Type A)} & = & {\displaystyle\frac{235}{1000}} & = & 0.235 \\
+\end{array}$$
+
+We also can combine table entries to compute other probabilities.  For
+instance, there are a total of $16 + 24 = 40$ people with blood type AB, so
+
+$$
+\mbox{P(Type AB)} = \frac{40}{1000} = 0.04
+$$
+
+For another example, there are a total of $235 + 24 + 63 + 248 = 570$ males in 
+our population, so
+
+$$
+\mbox{P(Male)} = \frac{570}{1000} = 0.57
+$$
+### Sample questions here
+
+Place some example questions and answers here.
+
+## And vs Or
+
+Above we saw that $\mbox{P(Female and Type A)} = 0.175$.  Suppose we
+we instead would like to know $\mbox{P(Female or Type A)}$?  That is,
+we want to know the probability that a randomly selected person
+is either female or has type A blood.  (Note that this group includes those
+who are both female **and** have type A blood.) From our table we see that 
+the total number in this group is $175+16+37+202+235 = 665$ so that
+
+$$
+\mbox{P(Female or Type A)} = \frac{665}{1000} = 0.665
+$$
+
+Other combinations are also possible.  For instance, there
+are $175 + 235 = 310$ people with type A blood and
+$37 + 63 = 100$ people with type B blood, so there are a total of
+$310 + 100 = 410$ people that have either type A or type B blood.  Therefore we
+have
+
+$$
+\mbox{P(Type A or Type B)} = \frac{410}{1000} = 0.41
+$$
+    
+
+### Sample questions here
+
+Place some example questions and answers here.
+
+
+## Probability Tables
+
+
+Frequently tables provide probabilities (or percentages) 
+instead of counts. To make the conversion from counts to probabilities, 
+all we do is divide each table entry by the total.  Thus for our table, 
+we divide each entry by 1000 to arrive at
+
+$$
+\begin{array}{c|c|c}
+           & \mathrm{F} & \mathrm{M}\\ \hline
+\mathrm{A} & 0.175 & 0.235 \\ 
+\mathrm{AB} & 0.016 & 0.024 \\ 
+\mathrm{B} & 0.037 & 0.063 \\ 
+\mathrm{O} & 0.202 & 0.248 \\ 
+\end{array}\\
+\mbox{Gender and blood type counts}
+$$
+
+Table 2 entries give the probability of selecting each combination. 
+For instance
+
+\[
+\mbox{P(Female and Type O)} = 0.202
+\]
+
+We can add entries in this table to compute other probabilities.  
+For example, suppose we want to compute the probability that a 
+randomly selected person has type O blood.  Based on the table, this
+can happen if a person is female and has type O blood, or it a person
+is male and has type O blood.  Because these two groups are disjoint, we
+can add the probabilities to arrive at
+
+$$
+\mbox{P(Type O)} = \mbox{P(Female and Type O)} + \mbox{P(Male and Type O)}
+= 0.202 + 0.248 = 0.45
+$$
+
+If instead (for instance) we want to compute P(Female) then we add the 
+entries in the corresponding column, giving us
+
+$$
+\mbox{Pr(Female)} = 0.175 + 0.016 + 0.037 + 0.202 = 0.43 
+$$
+
+
+
+
+
