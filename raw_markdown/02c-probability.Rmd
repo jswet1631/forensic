@@ -1,25 +1,22 @@
 # Conditional Probability
 
-Now suppose that we just focus on the females in the population, which
-forms a subset of the population. The probability that a randomly selected 
-female has blood type O is an example of a **conditional probability**.  
+Now suppose that we just focus on the females in the population, which forms a subset of the population. 
+The probability that a randomly selected female has blood type O is an example of a **conditional probability**.  
 
-There are 430 females in the population, and 202 of those have type O 
-blood. Hence the probability that female chosen at random has type O 
-blood is
+There are 430 females in the population, and 202 of those have type O blood. 
+Hence, the probability that female chosen at random has type O blood is
 
 $$
 \mbox{P(Type O | Female)} = \frac{202}{430} = 0.470
 $$
 
-The vertical bar in the notation is interpreted as *given that*, so that  $\mbox{P(Type O | Female)}$ is read as 
+The vertical bar in the notation is interpreted as *given that*, so that $\mbox{P(Type O | Female)}$ is read as 
 
 $$
 \mbox{The probability of blood type O, given the person is female.}
 $$
 
-Conditional probabilities arise all the time when evaluating forensic evidence.
-Other examples of conditional probabilities:
+Conditional probabilities arise all the time when evaluating forensic evidence. Other examples of conditional probabilities:
 
 The probability of Type AB, given that the person is male:
 
@@ -32,6 +29,7 @@ The probability the person is female, given Type B blood:
 $$
 \mbox{P(Female | Type B)} = \frac{37}{100} = 0.37
 $$
+
 The probability the person is male, given Type A blood:
 
 $$
@@ -41,4 +39,3 @@ $$
 ### Sample questions here
 
 Place some example questions and answers here.
-
