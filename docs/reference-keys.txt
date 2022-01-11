@@ -19,3 +19,5 @@ conditional-probability-1
 sample-questions-here-2
 probability-rules
 counterintuitive-applications
+birthday-paradox
+monty-hall-problem

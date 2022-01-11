@@ -24,7 +24,7 @@
 <meta name="author" content="Jeff Holt and Joseph Swetonic" />
 
 
-<meta name="date" content="2022-01-10" />
+<meta name="date" content="2022-01-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -70,7 +70,7 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Statistics and Forensic Science</a></li>
+<li><a href="./">Forensic Science and Statistics</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
@@ -101,7 +101,10 @@
 <li class="chapter" data-level="5.0.1" data-path="conditional-probability-1.html"><a href="conditional-probability-1.html#sample-questions-here-2"><i class="fa fa-check"></i><b>5.0.1</b> Sample questions here</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="probability-rules.html"><a href="probability-rules.html"><i class="fa fa-check"></i><b>6</b> Probability Rules</a></li>
-<li class="chapter" data-level="7" data-path="counterintuitive-applications.html"><a href="counterintuitive-applications.html"><i class="fa fa-check"></i><b>7</b> Counterintuitive Applications</a></li>
+<li class="chapter" data-level="7" data-path="counterintuitive-applications.html"><a href="counterintuitive-applications.html"><i class="fa fa-check"></i><b>7</b> Counterintuitive Applications</a><ul>
+<li class="chapter" data-level="7.1" data-path="counterintuitive-applications.html"><a href="counterintuitive-applications.html#birthday-paradox"><i class="fa fa-check"></i><b>7.1</b> Birthday Paradox</a></li>
+<li class="chapter" data-level="7.2" data-path="counterintuitive-applications.html"><a href="counterintuitive-applications.html#monty-hall-problem"><i class="fa fa-check"></i><b>7.2</b> Monty Hall Problem</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -125,7 +128,41 @@
             <section class="normal" id="section-">
 <div id="counterintuitive-applications" class="section level1">
 <h1><span class="header-section-number">Chapter 7</span> Counterintuitive Applications</h1>
+<div id="birthday-paradox" class="section level2">
+<h2><span class="header-section-number">7.1</span> Birthday Paradox</h2>
+<p>How many people are needed in a classroom so that the probability of them sharing a birthday is at least <span class="math inline">\(\frac{1}{2}\)</span>?
+Intuitively, one could claim that 183 people in the group would imply that the probability is greater than <span class="math inline">\(\frac{1}{2}\)</span>,
+since <span class="math inline">\(\frac{183}{365} = 0.501\)</span>. However, intuition does not correctly solve this problem.</p>
+<p>To begin, there are some assumptions that need to be made.
+For simplicity, we will ignore leap years and assume that all 365 birthdays have an equal probability of occurring.</p>
+<p>We want to compute <span class="math inline">\(P(\beta)\)</span>, the probability that at least 2 people share the same birthday.
+Recall from the previous chapter that <span class="math inline">\(P(\beta) = 1 - P(\beta&#39;)\)</span>.
+In this case, it is much simpler to calculate the probability that no one in the group shares the same birthday with someone else.</p>
+<p>Let’s start with the simple example involving only two people. The probability that they do not share the same birthday is
+<span class="math display">\[P(\beta&#39;) = \left( \frac{365}{365} \right) \left( \frac{364}{365} \right) = 0.997\]</span>
+<span class="math display">\[1 - P(\beta&#39;) = 0.003\]</span></p>
+<p>Extending this result to a group of five people:
+<span class="math display">\[P(\beta&#39;) = \left( \frac{365}{365} \right) \left( \frac{364}{365} \right) \left( \frac{363}{365} \right) 
+\left( \frac{362}{365} \right) \left( \frac{361}{365} \right)\]</span>
+<span class="math display">\[ = \frac{365!}{365^5(365 - 5)!} = 0.973\]</span>
+<span class="math display">\[1 - P(\beta&#39;) = 0.027\]</span></p>
+<p>This formula can be applied to any number of group size, so that in the general case of <span class="math inline">\(n\)</span> people,
+the probability that at least two share the same birthday is
+<span class="math display">\[P(\beta) = 1 - \frac{365!}{365^n(365 - n)!}\]</span></p>
+<p>Finally, to solve the original question:
+How many people are needed in a classroom so that the probability of them sharing a birthday is at least <span class="math inline">\(\frac{1}{2}\)</span>?
+Iteratively increasing the group size from five, it is clear to see that at a group size of 23, <span class="math inline">\(P(\beta) &gt; \frac{1}{2}\)</span>
+<span class="math display">\[P(\beta) = 1 - P(\beta&#39;) = 1 - \frac{365!}{365^{23}(365 - 23)!} = 0.507\]</span></p>
+</div>
+<div id="monty-hall-problem" class="section level2">
+<h2><span class="header-section-number">7.2</span> Monty Hall Problem</h2>
+<p>The original problem was popularized as a letter by Craig F. Whitaker sent to Marilyn vos Savant’s column in Parade magazine in 1990.
+You can read more about the article here: <a href="https://web.archive.org/web/20130121183432/http://marilynvossavant.com/game-show-problem/" class="uri">https://web.archive.org/web/20130121183432/http://marilynvossavant.com/game-show-problem/</a></p>
+<p>Suppose you’re on a game show, and you’re given the choice of three doors. Behind one door is a car, behind the others, goats.
+You pick a door, say #1, and the host, who knows what’s behind the doors, opens another door, say #3, which has a goat.
+He says to you, “Do you want to pick door #2?” Is it to your advantage to switch your choice of doors?</p>
 
+</div>
 </div>
             </section>
 
@@ -175,7 +212,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"download": ["forensic-statistics-book.pdf"],
 "search": {
 "engine": "fuse",
 "options": null
