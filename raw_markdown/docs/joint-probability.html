@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Joint Probability | Forensic Science and Statistics: Version 1.0.0</title>
+  <meta name="description" content="This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Joint Probability | Forensic Science and Statistics: Version 1.0.0" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Joint Probability | Forensic Science and Statistics: Version 1.0.0" />
+  
+  <meta name="twitter:description" content="This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Jeff Holt and Joseph Swetonic" />
+
+
+<meta name="date" content="2022-01-11" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introduction-to-probability.html"/>
+<link rel="next" href="conditional-probability-1.html"/>
+<script src="libs/jquery-3.5.1/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Forensic Science and Statistics</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>2</b> Probability</a><ul>
+<li class="chapter" data-level="2.1" data-path="probability.html"><a href="probability.html#introduction-1"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="probability.html"><a href="probability.html#another-subsection"><i class="fa fa-check"></i><b>2.2</b> Another Subsection</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="probability.html"><a href="probability.html#sample-questions"><i class="fa fa-check"></i><b>2.2.1</b> Sample Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="probability.html"><a href="probability.html#and-vs-or"><i class="fa fa-check"></i><b>2.3</b> And vs Or</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="probability.html"><a href="probability.html#sample-questions-1"><i class="fa fa-check"></i><b>2.3.1</b> Sample Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="probability.html"><a href="probability.html#conditional-probability"><i class="fa fa-check"></i><b>2.4</b> Conditional Probability</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="probability.html"><a href="probability.html#sample-questions-2"><i class="fa fa-check"></i><b>2.4.1</b> Sample Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html"><i class="fa fa-check"></i><b>3</b> Introduction to Probability</a><ul>
+<li class="chapter" data-level="3.1" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#a-initial-example"><i class="fa fa-check"></i><b>3.1</b> A Initial Example</a></li>
+<li class="chapter" data-level="3.2" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#calculating-probabilities-from-data"><i class="fa fa-check"></i><b>3.2</b> Calculating Probabilities From Data</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="joint-probability.html"><a href="joint-probability.html"><i class="fa fa-check"></i><b>4</b> Joint Probability</a><ul>
+<li class="chapter" data-level="4.0.1" data-path="joint-probability.html"><a href="joint-probability.html#sample-questions-here"><i class="fa fa-check"></i><b>4.0.1</b> Sample questions here</a></li>
+<li class="chapter" data-level="4.1" data-path="joint-probability.html"><a href="joint-probability.html#and-vs-or-1"><i class="fa fa-check"></i><b>4.1</b> And vs Or</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="joint-probability.html"><a href="joint-probability.html#sample-questions-here-1"><i class="fa fa-check"></i><b>4.1.1</b> Sample questions here</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="joint-probability.html"><a href="joint-probability.html#probability-tables"><i class="fa fa-check"></i><b>4.2</b> Probability Tables</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="conditional-probability-1.html"><a href="conditional-probability-1.html"><i class="fa fa-check"></i><b>5</b> Conditional Probability</a><ul>
+<li class="chapter" data-level="5.0.1" data-path="conditional-probability-1.html"><a href="conditional-probability-1.html#sample-questions-here-2"><i class="fa fa-check"></i><b>5.0.1</b> Sample questions here</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="probability-rules.html"><a href="probability-rules.html"><i class="fa fa-check"></i><b>6</b> Probability Rules</a></li>
+<li class="chapter" data-level="7" data-path="counterintuitive-applications.html"><a href="counterintuitive-applications.html"><i class="fa fa-check"></i><b>7</b> Counterintuitive Applications</a><ul>
+<li class="chapter" data-level="7.1" data-path="counterintuitive-applications.html"><a href="counterintuitive-applications.html#birthday-paradox"><i class="fa fa-check"></i><b>7.1</b> Birthday Paradox</a></li>
+<li class="chapter" data-level="7.2" data-path="counterintuitive-applications.html"><a href="counterintuitive-applications.html#monty-hall-problem"><i class="fa fa-check"></i><b>7.2</b> Monty Hall Problem</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Forensic Science and Statistics: Version 1.0.0</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="joint-probability" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Joint Probability</h1>
+<p>Suppose that we have a population of 1000 people, each classified by gender (Female or Male) and blood type (A, AB, B, or O).
+The number of people of each combination of gender and blood type is shown in the table below.</p>
+<p><span class="math display">\[
+\begin{array}{c|c|c}
+           &amp; \mathrm{F} &amp; \mathrm{M}\\ \hline
+\mathrm{A} &amp; 175 &amp; 235 \\ 
+\mathrm{AB} &amp; 16 &amp; 24 \\ 
+\mathrm{B} &amp; 37 &amp; 63 \\ 
+\mathrm{O} &amp; 202 &amp; 248 \\ 
+\end{array}\\
+\mbox{Gender and blood type counts}
+\]</span></p>
+<p>Suppose that we select one of the people at random, and note that person’s gender and blood type.
+There are various possibilities for outcomes, such as the person selected is female with Type A blood.
+The chance that this outcome occurs is called the <strong>probability</strong> of this outcome.
+As 175 out of the 1000 people are female of blood type A, the probability of selecting such a person is</p>
+<p><span class="math display">\[\mbox{P(Female and Type A)} = \frac{175}{1000} = 0.175\]</span></p>
+<p>Here, P(Female and Type A) stands for the probability that the person selected is Female <strong>and</strong> has Type A blood.
+A sample of other probabilities that come directly from the table are</p>
+<p><span class="math display">\[\begin{array}{rcccl}
+\mbox{P(Female and Type O)} &amp; = &amp; {\displaystyle\frac{202}{1000}} &amp; = &amp; 0.202 \\[5pt]
+\mbox{P(Male and Type AB)} &amp; = &amp; {\displaystyle\frac{24}{1000}} &amp; = &amp; 0.024 \\[5pt]
+\mbox{P(Male and Type A)} &amp; = &amp; {\displaystyle\frac{235}{1000}} &amp; = &amp; 0.235 \\
+\end{array}\]</span></p>
+<p>We also can combine table entries to compute other probabilities.
+For instance, there are a total of <span class="math inline">\(16 + 24 = 40\)</span> people with blood type AB, so</p>
+<p><span class="math display">\[
+\mbox{P(Type AB)} = \frac{40}{1000} = 0.04
+\]</span></p>
+<p>For another example, there are a total of <span class="math inline">\(235 + 24 + 63 + 248 = 570\)</span> males in our population, so</p>
+<p><span class="math display">\[
+\mbox{P(Male)} = \frac{570}{1000} = 0.57
+\]</span></p>
+<div id="sample-questions-here" class="section level3">
+<h3><span class="header-section-number">4.0.1</span> Sample questions here</h3>
+<p>Place some example questions and answers here.</p>
+</div>
+<div id="and-vs-or-1" class="section level2">
+<h2><span class="header-section-number">4.1</span> And vs Or</h2>
+<p>Above we saw that <span class="math inline">\(\mbox{P(Female and Type A)} = 0.175\)</span>. Suppose we instead would like to know <span class="math inline">\(\mbox{P(Female or Type A)}\)</span>?
+That is, we want to know the probability that a randomly selected person is either female or has type A blood.
+(Note that this group includes those who are both female <strong>and</strong> have type A blood.)
+From our table we see that the total number in this group is <span class="math inline">\(175 + 16 + 37 + 202 + 235 = 665\)</span> so that</p>
+<p><span class="math display">\[
+\mbox{P(Female or Type A)} = \frac{665}{1000} = 0.665
+\]</span></p>
+<p>Other combinations are also possible.
+For instance, there are <span class="math inline">\(175 + 235 = 310\)</span> people with type A blood and <span class="math inline">\(37 + 63 = 100\)</span> people with type B blood,
+so there are a total of <span class="math inline">\(310 + 100 = 410\)</span> people that have either type A or type B blood.
+Therefore, we have</p>
+<p><span class="math display">\[
+\mbox{P(Type A or Type B)} = \frac{410}{1000} = 0.41
+\]</span></p>
+<div id="sample-questions-here-1" class="section level3">
+<h3><span class="header-section-number">4.1.1</span> Sample questions here</h3>
+<p>Place some example questions and answers here.</p>
+</div>
+</div>
+<div id="probability-tables" class="section level2">
+<h2><span class="header-section-number">4.2</span> Probability Tables</h2>
+<p>Frequently, tables provide probabilities (or percentages) instead of counts.
+To make the conversion from counts to probabilities, all we do is divide each table entry by the total.
+Thus, for our table, we divide each entry by 1000 to arrive at</p>
+<p><span class="math display">\[
+\begin{array}{c|c|c}
+           &amp; \mathrm{F} &amp; \mathrm{M}\\ \hline
+\mathrm{A} &amp; 0.175 &amp; 0.235 \\ 
+\mathrm{AB} &amp; 0.016 &amp; 0.024 \\ 
+\mathrm{B} &amp; 0.037 &amp; 0.063 \\ 
+\mathrm{O} &amp; 0.202 &amp; 0.248 \\ 
+\end{array}\\
+\mbox{Gender and blood type counts}
+\]</span></p>
+<p>Table 2 entries give the probability of selecting each combination. For instance</p>
+<p><span class="math display">\[
+\mbox{P(Female and Type O)} = 0.202
+\]</span></p>
+<p>We can add entries in this table to compute other probabilities.<br />
+For example, suppose we want to compute the probability that a randomly selected person has type O blood.
+Based on the table, this can happen if a person is female and has type O blood, or if a person is male and has type O blood.
+Because these two groups are disjoint, we can add the probabilities to arrive at</p>
+<p><span class="math display">\[
+\mbox{P(Type O)} = \mbox{P(Female and Type O)} + \mbox{P(Male and Type O)}
+= 0.202 + 0.248 = 0.45
+\]</span></p>
+<p>If instead (for instance), we want to compute P(Female) then we add the entries in the corresponding column, giving us</p>
+<p><span class="math display">\[
+\mbox{Pr(Female)} = 0.175 + 0.016 + 0.037 + 0.202 = 0.43 
+\]</span></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduction-to-probability.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="conditional-probability-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["forensic-statistics-book.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
