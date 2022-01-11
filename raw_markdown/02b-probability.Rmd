@@ -90,9 +90,9 @@ $$
 
 Table 2 entries give the probability of selecting each combination. For instance
 
-\[
+$$
 \mbox{P(Female and Type O)} = 0.202
-\]
+$$
 
 We can add entries in this table to compute other probabilities.  
 For example, suppose we want to compute the probability that a randomly selected person has type O blood. 
