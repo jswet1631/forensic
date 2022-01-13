@@ -1,0 +1,259 @@
+# Introduction to Probability
+
+Suppose that an individual commits an armed robbery of a convenience store
+late at night.  All that is known about this individual in that they have
+brown hair.  
+
+Probability is an important and complex field of study. Fortunately, 
+only a few basic issues in probability theory are essential for understanding
+statistics at the level covered in this book. These basic issues are covered 
+in this chapter.
+
+## Introduction 
+
+The introductory section discusses the definitions of probability. This is 
+not as simple as it may seem. The section on basic concepts covers how to compute probabilities in a variety of simple situations. The Gambler's 
+Fallacy Simulation provides an opportunity to explore this fallacy by
+simulation. The Birthday Demonstration illustrates the probability of 
+finding two or more people with the same birthday. The Binomial Demonstration
+shows the binomial distribution for different parameters. The section on base
+rates discusses an important but often-ignored factor in determining
+probabilities. It also presents Bayes' Theorem. The Bayes' Theorem 
+Demonstration shows how a tree diagram and Bayes' Theorem result in 
+the same answer. Finally, the Monty Hall Demonstration lets you play 
+a game with a very counterintuitive result.
+
+## Another Subsection
+
+In what follows we introduce the basics of probability, which quantifies the
+chance that something occurs.  Let's start with a specific situation to serve 
+as an example. Suppose that we have a population of 1000 people, each classified
+by gender (Female or Male) and blood type (A, AB, B, or O).  The number of
+people of each combination of gender and blood type is
+shown in the table below.
+
+$$
+\begin{array}{c|c|c}
+           & \mathrm{F} & \mathrm{M}\\ \hline
+\mathrm{A} & 175 & 235 \\ 
+\mathrm{AB} & 16 & 24 \\ 
+\mathrm{B} & 37 & 63 \\ 
+\mathrm{O} & 202 & 248 \\ 
+\end{array}\\
+\mbox{Gender and blood type counts}
+$$
+
+Suppose that we select one of the people at random, and note that person's gender and blood type.  There are various possibilities for outcomes, such 
+as the person selected is female with Type A blood.  The chance that this
+outcome occurs is called the **probability** of this outcome.  As 175 out 
+of the 1000 people are female of blood type A, the probability of
+selecting such a person is
+
+$$\mbox{P(Female and Type A)} = \frac{175}{1000} = 0.175$$
+
+Here P(Female and Type A) stands for the probability that the person
+selected is Female **and** has Type A blood. A sample of other probabilities
+that come directly from the table are
+
+$$\begin{array}{rcccl}
+\mbox{P(Female and Type O)} & = & {\displaystyle\frac{202}{1000}} & = & 0.202 \\[5pt]
+\mbox{P(Male and Type AB)} & = & {\displaystyle\frac{24}{1000}} & = & 0.024 \\[5pt]
+\mbox{P(Male and Type A)} & = & {\displaystyle\frac{235}{1000}} & = & 0.235 \\
+\end{array}$$
+
+We also can combine table entries to compute other probabilities.  For
+instance, there are a total of $235 + 24 + 63 + 248 =   570$ males in 
+our population, so
+
+$$
+\mbox{P(Male)} = \frac{570}{1000} = 0.57
+$$
+
+There are a total of $16 + 24 = 40$ people with blood type AB, so
+
+$$
+\mbox{P(Type AB)} = \frac{40}{1000} = 0.04
+$$
+
+### Sample questions here
+
+Place some example questions and answers here.
+
+## And vs Or
+
+Above we saw that $\mbox{P(Female and Type A)} = 0.175$.  Suppose we
+we instead would like to know $\mbox{P(Female or Type A)}$?  That is,
+we want to know the probability that a randomly selected person
+is either female or has type A blood.  (Note that this group includes those
+who are both female **and** have type A blood.) From our table we see that 
+the total number in this group is $175+16+37+202+235 = 665$ so that
+
+$$
+\mbox{P(Female or Type A)} = \frac{665}{1000} = 0.665
+$$
+
+Other combinations are also possible.  For instance, there
+are $175 + 235 = 310$ people with type A blood and
+$37 + 63 = 100$ people with type B blood, so there are a total of
+$310 + 100 = 410$ people that have either type A or type B blood.  Therefore we
+have
+
+$$
+\mbox{P(Type A or Type B)} = \frac{410}{1000} = 0.41
+$$
+    
+
+### Sample questions here
+
+Place some example questions and answers here.
+
+## Conditional Probability
+
+Now suppose that we just focus on the females in the population, which
+forms a subset of the population. The probability that a randomly selected 
+female has blood type O is an example of a **conditional probability**.  
+
+There are 430 females in the population, and 202 of those have type O 
+blood. Hence the probability that female chosen at random has type O 
+blood is
+
+$$
+\mbox{P(Type O | Female)} = \frac{202}{430} = 0.470
+$$
+
+The vertical bar in the notation is interpreted as *given that*, so that  $\mbox{P(Type O | Female)}$ is read as 
+
+$$
+\mbox{The probability of blood type O, given the person is female.}
+$$
+
+Conditional probabilities arise all the time when evaluating forensic evidence.
+Other examples of conditional probabilities:
+
+The probability of Type AB, given that the person is male:
+
+$$
+\mbox{P(Type AB | Male)} = \frac{24}{570} = 0.042
+$$
+
+The probability the person is female, given Type B blood:
+
+$$
+\mbox{P(Female | Type B)} = \frac{37}{100} = 0.37
+$$
+The probability the person is male, given Type A blood:
+
+$$
+\mbox{P(Male | Type A)} = \frac{235}{410} = 0.573
+$$
+   
+### Sample questions here
+
+Place some example questions and answers here.
+
+
+## Probability Tables
+
+
+Frequently tables provide probabilities (or percentages) 
+instead of counts. To make the conversion from counts to probabilities, 
+all we do is divide each table entry by the total.  Thus for our table, 
+we divide each entry by 1000 to arrive at
+
+$$
+\begin{array}{c|c|c}
+           & \mathrm{F} & \mathrm{M}\\ \hline
+\mathrm{A} & 0.175 & 0.235 \\ 
+\mathrm{AB} & 0.016 & 0.024 \\ 
+\mathrm{B} & 0.037 & 0.063 \\ 
+\mathrm{O} & 0.202 & 0.248 \\ 
+\end{array}\\
+\mbox{Gender and blood type counts}
+$$
+
+Table 2 entries give the probability of selecting each combination. 
+For instance
+
+\[
+\mbox{P(Female and Type O)} = 0.202
+\]
+
+We can add entries in this table to compute other probabilities.  
+For example, suppose we want to compute the probability that a 
+randomly selected person has type O blood.  Based on the table, this
+can happen if a person is female and has type O blood, or it a person
+is male and has type O blood.  Because these two groups are disjoint, we
+can add the probabilities to arrive at
+
+$$
+\mbox{P(Type O)} = \mbox{P(Female and Type O)} + \mbox{P(Male and Type O)}
+= 0.202 + 0.248 = 0.45
+$$
+
+If instead (for instance) we want to compute P(Female) then we add the 
+entries in the corresponding column, giving us
+
+$$
+\mbox{Pr(Female)} = 0.175 + 0.016 + 0.037 + 0.202 = 0.43 
+$$
+
+## Conditional Probability II
+
+
+Earlier we computed the conditional probability
+
+$$
+\mbox{P(Type O | Female)} = \frac{202}{430} 
+$$
+
+The numerator 202 came from the count of Females who have blood Type B, 
+and the denominator 430 is the total number of Females.  If we divide the numerator and denominator by 1000, then the quotient is not changed, so that
+
+$$
+\mbox{P(Type O | Female)} = \frac{202/1000}{430/1000} 
+= \frac{0.202}{0.43} = \frac{\mbox{P(Type O and Female)}}{\mbox{P(Female)}}
+$$
+
+This illustrates a general property of probability: If A and B 
+represent possible outcomes, then the probability of A given B is
+
+$$
+\mbox{P(A | B)} = \frac{\mbox{P(A and B)}}{\mbox{P(B)}}
+$$
+
+Multiplying on both sides of the above equation by P(B) gives
+
+$$
+\mbox{P(A and B)} = \mbox{P(A | B)}\mbox{P(B)}  
+$$
+
+This is called the **multiplication rule**.  
+Reversing the order of A and B above gives
+
+$$
+\mbox{P(B and A)} = \mbox{P(B | A)}\mbox{P(A)}  
+$$
+
+In the blood type example, it is clear that P(Female and Type O)
+is the same as P(Type O and Female).  This is true in general:
+P(A and B) = P(B and A)}, it follows that
+\[
+\mbox{Pr(A $|$ B)}\mbox{Pr(B)}  = \mbox{Pr(B $|$ A)}\mbox{Pr(A)} 
+\]
+so that 
+\[
+\mbox{Pr(A $|$ B)}  = \mbox{Pr(B $|$ A)}\frac{\mbox{Pr(A)}}{\mbox{Pr(B)}}
+\]
+This formula is called \textbf{Bayes Rule}.  Applied to our earlier population, we have
+\[
+\mbox{Pr(Type O $|$ Female)} = \mbox{Pr(Female $|$ Type O)}\frac{\mbox{Pr(Type O)}}{\mbox{Pr(Female)}}
+\]
+
+
+
+Two outcomes A and B are \textbf{independent} when
+$\mbox{Pr(A $|$ B)} = \mbox{Pr(A)}$, which implies that knowing if B has occurred has no effect on the
+probability of A.
+
+
+
