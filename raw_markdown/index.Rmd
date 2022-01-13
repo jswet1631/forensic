@@ -1,4 +1,18 @@
-# forensic
+--- 
+title: "Forensic Science and Statistics: Version 1.0.0"
+author: "Jeff Holt and Joseph Swetonic"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+description: "This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook."
+---
+
+# Introduction
 
 **This is a draft version of a work in progress. It is NOT intended for circulation.**
 
@@ -15,7 +29,3 @@ Online Statistics Education: A Multimedia Course of Study (http://onlinestatbook
 
 This site provides a comprehensive introduction to probability and statistics, and is worth referencing when you would like additional information. 
 We appreciate their willingness to allow the use of their work.
-
-~ Jeff Holt & Joseph Swetonic
-
-Book hosted @: https://jswet1631.github.io/forensic/

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Forensic Science and Statistics: Version 1.0.0</title>
+  <title>Chapter 6 Probability Rules | Forensic Science and Statistics: Version 1.0.0</title>
   <meta name="description" content="This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Forensic Science and Statistics: Version 1.0.0" />
+  <meta property="og:title" content="Chapter 6 Probability Rules | Forensic Science and Statistics: Version 1.0.0" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Forensic Science and Statistics: Version 1.0.0" />
+  <meta name="twitter:title" content="Chapter 6 Probability Rules | Forensic Science and Statistics: Version 1.0.0" />
   
   <meta name="twitter:description" content="This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="probability.html"/>
+<link rel="prev" href="conditional-probability-1.html"/>
+<link rel="next" href="counterintuitive-applications.html"/>
 <script src="libs/jquery-3.5.1/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -126,23 +126,45 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Forensic Science and Statistics: Version 1.0.0</h1>
-<p class="author"><em>Jeff Holt and Joseph Swetonic</em></p>
-<p class="date"><em>2022-01-11</em></p>
-</div>
-<div id="introduction" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
-<p><strong>This is a draft version of a work in progress. It is NOT intended for circulation.</strong></p>
-<p>This book introduces statistical methods that are of use in forensic science. In some cases the methods are currently used,
-in others the methods are described but not generally in use, although they could be!</p>
-<p>We assume that the reader has a basic understanding of mathematics, but no prior knowledge of statistics is required.
-We will provide a modest description of forensic science methods, but as many of these are highly nuanced we do not attempt to
-provide a deep treatment of them here. However, when possible we will try to provide references to more information.</p>
-<p>There are portions of this book that borrow from the treatment of probability and statistics given in the online materials:</p>
-<p>Online Statistics Education: A Multimedia Course of Study (<a href="http://onlinestatbook.com/" class="uri">http://onlinestatbook.com/</a>). Project Leader: David M. Lane, Rice University.</p>
-<p>This site provides a comprehensive introduction to probability and statistics, and is worth referencing when you would like additional information.
-We appreciate their willingness to allow the use of their work.</p>
+<div id="probability-rules" class="section level1">
+<h1><span class="header-section-number">Chapter 6</span> Probability Rules</h1>
+<p>Earlier we computed the conditional probability</p>
+<p><span class="math display">\[
+\mbox{P(Type O | Female)} = \frac{202}{430} 
+\]</span></p>
+<p>The numerator 202 came from the count of Females who have blood Type B, and the denominator 430 is the total number of Females.
+If we divide the numerator and denominator by 1000, then the quotient is not changed, so that</p>
+<p><span class="math display">\[
+\mbox{P(Type O | Female)} = \frac{202/1000}{430/1000} 
+= \frac{0.202}{0.43} = \frac{\mbox{P(Type O and Female)}}{\mbox{P(Female)}}
+\]</span></p>
+<p>This illustrates a general property of probability: If A and B represent possible outcomes, then the probability of A given B is</p>
+<p><span class="math display">\[
+\mbox{P(A | B)} = \frac{\mbox{P(A and B)}}{\mbox{P(B)}}
+\]</span></p>
+<p>Multiplying on both sides of the above equation by P(B) gives</p>
+<p><span class="math display">\[
+\mbox{P(A and B)} = \mbox{P(A | B)}\mbox{P(B)}  
+\]</span></p>
+<p>This is called the <strong>multiplication rule</strong>. Reversing the order of A and B above gives</p>
+<p><span class="math display">\[
+\mbox{P(B and A)} = \mbox{P(B | A)}\mbox{P(A)}  
+\]</span></p>
+<p>In the blood type example, it is clear that P(Female and Type O) is the same as P(Type O and Female).
+This is true in general: P(A and B) = P(B and A)}, it follows that
+<span class="math display">\[
+\mbox{Pr(A $|$ B)}\mbox{Pr(B)}  = \mbox{Pr(B $|$ A)}\mbox{Pr(A)} 
+\]</span>
+so that
+<span class="math display">\[
+\mbox{Pr(A $|$ B)}  = \mbox{Pr(B $|$ A)}\frac{\mbox{Pr(A)}}{\mbox{Pr(B)}}
+\]</span>
+This formula is called . Applied to our earlier population, we have
+<span class="math display">\[
+\mbox{Pr(Type O $|$ Female)} = \mbox{Pr(Female $|$ Type O)}\frac{\mbox{Pr(Type O)}}{\mbox{Pr(Female)}}
+\]</span></p>
+<p>Two outcomes A and B are  when $ = $,
+which implies that knowing if B has occurred has no effect on the probability of A.</p>
 
 </div>
             </section>
@@ -150,8 +172,8 @@ We appreciate their willingness to allow the use of their work.</p>
           </div>
         </div>
       </div>
-
-<a href="probability.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="conditional-probability-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="counterintuitive-applications.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
