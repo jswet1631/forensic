@@ -12,20 +12,78 @@ github-repo: rstudio/bookdown-demo
 description: "This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook."
 ---
 
-# Introduction
+# Welcome
 
 **This is a draft version of a work in progress. It is NOT intended for circulation.**
 
-This book introduces statistical methods that are of use in forensic science. In some cases the methods are currently used,
-in others the methods are described but not generally in use, although they could be!  
+This book introduces statistical methods that are of use in forensic science. 
+In some cases the methods are currently used.
+In others the methods are described but not generally in use, 
+although we hope that eventually they will be!  
 
-We assume that the reader has a basic understanding of mathematics, but no prior knowledge of statistics is required.
-We will provide a modest description of forensic science methods, but as many of these are highly nuanced we do not attempt to 
-provide a deep treatment of them here. However, when possible we will try to provide references to more information.
+We assume that the reader has a basic understanding of mathematics, but no prior 
+knowledge of statistics is required.
+We will provide a modest description of forensic methods, but as many of these are 
+highly nuanced we do not attempt to 
+provide a deep treatment of forensic methods here. However, when possible we will 
+try to provide references to more information.
 
-There are portions of this book that borrow from the treatment of probability and statistics given in the online materials:
+There are portions of this book that borrow from the treatment of statistics 
+given in the online materials:
 
-Online Statistics Education: A Multimedia Course of Study (http://onlinestatbook.com/). Project Leader: David M. Lane, Rice University.
+> Online Statistics Education: A Multimedia Course of Study (http://onlinestatbook.com/) 
+> Project Leader: David M. Lane, Rice University
 
-This site provides a comprehensive introduction to probability and statistics, and is worth referencing when you would like additional information. 
-We appreciate their willingness to allow the use of their work.
+This site provides a comprehensive introduction to statistics and is worth referencing when you would like additional information. 
+We deeply appreciate their willingness to allow the use of their work.
+
+## An Introductory Example
+
+Consider the following scenario:
+Suppose there is a late-night break-in at a closed convenience store.
+No one is present to see the perpetrator, but there is low-quality CCTV footage. 
+Unfortunately, the *only* thing that can be discerned from the video is the 
+color of the perpetrator's hair.
+
+Now consider two possible versions of what comes next:
+
+**Version 1**: The video shows that the perpetrator has *brown* hair. 
+The day after the robbery, police see a person with brown hair walking down the street. 
+The person is arrested on suspicion of committing the break-in.
+
+**Version 2**: The video shows that the perpetrator has *green* hair.  The 
+day after the robbery, police see a person with green hair walking down the street. 
+The person is arrested on suspicion of committing the break-in.
+
+For the sake of this simplified example, 
+in both versions we assume that the color of the hair is the **only** reason the 
+police suspect the person who is arrested.
+
+**Question**: In which version do you think it is more likely that the police have 
+arrested the person who committed the break-in?
+
+Answering the question requires considering the likelihood that the police have 
+the correct person in both versions and deciding which is greater.
+In most communities people with brown hair outnumber people with green hair,
+so let's assume that is the case here. Intuitively,
+it seems reasonable to expect that the likelihood of a correct arrest in Version 2 is greater 
+than that in Version 1: 
+Brown-haired people are relatively common, so in Version 1 the likelihood of 
+arresting the correct brown-haired person is probably low. 
+On the other hand, green-haired people are relatively rare, so in Version 2 
+the likelihood of arresting the correct person is higher.
+
+Two important points:
+
+1) Although the likelihood of the correct arrest is greater in Version 2 
+than in Version 1 does not mean that the likelihood in Version 2 is high.
+It is possible that there are more brown-haired people than green-haired people 
+while still having a lot of green-haird people, making the correct arrest 
+unlikely in either case.
+
+2) While the above discussion is interesting, the word "likelihood" is 
+imprecise.  Going forward we will develop "probability" which
+will allow us to quantify the notion of likelihood, so that we will be able 
+to specify (for instance) how much more likely a correct arrest is in
+Version 1 than in Version 2.
+

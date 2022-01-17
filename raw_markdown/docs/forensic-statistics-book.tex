@@ -84,7 +84,7 @@
 
 \title{Forensic Science and Statistics: Version 1.0.0}
 \author{Jeff Holt and Joseph Swetonic}
-\date{2022-01-11}
+\date{2022-01-17}
 
 \begin{document}
 \maketitle
@@ -93,225 +93,166 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\hypertarget{introduction}{%
-\chapter{Introduction}\label{introduction}}
+\hypertarget{welcome}{%
+\chapter{Welcome}\label{welcome}}
 
 \textbf{This is a draft version of a work in progress. It is NOT intended for circulation.}
 
-This book introduces statistical methods that are of use in forensic science. In some cases the methods are currently used,
-in others the methods are described but not generally in use, although they could be!
+This book introduces statistical methods that are of use in forensic science.
+In some cases the methods are currently used.
+In others the methods are described but not generally in use,
+although we hope that eventually they will be!
 
-We assume that the reader has a basic understanding of mathematics, but no prior knowledge of statistics is required.
-We will provide a modest description of forensic science methods, but as many of these are highly nuanced we do not attempt to
-provide a deep treatment of them here. However, when possible we will try to provide references to more information.
+We assume that the reader has a basic understanding of mathematics, but no prior
+knowledge of statistics is required.
+We will provide a modest description of forensic methods, but as many of these are
+highly nuanced we do not attempt to
+provide a deep treatment of forensic methods here. However, when possible we will
+try to provide references to more information.
 
-There are portions of this book that borrow from the treatment of probability and statistics given in the online materials:
+There are portions of this book that borrow from the treatment of statistics
+given in the online materials:
 
-Online Statistics Education: A Multimedia Course of Study (\url{http://onlinestatbook.com/}). Project Leader: David M. Lane, Rice University.
+\begin{quote}
+Online Statistics Education: A Multimedia Course of Study (\url{http://onlinestatbook.com/}).
+Project Leader: David M. Lane, Rice University.
+\end{quote}
 
-This site provides a comprehensive introduction to probability and statistics, and is worth referencing when you would like additional information.
-We appreciate their willingness to allow the use of their work.
+This site provides a comprehensive introduction to statistics and is worth referencing when you would like additional information.
+We deeply appreciate their willingness to allow the use of their work.
 
-\hypertarget{probability}{%
-\chapter{Probability}\label{probability}}
+\hypertarget{an-introductory-example}{%
+\section{An Introductory Example}\label{an-introductory-example}}
 
-Probability is an important and complex field of study.
-Fortunately, only a few basic issues in probability theory are essential for understanding statistics at the level covered in this book.
-These basic issues are covered in this chapter.
-
-\hypertarget{introduction-1}{%
-\section{Introduction}\label{introduction-1}}
-
-TODO: Edit the introductory section below.
-
-\emph{``The introductory section discusses the definitions of probability. This is not as simple as it may seem.
-The section on basic concepts covers how to compute probabilities in a variety of simple situations.
-The Gambler's Fallacy Simulation provides an opportunity to explore this fallacy by simulation.
-The Birthday Demonstration illustrates the probability of finding two or more people with the same birthday.
-The Binomial Demonstration shows the binomial distribution for different parameters.
-The section on base rates discusses an important but often-ignored factor in determining probabilities. It also presents Bayes' Theorem.
-The Bayes' Theorem Demonstration shows how a tree diagram and Bayes' Theorem result in the same answer.
-Finally, the Monty Hall Demonstration lets you play a game with a very counterintuitive result.''}
-
-\hypertarget{another-subsection}{%
-\section{Another Subsection}\label{another-subsection}}
-
-In what follows we introduce the basics of probability, which quantifies the chance that something occurs.
-Let's start with a specific situation to serve as an example. Suppose that we have a population of 1000 people,
-each classified by gender (Female or Male) and blood type (A, AB, B, or O).
-The number of people of each combination of gender and blood type is shown in the table below.
-
-\[
-\begin{array}{c|c|c}
-           & \mathrm{F} & \mathrm{M}\\ \hline
-\mathrm{A} & 175 & 235 \\ 
-\mathrm{AB} & 16 & 24 \\ 
-\mathrm{B} & 37 & 63 \\ 
-\mathrm{O} & 202 & 248 \\ 
-\end{array}\\
-\mbox{Gender and blood type counts}
-\]
-
-Suppose that we select one of the people at random, and note that person's gender and blood type.
-There are various possibilities for outcomes, such as the person selected is female with Type A blood.
-The chance that this outcome occurs is called the \textbf{probability} of this outcome.
-As 175 out of the 1000 people are female of blood type A, the probability of selecting such a person is
-
-\[\mbox{P(Female and Type A)} = \frac{175}{1000} = 0.175\]
-
-Here, P(Female and Type A) stands for the probability that the person selected is Female \textbf{and} has Type A blood.
-A sample of other probabilities that come directly from the table are
-
-\[
-\begin{array}{rcccl}
-\mbox{P(Female and Type O)} & = & {\displaystyle\frac{202}{1000}} & = & 0.202 \\[5pt]
-\mbox{P(Male and Type AB)} & = & {\displaystyle\frac{24}{1000}} & = & 0.024 \\[5pt]
-\mbox{P(Male and Type A)} & = & {\displaystyle\frac{235}{1000}} & = & 0.235 \\
-\end{array}
-\]
-
-We also can combine table entries to compute other probabilities.
-For instance, there are a total of \(235 + 24 + 63 + 248 = 570\) males in our population, so
-
-\[
-\mbox{P(Male)} = \frac{570}{1000} = 0.57
-\]
-
-There are a total of \(16 + 24 = 40\) people with blood type AB, so
-
-\[
-\mbox{P(Type AB)} = \frac{40}{1000} = 0.04
-\]
-
-\hypertarget{sample-questions}{%
-\subsection{Sample Questions}\label{sample-questions}}
-
-\textbf{1.} What is the probability that the person selected is female?
-
-\textbf{Answer:} \(P(\text{Female}) = 1 - P(\text{Male}) = 1 - 0.57 = 0.43\) This is equivalent to \((175 + 16 + 37 + 202) / 1000\).
-
-\textbf{2.} What is the probability that the person selected is male and has type A blood and type O blood?
-
-\textbf{Answer:} \(P(\text{Male and A and O}) = 0\).
-The probability of this event occurring in the table is zero, as no men have two different types of blood.
-
-\hypertarget{and-vs-or}{%
-\section{And vs Or}\label{and-vs-or}}
-
-Above we saw that \(\mbox{P(Female and Type A)} = 0.175\). Suppose we instead would like to know \(\mbox{P(Female or Type A)}\)?
-That is, we want to know the probability that a randomly selected person is either female or has type A blood.
-(Note that this group includes those who are both female \textbf{and} have type A blood.)
-From our table we see that the total number in this group is \(175+16+37+202+235 = 665\) so that
-
-\[
-\mbox{P(Female or Type A)} = \frac{665}{1000} = 0.665
-\]
-
-Other combinations are also possible. For instance,
-there are \(175 + 235 = 310\) people with type A blood and \(37 + 63 = 100\) people with type B blood,
-so there are a total of \(310 + 100 = 410\) people that have either type A or type B blood.
-Therefore, we have
-
-\[
-\mbox{P(Type A or Type B)} = \frac{410}{1000} = 0.41
-\]
-
-\hypertarget{sample-questions-1}{%
-\subsection{Sample Questions}\label{sample-questions-1}}
-
-\textbf{1.} What is the probability of selecting a female or male with type AB blood?
-
-\textbf{Answer:} \(P(\text{(Male or Female) and AB}) = P(\text{(Male and AB) or (Female and AB)}) = (16 + 24) / 1000 = 0.04\)
-
-\hypertarget{conditional-probability}{%
-\section{Conditional Probability}\label{conditional-probability}}
-
-Now suppose that we just focus on the females in the population, which forms a subset of the population.
-The probability that a randomly selected female has blood type O is an example of a \textbf{conditional probability}.
-
-There are 430 females in the population, and 202 of those have type O blood.\\
-Hence, the probability that female chosen at random has type O blood is
-
-\[
-\mbox{P(Type O | Female)} = \frac{202}{430} = 0.470
-\]
-
-The notation \(\mbox{P(Type O | Female)}\) is read out loud as \emph{the probability of blood type O, given the individual is female.}
-Conditional probabilities arise all the time when evaluating forensic evidence. Other examples of conditional probabilities:
-
-The probability of Type AB, given that the person is male:
-
-\[
-\mbox{Pr(Type AB | Male)} = \frac{24}{570} = 0.042
-\]
-
-The probability the person is female, given Type B blood:
-
-\[
-\mbox{Pr(Female | Type B)} = \frac{37}{100} = 0.37
-\]
-
-The probability the person is male, given Type A blood:
-
-\[
-\mbox{Pr(Male | Type A)} = \frac{235}{410} = 0.573
-\]
-
-\hypertarget{sample-questions-2}{%
-\subsection{Sample Questions}\label{sample-questions-2}}
-
-\textbf{1.} What is the probability of blood type AB or B given the person selected is female?
-
-\textbf{Answer:} \(P(\text{AB or B | Female}) = (16 + 37) / 430 = 0.123\)
-
-\hypertarget{introduction-to-probability}{%
-\chapter{Introduction to Probability}\label{introduction-to-probability}}
-
-\hypertarget{a-initial-example}{%
-\section{A Initial Example}\label{a-initial-example}}
-
-We start this introduction to probability with an example that has been simplified in many ways:
-Suppose that there is a late-night break-in at a closed convenience store.
+Consider the following scenario:
+Suppose there is a late-night break-in at a closed convenience store.
 No one is present to see the perpetrator, but there is low-quality CCTV footage.
-Unfortunately, the \emph{only} thing that can be discerned from the video is the color of the perpetrator's hair.
+Unfortunately, the \emph{only} thing that can be discerned from the video is the
+color of the perpetrator's hair.
 
 Now consider two possible versions of what comes next:
 
-\textbf{Version 1}: The video shows that the perpetrator has brown hair.
+\textbf{Version 1}: The video shows that the perpetrator has \emph{brown} hair.
 The day after the robbery, police see a person with brown hair walking down the street.
 The person is arrested on suspicion of committing the break-in.
 
-\textbf{Version 2}: The video shows that the perpetrator has green hair.\\
-The day after the robbery, police see a person with green hair walking down the street.
+\textbf{Version 2}: The video shows that the perpetrator has \emph{green} hair. The
+day after the robbery, police see a person with green hair walking down the street.
 The person is arrested on suspicion of committing the break-in.
 
 For the sake of this simplified example,
-in both versions we assume that the color of the hair is the \emph{only} reason the police suspect the person arrested.
+in both versions we assume that the color of the hair is the \textbf{only} reason the
+police suspect the person who is arrested.
 
-\textbf{Question}: In which version do you think it is more likely that the police have arrested the person who committed the break-in?
+\textbf{Question}: In which version do you think it is more likely that the police have
+arrested the person who committed the break-in?
 
-Answering the question requires considering the likelihood that the police have the correct person in both versions and deciding which is greater.
-
-A \textbf{probability} is a number between 0 and 1 that provides a measure of the likelihood that something occurs,
-with a larger number indicating increased likelihood. In probability terminology, the thing occurring is called an \emph{event}.
-In our question, the event is the police arresting the correct person.
-
-Coming back to our question, we need to decide which version has the greater probability. In most communities,
-people with brown hair outnumber people with green hair -- let's assume that is the case here.
-Thus, it seems reasonable to expect that the probability of Version 2 is greater than that of Version 1:
-Brown-haired people are relatively common, so in Version 1 the probability of arresting the correct brown-haired person is low.
-On the other hand, green-haired people are rare, so in Version 2, the probability of arresting the correct person is higher.
+Answering the question requires considering the likelihood that the police have
+the correct person in both versions and deciding which is greater.
+In most communities people with brown hair outnumber people with green hair,
+so let's assume that is the case here. Intuitively,
+it seems reasonable to expect that the likelihood of a correct arrest in Version 2 is greater
+than that in Version 1:
+Brown-haired people are relatively common, so in Version 1 the likelihood of
+arresting the correct brown-haired person is probably low.
+On the other hand, green-haired people are relatively rare, so in Version 2
+the likelihood of arresting the correct person is higher.
 
 Two important points:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi})}
 \item
-  Just because the probability of the correct arrest is greater in Version 2 than in Version 1 does not mean that the probability in Version 2 is high.
-  It's possible that there are more brown-haired people than green-haired people while still having a lot of green-haird people,
-  making both probabilities small. (Consider if we replace ``green'' with ``blond''.)
+  Although the likelihood of the correct arrest is greater in Version 2
+  than in Version 1 does not mean that the likelihood in Version 2 is high.
+  It is possible that there are more brown-haired people than green-haired people
+  while still having a lot of green-haird people, making the correct arrest
+  unlikely in either case.
 \item
-  While the above discussion is interesting, it is important to have a better sense of the actual value of the probability.
+  While the above discussion is interesting, the word ``likelihood'' is
+  imprecise. Going forward we will develop ``probability'' which
+  will allow us to quantify the notion of likelihood, so that we will be able
+  to specify (for instance) how much more likely a correct arrest is in
+  Version 1 than in Version 2.
+\end{enumerate}
+
+\hypertarget{introduction-to-probability}{%
+\chapter{Introduction to Probability}\label{introduction-to-probability}}
+
+\hypertarget{the-previous-example}{%
+\section{The Previous Example}\label{the-previous-example}}
+
+The example from the previous section involves the likelihood of arresting the
+correct person based on their hair color. Let's provide some additional
+context: Suppose that the crime described takes place on an island of 1000 people.
+The number of people with each hair color is given in the table below.
+
+\[
+\begin{array}{c|c}
+ \mathrm{Color} & \mathrm{Count} \\ \hline
+\mathrm{Brown} & 670  \\ 
+\mathrm{Blond} & 200  \\ 
+\mathrm{Red} & 110  \\ 
+\mathrm{Green} & 20  \\ 
+\end{array}\\
+\mbox{Table 1: Hair Color Counts}
+\]
+
+We start this introduction to probability with an example that purposely simplified:
+Suppose that there is a late-night break-in at a closed convenience store.
+No one is present to see the perpetrator, but there is low-quality CCTV footage.
+Unfortunately, the \emph{only} thing that can be discerned from the video is the
+color of the perpetrator's hair.
+
+Now consider two possible versions of what comes next:
+
+\textbf{Version 1}: The video shows that the perpetrator has \emph{brown} hair.
+The day after the robbery, police see a person with brown hair walking down the street.
+The person is arrested on suspicion of committing the break-in.
+
+\textbf{Version 2}: The video shows that the perpetrator has \emph{green} hair. The
+day after the robbery, police see a person with green hair walking down the street.
+The person is arrested on suspicion of committing the break-in.
+
+For the sake of this simplified example,
+in both versions we assume that the color of the hair is the \emph{only} reason the
+police suspect the person arrested.
+
+\textbf{Question}: In which version do you think it is more likely that the police have
+arrested the person who committed the break-in?
+
+Answering the question requires considering the likelihood that the police have
+the correct person in both versions and deciding which is greater.
+
+A \textbf{probability} is a number between 0 and 1 that provides a measure of the
+likelihood that something occurs,
+with a larger number indicating increased likelihood. In probability terminology,
+the thing occurring is called an \emph{event}.
+In our question, the event is the police arresting the correct person.
+
+Coming back to our question, we need to decide which version has the greater
+probability. In most communities,
+people with brown hair outnumber people with green hair -- let's assume that is the case here.
+Thus, it seems reasonable to expect that the probability of Version 2 is greater
+than that of Version 1:
+Brown-haired people are relatively common, so in Version 1 the probability of
+arresting the correct brown-haired person is low.
+On the other hand, green-haired people are fairly are, so in Version 2,
+the probability of arresting the correct person is higher.
+
+Two important points:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\item
+  Just because the probability of the correct arrest is greater in Version 2
+  than in Version 1 does not mean that the probability in Version 2 is high.
+  It's possible that there are more brown-haired people than green-haired people
+  while still having a lot of green-haird people,
+  making both probabilities small.
+\item
+  While the above discussion is interesting, it is important to have a better
+  sense of the actual numerical value of the probability.
   We start in that direction in the next section.
 \end{enumerate}
 
@@ -325,19 +266,39 @@ The number of people with each hair color is given in the table below.
 \begin{array}{c|c}
  \mathrm{Color} & \mathrm{Count} \\ \hline
 \mathrm{Brown} & 670  \\ 
-\mathrm{Blond} & 180  \\ 
+\mathrm{Blond} & 200  \\ 
 \mathrm{Red} & 110  \\ 
-\mathrm{Green} & 40  \\ 
+\mathrm{Green} & 20  \\ 
 \end{array}\\
 \mbox{Table 1: Hair Color Counts}
 \]
 
-Now suppose that we select a person from this population at random. To compute the \textbf{probability} that this person has brown hair,
+Now suppose that we select a person from this population at random. To compute
+the \textbf{probability} that this person has brown hair,
 we take the number with brown hair and divide by the number of people:
 
 \[\mbox{P(Brown hair)} = \frac{670}{1000} = 0.67\]
 
-\[\mbox{This space will get examples and a probability table}\]
+We use ``P(\ldots)'' to denote the probability of something. For instance in this case
+\(\mbox{P(Brown hair)}\) = ``probability of brown hair''.
+
+A probability is a number between 0 and 1, with a smaller number indicating a
+less likely outcome.
+
+\hypertarget{sample-questions}{%
+\subsection{Sample Questions}\label{sample-questions}}
+
+Sprinkled thought this book are Sample Questions. In the online version, the
+solutions to these questions are hidden. Before looking at the solution
+(by hovering), we recommend that you try to do them yourself!
+
+\textbf{1.} What is the probability that a randomly selected person has blond hair?
+
+\textbf{Answer:} \(P(\text{Blond}) = \frac{200}{1000} = 0.20\).
+
+\textbf{2.} What is the probability that a randomly selected person has red hair?
+
+\textbf{Answer:} \(P(\text{Red}) = \frac{110}{1000} = 0.11\).
 
 \hypertarget{joint-probability}{%
 \chapter{Joint Probability}\label{joint-probability}}
@@ -390,8 +351,8 @@ For another example, there are a total of \(235 + 24 + 63 + 248 = 570\) males in
 
 Place some example questions and answers here.
 
-\hypertarget{and-vs-or-1}{%
-\section{And vs Or}\label{and-vs-or-1}}
+\hypertarget{and-vs-or}{%
+\section{And vs Or}\label{and-vs-or}}
 
 Above we saw that \(\mbox{P(Female and Type A)} = 0.175\). Suppose we instead would like to know \(\mbox{P(Female or Type A)}\)?
 That is, we want to know the probability that a randomly selected person is either female or has type A blood.
@@ -456,8 +417,8 @@ If instead (for instance), we want to compute P(Female) then we add the entries 
 \mbox{Pr(Female)} = 0.175 + 0.016 + 0.037 + 0.202 = 0.43 
 \]
 
-\hypertarget{conditional-probability-1}{%
-\chapter{Conditional Probability}\label{conditional-probability-1}}
+\hypertarget{conditional-probability}{%
+\chapter{Conditional Probability}\label{conditional-probability}}
 
 Now suppose that we just focus on the females in the population, which forms a subset of the population.
 The probability that a randomly selected female has blood type O is an example of a \textbf{conditional probability}.
