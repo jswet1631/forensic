@@ -43,9 +43,27 @@ $$
 \mbox{P(Male)} = \frac{570}{1000} = 0.57
 $$
 
-### Sample questions here
+### Sample Questions
 
-Place some example questions and answers here.
+<style>
+hide {
+  background-color: #d6d6d6;
+  color: #d6d6d6;
+}
+hide:hover {
+  background-color: white;
+  color: black;
+}
+</style>
+
+**1.** What is the probability that the person selected is female?
+
+**Answer:** <hide>$P(\text{Female}) = 1 - P(\text{Male}) = 1 - 0.57 = 0.43$ This is equivalent to $(175 + 16 + 37 + 202) / 1000$.<hide>
+
+**2.** What is the probability that the person selected is male and has type A blood and type O blood?
+
+**Answer:** <hide>$P(\text{Male and A and O}) = 0$. 
+The probability of this event occurring in the table is zero, as no men have two different types of blood. <hide>
 
 ## And vs Or
 
@@ -67,9 +85,11 @@ $$
 \mbox{P(Type A or Type B)} = \frac{410}{1000} = 0.41
 $$
 
-### Sample questions here
+### Sample Questions
 
-Place some example questions and answers here.
+**1.** What is the probability of selecting a female or male with type AB blood?
+
+**Answer:** <hide>$P(\text{(Male or Female) and AB}) = P(\text{(Male and AB) or (Female and AB)}) = (16 + 24) / 1000 = 0.04$<hide>
 
 ## Probability Tables
 

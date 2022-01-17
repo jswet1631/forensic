@@ -36,6 +36,8 @@ $$
 \mbox{P(Male | Type A)} = \frac{235}{410} = 0.573
 $$
    
-### Sample questions here
+### Sample Questions
 
-Place some example questions and answers here.
+**1.** What is the probability of blood type AB or B given the person selected is female?
+
+**Answer:** <hide>$P(\text{AB or B | Female}) = (16 + 37) / 430 = 0.123$<hide>

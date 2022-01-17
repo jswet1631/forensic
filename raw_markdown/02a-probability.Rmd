@@ -95,32 +95,15 @@ if the culprit has red hair vs having blond hair.
 **Answer:** <hide>In the case of a blond-hairded person, we have
 $P(\text{correct arrest}) = \frac{1}{200} = 0.005$.  Therefore the ratio
 of probabilities is
-
-$$\frac{0.00909}{0.005} = 1.81818$$
-
+$\frac{0.00909}{0.005} = 1.81818$
 so a correct arrest for a red-haired culprit is 1.81818 times as likely
 as for a blond-haired culprit.
 <hide>
 
-## Calculating Probabilities From Tables
 
-In practice we often have information about probabilities instead of
-population counts.  For example, in the case of our example instead of
-the number of people with each hair color we have
+## Exercises
 
-$$
-\begin{array}{c|c}
- \mathrm{Color} & \mathrm{Probability} \\ \hline
-\mathrm{Brown} & 0.67  \\ 
-\mathrm{Blond} & 0.20  \\ 
-\mathrm{Red} & 0.11  \\ 
-\mathrm{Green} & 0.02  \\ 
-\end{array}\\
-\mbox{Table 1: Hair Color Probabilities}
-$$
-
-
-
+$$\mbox{Put exercises here}$$
 
 
 
