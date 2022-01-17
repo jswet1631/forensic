@@ -37,7 +37,7 @@ likelihood that something occurs,
 with a larger number indicating greater likelihood. 
 
 Suppose that we select a person from this population at random. To compute 
-the **probability** that this person has brown hair,
+the probability that this person has brown hair,
 we take the number with brown hair and divide by the number of people:
 
 $$\mbox{P(Brown hair)} = \frac{670}{1000} = 0.67$$
@@ -60,54 +60,69 @@ solutions to these questions are hidden.  Before looking at the solution
 
 **Answer:** <hide>$P(\text{Red}) = \frac{110}{1000} = 0.11$.<hide>
 
+These examples are fine but do not answer the question from the previous section.
+In Version 1, we have a brown-haired person on the CCTV and one of the
+670 brown-haired people randomly arrested.
+Thus the probability that the correct person is arrested is
+
+$$\mbox{P(correct arrest)} = \frac{1}{670} = 0.00149$$
+
+In Version 2 of the example we have a green-haired person on CCTV, so this 
+time the probability that the correct person is arrested is
+
+$$\mbox{P(correct arrest)} = \frac{1}{20} = 0.05$$
+
+Dividing the two probabilities
+
+$$\frac{0.05}{0.00149} = 33.5$$
+
+we see that a correct arrest in Version 2 is 33.5 times as likely as in Version 1.
+However, even in Version 2 there is only a 0.05 probability that the police have
+the correct person!
+
+### Sample Questions
+
+**1.** Suppose CCTV shows a red-haired person committed the robbery, and that
+a random red-haired person is arrested.  What is the probability of a correct
+arrest in this instance?
+
+**Answer:** <hide>$P(\text{correct arrest}) = \frac{1}{110} = 0.00909$.<hide>
+
+**2.** Determine the number of times greater the likelihood of a correct arrest
+if the culprit has red hair vs having blond hair.
 
 
-## Calculating Probabilities From Data
+**Answer:** <hide>In the case of a blond-hairded person, we have
+$P(\text{correct arrest}) = \frac{1}{200} = 0.005$.  Therefore the ratio
+of probabilities is
 
-Let's suppose that the crime described above takes place on an island that has 1000 people. 
-The number of people with each hair color is given in the table below.
+$$\frac{0.00909}{0.005} = 1.81818$$
+
+so a correct arrest for a red-haired culprit is 1.81818 times as likely
+as for a blond-haired culprit.
+<hide>
+
+## Calculating Probabilities From Tables
+
+In practice we often have information about probabilities instead of
+population counts.  For example, in the case of our example instead of
+the number of people with each hair color we have
 
 $$
 \begin{array}{c|c}
- \mathrm{Color} & \mathrm{Count} \\ \hline
-\mathrm{Brown} & 670  \\ 
-\mathrm{Blond} & 200  \\ 
-\mathrm{Red} & 110  \\ 
-\mathrm{Green} & 20  \\ 
+ \mathrm{Color} & \mathrm{Probability} \\ \hline
+\mathrm{Brown} & 0.67  \\ 
+\mathrm{Blond} & 0.20  \\ 
+\mathrm{Red} & 0.11  \\ 
+\mathrm{Green} & 0.02  \\ 
 \end{array}\\
-\mbox{Table 1: Hair Color Counts}
+\mbox{Table 1: Hair Color Probabilities}
 $$
 
 
 
 
 
-
-In probability terminology, 
-the thing occurring is called an *event*. 
-In our question, the event is the police arresting the correct person.
-
-Coming back to our question, we need to decide which version has the greater 
-probability. In most communities, 
-people with brown hair outnumber people with green hair -- let's assume that is the case here. 
-Thus, it seems reasonable to expect that the probability of Version 2 is greater 
-than that of Version 1: 
-Brown-haired people are relatively common, so in Version 1 the probability of 
-arresting the correct brown-haired person is low. 
-On the other hand, green-haired people are fairly are, so in Version 2, 
-the probability of arresting the correct person is higher.
-
-Two important points:
-
-1) Just because the probability of the correct arrest is greater in Version 2 
-than in Version 1 does not mean that the probability in Version 2 is high.
-It's possible that there are more brown-haired people than green-haired people 
-while still having a lot of green-haird people, 
-making both probabilities small. 
-
-2) While the above discussion is interesting, it is important to have a better 
-sense of the actual numerical value of the probability. 
-We start in that direction in the next section.
 
 
 

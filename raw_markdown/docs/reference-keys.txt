@@ -2,8 +2,9 @@ welcome
 an-introductory-example
 introduction-to-probability
 the-previous-example
-calculating-probabilities-from-data
 sample-questions
+sample-questions-1
+calculating-probabilities-from-tables
 joint-probability
 sample-questions-here
 and-vs-or

@@ -114,8 +114,8 @@ There are portions of this book that borrow from the treatment of statistics
 given in the online materials:
 
 \begin{quote}
-Online Statistics Education: A Multimedia Course of Study (\url{http://onlinestatbook.com/}).
-Project Leader: David M. Lane, Rice University.
+Online Statistics Education: A Multimedia Course of Study (\url{http://onlinestatbook.com/})
+Project Leader: David M. Lane, Rice University
 \end{quote}
 
 This site provides a comprehensive introduction to statistics and is worth referencing when you would like additional information.
@@ -182,10 +182,13 @@ Two important points:
 \hypertarget{the-previous-example}{%
 \section{The Previous Example}\label{the-previous-example}}
 
-The example from the previous section involves the likelihood of arresting the
-correct person based on their hair color. Let's provide some additional
-context: Suppose that the crime described takes place on an island of 1000 people.
-The number of people with each hair color is given in the table below.
+The example from the previous section involves the ``likelihood'' of arresting the
+correct person based on their hair color. Here we begin the development of
+``probability'' which allows us to quantify the notion of likelihood.
+
+Let's start by providing some additional context for our example:
+Suppose that the crime described takes place on an island of 1000 people.
+The number of these people with each hair color is given in the table below.
 
 \[
 \begin{array}{c|c}
@@ -197,84 +200,13 @@ The number of people with each hair color is given in the table below.
 \end{array}\\
 \mbox{Table 1: Hair Color Counts}
 \]
-
-We start this introduction to probability with an example that purposely simplified:
-Suppose that there is a late-night break-in at a closed convenience store.
-No one is present to see the perpetrator, but there is low-quality CCTV footage.
-Unfortunately, the \emph{only} thing that can be discerned from the video is the
-color of the perpetrator's hair.
-
-Now consider two possible versions of what comes next:
-
-\textbf{Version 1}: The video shows that the perpetrator has \emph{brown} hair.
-The day after the robbery, police see a person with brown hair walking down the street.
-The person is arrested on suspicion of committing the break-in.
-
-\textbf{Version 2}: The video shows that the perpetrator has \emph{green} hair. The
-day after the robbery, police see a person with green hair walking down the street.
-The person is arrested on suspicion of committing the break-in.
-
-For the sake of this simplified example,
-in both versions we assume that the color of the hair is the \emph{only} reason the
-police suspect the person arrested.
-
-\textbf{Question}: In which version do you think it is more likely that the police have
-arrested the person who committed the break-in?
-
-Answering the question requires considering the likelihood that the police have
-the correct person in both versions and deciding which is greater.
 
 A \textbf{probability} is a number between 0 and 1 that provides a measure of the
 likelihood that something occurs,
-with a larger number indicating increased likelihood. In probability terminology,
-the thing occurring is called an \emph{event}.
-In our question, the event is the police arresting the correct person.
+with a larger number indicating greater likelihood.
 
-Coming back to our question, we need to decide which version has the greater
-probability. In most communities,
-people with brown hair outnumber people with green hair -- let's assume that is the case here.
-Thus, it seems reasonable to expect that the probability of Version 2 is greater
-than that of Version 1:
-Brown-haired people are relatively common, so in Version 1 the probability of
-arresting the correct brown-haired person is low.
-On the other hand, green-haired people are fairly are, so in Version 2,
-the probability of arresting the correct person is higher.
-
-Two important points:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi})}
-\item
-  Just because the probability of the correct arrest is greater in Version 2
-  than in Version 1 does not mean that the probability in Version 2 is high.
-  It's possible that there are more brown-haired people than green-haired people
-  while still having a lot of green-haird people,
-  making both probabilities small.
-\item
-  While the above discussion is interesting, it is important to have a better
-  sense of the actual numerical value of the probability.
-  We start in that direction in the next section.
-\end{enumerate}
-
-\hypertarget{calculating-probabilities-from-data}{%
-\section{Calculating Probabilities From Data}\label{calculating-probabilities-from-data}}
-
-Let's suppose that the crime described above takes place on an island that has 1000 people.
-The number of people with each hair color is given in the table below.
-
-\[
-\begin{array}{c|c}
- \mathrm{Color} & \mathrm{Count} \\ \hline
-\mathrm{Brown} & 670  \\ 
-\mathrm{Blond} & 200  \\ 
-\mathrm{Red} & 110  \\ 
-\mathrm{Green} & 20  \\ 
-\end{array}\\
-\mbox{Table 1: Hair Color Counts}
-\]
-
-Now suppose that we select a person from this population at random. To compute
-the \textbf{probability} that this person has brown hair,
+Suppose that we select a person from this population at random. To compute
+the probability that this person has brown hair,
 we take the number with brown hair and divide by the number of people:
 
 \[\mbox{P(Brown hair)} = \frac{670}{1000} = 0.67\]
@@ -282,13 +214,11 @@ we take the number with brown hair and divide by the number of people:
 We use ``P(\ldots)'' to denote the probability of something. For instance in this case
 \(\mbox{P(Brown hair)}\) = ``probability of brown hair''.
 
-A probability is a number between 0 and 1, with a smaller number indicating a
-less likely outcome.
-
 \hypertarget{sample-questions}{%
 \subsection{Sample Questions}\label{sample-questions}}
 
-Sprinkled thought this book are Sample Questions. In the online version, the
+Sprinkled thought this book are Sample Questions, which also play the role
+of examples. In the online version, the
 solutions to these questions are hidden. Before looking at the solution
 (by hovering), we recommend that you try to do them yourself!
 
@@ -299,6 +229,65 @@ solutions to these questions are hidden. Before looking at the solution
 \textbf{2.} What is the probability that a randomly selected person has red hair?
 
 \textbf{Answer:} \(P(\text{Red}) = \frac{110}{1000} = 0.11\).
+
+These examples are fine but do not answer the question from the previous section.
+In Version 1, we have a brown-haired person on the CCTV and one of the
+670 brown-haired people randomly arrested.
+Thus the probability that the correct person is arrested is
+
+\[\mbox{P(correct arrest)} = \frac{1}{670} = 0.00149\]
+
+In Version 2 of the example we have a green-haired person on CCTV, so this
+time the probability that the correct person is arrested is
+
+\[\mbox{P(correct arrest)} = \frac{1}{20} = 0.05\]
+
+Dividing the two probabilities
+
+\[\frac{0.05}{0.00149} = 33.5\]
+
+we see that a correct arrest in Version 2 is 33.5 times as likely as in Version 1.
+However, even in Version 2 there is only a 0.05 probability that the police have
+the correct person!
+
+\hypertarget{sample-questions-1}{%
+\subsection{Sample Questions}\label{sample-questions-1}}
+
+\textbf{1.} Suppose CCTV shows a red-haired person committed the robbery, and that
+a random red-haired person is arrested. What is the probability of a correct
+arrest in this instance?
+
+\textbf{Answer:} \(P(\text{correct arrest}) = \frac{1}{110} = 0.00909\).
+
+\textbf{2.} Determine the number of times greater the likelihood of a correct arrest
+if the culprit has red hair vs having blond hair.
+
+\textbf{Answer:} In the case of a blond-hairded person, we have
+\(P(\text{correct arrest}) = \frac{1}{200} = 0.005\). Therefore the ratio
+of probabilities is
+
+\[\frac{0.00909}{0.005} = 1.81818\]
+
+so a correct arrest for a red-haired culprit is 1.81818 times as likely
+as for a blond-haired culprit.
+
+\hypertarget{calculating-probabilities-from-tables}{%
+\section{Calculating Probabilities From Tables}\label{calculating-probabilities-from-tables}}
+
+In practice we often have information about probabilities instead of
+population counts. For example, in the case of our example instead of
+the number of people with each hair color we have
+
+\[
+\begin{array}{c|c}
+ \mathrm{Color} & \mathrm{Probability} \\ \hline
+\mathrm{Brown} & 0.67  \\ 
+\mathrm{Blond} & 0.20  \\ 
+\mathrm{Red} & 0.11  \\ 
+\mathrm{Green} & 0.02  \\ 
+\end{array}\\
+\mbox{Table 1: Hair Color Probability}
+\]
 
 \hypertarget{joint-probability}{%
 \chapter{Joint Probability}\label{joint-probability}}
