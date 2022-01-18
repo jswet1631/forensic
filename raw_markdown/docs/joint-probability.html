@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 3 Joint Probability | Forensic Science and Statistics: Version 1.0.0</title>
 <meta name="author" content="Jeff Holt and Joseph Swetonic">
-<meta name="description" content="Suppose that we have a population of 1000 people, each classified by gender (Female or Male) and blood type (A, AB, B, or O). The number of people of each combination of gender and blood type is...">
+<meta name="description" content="Blood plays a role in many forensic science applications, with the “blood type” determined by a combination of two different blood group systems: Blood types are inherited and represent...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
 <meta property="og:title" content="Chapter 3 Joint Probability | Forensic Science and Statistics: Version 1.0.0">
 <meta property="og:type" content="book">
-<meta property="og:description" content="Suppose that we have a population of 1000 people, each classified by gender (Female or Male) and blood type (A, AB, B, or O). The number of people of each combination of gender and blood type is...">
+<meta property="og:description" content="Blood plays a role in many forensic science applications, with the “blood type” determined by a combination of two different blood group systems: Blood types are inherited and represent...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 3 Joint Probability | Forensic Science and Statistics: Version 1.0.0">
-<meta name="twitter:description" content="Suppose that we have a population of 1000 people, each classified by gender (Female or Male) and blood type (A, AB, B, or O). The number of people of each combination of gender and blood type is...">
+<meta name="twitter:description" content="Blood plays a role in many forensic science applications, with the “blood type” determined by a combination of two different blood group systems: Blood types are inherited and represent...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.0/transition.js"></script><script src="libs/bs3compat-0.3.0/tabs.js"></script><script src="libs/bs3compat-0.3.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -57,24 +57,41 @@
 <h1>
 <span class="header-section-number">3</span> Joint Probability<a class="anchor" aria-label="anchor" href="#joint-probability"><i class="fas fa-link"></i></a>
 </h1>
-<p>Suppose that we have a population of 1000 people, each classified by gender (Female or Male) and blood type (A, AB, B, or O).
-The number of people of each combination of gender and blood type is shown in the table below.</p>
+<p>Blood plays a role in many forensic science applications, with the “blood
+type” determined by a combination of two different blood group systems:</p>
+<blockquote>
+<p><em>Blood types are inherited and represent contributions from both parents.
+As of 2019, a total of 41 human blood group systems are recognized by the
+International Society of Blood Transfusion (ISBT). The two most
+important blood group systems are ABO and Rh; they determine someone’s
+blood type (A, B, AB, and O, with +, − or null denoting RhD status)
+for suitability in blood transfusion.</em></p>
+<p>Source: <a href="https://en.wikipedia.org/wiki/Blood_type" class="uri">https://en.wikipedia.org/wiki/Blood_type</a></p>
+</blockquote>
+<div class="figure">
+<img src="images/BloodType-PieGraph_0.jpg" alt=""><p class="caption">Source: <a href="https://www.blood.ca/en/blood/donating-blood/whats-my-blood-type" class="uri">https://www.blood.ca/en/blood/donating-blood/whats-my-blood-type</a></p>
+</div>
+<p>Suppose that we have a collection of 1000 people, each classified by Rh
+(Rh+ or Rh-) and ABO (A, B, AB, or O).
+The number of people of each combination of Rh and ABO grouping is shown
+in the table below.</p>
 <p><span class="math display">\[
 \begin{array}{c|c|c}
-           &amp; \mathrm{F} &amp; \mathrm{M}\\ \hline
-\mathrm{A} &amp; 175 &amp; 235 \\ 
-\mathrm{AB} &amp; 16 &amp; 24 \\ 
-\mathrm{B} &amp; 37 &amp; 63 \\ 
-\mathrm{O} &amp; 202 &amp; 248 \\ 
+           &amp; \mathrm{Rh+} &amp; \mathrm{Rh-}\\ \hline
+\mathrm{A} &amp; 360 &amp; 60 \\ 
+\mathrm{B} &amp; 76 &amp; 14 \\ 
+\mathrm{AB} &amp; 25 &amp; 5 \\ 
+\mathrm{O} &amp; 390 &amp; 70 \\ 
 \end{array}\\
-\mbox{Gender and blood type counts}
+\mbox{Rh and ABO counts}
 \]</span></p>
-<p>Suppose that we select one of the people at random, and note that person’s gender and blood type.
-There are various possibilities for outcomes, such as the person selected is female with Type A blood.
-The chance that this outcome occurs is called the <strong>probability</strong> of this outcome.
-As 175 out of the 1000 people are female of blood type A, the probability of selecting such a person is</p>
-<p><span class="math display">\[\mbox{P(Female and Type A)} = \frac{175}{1000} = 0.175\]</span></p>
-<p>Here, P(Female and Type A) stands for the probability that the person selected is Female <strong>and</strong> has Type A blood.
+<p>Suppose that we select one of the people at random, and note that person’s groups.
+There are various possibilities for outcomes, such as the person selected is Rh+ and O.
+The likelihood that this combination occurs is the <strong>joint probability</strong> of the two classifications,
+Rh and ABO grouping.
+As 390 out of the 1000 people are O+, the probability of selecting such a person is</p>
+<p><span class="math display">\[\mbox{P(O+)} = \frac{390}{1000} = 0.39\]</span></p>
+<p>Here, P(O+) stands for the probability that the person selected is Rh+ <strong>and</strong> type O.
 A sample of other probabilities that come directly from the table are</p>
 <p><span class="math display">\[\begin{array}{rcccl}
 \mbox{P(Female and Type O)} &amp; = &amp; {\displaystyle\frac{202}{1000}} &amp; = &amp; 0.202 \\[5pt]

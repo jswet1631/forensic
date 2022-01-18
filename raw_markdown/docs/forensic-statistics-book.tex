@@ -277,28 +277,51 @@ as for a blond-haired culprit.
 \hypertarget{joint-probability}{%
 \chapter{Joint Probability}\label{joint-probability}}
 
-Suppose that we have a population of 1000 people, each classified by gender (Female or Male) and blood type (A, AB, B, or O).
-The number of people of each combination of gender and blood type is shown in the table below.
+Blood plays a role in many forensic science applications, with the ``blood
+type'' determined by a combination of two different blood group systems:
+
+\begin{quote}
+\emph{Blood types are inherited and represent contributions from both parents.
+As of 2019, a total of 41 human blood group systems are recognized by the
+International Society of Blood Transfusion (ISBT). The two most
+important blood group systems are ABO and Rh; they determine someone's
+blood type (A, B, AB, and O, with +, − or null denoting RhD status)
+for suitability in blood transfusion.}
+
+Source: \url{https://en.wikipedia.org/wiki/Blood_type}
+\end{quote}
+
+\begin{figure}
+\centering
+\includegraphics{images/BloodType-PieGraph_0.jpg}
+\caption{Source: \url{https://www.blood.ca/en/blood/donating-blood/whats-my-blood-type}}
+\end{figure}
+
+Suppose that we have a collection of 1000 people, each classified by Rh
+(Rh+ or Rh-) and ABO (A, B, AB, or O).
+The number of people of each combination of Rh and ABO grouping is shown
+in the table below.
 
 \[
 \begin{array}{c|c|c}
-           & \mathrm{F} & \mathrm{M}\\ \hline
-\mathrm{A} & 175 & 235 \\ 
-\mathrm{AB} & 16 & 24 \\ 
-\mathrm{B} & 37 & 63 \\ 
-\mathrm{O} & 202 & 248 \\ 
+           & \mathrm{Rh+} & \mathrm{Rh-}\\ \hline
+\mathrm{A} & 360 & 60 \\ 
+\mathrm{B} & 76 & 14 \\ 
+\mathrm{AB} & 25 & 5 \\ 
+\mathrm{O} & 390 & 70 \\ 
 \end{array}\\
-\mbox{Gender and blood type counts}
+\mbox{Rh and ABO counts}
 \]
 
-Suppose that we select one of the people at random, and note that person's gender and blood type.
-There are various possibilities for outcomes, such as the person selected is female with Type A blood.
-The chance that this outcome occurs is called the \textbf{probability} of this outcome.
-As 175 out of the 1000 people are female of blood type A, the probability of selecting such a person is
+Suppose that we select one of the people at random, and note that person's groups.
+There are various possibilities for outcomes, such as the person selected is Rh+ and O.
+The likelihood that this combination occurs is the \textbf{joint probability} of the two classifications,
+Rh and ABO grouping.
+As 390 out of the 1000 people are O+, the probability of selecting such a person is
 
-\[\mbox{P(Female and Type A)} = \frac{175}{1000} = 0.175\]
+\[\mbox{P(O+)} = \frac{390}{1000} = 0.39\]
 
-Here, P(Female and Type A) stands for the probability that the person selected is Female \textbf{and} has Type A blood.
+Here, P(O+) stands for the probability that the person selected is Rh+ \textbf{and} type O.
 A sample of other probabilities that come directly from the table are
 
 \[\begin{array}{rcccl}
