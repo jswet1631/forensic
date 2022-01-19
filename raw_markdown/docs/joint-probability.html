@@ -71,37 +71,38 @@ for suitability in blood transfusion.</em></p>
 <div class="figure">
 <img src="images/BloodType-PieGraph_0.jpg" alt=""><p class="caption">Source: <a href="https://www.blood.ca/en/blood/donating-blood/whats-my-blood-type" class="uri">https://www.blood.ca/en/blood/donating-blood/whats-my-blood-type</a></p>
 </div>
-<p>Suppose that we have a collection of 1000 people, each classified by Rh
-(Rh+ or Rh-) and ABO (A, B, AB, or O).
-The number of people of each combination of Rh and ABO grouping is shown
+<p>Suppose that we have a collection of 1000 people, each classified by both
+ABO (A, B, AB, or O) and Rh (+ or <span class="math inline">\(-\)</span>).
+The number of people of each combination of ABO and Rh class (the “blood type”) is shown
 in the table below.</p>
 <p><span class="math display">\[
 \begin{array}{c|c|c}
-           &amp; \mathrm{Rh+} &amp; \mathrm{Rh-}\\ \hline
+       &amp; \mathrm{+} &amp; - \\ \hline
 \mathrm{A} &amp; 360 &amp; 60 \\ 
 \mathrm{B} &amp; 76 &amp; 14 \\ 
 \mathrm{AB} &amp; 25 &amp; 5 \\ 
 \mathrm{O} &amp; 390 &amp; 70 \\ 
 \end{array}\\
-\mbox{Rh and ABO counts}
+\mbox{Counts by ABO and Rh}
 \]</span></p>
 <p>Suppose that we select one of the people at random, and note that person’s groups.
 There are various possibilities for outcomes, such as the person selected is Rh+ and O.
 The likelihood that this combination occurs is the <strong>joint probability</strong> of the two classifications,
 Rh and ABO grouping.
-As 390 out of the 1000 people are O+, the probability of selecting such a person is</p>
-<p><span class="math display">\[\mbox{P(O+)} = \frac{390}{1000} = 0.39\]</span></p>
-<p>Here, P(O+) stands for the probability that the person selected is Rh+ <strong>and</strong> type O.
+As 390 out of the 1000 people are O and +, the probability of selecting such a person is</p>
+<p><span class="math display">\[\mbox{P(O and +)} = \frac{390}{1000} = 0.39\]</span></p>
+<p>Here, P(O and +) stands for the probability that the person selected is
+ABO group O <strong>and</strong> Rh group +.
 A sample of other probabilities that come directly from the table are</p>
 <p><span class="math display">\[\begin{array}{rcccl}
-\mbox{P(Female and Type O)} &amp; = &amp; {\displaystyle\frac{202}{1000}} &amp; = &amp; 0.202 \\[5pt]
-\mbox{P(Male and Type AB)} &amp; = &amp; {\displaystyle\frac{24}{1000}} &amp; = &amp; 0.024 \\[5pt]
-\mbox{P(Male and Type A)} &amp; = &amp; {\displaystyle\frac{235}{1000}} &amp; = &amp; 0.235 \\
+\mbox{P(AB and -)} &amp; = &amp; {\displaystyle\frac{5}{1000}} &amp; = &amp; 0.005 \\[5pt]
+\mbox{P(B and +)} &amp; = &amp; {\displaystyle\frac{76}{1000}} &amp; = &amp; 0.076 \\[5pt]
+\mbox{P(B and -)} &amp; = &amp; {\displaystyle\frac{14}{1000}} &amp; = &amp; 0.014 \\
 \end{array}\]</span></p>
 <p>We also can combine table entries to compute other probabilities.
-For instance, there are a total of <span class="math inline">\(16 + 24 = 40\)</span> people with blood type AB, so</p>
+For instance, there are a total of <span class="math inline">\(76 + 14 = 90\)</span> people with blood group B, so</p>
 <p><span class="math display">\[
-\mbox{P(Type AB)} = \frac{40}{1000} = 0.04
+\mbox{P(B)} = \frac{90}{1000} = 0.09
 \]</span></p>
 <p>For another example, there are a total of <span class="math inline">\(235 + 24 + 63 + 248 = 570\)</span> males in our population, so</p>
 <p><span class="math display">\[
@@ -218,7 +219,7 @@ Because these two groups are disjoint, we can add the probabilities to arrive at
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Forensic Science and Statistics: Version 1.0.0</strong>" was written by Jeff Holt and Joseph Swetonic. It was last built on 2022-01-17.</p>
+    <p>"<strong>Forensic Science and Statistics: Version 1.0.0</strong>" was written by Jeff Holt and Joseph Swetonic. It was last built on 2022-01-18.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

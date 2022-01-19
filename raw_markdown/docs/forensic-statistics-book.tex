@@ -84,7 +84,7 @@
 
 \title{Forensic Science and Statistics: Version 1.0.0}
 \author{Jeff Holt and Joseph Swetonic}
-\date{2022-01-17}
+\date{2022-01-18}
 
 \begin{document}
 \maketitle
@@ -297,44 +297,45 @@ Source: \url{https://en.wikipedia.org/wiki/Blood_type}
 \caption{Source: \url{https://www.blood.ca/en/blood/donating-blood/whats-my-blood-type}}
 \end{figure}
 
-Suppose that we have a collection of 1000 people, each classified by Rh
-(Rh+ or Rh-) and ABO (A, B, AB, or O).
-The number of people of each combination of Rh and ABO grouping is shown
+Suppose that we have a collection of 1000 people, each classified by both
+ABO (A, B, AB, or O) and Rh (+ or \(-\)).
+The number of people of each combination of ABO and Rh class (the ``blood type'') is shown
 in the table below.
 
 \[
 \begin{array}{c|c|c}
-           & \mathrm{Rh+} & \mathrm{Rh-}\\ \hline
+       & \mathrm{+} & - \\ \hline
 \mathrm{A} & 360 & 60 \\ 
 \mathrm{B} & 76 & 14 \\ 
 \mathrm{AB} & 25 & 5 \\ 
 \mathrm{O} & 390 & 70 \\ 
 \end{array}\\
-\mbox{Rh and ABO counts}
+\mbox{Counts by ABO and Rh}
 \]
 
 Suppose that we select one of the people at random, and note that person's groups.
 There are various possibilities for outcomes, such as the person selected is Rh+ and O.
 The likelihood that this combination occurs is the \textbf{joint probability} of the two classifications,
 Rh and ABO grouping.
-As 390 out of the 1000 people are O+, the probability of selecting such a person is
+As 390 out of the 1000 people are O and +, the probability of selecting such a person is
 
-\[\mbox{P(O+)} = \frac{390}{1000} = 0.39\]
+\[\mbox{P(O and +)} = \frac{390}{1000} = 0.39\]
 
-Here, P(O+) stands for the probability that the person selected is Rh+ \textbf{and} type O.
+Here, P(O and +) stands for the probability that the person selected is
+ABO group O \textbf{and} Rh group +.
 A sample of other probabilities that come directly from the table are
 
 \[\begin{array}{rcccl}
-\mbox{P(Female and Type O)} & = & {\displaystyle\frac{202}{1000}} & = & 0.202 \\[5pt]
-\mbox{P(Male and Type AB)} & = & {\displaystyle\frac{24}{1000}} & = & 0.024 \\[5pt]
-\mbox{P(Male and Type A)} & = & {\displaystyle\frac{235}{1000}} & = & 0.235 \\
+\mbox{P(AB and -)} & = & {\displaystyle\frac{5}{1000}} & = & 0.005 \\[5pt]
+\mbox{P(B and +)} & = & {\displaystyle\frac{76}{1000}} & = & 0.076 \\[5pt]
+\mbox{P(B and -)} & = & {\displaystyle\frac{14}{1000}} & = & 0.014 \\
 \end{array}\]
 
 We also can combine table entries to compute other probabilities.
-For instance, there are a total of \(16 + 24 = 40\) people with blood type AB, so
+For instance, there are a total of \(76 + 14 = 90\) people with blood group B, so
 
 \[
-\mbox{P(Type AB)} = \frac{40}{1000} = 0.04
+\mbox{P(B)} = \frac{90}{1000} = 0.09
 \]
 
 For another example, there are a total of \(235 + 24 + 63 + 248 = 570\) males in our population, so
