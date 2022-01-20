@@ -84,7 +84,7 @@
 
 \title{Forensic Science and Statistics: Version 1.0.0}
 \author{Jeff Holt and Joseph Swetonic}
-\date{2022-01-18}
+\date{2022-01-19}
 
 \begin{document}
 \maketitle
@@ -297,33 +297,35 @@ Source: \url{https://en.wikipedia.org/wiki/Blood_type}
 \caption{Source: \url{https://www.blood.ca/en/blood/donating-blood/whats-my-blood-type}}
 \end{figure}
 
-Suppose that we have a collection of 1000 people, each classified by both
+Suppose that we have a collection of 1000 people, with each classified based on both
 ABO (A, B, AB, or O) and Rh (+ or \(-\)).
 The number of people of each combination of ABO and Rh class (the ``blood type'') is shown
-in the table below.
+in the table below. (This table is based on the distribution of blood types in
+Canada, reported at \url{https://www.blood.ca/en/blood/donating-blood/whats-my-blood-type})
 
 \[
 \begin{array}{c|c|c}
-       & \mathrm{+} & - \\ \hline
+       & + & - \\ \hline
 \mathrm{A} & 360 & 60 \\ 
 \mathrm{B} & 76 & 14 \\ 
 \mathrm{AB} & 25 & 5 \\ 
 \mathrm{O} & 390 & 70 \\ 
 \end{array}\\
-\mbox{Counts by ABO and Rh}
+\mbox{Counts by ABO and Rh groups}
 \]
 
-Suppose that we select one of the people at random, and note that person's groups.
-There are various possibilities for outcomes, such as the person selected is Rh+ and O.
+Suppose that one of these people is selected at random and note that person's groups.
+There are various possibilities for outcomes, such as the person selected has
+ABO group O and Rh group +.
 The likelihood that this combination occurs is the \textbf{joint probability} of the two classifications,
-Rh and ABO grouping.
-As 390 out of the 1000 people are O and +, the probability of selecting such a person is
+ABO and Rh groupings.
+There 390 out of the 1000 people are O and +, so the probability of selecting such a person is
 
 \[\mbox{P(O and +)} = \frac{390}{1000} = 0.39\]
 
 Here, P(O and +) stands for the probability that the person selected is
 ABO group O \textbf{and} Rh group +.
-A sample of other probabilities that come directly from the table are
+A sample of other probabilities that come from the table are
 
 \[\begin{array}{rcccl}
 \mbox{P(AB and -)} & = & {\displaystyle\frac{5}{1000}} & = & 0.005 \\[5pt]
@@ -335,23 +337,29 @@ We also can combine table entries to compute other probabilities.
 For instance, there are a total of \(76 + 14 = 90\) people with blood group B, so
 
 \[
-\mbox{P(B)} = \frac{90}{1000} = 0.09
+\mbox{P(B)} = \frac{76+14}{1000} = \frac{90}{1000} = 0.09
 \]
 
-For another example, there are a total of \(235 + 24 + 63 + 248 = 570\) males in our population, so
+For another example, there are a total of \(360 + 76 + 25 + 390 = 851\) people with
+Rh group +. Thus
 
 \[
-\mbox{P(Male)} = \frac{570}{1000} = 0.57
+\mbox{P(+)} = \frac{360 + 76 + 25 + 390}{1000} = \frac{851}{1000} = 0.851
 \]
 
 \hypertarget{sample-questions-2}{%
 \subsection{Sample Questions}\label{sample-questions-2}}
 
-\textbf{1.} What is the probability that the person selected is female?
+\textbf{1.} Find the probability that a randomly selected person has blood
+groups A and \(-\).
 
-\textbf{Answer:} \(P(\text{Female}) = 1 - P(\text{Male}) = 1 - 0.57 = 0.43\) This is equivalent to \((175 + 16 + 37 + 202) / 1000\).
+\textbf{Answer:} \(\mbox{P(A and }-) = \frac{60}{1000} = 0.06\).
 
-\textbf{2.} What is the probability that the person selected is male and has type A blood and type O blood?
+\textbf{2.} What is the probability that the person selected has ABO group AB?
+
+\textbf{Answer:} \(\mbox{P(AB)} = \frac{25 + 5}{1000} = \frac{30}{1000} = 0.03\).
+
+\textbf{3.} What is the probability that the person selected is male and has type A blood and type O blood?
 
 \textbf{Answer:} \(P(\text{Male and A and O}) = 0\).
 The probability of this event occurring in the table is zero, as no men have two different types of blood.
