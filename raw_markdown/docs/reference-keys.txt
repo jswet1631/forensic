@@ -6,10 +6,12 @@ sample-questions
 sample-questions-1
 exercises
 joint-probability
+blood-types
 sample-questions-2
 and-vs-or
 sample-questions-3
 probability-tables
+exercises-1
 conditional-probability
 sample-questions-4
 probability-rules

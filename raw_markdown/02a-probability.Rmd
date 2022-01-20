@@ -92,7 +92,7 @@ arrest in this instance?
 if the culprit has red hair vs having blond hair.
 
 
-**Answer:** <hide>In the case of a blond-hairded person, we have
+**Answer:** <hide>In the case of a blond-haired person, we have
 $P(\text{correct arrest}) = \frac{1}{200} = 0.005$.  Therefore the ratio
 of probabilities is
 $\frac{0.00909}{0.005} = 1.81818$
@@ -103,7 +103,7 @@ as for a blond-haired culprit.
 
 ## Exercises
 
-$$\mbox{Put exercises here}$$
+1. $\text{Put exercises here}$
 
 
 
