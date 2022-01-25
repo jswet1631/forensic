@@ -4,16 +4,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Page not found | Forensic Science and Statistics: Version 1.0.0</title>
+<title>Chapter 4 Conditional Probability | Forensic Science and Statistics: Version 1.0.0</title>
 <meta name="author" content="Jeff Holt and Joseph Swetonic">
-<meta name="description" content="The page you requested cannot be found (perhaps it was moved or renamed). You may want to try searching to find the page's new location, or use the table of contents to find the page you are...">
+<meta name="description" content="Now suppose that we just focus on the females in the population, which forms a subset of the population. The probability that a randomly selected female has blood type O is an example of a...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
-<meta property="og:title" content="Page not found | Forensic Science and Statistics: Version 1.0.0">
+<meta property="og:title" content="Chapter 4 Conditional Probability | Forensic Science and Statistics: Version 1.0.0">
 <meta property="og:type" content="book">
-<meta property="og:description" content="The page you requested cannot be found (perhaps it was moved or renamed). You may want to try searching to find the page's new location, or use the table of contents to find the page you are...">
+<meta property="og:description" content="Now suppose that we just focus on the females in the population, which forms a subset of the population. The probability that a randomly selected female has blood type O is an example of a...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Page not found | Forensic Science and Statistics: Version 1.0.0">
-<meta name="twitter:description" content="The page you requested cannot be found (perhaps it was moved or renamed). You may want to try searching to find the page's new location, or use the table of contents to find the page you are...">
+<meta name="twitter:title" content="Chapter 4 Conditional Probability | Forensic Science and Statistics: Version 1.0.0">
+<meta name="twitter:description" content="Now suppose that we just focus on the females in the population, which forms a subset of the population. The probability that a randomly selected female has blood type O is an example of a...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -42,7 +42,7 @@
 <li><a class="" href="index.html"><span class="header-section-number">1</span> Welcome</a></li>
 <li><a class="" href="introduction-to-probability.html"><span class="header-section-number">2</span> Introduction to Probability</a></li>
 <li><a class="" href="joint-probability.html"><span class="header-section-number">3</span> Joint Probability</a></li>
-<li><a class="" href="conditional-probability.html"><span class="header-section-number">4</span> Conditional Probability</a></li>
+<li><a class="active" href="conditional-probability.html"><span class="header-section-number">4</span> Conditional Probability</a></li>
 <li><a class="" href="probability-rules.html"><span class="header-section-number">5</span> Probability Rules</a></li>
 <li><a class="" href="counterintuitive-applications.html"><span class="header-section-number">6</span> Counterintuitive Applications</a></li>
 <li><a class="" href="graphing-distributions-qualitative-variables.html"><span class="header-section-number">7</span> Graphing Distributions: Qualitative Variables</a></li>
@@ -54,18 +54,59 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="page-not-found" class="section level1">
-<h1>Page not found<a class="anchor" aria-label="anchor" href="#page-not-found"><i class="fas fa-link"></i></a>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="conditional-probability" class="section level1" number="4">
+<h1>
+<span class="header-section-number">4</span> Conditional Probability<a class="anchor" aria-label="anchor" href="#conditional-probability"><i class="fas fa-link"></i></a>
 </h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<p>Now suppose that we just focus on the females in the population, which forms a subset of the population.
+The probability that a randomly selected female has blood type O is an example of a <strong>conditional probability</strong>.</p>
+<p>There are 430 females in the population, and 202 of those have type O blood.
+Hence, the probability that female chosen at random has type O blood is</p>
+<p><span class="math display">\[
+\mbox{P(Type O | Female)} = \frac{202}{430} = 0.470
+\]</span></p>
+<p>The vertical bar in the notation is interpreted as <em>given that</em>, so that <span class="math inline">\(\mbox{P(Type O | Female)}\)</span> is read as</p>
+<p><span class="math display">\[
+\mbox{The probability of blood type O, given the person is female.}
+\]</span></p>
+<p>Conditional probabilities arise all the time when evaluating forensic evidence. Other examples of conditional probabilities:</p>
+<p>The probability of Type AB, given that the person is male:</p>
+<p><span class="math display">\[
+\mbox{P(Type AB | Male)} = \frac{24}{570} = 0.042
+\]</span></p>
+<p>The probability the person is female, given Type B blood:</p>
+<p><span class="math display">\[
+\mbox{P(Female | Type B)} = \frac{37}{100} = 0.37
+\]</span></p>
+<p>The probability the person is male, given Type A blood:</p>
+<p><span class="math display">\[
+\mbox{P(Male | Type A)} = \frac{235}{410} = 0.573
+\]</span></p>
+<div id="sample-questions-4" class="section level3" number="4.0.1">
+<h3>
+<span class="header-section-number">4.0.1</span> Sample Questions<a class="anchor" aria-label="anchor" href="#sample-questions-4"><i class="fas fa-link"></i></a>
+</h3>
+<p><strong>1.</strong> What is the probability of blood type AB or B given the person selected is female?</p>
+<p><strong>Answer:</strong> <hide><span class="math inline">\(P(\text{AB or B | Female}) = (16 + 37) / 430 = 0.123\)</span><hide></hide></hide></p>
+
+</div>
 </div>
   <div class="chapter-nav">
-<div class="empty"></div>
-<div class="empty"></div>
+<div class="prev"><a href="joint-probability.html"><span class="header-section-number">3</span> Joint Probability</a></div>
+<div class="next"><a href="probability-rules.html"><span class="header-section-number">5</span> Probability Rules</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
-    </div>
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav"><li>
+<a class="nav-link" href="#conditional-probability"><span class="header-section-number">4</span> Conditional Probability</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#sample-questions-4"><span class="header-section-number">4.0.1</span> Sample Questions</a></li></ul>
+</li></ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
 
 </div>
 </div> <!-- .container -->

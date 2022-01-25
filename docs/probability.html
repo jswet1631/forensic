@@ -1,138 +1,70 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html lang="en">
 <head>
-
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Probability | Forensic Science and Statistics: Version 1.0.0</title>
-  <meta name="description" content="This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
-
-  <meta property="og:title" content="Chapter 2 Probability | Forensic Science and Statistics: Version 1.0.0" />
-  <meta property="og:type" content="book" />
-  
-  
-  <meta property="og:description" content="This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook." />
-  <meta name="github-repo" content="rstudio/bookdown-demo" />
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Probability | Forensic Science and Statistics: Version 1.0.0" />
-  
-  <meta name="twitter:description" content="This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook." />
-  
-
-<meta name="author" content="Jeff Holt and Joseph Swetonic" />
-
-
-<meta name="date" content="2022-01-11" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  
-  
-<link rel="prev" href="index.html"/>
-<link rel="next" href="introduction-to-probability.html"/>
-<script src="libs/jquery-3.5.1/jquery-3.5.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
-
-
-
-
-
-
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-
-
-
-
-<link rel="stylesheet" href="style.css" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 2 Probability | Forensic Science and Statistics: Version 1.0.0</title>
+<meta name="author" content="Jeff Holt and Joseph Swetonic">
+<meta name="description" content="Probability is an important and complex field of study. Fortunately, only a few basic issues in probability theory are essential for understanding statistics at the level covered in this book....">
+<meta name="generator" content="bookdown 0.24 with bs4_book()">
+<meta property="og:title" content="Chapter 2 Probability | Forensic Science and Statistics: Version 1.0.0">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Probability is an important and complex field of study. Fortunately, only a few basic issues in probability theory are essential for understanding statistics at the level covered in this book....">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 2 Probability | Forensic Science and Statistics: Version 1.0.0">
+<meta name="twitter:description" content="Probability is an important and complex field of study. Fortunately, only a few basic issues in probability theory are essential for understanding statistics at the level covered in this book....">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.0/transition.js"></script><script src="libs/bs3compat-0.3.0/tabs.js"></script><script src="libs/bs3compat-0.3.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
 </head>
+<body data-spy="scroll" data-target="#toc">
 
-<body>
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 
-
-
-  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
-
-    <div class="book-summary">
-      <nav role="navigation">
-
-<ul class="summary">
-<li><a href="./">Forensic Science and Statistics</a></li>
-
-<li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>2</b> Probability</a><ul>
-<li class="chapter" data-level="2.1" data-path="probability.html"><a href="probability.html#introduction-1"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
-<li class="chapter" data-level="2.2" data-path="probability.html"><a href="probability.html#another-subsection"><i class="fa fa-check"></i><b>2.2</b> Another Subsection</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="probability.html"><a href="probability.html#sample-questions"><i class="fa fa-check"></i><b>2.2.1</b> Sample Questions</a></li>
-</ul></li>
-<li class="chapter" data-level="2.3" data-path="probability.html"><a href="probability.html#and-vs-or"><i class="fa fa-check"></i><b>2.3</b> And vs Or</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="probability.html"><a href="probability.html#sample-questions-1"><i class="fa fa-check"></i><b>2.3.1</b> Sample Questions</a></li>
-</ul></li>
-<li class="chapter" data-level="2.4" data-path="probability.html"><a href="probability.html#conditional-probability"><i class="fa fa-check"></i><b>2.4</b> Conditional Probability</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="probability.html"><a href="probability.html#sample-questions-2"><i class="fa fa-check"></i><b>2.4.1</b> Sample Questions</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html"><i class="fa fa-check"></i><b>3</b> Introduction to Probability</a><ul>
-<li class="chapter" data-level="3.1" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#a-initial-example"><i class="fa fa-check"></i><b>3.1</b> A Initial Example</a></li>
-<li class="chapter" data-level="3.2" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#calculating-probabilities-from-data"><i class="fa fa-check"></i><b>3.2</b> Calculating Probabilities From Data</a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="joint-probability.html"><a href="joint-probability.html"><i class="fa fa-check"></i><b>4</b> Joint Probability</a><ul>
-<li class="chapter" data-level="4.0.1" data-path="joint-probability.html"><a href="joint-probability.html#sample-questions-here"><i class="fa fa-check"></i><b>4.0.1</b> Sample questions here</a></li>
-<li class="chapter" data-level="4.1" data-path="joint-probability.html"><a href="joint-probability.html#and-vs-or-1"><i class="fa fa-check"></i><b>4.1</b> And vs Or</a><ul>
-<li class="chapter" data-level="4.1.1" data-path="joint-probability.html"><a href="joint-probability.html#sample-questions-here-1"><i class="fa fa-check"></i><b>4.1.1</b> Sample questions here</a></li>
-</ul></li>
-<li class="chapter" data-level="4.2" data-path="joint-probability.html"><a href="joint-probability.html#probability-tables"><i class="fa fa-check"></i><b>4.2</b> Probability Tables</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="conditional-probability-1.html"><a href="conditional-probability-1.html"><i class="fa fa-check"></i><b>5</b> Conditional Probability</a><ul>
-<li class="chapter" data-level="5.0.1" data-path="conditional-probability-1.html"><a href="conditional-probability-1.html#sample-questions-here-2"><i class="fa fa-check"></i><b>5.0.1</b> Sample questions here</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="probability-rules.html"><a href="probability-rules.html"><i class="fa fa-check"></i><b>6</b> Probability Rules</a></li>
-<li class="chapter" data-level="7" data-path="counterintuitive-applications.html"><a href="counterintuitive-applications.html"><i class="fa fa-check"></i><b>7</b> Counterintuitive Applications</a><ul>
-<li class="chapter" data-level="7.1" data-path="counterintuitive-applications.html"><a href="counterintuitive-applications.html#birthday-paradox"><i class="fa fa-check"></i><b>7.1</b> Birthday Paradox</a></li>
-<li class="chapter" data-level="7.2" data-path="counterintuitive-applications.html"><a href="counterintuitive-applications.html#monty-hall-problem"><i class="fa fa-check"></i><b>7.2</b> Monty Hall Problem</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
-</ul>
-
-      </nav>
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Forensic Science and Statistics: Version 1.0.0</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
 
-    <div class="book-body">
-      <div class="body-inner">
-        <div class="book-header" role="navigation">
-          <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Forensic Science and Statistics: Version 1.0.0</a>
-          </h1>
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"><span class="header-section-number">1</span> Introduction</a></li>
+<li><a class="active" href="probability.html"><span class="header-section-number">2</span> Probability</a></li>
+<li><a class="" href="introduction-to-probability.html"><span class="header-section-number">3</span> Introduction to Probability</a></li>
+<li><a class="" href="joint-probability.html"><span class="header-section-number">4</span> Joint Probability</a></li>
+<li><a class="" href="conditional-probability-1.html"><span class="header-section-number">5</span> Conditional Probability</a></li>
+<li><a class="" href="probability-rules.html"><span class="header-section-number">6</span> Probability Rules</a></li>
+<li><a class="" href="counterintuitive-applications.html"><span class="header-section-number">7</span> Counterintuitive Applications</a></li>
+<li><a class="" href="references.html">References</a></li>
+</ul>
+
+        <div class="book-extra">
+          
         </div>
-
-        <div class="page-wrapper" tabindex="-1" role="main">
-          <div class="page-inner">
-
-            <section class="normal" id="section-">
-<div id="probability" class="section level1">
-<h1><span class="header-section-number">Chapter 2</span> Probability</h1>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="probability" class="section level1" number="2">
+<h1>
+<span class="header-section-number">2</span> Probability<a class="anchor" aria-label="anchor" href="#probability"><i class="fas fa-link"></i></a>
+</h1>
 <p>Probability is an important and complex field of study.
 Fortunately, only a few basic issues in probability theory are essential for understanding statistics at the level covered in this book.
 These basic issues are covered in this chapter.</p>
-<div id="introduction-1" class="section level2">
-<h2><span class="header-section-number">2.1</span> Introduction</h2>
+<div id="introduction-1" class="section level2" number="2.1">
+<h2>
+<span class="header-section-number">2.1</span> Introduction<a class="anchor" aria-label="anchor" href="#introduction-1"><i class="fas fa-link"></i></a>
+</h2>
 <p>TODO: Edit the introductory section below.</p>
 <p><em>“The introductory section discusses the definitions of probability. This is not as simple as it may seem.
 The section on basic concepts covers how to compute probabilities in a variety of simple situations.
@@ -143,8 +75,10 @@ The section on base rates discusses an important but often-ignored factor in det
 The Bayes’ Theorem Demonstration shows how a tree diagram and Bayes’ Theorem result in the same answer.
 Finally, the Monty Hall Demonstration lets you play a game with a very counterintuitive result.”</em></p>
 </div>
-<div id="another-subsection" class="section level2">
-<h2><span class="header-section-number">2.2</span> Another Subsection</h2>
+<div id="another-subsection" class="section level2" number="2.2">
+<h2>
+<span class="header-section-number">2.2</span> Another Subsection<a class="anchor" aria-label="anchor" href="#another-subsection"><i class="fas fa-link"></i></a>
+</h2>
 <p>In what follows we introduce the basics of probability, which quantifies the chance that something occurs.
 Let’s start with a specific situation to serve as an example. Suppose that we have a population of 1000 people,
 each classified by gender (Female or Male) and blood type (A, AB, B, or O).
@@ -182,8 +116,10 @@ For instance, there are a total of <span class="math inline">\(235 + 24 + 63 + 2
 <p><span class="math display">\[
 \mbox{P(Type AB)} = \frac{40}{1000} = 0.04
 \]</span></p>
-<div id="sample-questions" class="section level3">
-<h3><span class="header-section-number">2.2.1</span> Sample Questions</h3>
+<div id="sample-questions" class="section level3" number="2.2.1">
+<h3>
+<span class="header-section-number">2.2.1</span> Sample Questions<a class="anchor" aria-label="anchor" href="#sample-questions"><i class="fas fa-link"></i></a>
+</h3>
 <style>
 hide {
   background-color: #d6d6d6;
@@ -195,14 +131,16 @@ hide:hover {
 }
 </style>
 <p><strong>1.</strong> What is the probability that the person selected is female?</p>
-<p><strong>Answer:</strong> <hide><span class="math inline">\(P(\text{Female}) = 1 - P(\text{Male}) = 1 - 0.57 = 0.43\)</span> This is equivalent to <span class="math inline">\((175 + 16 + 37 + 202) / 1000\)</span>.<hide></p>
+<p><strong>Answer:</strong> <hide><span class="math inline">\(P(\text{Female}) = 1 - P(\text{Male}) = 1 - 0.57 = 0.43\)</span> This is equivalent to <span class="math inline">\((175 + 16 + 37 + 202) / 1000\)</span>.<hide></hide></hide></p>
 <p><strong>2.</strong> What is the probability that the person selected is male and has type A blood and type O blood?</p>
 <p><strong>Answer:</strong> <hide><span class="math inline">\(P(\text{Male and A and O}) = 0\)</span>.
-The probability of this event occurring in the table is zero, as no men have two different types of blood. <hide></p>
+The probability of this event occurring in the table is zero, as no men have two different types of blood. <hide></hide></hide></p>
 </div>
 </div>
-<div id="and-vs-or" class="section level2">
-<h2><span class="header-section-number">2.3</span> And vs Or</h2>
+<div id="and-vs-or" class="section level2" number="2.3">
+<h2>
+<span class="header-section-number">2.3</span> And vs Or<a class="anchor" aria-label="anchor" href="#and-vs-or"><i class="fas fa-link"></i></a>
+</h2>
 <p>Above we saw that <span class="math inline">\(\mbox{P(Female and Type A)} = 0.175\)</span>. Suppose we instead would like to know <span class="math inline">\(\mbox{P(Female or Type A)}\)</span>?
 That is, we want to know the probability that a randomly selected person is either female or has type A blood.
 (Note that this group includes those who are both female <strong>and</strong> have type A blood.)
@@ -217,17 +155,21 @@ Therefore, we have</p>
 <p><span class="math display">\[
 \mbox{P(Type A or Type B)} = \frac{410}{1000} = 0.41
 \]</span></p>
-<div id="sample-questions-1" class="section level3">
-<h3><span class="header-section-number">2.3.1</span> Sample Questions</h3>
+<div id="sample-questions-1" class="section level3" number="2.3.1">
+<h3>
+<span class="header-section-number">2.3.1</span> Sample Questions<a class="anchor" aria-label="anchor" href="#sample-questions-1"><i class="fas fa-link"></i></a>
+</h3>
 <p><strong>1.</strong> What is the probability of selecting a female or male with type AB blood?</p>
-<p><strong>Answer:</strong> <hide><span class="math inline">\(P(\text{(Male or Female) and AB}) = P(\text{(Male and AB) or (Female and AB)}) = (16 + 24) / 1000 = 0.04\)</span><hide></p>
+<p><strong>Answer:</strong> <hide><span class="math inline">\(P(\text{(Male or Female) and AB}) = P(\text{(Male and AB) or (Female and AB)}) = (16 + 24) / 1000 = 0.04\)</span><hide></hide></hide></p>
 </div>
 </div>
-<div id="conditional-probability" class="section level2">
-<h2><span class="header-section-number">2.4</span> Conditional Probability</h2>
+<div id="conditional-probability" class="section level2" number="2.4">
+<h2>
+<span class="header-section-number">2.4</span> Conditional Probability<a class="anchor" aria-label="anchor" href="#conditional-probability"><i class="fas fa-link"></i></a>
+</h2>
 <p>Now suppose that we just focus on the females in the population, which forms a subset of the population.
 The probability that a randomly selected female has blood type O is an example of a <strong>conditional probability</strong>.</p>
-<p>There are 430 females in the population, and 202 of those have type O blood.<br />
+<p>There are 430 females in the population, and 202 of those have type O blood.<br>
 Hence, the probability that female chosen at random has type O blood is</p>
 <p><span class="math display">\[
 \mbox{P(Type O | Female)} = \frac{202}{430} = 0.470
@@ -246,76 +188,58 @@ Conditional probabilities arise all the time when evaluating forensic evidence. 
 <p><span class="math display">\[
 \mbox{Pr(Male | Type A)} = \frac{235}{410} = 0.573
 \]</span></p>
-<div id="sample-questions-2" class="section level3">
-<h3><span class="header-section-number">2.4.1</span> Sample Questions</h3>
+<div id="sample-questions-2" class="section level3" number="2.4.1">
+<h3>
+<span class="header-section-number">2.4.1</span> Sample Questions<a class="anchor" aria-label="anchor" href="#sample-questions-2"><i class="fas fa-link"></i></a>
+</h3>
 <p><strong>1.</strong> What is the probability of blood type AB or B given the person selected is female?</p>
-<p><strong>Answer:</strong> <hide><span class="math inline">\(P(\text{AB or B | Female}) = (16 + 37) / 430 = 0.123\)</span><hide></p>
+<p><strong>Answer:</strong> <hide><span class="math inline">\(P(\text{AB or B | Female}) = (16 + 37) / 430 = 0.123\)</span><hide></hide></hide></p>
 
 </div>
 </div>
 </div>
-            </section>
+  <div class="chapter-nav">
+<div class="prev"><a href="index.html"><span class="header-section-number">1</span> Introduction</a></div>
+<div class="next"><a href="introduction-to-probability.html"><span class="header-section-number">3</span> Introduction to Probability</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#probability"><span class="header-section-number">2</span> Probability</a></li>
+<li><a class="nav-link" href="#introduction-1"><span class="header-section-number">2.1</span> Introduction</a></li>
+<li>
+<a class="nav-link" href="#another-subsection"><span class="header-section-number">2.2</span> Another Subsection</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#sample-questions"><span class="header-section-number">2.2.1</span> Sample Questions</a></li></ul>
+</li>
+<li>
+<a class="nav-link" href="#and-vs-or"><span class="header-section-number">2.3</span> And vs Or</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#sample-questions-1"><span class="header-section-number">2.3.1</span> Sample Questions</a></li></ul>
+</li>
+<li>
+<a class="nav-link" href="#conditional-probability"><span class="header-section-number">2.4</span> Conditional Probability</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#sample-questions-2"><span class="header-section-number">2.4.1</span> Sample Questions</a></li></ul>
+</li>
+</ul>
 
-          </div>
-        </div>
-      </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="introduction-to-probability.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
-    </div>
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Forensic Science and Statistics: Version 1.0.0</strong>" was written by Jeff Holt and Joseph Swetonic. It was last built on 2022-01-11.</p>
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
-<script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": null,
-"text": null
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["forensic-statistics-book.pdf"],
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "subsection"
-}
-});
-});
-</script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
@@ -327,7 +251,22 @@ gitbook.start({
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
 </script>
 </body>
-
 </html>

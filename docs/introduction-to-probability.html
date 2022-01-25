@@ -1,250 +1,195 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html lang="en">
 <head>
-
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Introduction to Probability | Forensic Science and Statistics: Version 1.0.0</title>
-  <meta name="description" content="This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
-
-  <meta property="og:title" content="Chapter 3 Introduction to Probability | Forensic Science and Statistics: Version 1.0.0" />
-  <meta property="og:type" content="book" />
-  
-  
-  <meta property="og:description" content="This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook." />
-  <meta name="github-repo" content="rstudio/bookdown-demo" />
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Introduction to Probability | Forensic Science and Statistics: Version 1.0.0" />
-  
-  <meta name="twitter:description" content="This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook." />
-  
-
-<meta name="author" content="Jeff Holt and Joseph Swetonic" />
-
-
-<meta name="date" content="2022-01-11" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  
-  
-<link rel="prev" href="probability.html"/>
-<link rel="next" href="joint-probability.html"/>
-<script src="libs/jquery-3.5.1/jquery-3.5.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
-
-
-
-
-
-
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-
-
-
-
-<link rel="stylesheet" href="style.css" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 2 Introduction to Probability | Forensic Science and Statistics: Version 1.0.0</title>
+<meta name="author" content="Jeff Holt and Joseph Swetonic">
+<meta name="description" content="hide {  background-color: #d6d6d6;  color: #d6d6d6; } hide:hover {  background-color: white;  color: black; }  2.1 The Previous Example The example from the previous section involves the...">
+<meta name="generator" content="bookdown 0.24 with bs4_book()">
+<meta property="og:title" content="Chapter 2 Introduction to Probability | Forensic Science and Statistics: Version 1.0.0">
+<meta property="og:type" content="book">
+<meta property="og:description" content="hide {  background-color: #d6d6d6;  color: #d6d6d6; } hide:hover {  background-color: white;  color: black; }  2.1 The Previous Example The example from the previous section involves the...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 2 Introduction to Probability | Forensic Science and Statistics: Version 1.0.0">
+<meta name="twitter:description" content="hide {  background-color: #d6d6d6;  color: #d6d6d6; } hide:hover {  background-color: white;  color: black; }  2.1 The Previous Example The example from the previous section involves the...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
 </head>
+<body data-spy="scroll" data-target="#toc">
 
-<body>
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 
-
-
-  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
-
-    <div class="book-summary">
-      <nav role="navigation">
-
-<ul class="summary">
-<li><a href="./">Forensic Science and Statistics</a></li>
-
-<li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>2</b> Probability</a><ul>
-<li class="chapter" data-level="2.1" data-path="probability.html"><a href="probability.html#introduction-1"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
-<li class="chapter" data-level="2.2" data-path="probability.html"><a href="probability.html#another-subsection"><i class="fa fa-check"></i><b>2.2</b> Another Subsection</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="probability.html"><a href="probability.html#sample-questions"><i class="fa fa-check"></i><b>2.2.1</b> Sample Questions</a></li>
-</ul></li>
-<li class="chapter" data-level="2.3" data-path="probability.html"><a href="probability.html#and-vs-or"><i class="fa fa-check"></i><b>2.3</b> And vs Or</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="probability.html"><a href="probability.html#sample-questions-1"><i class="fa fa-check"></i><b>2.3.1</b> Sample Questions</a></li>
-</ul></li>
-<li class="chapter" data-level="2.4" data-path="probability.html"><a href="probability.html#conditional-probability"><i class="fa fa-check"></i><b>2.4</b> Conditional Probability</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="probability.html"><a href="probability.html#sample-questions-2"><i class="fa fa-check"></i><b>2.4.1</b> Sample Questions</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html"><i class="fa fa-check"></i><b>3</b> Introduction to Probability</a><ul>
-<li class="chapter" data-level="3.1" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#a-initial-example"><i class="fa fa-check"></i><b>3.1</b> A Initial Example</a></li>
-<li class="chapter" data-level="3.2" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#calculating-probabilities-from-data"><i class="fa fa-check"></i><b>3.2</b> Calculating Probabilities From Data</a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="joint-probability.html"><a href="joint-probability.html"><i class="fa fa-check"></i><b>4</b> Joint Probability</a><ul>
-<li class="chapter" data-level="4.0.1" data-path="joint-probability.html"><a href="joint-probability.html#sample-questions-here"><i class="fa fa-check"></i><b>4.0.1</b> Sample questions here</a></li>
-<li class="chapter" data-level="4.1" data-path="joint-probability.html"><a href="joint-probability.html#and-vs-or-1"><i class="fa fa-check"></i><b>4.1</b> And vs Or</a><ul>
-<li class="chapter" data-level="4.1.1" data-path="joint-probability.html"><a href="joint-probability.html#sample-questions-here-1"><i class="fa fa-check"></i><b>4.1.1</b> Sample questions here</a></li>
-</ul></li>
-<li class="chapter" data-level="4.2" data-path="joint-probability.html"><a href="joint-probability.html#probability-tables"><i class="fa fa-check"></i><b>4.2</b> Probability Tables</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="conditional-probability-1.html"><a href="conditional-probability-1.html"><i class="fa fa-check"></i><b>5</b> Conditional Probability</a><ul>
-<li class="chapter" data-level="5.0.1" data-path="conditional-probability-1.html"><a href="conditional-probability-1.html#sample-questions-here-2"><i class="fa fa-check"></i><b>5.0.1</b> Sample questions here</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="probability-rules.html"><a href="probability-rules.html"><i class="fa fa-check"></i><b>6</b> Probability Rules</a></li>
-<li class="chapter" data-level="7" data-path="counterintuitive-applications.html"><a href="counterintuitive-applications.html"><i class="fa fa-check"></i><b>7</b> Counterintuitive Applications</a><ul>
-<li class="chapter" data-level="7.1" data-path="counterintuitive-applications.html"><a href="counterintuitive-applications.html#birthday-paradox"><i class="fa fa-check"></i><b>7.1</b> Birthday Paradox</a></li>
-<li class="chapter" data-level="7.2" data-path="counterintuitive-applications.html"><a href="counterintuitive-applications.html#monty-hall-problem"><i class="fa fa-check"></i><b>7.2</b> Monty Hall Problem</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
-</ul>
-
-      </nav>
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Forensic Science and Statistics: Version 1.0.0</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
 
-    <div class="book-body">
-      <div class="body-inner">
-        <div class="book-header" role="navigation">
-          <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Forensic Science and Statistics: Version 1.0.0</a>
-          </h1>
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"><span class="header-section-number">1</span> Welcome</a></li>
+<li><a class="active" href="introduction-to-probability.html"><span class="header-section-number">2</span> Introduction to Probability</a></li>
+<li><a class="" href="joint-probability.html"><span class="header-section-number">3</span> Joint Probability</a></li>
+<li><a class="" href="conditional-probability.html"><span class="header-section-number">4</span> Conditional Probability</a></li>
+<li><a class="" href="probability-rules.html"><span class="header-section-number">5</span> Probability Rules</a></li>
+<li><a class="" href="counterintuitive-applications.html"><span class="header-section-number">6</span> Counterintuitive Applications</a></li>
+<li><a class="" href="graphing-distributions-qualitative-variables.html"><span class="header-section-number">7</span> Graphing Distributions: Qualitative Variables</a></li>
+<li><a class="" href="references.html">References</a></li>
+</ul>
+
+        <div class="book-extra">
+          
         </div>
-
-        <div class="page-wrapper" tabindex="-1" role="main">
-          <div class="page-inner">
-
-            <section class="normal" id="section-">
-<div id="introduction-to-probability" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> Introduction to Probability</h1>
-<div id="a-initial-example" class="section level2">
-<h2><span class="header-section-number">3.1</span> A Initial Example</h2>
-<p>We start this introduction to probability with an example that has been simplified in many ways:
-Suppose that there is a late-night break-in at a closed convenience store.
-No one is present to see the perpetrator, but there is low-quality CCTV footage.
-Unfortunately, the <em>only</em> thing that can be discerned from the video is the color of the perpetrator’s hair.</p>
-<p>Now consider two possible versions of what comes next:</p>
-<p><strong>Version 1</strong>: The video shows that the perpetrator has brown hair.
-The day after the robbery, police see a person with brown hair walking down the street.
-The person is arrested on suspicion of committing the break-in.</p>
-<p><strong>Version 2</strong>: The video shows that the perpetrator has green hair.<br />
-The day after the robbery, police see a person with green hair walking down the street.
-The person is arrested on suspicion of committing the break-in.</p>
-<p>For the sake of this simplified example,
-in both versions we assume that the color of the hair is the <em>only</em> reason the police suspect the person arrested.</p>
-<p><strong>Question</strong>: In which version do you think it is more likely that the police have arrested the person who committed the break-in?</p>
-<p>Answering the question requires considering the likelihood that the police have the correct person in both versions and deciding which is greater.</p>
-<p>A <strong>probability</strong> is a number between 0 and 1 that provides a measure of the likelihood that something occurs,
-with a larger number indicating increased likelihood. In probability terminology, the thing occurring is called an <em>event</em>.
-In our question, the event is the police arresting the correct person.</p>
-<p>Coming back to our question, we need to decide which version has the greater probability. In most communities,
-people with brown hair outnumber people with green hair – let’s assume that is the case here.
-Thus, it seems reasonable to expect that the probability of Version 2 is greater than that of Version 1:
-Brown-haired people are relatively common, so in Version 1 the probability of arresting the correct brown-haired person is low.
-On the other hand, green-haired people are rare, so in Version 2, the probability of arresting the correct person is higher.</p>
-<p>Two important points:</p>
-<ol style="list-style-type: decimal">
-<li><p>Just because the probability of the correct arrest is greater in Version 2 than in Version 1 does not mean that the probability in Version 2 is high.
-It’s possible that there are more brown-haired people than green-haired people while still having a lot of green-haird people,
-making both probabilities small. (Consider if we replace “green” with “blond”.)</p></li>
-<li><p>While the above discussion is interesting, it is important to have a better sense of the actual value of the probability.
-We start in that direction in the next section.</p></li>
-</ol>
+      </nav>
 </div>
-<div id="calculating-probabilities-from-data" class="section level2">
-<h2><span class="header-section-number">3.2</span> Calculating Probabilities From Data</h2>
-<p>Let’s suppose that the crime described above takes place on an island that has 1000 people.
-The number of people with each hair color is given in the table below.</p>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="introduction-to-probability" class="section level1" number="2">
+<h1>
+<span class="header-section-number">2</span> Introduction to Probability<a class="anchor" aria-label="anchor" href="#introduction-to-probability"><i class="fas fa-link"></i></a>
+</h1>
+<style>
+hide {
+  background-color: #d6d6d6;
+  color: #d6d6d6;
+}
+hide:hover {
+  background-color: white;
+  color: black;
+}
+</style>
+<div id="the-previous-example" class="section level2" number="2.1">
+<h2>
+<span class="header-section-number">2.1</span> The Previous Example<a class="anchor" aria-label="anchor" href="#the-previous-example"><i class="fas fa-link"></i></a>
+</h2>
+<p>The example from the previous section involves the “likelihood” of arresting the
+correct person based on their hair color. Here we begin the development of
+“probability” which allows us to quantify the notion of likelihood.</p>
+<p>Let’s start by providing some additional context for our example:
+Suppose that the crime described takes place on an island of 1000 people.
+The number of these people with each hair color is given in the table below.</p>
 <p><span class="math display">\[
 \begin{array}{c|c}
  \mathrm{Color} &amp; \mathrm{Count} \\ \hline
 \mathrm{Brown} &amp; 670  \\ 
-\mathrm{Blond} &amp; 180  \\ 
+\mathrm{Blond} &amp; 200  \\ 
 \mathrm{Red} &amp; 110  \\ 
-\mathrm{Green} &amp; 40  \\ 
+\mathrm{Green} &amp; 20  \\ 
 \end{array}\\
 \mbox{Table 1: Hair Color Counts}
 \]</span></p>
-<p>Now suppose that we select a person from this population at random. To compute the <strong>probability</strong> that this person has brown hair,
+<p>A <strong>probability</strong> is a number between 0 and 1 that provides a measure of the
+likelihood that something occurs,
+with a larger number indicating greater likelihood.</p>
+<p>Suppose that we select a person from this population at random. To compute
+the probability that this person has brown hair,
 we take the number with brown hair and divide by the number of people:</p>
 <p><span class="math display">\[\mbox{P(Brown hair)} = \frac{670}{1000} = 0.67\]</span></p>
-<p><span class="math display">\[\mbox{This space will get examples and a probability table}\]</span></p>
-
+<p>We use “P(…)” to denote the probability of something. For instance in this case
+<span class="math inline">\(\mbox{P(Brown hair)}\)</span> = “probability of brown hair.”</p>
+<div id="sample-questions" class="section level3" number="2.1.1">
+<h3>
+<span class="header-section-number">2.1.1</span> Sample Questions<a class="anchor" aria-label="anchor" href="#sample-questions"><i class="fas fa-link"></i></a>
+</h3>
+<p>Sprinkled thought this book are Sample Questions, which also play the role
+of examples. In the online version, the
+solutions to these questions are hidden. Before looking at the solution
+(by hovering), we recommend that you try to do them yourself!</p>
+<p><strong>1.</strong> What is the probability that a randomly selected person has blond hair?</p>
+<p><strong>Answer:</strong> <hide><span class="math inline">\(P(\text{Blond}) = \frac{200}{1000} = 0.20\)</span>.<hide></hide></hide></p>
+<p><strong>2.</strong> What is the probability that a randomly selected person has red hair?</p>
+<p><strong>Answer:</strong> <hide><span class="math inline">\(P(\text{Red}) = \frac{110}{1000} = 0.11\)</span>.<hide></hide></hide></p>
+<p>These examples are fine but do not answer the question from the previous section.
+In Version 1, we have a brown-haired person on the CCTV and one of the
+670 brown-haired people randomly arrested.
+Thus the probability that the correct person is arrested is</p>
+<p><span class="math display">\[\mbox{P(correct arrest)} = \frac{1}{670} = 0.00149\]</span></p>
+<p>In Version 2 of the example we have a green-haired person on CCTV, so this
+time the probability that the correct person is arrested is</p>
+<p><span class="math display">\[\mbox{P(correct arrest)} = \frac{1}{20} = 0.05\]</span></p>
+<p>Dividing the two probabilities</p>
+<p><span class="math display">\[\frac{0.05}{0.00149} = 33.5\]</span></p>
+<p>we see that a correct arrest in Version 2 is 33.5 times as likely as in Version 1.
+However, even in Version 2 there is only a 0.05 probability that the police have
+the correct person!</p>
+</div>
+<div id="sample-questions-1" class="section level3" number="2.1.2">
+<h3>
+<span class="header-section-number">2.1.2</span> Sample Questions<a class="anchor" aria-label="anchor" href="#sample-questions-1"><i class="fas fa-link"></i></a>
+</h3>
+<p><strong>1.</strong> Suppose CCTV shows a red-haired person committed the robbery, and that
+a random red-haired person is arrested. What is the probability of a correct
+arrest in this instance?</p>
+<p><strong>Answer:</strong> <hide><span class="math inline">\(P(\text{correct arrest}) = \frac{1}{110} = 0.00909\)</span>.<hide></hide></hide></p>
+<p><strong>2.</strong> Determine the number of times greater the likelihood of a correct arrest
+if the culprit has red hair vs having blond hair.</p>
+<p><strong>Answer:</strong> <hide>In the case of a blond-haired person, we have
+<span class="math inline">\(P(\text{correct arrest}) = \frac{1}{200} = 0.005\)</span>. Therefore the ratio
+of probabilities is
+<span class="math inline">\(\frac{0.00909}{0.005} = 1.81818\)</span>
+so a correct arrest for a red-haired culprit is 1.81818 times as likely
+as for a blond-haired culprit.
+<hide></hide></hide></p>
 </div>
 </div>
-            </section>
+<div id="exercises" class="section level2" number="2.2">
+<h2>
+<span class="header-section-number">2.2</span> Exercises<a class="anchor" aria-label="anchor" href="#exercises"><i class="fas fa-link"></i></a>
+</h2>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\text{Put exercises here}\)</span></li>
+</ol>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="index.html"><span class="header-section-number">1</span> Welcome</a></div>
+<div class="next"><a href="joint-probability.html"><span class="header-section-number">3</span> Joint Probability</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#introduction-to-probability"><span class="header-section-number">2</span> Introduction to Probability</a></li>
+<li>
+<a class="nav-link" href="#the-previous-example"><span class="header-section-number">2.1</span> The Previous Example</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#sample-questions"><span class="header-section-number">2.1.1</span> Sample Questions</a></li>
+<li><a class="nav-link" href="#sample-questions-1"><span class="header-section-number">2.1.2</span> Sample Questions</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#exercises"><span class="header-section-number">2.2</span> Exercises</a></li>
+</ul>
 
-          </div>
-        </div>
-      </div>
-<a href="probability.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="joint-probability.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
-    </div>
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Forensic Science and Statistics: Version 1.0.0</strong>" was written by Jeff Holt and Joseph Swetonic. It was last built on 2022-01-24.</p>
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
-<script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": null,
-"text": null
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["forensic-statistics-book.pdf"],
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "subsection"
-}
-});
-});
-</script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
@@ -256,7 +201,22 @@ gitbook.start({
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
 </script>
 </body>
-
 </html>
