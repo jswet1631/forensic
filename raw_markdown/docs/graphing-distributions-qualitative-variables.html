@@ -16,7 +16,7 @@
 <meta name="twitter:description" content="Note: Portions below modeled after content from Online Statistics Education: A Multimedia Course of Study (http://onlinestatbook.com/) Project Leader: David M. Lane, Rice University  7.1...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.0/transition.js"></script><script src="libs/bs3compat-0.3.0/tabs.js"></script><script src="libs/bs3compat-0.3.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
 </head>
 <body data-spy="scroll" data-target="#toc">
@@ -89,7 +89,7 @@ For example, the relative frequency for group B is 45/500 = 0.09.</p>
 \begin{array}{|c|c|c|} \hline
 \mathrm{ABO} &amp; &amp; \mathrm{Relative} \\
 \mathrm{Group} &amp; \mathrm{Frequency} &amp; \mathrm{Frequency} \\ \hline
-\mathrm{A} &amp; 210 &amp; 0.42  \\  \hline
+\mathrm{A} &amp; 210 &amp; 0.42 \\  \hline
 \mathrm{B} &amp; 45  &amp; 0.09 \\  \hline
 \mathrm{AB} &amp; 15 &amp; 0.03 \\  \hline
 \mathrm{O} &amp; 230 &amp; 0.46 \\  \hline
@@ -105,56 +105,84 @@ For example, the relative frequency for group B is 45/500 = 0.09.</p>
 each category is represented by a slice of the pie. The area of the slice is
 proportional to the percentage of items in the category – that is, the
 relative frequency multiplied by 100.</p>
-<div class="inline-figure"><img src="forensic-statistics-book_files/figure-html/unnamed-chunk-1-1.png" width="672"></div>
+<p><span class="math display">\[
+\begin{array}{c}
+\mbox{Joseph: Please add code to generate pie chart} \\[.1in]
+\mbox{Figure 1. Pie chart of relative frequencies for ABO blood groups}
+\end{array}
+\]</span></p>
 <p>Pie charts are effective for displaying the relative frequencies of a small
 number of categories. They are not recommended, however, when you have a large
 number of categories. Pie charts can also be confusing when they are used to
 compare the outcomes of two different surveys or experiments. In an influential
 book on the use of graphs, Edward Tufte asserted, “The only worse design than
 a pie chart is several of them.”</p>
-<p>Here is another important point about pie charts. If they are based on a small
-number of observations, it can be misleading to label the pie slices with
-percentages. For example, if just 5 people had been interviewed by Apple
-Computers, and 3 were former Windows users, it would be misleading to display
-a pie chart with the Windows slice showing 60%. With so few people interviewed,
-such a large percentage of Windows users might easily have occurred since chance
-can cause large errors with small samples. In this case, it is better to alert
-the user of the pie chart to the actual numbers involved. The slices should
-therefore be labeled with the actual frequencies observed (e.g., 3) instead
-of with percentages.</p>
 </div>
 <div id="bar-charts" class="section level2" number="7.4">
 <h2>
 <span class="header-section-number">7.4</span> Bar Charts<a class="anchor" aria-label="anchor" href="#bar-charts"><i class="fas fa-link"></i></a>
 </h2>
 <p>Bar charts can also be used to represent frequencies of different categories.
-A bar chart of the iMac purchases is shown in Figure 2. Frequencies are shown
-on the Y-axis and the type of computer previously owned is shown on the X-axis.
-Typically, the Y-axis shows the number of observations in each category rather
-than the percentage of observations as is typical in pie charts.</p>
-<p>Figure 2. Bar chart of iMac purchases as a function of previous computer ownership.</p>
+A bar chart of the ABO frequencies is shown in Figure 2. Frequencies are shown
+on the Y-axis and the blood group is shown on the X-axis.</p>
+<p><span class="math display">\[
+\begin{array}{c}
+\mbox{Joseph: Please add code to generate bar chart} \\[.1in]
+\mbox{Figure 2. Bar chart of frequencies for ABO blood groups}
+\end{array}
+\]</span></p>
+<p>The Y-axis also can show the percentage of observations
+instead of the number of observations, as in Figure 3.</p>
+<p><span class="math display">\[
+\begin{array}{c}
+\mbox{Joseph: Please add code to generate bar charts} \\[.1in]
+\mbox{Figure 3. Bar chart of percentages for ABO blood groups}
+\end{array}
+\]</span></p>
 </div>
 <div id="comparing-distributions" class="section level2" number="7.5">
 <h2>
 <span class="header-section-number">7.5</span> Comparing Distributions<a class="anchor" aria-label="anchor" href="#comparing-distributions"><i class="fas fa-link"></i></a>
 </h2>
-<p>Often we need to compare the results of different surveys, or of different
-conditions within the same overall survey. In this case, we are comparing the
-“distributions” of responses between the surveys or conditions. Bar charts are
-often excellent for illustrating differences between two distributions.
-Figure 3 shows the number of people playing card games at the Yahoo website on
-a Sunday and on a Wednesday in the Spring of 2001. We see that there were more
-players overall on Wednesday compared to Sunday. The number of people playing
-Pinochle was nonetheless the same on these two days. In contrast, there were
-about twice as many people playing hearts on Wednesday as on Sunday. Facts like
-these emerge clearly from a well-designed bar chart.</p>
-<p>Figure 3. A bar chart of the number of people playing different card games on
-Sunday and Wednesday.</p>
-<p>The bars in Figure 3 are oriented horizontally rather than vertically. The
+<p>Often we need to compare different sets of data, or different subsets
+within the same overall data set In this case, we are comparing the
+“distributions” of outcomes or responses. Bar charts are
+often excellent for illustrating differences between two distributions. Table
+2 shows the distribution (in percentages) of ABO blood groups for those in
+Albania and Australia.</p>
+<p><span class="math display">\[
+\begin{array}{|c|c|c|} \hline
+\text{ABO} &amp;&amp; \\
+\text{Group} &amp; \text{Albania} &amp; \text{Australia} \\ \hline
+\mathrm{A} &amp; 36.7 &amp; 38.0 \\  \hline
+\mathrm{B} &amp; 17.1 &amp; 10.0 \\  \hline
+\mathrm{AB} &amp; 6.1 &amp; 3.0 \\  \hline
+\mathrm{O} &amp; 40.1 &amp; 49.0 \\  \hline
+\end{array}\\
+\mbox{Table 2: ABO Blood Group Percentages}
+\]</span>
+From Table 2 we see that ABO groups B and AB are more common in Albania,
+group O is more common in Australia, and group A is similar for both.
+This can be seen in the bar chart in Figure 4.</p>
+<p><span class="math display">\[
+\begin{array}{c}
+\mbox{Joseph: Please add code to generate side-by-side bar chart 
+(oriented horizontally)} \\[.1in]
+\mbox{Figure 4. Bar chart of percentages for ABO blood groups}
+\end{array}
+\]</span></p>
+<p>The bars in Figure 4 are oriented horizontally rather than vertically. The
 horizontal format is useful when you have many categories because there is more
-room for the category labels. We’ll have more to say about bar charts when we
-consider numerical quantities later in the section Bar Charts.</p>
-
+room for the category labels.</p>
+<hr>
+</div>
+<div id="exercises-2" class="section level2" number="7.6">
+<h2>
+<span class="header-section-number">7.6</span> Exercises<a class="anchor" aria-label="anchor" href="#exercises-2"><i class="fas fa-link"></i></a>
+</h2>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\text{Put exercises here}\)</span></li>
+</ol>
 </div>
 </div>
   <div class="chapter-nav">
@@ -169,6 +197,7 @@ consider numerical quantities later in the section Bar Charts.</p>
 <li><a class="nav-link" href="#pie-charts"><span class="header-section-number">7.3</span> Pie Charts</a></li>
 <li><a class="nav-link" href="#bar-charts"><span class="header-section-number">7.4</span> Bar Charts</a></li>
 <li><a class="nav-link" href="#comparing-distributions"><span class="header-section-number">7.5</span> Comparing Distributions</a></li>
+<li><a class="nav-link" href="#exercises-2"><span class="header-section-number">7.6</span> Exercises</a></li>
 </ul>
 
       <div class="book-extra">

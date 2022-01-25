@@ -30,7 +30,7 @@ $$
 \begin{array}{|c|c|c|} \hline
 \mathrm{ABO} & & \mathrm{Relative} \\
 \mathrm{Group} & \mathrm{Frequency} & \mathrm{Frequency} \\ \hline
-\mathrm{A} & 210 & 0.42  \\  \hline
+\mathrm{A} & 210 & 0.42 \\  \hline
 \mathrm{B} & 45  & 0.09 \\  \hline
 \mathrm{AB} & 15 & 0.03 \\  \hline
 \mathrm{O} & 230 & 0.46 \\  \hline
@@ -45,25 +45,13 @@ each category is represented by a slice of the pie. The area of the slice is
 proportional to the percentage of items in the category -- that is, the 
 relative frequency multiplied by 100. 
 
-```{r echo=FALSE, message=FALSE}
+$$
+\begin{array}{c}
+\mbox{Joseph: Please add code to generate pie chart} \\[.1in]
+\mbox{Figure 1. Pie chart of relative frequencies for ABO blood groups}
+\end{array}
+$$
 
-slices <- c(42, 9, 3, 46)
-lbls <- c("A", "B", "AB", "O")
-pie(slices, labels = lbls, main="Figure 1. Pie chart of relative frequencies for ABO blood group classes")
-
-```
-
-```{r echo=FALSE, message=FALSE}
-
-library(ggplot2)
-p <- ggplot(penguins_raw, aes(x = culmen_length_mm, y = culmen_depth_mm, color = species, fill = species)) +
-  geom_point() +
-  geom_smooth(method = "lm", formula = "y ~ x", alpha = 0.3) +
-  scale_color_viridis_d() +
-  scale_fill_viridis_d() +
-  labs(x = "Culmen Length (mm)", y = "Culmen depth (mm)", fill = "Species", color = "Species")
-p
-```
 
 Pie charts are effective for displaying the relative frequencies of a small 
 number of categories. They are not recommended, however, when you have a large 
@@ -72,45 +60,68 @@ compare the outcomes of two different surveys or experiments. In an influential
 book on the use of graphs, Edward Tufte asserted, "The only worse design than 
 a pie chart is several of them."
 
-Here is another important point about pie charts. If they are based on a small 
-number of observations, it can be misleading to label the pie slices with 
-percentages. For example, if just 5 people had been interviewed by Apple 
-Computers, and 3 were former Windows users, it would be misleading to display 
-a pie chart with the Windows slice showing 60%. With so few people interviewed, 
-such a large percentage of Windows users might easily have occurred since chance 
-can cause large errors with small samples. In this case, it is better to alert 
-the user of the pie chart to the actual numbers involved. The slices should 
-therefore be labeled with the actual frequencies observed (e.g., 3) instead 
-of with percentages.
 
 ## Bar Charts
 
 Bar charts can also be used to represent frequencies of different categories. 
-A bar chart of the iMac purchases is shown in Figure 2. Frequencies are shown 
-on the Y-axis and the type of computer previously owned is shown on the X-axis. 
-Typically, the Y-axis shows the number of observations in each category rather 
-than the percentage of observations as is typical in pie charts.
+A bar chart of the ABO frequencies is shown in Figure 2. Frequencies are shown 
+on the Y-axis and the blood group is shown on the X-axis. 
 
-Figure 2. Bar chart of iMac purchases as a function of previous computer ownership.
+$$
+\begin{array}{c}
+\mbox{Joseph: Please add code to generate bar chart} \\[.1in]
+\mbox{Figure 2. Bar chart of frequencies for ABO blood groups}
+\end{array}
+$$
+
+The Y-axis also can show the percentage of observations
+instead of the number of observations, as in Figure 3. 
+
+$$
+\begin{array}{c}
+\mbox{Joseph: Please add code to generate bar charts} \\[.1in]
+\mbox{Figure 3. Bar chart of percentages for ABO blood groups}
+\end{array}
+$$
 
 ## Comparing Distributions
 
-Often we need to compare the results of different surveys, or of different 
-conditions within the same overall survey. In this case, we are comparing the 
-"distributions" of responses between the surveys or conditions. Bar charts are 
-often excellent for illustrating differences between two distributions. 
-Figure 3 shows the number of people playing card games at the Yahoo website on 
-a Sunday and on a Wednesday in the Spring of 2001. We see that there were more 
-players overall on Wednesday compared to Sunday. The number of people playing 
-Pinochle was nonetheless the same on these two days. In contrast, there were 
-about twice as many people playing hearts on Wednesday as on Sunday. Facts like 
-these emerge clearly from a well-designed bar chart.
+Often we need to compare different sets of data, or different subsets
+within the same overall data set In this case, we are comparing the 
+"distributions" of outcomes or responses. Bar charts are 
+often excellent for illustrating differences between two distributions.  Table
+2 shows the distribution (in percentages) of ABO blood groups for those in
+Albania and Australia.
 
+$$
+\begin{array}{|c|c|c|} \hline
+\text{ABO} && \\
+\text{Group} & \text{Albania} & \text{Australia} \\ \hline
+\mathrm{A} & 36.7 & 38.0 \\  \hline
+\mathrm{B} & 17.1 & 10.0 \\  \hline
+\mathrm{AB} & 6.1 & 3.0 \\  \hline
+\mathrm{O} & 40.1 & 49.0 \\  \hline
+\end{array}\\
+\mbox{Table 2: ABO Blood Group Percentages}
+$$
+From Table 2 we see that ABO groups B and AB are more common in Albania, 
+group O is more common in Australia, and group A is similar for both.
+This can be seen in the bar chart in Figure 4.
 
-Figure 3. A bar chart of the number of people playing different card games on 
-Sunday and Wednesday.
+$$
+\begin{array}{c}
+\mbox{Joseph: Please add code to generate side-by-side bar chart 
+(oriented horizontally)} \\[.1in]
+\mbox{Figure 4. Bar chart of percentages for ABO blood groups}
+\end{array}
+$$
 
-The bars in Figure 3 are oriented horizontally rather than vertically. The 
+The bars in Figure 4 are oriented horizontally rather than vertically. The 
 horizontal format is useful when you have many categories because there is more 
-room for the category labels. We’ll have more to say about bar charts when we 
-consider numerical quantities later in the section Bar Charts.
+room for the category labels. 
+
+---
+
+## Exercises
+
+1. $\text{Put exercises here}$
