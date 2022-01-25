@@ -6,7 +6,7 @@
 
 ## Introduction
 
-Suppose that we have a community of 1000 people.  Each is classified based on 
+Suppose that we have a community of 500 people.  Each is classified based on 
 their ABO blood group, which is one of A, B, AB, or O.  Below we consider
 graphical methods for displaying the results of the blood group classifications.
 This starts with tables, and then continues on to how to graph data that 
@@ -24,31 +24,46 @@ All of the graphical methods shown in this section are derived from frequency
 tables. Table 1 shows a frequency table for the results of the ABO blood group
 classification.  It also shows the 
 relative frequencies, which are the proportion classified in each category. 
-For example, the relative frequency for group B is 90/1000 = 0.09.
+For example, the relative frequency for group B is 45/500 = 0.09.
 
 $$
 \begin{array}{|c|c|c|} \hline
 \mathrm{ABO} & & \mathrm{Relative} \\
 \mathrm{Group} & \mathrm{Frequency} & \mathrm{Frequency} \\ \hline
-\mathrm{A} & 420 & 0.42  \\  \hline
-\mathrm{B} & 90  & 0.09 \\  \hline
-\mathrm{AB} & 30 & 0.03 \\  \hline
-\mathrm{O} & 460 & 0.46 \\  \hline
+\mathrm{A} & 210 & 0.42  \\  \hline
+\mathrm{B} & 45  & 0.09 \\  \hline
+\mathrm{AB} & 15 & 0.03 \\  \hline
+\mathrm{O} & 230 & 0.46 \\  \hline
 \end{array}\\
 \mbox{Table 1: Frequency Table for ABO Group Data}
 $$
 
 ## Pie Charts
 
-The pie chart in Figure 1 shows the results of the iMac study. In a pie chart, 
+The pie chart in Figure 1 depicts the ABO group data. In a pie chart, 
 each category is represented by a slice of the pie. The area of the slice is 
-proportional to the percentage of responses in the category. This is simply the 
-relative frequency multiplied by 100. Although most iMac purchasers were 
-Macintosh owners, Apple was encouraged by the 12% of purchasers who were former 
-Windows users, and by the 17% of purchasers who were buying a computer for the 
-first time.
+proportional to the percentage of items in the category -- that is, the 
+relative frequency multiplied by 100. 
 
-Figure 1. Pie chart of relative frequencies for ABO blood group classes.
+```{r echo=FALSE, message=FALSE}
+
+slices <- c(42, 9, 3, 46)
+lbls <- c("A", "B", "AB", "O")
+pie(slices, labels = lbls, main="Figure 1. Pie chart of relative frequencies for ABO blood group classes")
+
+```
+
+```{r echo=FALSE, message=FALSE}
+
+library(ggplot2)
+p <- ggplot(penguins_raw, aes(x = culmen_length_mm, y = culmen_depth_mm, color = species, fill = species)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = "y ~ x", alpha = 0.3) +
+  scale_color_viridis_d() +
+  scale_fill_viridis_d() +
+  labs(x = "Culmen Length (mm)", y = "Culmen depth (mm)", fill = "Species", color = "Species")
+p
+```
 
 Pie charts are effective for displaying the relative frequencies of a small 
 number of categories. They are not recommended, however, when you have a large 
