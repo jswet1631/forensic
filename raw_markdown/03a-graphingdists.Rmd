@@ -1,0 +1,101 @@
+# Graphing Distributions: Qualitative Variables
+
+ <font size="2"> Note: Portions below modeled after content from
+ *Online Statistics Education: A Multimedia Course of Study* 
+ (http://onlinestatbook.com/) Project Leader: David M. Lane, Rice University </font>
+
+## Introduction
+
+Suppose that we have a community of 1000 people.  Each is classified based on 
+their ABO blood group, which is one of A, B, AB, or O.  Below we consider
+graphical methods for displaying the results of the blood group classifications.
+This starts with tables, and then continues on to how to graph data that 
+fall into a small number of categories. 
+
+This is an example of *qualitative data*.  One characteristic of such data is
+that the different values do not come with any pre-established ordering.
+This can be contrasted with quantitative data, such as the weight of a bag of an 
+unknown substance, which does have a natural ordering with respect to 
+different weights.
+
+## Frequency Tables
+
+All of the graphical methods shown in this section are derived from frequency 
+tables. Table 1 shows a frequency table for the results of the ABO blood group
+classification.  It also shows the 
+relative frequencies, which are the proportion classified in each category. 
+For example, the relative frequency for group B is 90/1000 = 0.09.
+
+$$
+\begin{array}{|c|c|c|} \hline
+\mathrm{ABO} & & \mathrm{Relative} \\
+\mathrm{Group} & \mathrm{Frequency} & \mathrm{Frequency} \\ \hline
+\mathrm{A} & 420 & 0.42  \\  \hline
+\mathrm{B} & 90  & 0.09 \\  \hline
+\mathrm{AB} & 30 & 0.03 \\  \hline
+\mathrm{O} & 460 & 0.46 \\  \hline
+\end{array}\\
+\mbox{Table 1: Frequency Table for ABO Group Data}
+$$
+
+## Pie Charts
+
+The pie chart in Figure 1 shows the results of the iMac study. In a pie chart, 
+each category is represented by a slice of the pie. The area of the slice is 
+proportional to the percentage of responses in the category. This is simply the 
+relative frequency multiplied by 100. Although most iMac purchasers were 
+Macintosh owners, Apple was encouraged by the 12% of purchasers who were former 
+Windows users, and by the 17% of purchasers who were buying a computer for the 
+first time.
+
+Figure 1. Pie chart of relative frequencies for ABO blood group classes.
+
+Pie charts are effective for displaying the relative frequencies of a small 
+number of categories. They are not recommended, however, when you have a large 
+number of categories. Pie charts can also be confusing when they are used to 
+compare the outcomes of two different surveys or experiments. In an influential 
+book on the use of graphs, Edward Tufte asserted, "The only worse design than 
+a pie chart is several of them."
+
+Here is another important point about pie charts. If they are based on a small 
+number of observations, it can be misleading to label the pie slices with 
+percentages. For example, if just 5 people had been interviewed by Apple 
+Computers, and 3 were former Windows users, it would be misleading to display 
+a pie chart with the Windows slice showing 60%. With so few people interviewed, 
+such a large percentage of Windows users might easily have occurred since chance 
+can cause large errors with small samples. In this case, it is better to alert 
+the user of the pie chart to the actual numbers involved. The slices should 
+therefore be labeled with the actual frequencies observed (e.g., 3) instead 
+of with percentages.
+
+## Bar Charts
+
+Bar charts can also be used to represent frequencies of different categories. 
+A bar chart of the iMac purchases is shown in Figure 2. Frequencies are shown 
+on the Y-axis and the type of computer previously owned is shown on the X-axis. 
+Typically, the Y-axis shows the number of observations in each category rather 
+than the percentage of observations as is typical in pie charts.
+
+Figure 2. Bar chart of iMac purchases as a function of previous computer ownership.
+
+## Comparing Distributions
+
+Often we need to compare the results of different surveys, or of different 
+conditions within the same overall survey. In this case, we are comparing the 
+"distributions" of responses between the surveys or conditions. Bar charts are 
+often excellent for illustrating differences between two distributions. 
+Figure 3 shows the number of people playing card games at the Yahoo website on 
+a Sunday and on a Wednesday in the Spring of 2001. We see that there were more 
+players overall on Wednesday compared to Sunday. The number of people playing 
+Pinochle was nonetheless the same on these two days. In contrast, there were 
+about twice as many people playing hearts on Wednesday as on Sunday. Facts like 
+these emerge clearly from a well-designed bar chart.
+
+
+Figure 3. A bar chart of the number of people playing different card games on 
+Sunday and Wednesday.
+
+The bars in Figure 3 are oriented horizontally rather than vertically. The 
+horizontal format is useful when you have many categories because there is more 
+room for the category labels. We’ll have more to say about bar charts when we 
+consider numerical quantities later in the section Bar Charts.

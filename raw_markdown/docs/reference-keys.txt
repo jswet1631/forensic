@@ -18,3 +18,9 @@ probability-rules
 counterintuitive-applications
 birthday-paradox
 monty-hall-problem
+graphing-distributions-qualitative-variables
+introduction
+frequency-tables
+pie-charts
+bar-charts
+comparing-distributions
