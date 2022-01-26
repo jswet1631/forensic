@@ -25,3 +25,6 @@ pie-charts
 bar-charts
 comparing-distributions
 exercises-2
+graphing-distributions-histograms
+introduction-1
+exercises-3
