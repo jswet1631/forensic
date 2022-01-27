@@ -38,6 +38,17 @@ $$
    
 ### Sample Questions
 
+<style>
+hide {
+  background-color: #d6d6d6;
+  color: #d6d6d6;
+}
+hide:hover {
+  background-color: white;
+  color: black;
+}
+</style>
+
 **1.** What is the probability of blood type AB or B given the person selected is female?
 
 **Answer:** <hide>$P(\text{AB or B | Female}) = (16 + 37) / 430 = 0.123$<hide>
