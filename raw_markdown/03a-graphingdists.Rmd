@@ -40,18 +40,23 @@ $$
 
 ## Pie Charts
 
-The pie chart in Figure 1 depicts the ABO group data. In a pie chart, 
+The pie chart in Figure \@ref(fig:pie-chart) depicts the ABO group data. In a pie chart, 
 each category is represented by a slice of the pie. The area of the slice is 
 proportional to the percentage of items in the category -- that is, the 
-relative frequency multiplied by 100. 
+relative frequency multiplied by 100.
 
-$$
-\begin{array}{c}
-\mbox{Joseph: Please add code to generate pie chart} \\[.1in]
-\mbox{Figure 1. Pie chart of relative frequencies for ABO blood groups}
-\end{array}
-$$
+```{r pie-chart, fig.cap="Relative Frequencies for ABO Blood Groups", warning=FALSE, echo=FALSE, message=FALSE}
+library(dplyr)
+library(ggplot2)
 
+data <- data.frame(ABO_Group = c("A", "B", "AB", "O"), value = c(210, 45, 15, 230)) %>%
+  mutate(prop = value / sum(value) * 100)
+
+ggplot(data = data, aes(x = "", y = prop, fill = ABO_Group)) + 
+  geom_bar(stat = "identity", width = 1, color = "white") + 
+  coord_polar("y", start = 0) + 
+  theme_void()
+```
 
 Pie charts are effective for displaying the relative frequencies of a small 
 number of categories. They are not recommended, however, when you have a large 
@@ -64,25 +69,23 @@ a pie chart is several of them."
 ## Bar Charts
 
 Bar charts can also be used to represent frequencies of different categories. 
-A bar chart of the ABO frequencies is shown in Figure 2. Frequencies are shown 
+A bar chart of the ABO frequencies is shown in Figure \@ref(fig:bar-chart). Frequencies are shown 
 on the Y-axis and the blood group is shown on the X-axis. 
 
-$$
-\begin{array}{c}
-\mbox{Joseph: Please add code to generate bar chart} \\[.1in]
-\mbox{Figure 2. Bar chart of frequencies for ABO blood groups}
-\end{array}
-$$
+```{r bar-chart, fig.cap="Frequencies for ABO Blood Groups", echo=FALSE}
+ggplot(data, aes(ABO_Group, value)) + 
+  geom_bar(stat = "identity", fill = "steelblue", width = 0.6) + 
+  labs(x = "ABO Group", y = "Frequency")
+```
 
-The Y-axis also can show the percentage of observations
-instead of the number of observations, as in Figure 3. 
+The Y-axis also can show the percentage of observations 
+instead of the number of observations, as in Figure \@ref(fig:bar-chart-percent).
 
-$$
-\begin{array}{c}
-\mbox{Joseph: Please add code to generate bar charts} \\[.1in]
-\mbox{Figure 3. Bar chart of percentages for ABO blood groups}
-\end{array}
-$$
+```{r bar-chart-percent, echo=FALSE, fig.cap="Percentages for ABO Blood Groups"}
+ggplot(data, aes(ABO_Group, prop)) + 
+  geom_bar(stat = "identity", fill = "#B4464B", width = 0.6) + 
+  labs(x = "ABO Group", y = "Percentage")
+```
 
 ## Comparing Distributions
 
@@ -106,17 +109,22 @@ $$
 $$
 From Table 2 we see that ABO groups B and AB are more common in Albania, 
 group O is more common in Australia, and group A is similar for both.
-This can be seen in the bar chart in Figure 4.
+This can be seen in the bar chart in Figure \@ref(fig:horiz-bar).
 
-$$
-\begin{array}{c}
-\mbox{Joseph: Please add code to generate side-by-side bar chart 
-(oriented horizontally)} \\[.1in]
-\mbox{Figure 4. Bar chart of percentages for ABO blood groups}
-\end{array}
-$$
+```{r horiz-bar, echo=FALSE, fig.cap="Percentages for ABO Blood Groups by Country"}
+library(tidyr)
 
-The bars in Figure 4 are oriented horizontally rather than vertically. The 
+data <- data.frame(ABO_Group = c("A", "B", "AB", "O"), 
+                   Albania = c(36.7, 17.1, 6.1, 40.1), 
+                   Australia = c(38, 10, 3, 49)) %>%
+  pivot_longer(!ABO_Group, names_to = "Country", values_to = "Percentage")
+
+ggplot(data, aes(ABO_Group, Percentage, fill = Country)) + 
+  geom_bar(stat = "identity", position = "dodge", width = 0.8) + 
+  coord_flip()
+```
+
+The bars in Figure \@ref(fig:horiz-bar) are oriented horizontally rather than vertically. The 
 horizontal format is useful when you have many categories because there is more 
 room for the category labels. 
 
@@ -125,3 +133,42 @@ room for the category labels.
 ## Exercises
 
 1. $\text{Put exercises here}$
+
+
+## Code Appendix
+
+```{r, eval=FALSE}
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+
+data <- data.frame(ABO_Group = c("A", "B", "AB", "O"), value = c(210, 45, 15, 230)) %>%
+  mutate(prop = value / sum(value) * 100)
+
+# Figure 7.1 -----
+ggplot(data = data, aes(x = "", y = prop, fill = ABO_Group)) + 
+  geom_bar(stat = "identity", width = 1, color = "white") + 
+  coord_polar("y", start = 0) + 
+  theme_void()
+
+# Figure 7.2 -----
+ggplot(data, aes(ABO_Group, value)) + 
+  geom_bar(stat = "identity", fill = "steelblue") + 
+  labs(x = "ABO Group", y = "Frequency")
+
+# Figure 7.3 -----
+ggplot(data, aes(ABO_Group, prop)) + 
+  geom_bar(stat = "identity", fill = "#B4464B") + 
+  labs(x = "ABO Group", y = "Percentage")
+
+# Figure 7.4 -----
+data <- data.frame(ABO_Group = c("A", "B", "AB", "O"), 
+                   Albania = c(36.7, 17.1, 6.1, 40.1), 
+                   Australia = c(38, 10, 3, 49)) %>%
+  pivot_longer(!ABO_Group, names_to = "Country", values_to = "Percentage")
+
+ggplot(data, aes(ABO_Group, Percentage, fill = Country)) + 
+  geom_bar(stat = "identity", position = "dodge", width = 0.8) + 
+  labs(x = "ABO Group")
+  coord_flip()
+```

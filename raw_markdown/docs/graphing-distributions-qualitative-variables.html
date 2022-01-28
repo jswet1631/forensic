@@ -102,16 +102,16 @@ For example, the relative frequency for group B is 45/500 = 0.09.</p>
 <h2>
 <span class="header-section-number">7.3</span> Pie Charts<a class="anchor" aria-label="anchor" href="#pie-charts"><i class="fas fa-link"></i></a>
 </h2>
-<p>The pie chart in Figure 1 depicts the ABO group data. In a pie chart,
+<p>The pie chart in Figure <a href="graphing-distributions-qualitative-variables.html#fig:pie-chart">7.1</a> depicts the ABO group data. In a pie chart,
 each category is represented by a slice of the pie. The area of the slice is
 proportional to the percentage of items in the category – that is, the
 relative frequency multiplied by 100.</p>
-<p><span class="math display">\[
-\begin{array}{c}
-\mbox{Joseph: Please add code to generate pie chart} \\[.1in]
-\mbox{Figure 1. Pie chart of relative frequencies for ABO blood groups}
-\end{array}
-\]</span></p>
+<div class="figure">
+<span style="display:block;" id="fig:pie-chart"></span>
+<img src="forensic-statistics-book_files/figure-html/pie-chart-1.png" alt="Relative Frequencies for ABO Blood Groups" width="672"><p class="caption">
+Figure 7.1: Relative Frequencies for ABO Blood Groups
+</p>
+</div>
 <p>Pie charts are effective for displaying the relative frequencies of a small
 number of categories. They are not recommended, however, when you have a large
 number of categories. Pie charts can also be confusing when they are used to
@@ -124,22 +124,22 @@ a pie chart is several of them.”</p>
 <span class="header-section-number">7.4</span> Bar Charts<a class="anchor" aria-label="anchor" href="#bar-charts"><i class="fas fa-link"></i></a>
 </h2>
 <p>Bar charts can also be used to represent frequencies of different categories.
-A bar chart of the ABO frequencies is shown in Figure 2. Frequencies are shown
+A bar chart of the ABO frequencies is shown in Figure <a href="graphing-distributions-qualitative-variables.html#fig:bar-chart">7.2</a>. Frequencies are shown
 on the Y-axis and the blood group is shown on the X-axis.</p>
-<p><span class="math display">\[
-\begin{array}{c}
-\mbox{Joseph: Please add code to generate bar chart} \\[.1in]
-\mbox{Figure 2. Bar chart of frequencies for ABO blood groups}
-\end{array}
-\]</span></p>
+<div class="figure">
+<span style="display:block;" id="fig:bar-chart"></span>
+<img src="forensic-statistics-book_files/figure-html/bar-chart-1.png" alt="Frequencies for ABO Blood Groups" width="672"><p class="caption">
+Figure 7.2: Frequencies for ABO Blood Groups
+</p>
+</div>
 <p>The Y-axis also can show the percentage of observations
-instead of the number of observations, as in Figure 3.</p>
-<p><span class="math display">\[
-\begin{array}{c}
-\mbox{Joseph: Please add code to generate bar charts} \\[.1in]
-\mbox{Figure 3. Bar chart of percentages for ABO blood groups}
-\end{array}
-\]</span></p>
+instead of the number of observations, as in Figure <a href="graphing-distributions-qualitative-variables.html#fig:bar-chart-percent">7.3</a>.</p>
+<div class="figure">
+<span style="display:block;" id="fig:bar-chart-percent"></span>
+<img src="forensic-statistics-book_files/figure-html/bar-chart-percent-1.png" alt="Percentages for ABO Blood Groups" width="672"><p class="caption">
+Figure 7.3: Percentages for ABO Blood Groups
+</p>
+</div>
 </div>
 <div id="comparing-distributions" class="section level2">
 <h2>
@@ -164,15 +164,14 @@ Albania and Australia.</p>
 \]</span>
 From Table 2 we see that ABO groups B and AB are more common in Albania,
 group O is more common in Australia, and group A is similar for both.
-This can be seen in the bar chart in Figure 4.</p>
-<p><span class="math display">\[
-\begin{array}{c}
-\mbox{Joseph: Please add code to generate side-by-side bar chart 
-(oriented horizontally)} \\[.1in]
-\mbox{Figure 4. Bar chart of percentages for ABO blood groups}
-\end{array}
-\]</span></p>
-<p>The bars in Figure 4 are oriented horizontally rather than vertically. The
+This can be seen in the bar chart in Figure <a href="graphing-distributions-qualitative-variables.html#fig:horiz-bar">7.4</a>.</p>
+<div class="figure">
+<span style="display:block;" id="fig:horiz-bar"></span>
+<img src="forensic-statistics-book_files/figure-html/horiz-bar-1.png" alt="Percentages for ABO Blood Groups by Country" width="672"><p class="caption">
+Figure 7.4: Percentages for ABO Blood Groups by Country
+</p>
+</div>
+<p>The bars in Figure <a href="graphing-distributions-qualitative-variables.html#fig:horiz-bar">7.4</a> are oriented horizontally rather than vertically. The
 horizontal format is useful when you have many categories because there is more
 room for the category labels.</p>
 <hr>
@@ -184,6 +183,46 @@ room for the category labels.</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\text{Put exercises here}\)</span></li>
 </ol>
+</div>
+<div id="code-appendix" class="section level2">
+<h2>
+<span class="header-section-number">7.7</span> Code Appendix<a class="anchor" aria-label="anchor" href="#code-appendix"><i class="fas fa-link"></i></a>
+</h2>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyr.tidyverse.org">tidyr</a></span><span class="op">)</span>
+
+<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>ABO_Group <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"AB"</span>, <span class="st">"O"</span><span class="op">)</span>, value <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">210</span>, <span class="fl">45</span>, <span class="fl">15</span>, <span class="fl">230</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>prop <span class="op">=</span> <span class="va">value</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">value</span><span class="op">)</span> <span class="op">*</span> <span class="fl">100</span><span class="op">)</span>
+
+<span class="co"># Figure 7.1 -----</span>
+<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">data</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">""</span>, y <span class="op">=</span> <span class="va">prop</span>, fill <span class="op">=</span> <span class="va">ABO_Group</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> 
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>stat <span class="op">=</span> <span class="st">"identity"</span>, width <span class="op">=</span> <span class="fl">1</span>, color <span class="op">=</span> <span class="st">"white"</span><span class="op">)</span> <span class="op">+</span> 
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_polar.html">coord_polar</a></span><span class="op">(</span><span class="st">"y"</span>, start <span class="op">=</span> <span class="fl">0</span><span class="op">)</span> <span class="op">+</span> 
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_void</a></span><span class="op">(</span><span class="op">)</span>
+
+<span class="co"># Figure 7.2 -----</span>
+<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">data</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">ABO_Group</span>, <span class="va">value</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> 
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>stat <span class="op">=</span> <span class="st">"identity"</span>, fill <span class="op">=</span> <span class="st">"steelblue"</span><span class="op">)</span> <span class="op">+</span> 
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"ABO Group"</span>, y <span class="op">=</span> <span class="st">"Frequency"</span><span class="op">)</span>
+
+<span class="co"># Figure 7.3 -----</span>
+<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">data</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">ABO_Group</span>, <span class="va">prop</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> 
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>stat <span class="op">=</span> <span class="st">"identity"</span>, fill <span class="op">=</span> <span class="st">"#B4464B"</span><span class="op">)</span> <span class="op">+</span> 
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"ABO Group"</span>, y <span class="op">=</span> <span class="st">"Percentage"</span><span class="op">)</span>
+
+<span class="co"># Figure 7.4 -----</span>
+<span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>ABO_Group <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"AB"</span>, <span class="st">"O"</span><span class="op">)</span>, 
+                   Albania <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">36.7</span>, <span class="fl">17.1</span>, <span class="fl">6.1</span>, <span class="fl">40.1</span><span class="op">)</span>, 
+                   Australia <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">38</span>, <span class="fl">10</span>, <span class="fl">3</span>, <span class="fl">49</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op">(</span><span class="op">!</span><span class="va">ABO_Group</span>, names_to <span class="op">=</span> <span class="st">"Country"</span>, values_to <span class="op">=</span> <span class="st">"Percentage"</span><span class="op">)</span>
+
+<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">data</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">ABO_Group</span>, <span class="va">Percentage</span>, fill <span class="op">=</span> <span class="va">Country</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> 
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>stat <span class="op">=</span> <span class="st">"identity"</span>, position <span class="op">=</span> <span class="st">"dodge"</span>, width <span class="op">=</span> <span class="fl">0.8</span><span class="op">)</span> <span class="op">+</span> 
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"ABO Group"</span><span class="op">)</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_flip.html">coord_flip</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+
 </div>
 </div>
   <div class="chapter-nav">
@@ -199,6 +238,7 @@ room for the category labels.</p>
 <li><a class="nav-link" href="#bar-charts"><span class="header-section-number">7.4</span> Bar Charts</a></li>
 <li><a class="nav-link" href="#comparing-distributions"><span class="header-section-number">7.5</span> Comparing Distributions</a></li>
 <li><a class="nav-link" href="#exercises-2"><span class="header-section-number">7.6</span> Exercises</a></li>
+<li><a class="nav-link" href="#code-appendix"><span class="header-section-number">7.7</span> Code Appendix</a></li>
 </ul>
 
       <div class="book-extra">
@@ -215,11 +255,7 @@ room for the category labels.</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-<<<<<<< Updated upstream
-    <p>"<strong>Forensic Science and Statistics: Version 1.0.0</strong>" was written by Jeff Holt and Joseph Swetonic. It was last built on 2022-01-26.</p>
-=======
-    <p>"<strong>Forensic Science and Statistics: Version 1.0.0</strong>" was written by Jeff Holt and Joseph Swetonic. It was last built on 2022-01-25.</p>
->>>>>>> Stashed changes
+    <p>"<strong>Forensic Science and Statistics: Version 1.0.0</strong>" was written by Jeff Holt and Joseph Swetonic. It was last built on 2022-01-27.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
