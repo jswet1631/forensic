@@ -41,6 +41,46 @@
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs}
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -80,11 +120,7 @@
 
 \title{Forensic Science and Statistics: Version 1.0.0}
 \author{Jeff Holt and Joseph Swetonic}
-<<<<<<< Updated upstream
-\date{2022-01-26}
-=======
-\date{2022-01-25}
->>>>>>> Stashed changes
+\date{2022-01-27}
 
 \begin{document}
 \maketitle
@@ -272,32 +308,11 @@ as for a blond-haired culprit.
 \hypertarget{exercises}{%
 \section{Exercises}\label{exercises}}
 
-Use Table 2 to answer the following questions.
-
-\[
-\begin{array}{c|c}
- \mathrm{Color} & \mathrm{Count} \\ \hline
-\mathrm{Black} & 419  \\ 
-\mathrm{Blond} & 152  \\ 
-\mathrm{Brown} & 714  \\ 
-\mathrm{Red} & 70  \\ 
-\end{array}\\
-\mbox{Table 2: Observed Hair Color}
-\]
-
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  What is the probability that a randomly selected individual has black hair?
-\item
-  And what is the probability of randomly selecting someone with brown hair?
-\item
-  Determine the number of times greater the likelihood of a correct arrest is if CCTV shows the culprit with black hair vs brown hair.
-\item
-  Is the likelihood greater when the culprit has black hair or brown hair? Why?
-\item
-  A six-sided die was dropped at a crime scene and a five was rolled. What is the probability that a five is rolled twice in a row?
+  \(\text{Put exercises here}\)
 \end{enumerate}
 
 \hypertarget{joint-probability}{%
@@ -591,20 +606,20 @@ This is called the \textbf{multiplication rule}. Reversing the order of A and B 
 \]
 
 In the blood type example, it is clear that P(Female and Type O) is the same as P(Type O and Female).
-This is true in general: P(A and B) = P(B and A)\}, it follows that
+This is true in general: P(A and B) = P(B and A), it follows that
 \[
-\mbox{Pr(A $|$ B)}\mbox{Pr(B)}  = \mbox{Pr(B $|$ A)}\mbox{Pr(A)} 
+\mbox{Pr(A | B)}\mbox{Pr(B)}  = \mbox{Pr(B | A)}\mbox{Pr(A)} 
 \]
 so that
 \[
-\mbox{Pr(A $|$ B)}  = \mbox{Pr(B $|$ A)}\frac{\mbox{Pr(A)}}{\mbox{Pr(B)}}
+\mbox{Pr(A | B)}  = \mbox{Pr(B | A)}\frac{\mbox{Pr(A)}}{\mbox{Pr(B)}}
 \]
-This formula is called \textbf{Bayes Rule}. Applied to our earlier population, we have
+This formula is called \(\textbf{Bayes Rule}\). Applied to our earlier population, we have
 \[
-\mbox{Pr(Type O $|$ Female)} = \mbox{Pr(Female $|$ Type O)}\frac{\mbox{Pr(Type O)}}{\mbox{Pr(Female)}}
+\mbox{Pr(Type O | Female)} = \mbox{Pr(Female | Type O)}\frac{\mbox{Pr(Type O)}}{\mbox{Pr(Female)}}
 \]
 
-Two outcomes A and B are \textbf{independent} when \$\mbox{Pr(A $|$ B)} = \mbox{Pr(A)}\$,
+Two outcomes A and B are \(\textbf{independent}\) when \(\mbox{Pr(A | B)} = \mbox{Pr(A)}\),
 which implies that knowing if B has occurred has no effect on the probability of A.
 
 \hypertarget{counterintuitive-applications}{%
@@ -699,17 +714,16 @@ For example, the relative frequency for group B is 45/500 = 0.09.
 \hypertarget{pie-charts}{%
 \section{Pie Charts}\label{pie-charts}}
 
-The pie chart in Figure 1 depicts the ABO group data. In a pie chart,
+The pie chart in Figure \ref{fig:pie-chart} depicts the ABO group data. In a pie chart,
 each category is represented by a slice of the pie. The area of the slice is
 proportional to the percentage of items in the category -- that is, the
 relative frequency multiplied by 100.
 
-\[
-\begin{array}{c}
-\mbox{Joseph: Please add code to generate pie chart} \\[.1in]
-\mbox{Figure 1. Pie chart of relative frequencies for ABO blood groups}
-\end{array}
-\]
+\begin{figure}
+\centering
+\includegraphics{forensic-statistics-book_files/figure-latex/pie-chart-1.pdf}
+\caption{\label{fig:pie-chart}Relative Frequencies for ABO Blood Groups}
+\end{figure}
 
 Pie charts are effective for displaying the relative frequencies of a small
 number of categories. They are not recommended, however, when you have a large
@@ -722,25 +736,23 @@ a pie chart is several of them.''
 \section{Bar Charts}\label{bar-charts}}
 
 Bar charts can also be used to represent frequencies of different categories.
-A bar chart of the ABO frequencies is shown in Figure 2. Frequencies are shown
+A bar chart of the ABO frequencies is shown in Figure \ref{fig:bar-chart}. Frequencies are shown
 on the Y-axis and the blood group is shown on the X-axis.
 
-\[
-\begin{array}{c}
-\mbox{Joseph: Please add code to generate bar chart} \\[.1in]
-\mbox{Figure 2. Bar chart of frequencies for ABO blood groups}
-\end{array}
-\]
+\begin{figure}
+\centering
+\includegraphics{forensic-statistics-book_files/figure-latex/bar-chart-1.pdf}
+\caption{\label{fig:bar-chart}Frequencies for ABO Blood Groups}
+\end{figure}
 
 The Y-axis also can show the percentage of observations
-instead of the number of observations, as in Figure 3.
+instead of the number of observations, as in Figure \ref{fig:bar-chart-percent}.
 
-\[
-\begin{array}{c}
-\mbox{Joseph: Please add code to generate bar charts} \\[.1in]
-\mbox{Figure 3. Bar chart of percentages for ABO blood groups}
-\end{array}
-\]
+\begin{figure}
+\centering
+\includegraphics{forensic-statistics-book_files/figure-latex/bar-chart-percent-1.pdf}
+\caption{\label{fig:bar-chart-percent}Percentages for ABO Blood Groups}
+\end{figure}
 
 \hypertarget{comparing-distributions}{%
 \section{Comparing Distributions}\label{comparing-distributions}}
@@ -765,17 +777,15 @@ Albania and Australia.
 \]
 From Table 2 we see that ABO groups B and AB are more common in Albania,
 group O is more common in Australia, and group A is similar for both.
-This can be seen in the bar chart in Figure 4.
+This can be seen in the bar chart in Figure \ref{fig:horiz-bar}.
 
-\[
-\begin{array}{c}
-\mbox{Joseph: Please add code to generate side-by-side bar chart 
-(oriented horizontally)} \\[.1in]
-\mbox{Figure 4. Bar chart of percentages for ABO blood groups}
-\end{array}
-\]
+\begin{figure}
+\centering
+\includegraphics{forensic-statistics-book_files/figure-latex/horiz-bar-1.pdf}
+\caption{\label{fig:horiz-bar}Percentages for ABO Blood Groups by Country}
+\end{figure}
 
-The bars in Figure 4 are oriented horizontally rather than vertically. The
+The bars in Figure \ref{fig:horiz-bar} are oriented horizontally rather than vertically. The
 horizontal format is useful when you have many categories because there is more
 room for the category labels.
 
@@ -790,6 +800,47 @@ room for the category labels.
 \item
   \(\text{Put exercises here}\)
 \end{enumerate}
+
+\hypertarget{code-appendix}{%
+\section{Code Appendix}\label{code-appendix}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(dplyr)}
+\KeywordTok{library}\NormalTok{(ggplot2)}
+\KeywordTok{library}\NormalTok{(tidyr)}
+
+\NormalTok{data <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{ABO_Group =} \KeywordTok{c}\NormalTok{(}\StringTok{"A"}\NormalTok{, }\StringTok{"B"}\NormalTok{, }\StringTok{"AB"}\NormalTok{, }\StringTok{"O"}\NormalTok{), }\DataTypeTok{value =} \KeywordTok{c}\NormalTok{(}\DecValTok{210}\NormalTok{, }\DecValTok{45}\NormalTok{, }\DecValTok{15}\NormalTok{, }\DecValTok{230}\NormalTok{)) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{prop =}\NormalTok{ value }\OperatorTok{/}\StringTok{ }\KeywordTok{sum}\NormalTok{(value) }\OperatorTok{*}\StringTok{ }\DecValTok{100}\NormalTok{)}
+
+\CommentTok{# Figure 7.1 -----}
+\KeywordTok{ggplot}\NormalTok{(}\DataTypeTok{data =}\NormalTok{ data, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =} \StringTok{""}\NormalTok{, }\DataTypeTok{y =}\NormalTok{ prop, }\DataTypeTok{fill =}\NormalTok{ ABO_Group)) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{, }\DataTypeTok{width =} \DecValTok{1}\NormalTok{, }\DataTypeTok{color =} \StringTok{"white"}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{coord_polar}\NormalTok{(}\StringTok{"y"}\NormalTok{, }\DataTypeTok{start =} \DecValTok{0}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{theme_void}\NormalTok{()}
+
+\CommentTok{# Figure 7.2 -----}
+\KeywordTok{ggplot}\NormalTok{(data, }\KeywordTok{aes}\NormalTok{(ABO_Group, value)) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{, }\DataTypeTok{fill =} \StringTok{"steelblue"}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"ABO Group"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Frequency"}\NormalTok{)}
+
+\CommentTok{# Figure 7.3 -----}
+\KeywordTok{ggplot}\NormalTok{(data, }\KeywordTok{aes}\NormalTok{(ABO_Group, prop)) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{, }\DataTypeTok{fill =} \StringTok{"#B4464B"}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"ABO Group"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Percentage"}\NormalTok{)}
+
+\CommentTok{# Figure 7.4 -----}
+\NormalTok{data <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{ABO_Group =} \KeywordTok{c}\NormalTok{(}\StringTok{"A"}\NormalTok{, }\StringTok{"B"}\NormalTok{, }\StringTok{"AB"}\NormalTok{, }\StringTok{"O"}\NormalTok{), }
+                   \DataTypeTok{Albania =} \KeywordTok{c}\NormalTok{(}\FloatTok{36.7}\NormalTok{, }\FloatTok{17.1}\NormalTok{, }\FloatTok{6.1}\NormalTok{, }\FloatTok{40.1}\NormalTok{), }
+                   \DataTypeTok{Australia =} \KeywordTok{c}\NormalTok{(}\DecValTok{38}\NormalTok{, }\DecValTok{10}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{49}\NormalTok{)) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{pivot_longer}\NormalTok{(}\OperatorTok{!}\NormalTok{ABO_Group, }\DataTypeTok{names_to =} \StringTok{"Country"}\NormalTok{, }\DataTypeTok{values_to =} \StringTok{"Percentage"}\NormalTok{)}
+
+\KeywordTok{ggplot}\NormalTok{(data, }\KeywordTok{aes}\NormalTok{(ABO_Group, Percentage, }\DataTypeTok{fill =}\NormalTok{ Country)) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{, }\DataTypeTok{position =} \StringTok{"dodge"}\NormalTok{, }\DataTypeTok{width =} \FloatTok{0.8}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"ABO Group"}\NormalTok{)}
+  \KeywordTok{coord_flip}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
 
 \hypertarget{graphing-distributions-histograms}{%
 \chapter{Graphing Distributions: Histograms}\label{graphing-distributions-histograms}}
