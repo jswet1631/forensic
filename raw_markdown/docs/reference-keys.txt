@@ -2,6 +2,7 @@ fig:pie-chart
 fig:bar-chart
 fig:bar-chart-percent
 fig:horiz-bar
+fig:histogram
 welcome
 an-introductory-example
 introduction-to-probability

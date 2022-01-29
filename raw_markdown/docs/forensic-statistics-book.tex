@@ -4,8 +4,8 @@
 %
 \documentclass[
 ]{book}
+\usepackage{amsmath,amssymb}
 \usepackage{lmodern}
-\usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
@@ -81,7 +81,8 @@
 \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
 \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\usepackage{longtable,booktabs}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
 \makeatletter
@@ -90,7 +91,7 @@
 % Allow footnotes in longtable head/foot
 \IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
 \makesavenoteenv{longtable}
-\usepackage{graphicx,grffile}
+\usepackage{graphicx}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
 \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
@@ -115,12 +116,15 @@
   \thm@postskip=\thm@preskip
 }
 \makeatother
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
 
 \title{Forensic Science and Statistics: Version 1.0.0}
 \author{Jeff Holt and Joseph Swetonic}
-\date{2022-01-27}
+\date{2022-01-28}
 
 \begin{document}
 \maketitle
@@ -806,39 +810,39 @@ room for the category labels.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{library}\NormalTok{(dplyr)}
-\KeywordTok{library}\NormalTok{(ggplot2)}
-\KeywordTok{library}\NormalTok{(tidyr)}
+\FunctionTok{library}\NormalTok{(dplyr)}
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\FunctionTok{library}\NormalTok{(tidyr)}
 
-\NormalTok{data <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{ABO_Group =} \KeywordTok{c}\NormalTok{(}\StringTok{"A"}\NormalTok{, }\StringTok{"B"}\NormalTok{, }\StringTok{"AB"}\NormalTok{, }\StringTok{"O"}\NormalTok{), }\DataTypeTok{value =} \KeywordTok{c}\NormalTok{(}\DecValTok{210}\NormalTok{, }\DecValTok{45}\NormalTok{, }\DecValTok{15}\NormalTok{, }\DecValTok{230}\NormalTok{)) }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{prop =}\NormalTok{ value }\OperatorTok{/}\StringTok{ }\KeywordTok{sum}\NormalTok{(value) }\OperatorTok{*}\StringTok{ }\DecValTok{100}\NormalTok{)}
+\NormalTok{data }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}\AttributeTok{ABO\_Group =} \FunctionTok{c}\NormalTok{(}\StringTok{"A"}\NormalTok{, }\StringTok{"B"}\NormalTok{, }\StringTok{"AB"}\NormalTok{, }\StringTok{"O"}\NormalTok{), }\AttributeTok{value =} \FunctionTok{c}\NormalTok{(}\DecValTok{210}\NormalTok{, }\DecValTok{45}\NormalTok{, }\DecValTok{15}\NormalTok{, }\DecValTok{230}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{prop =}\NormalTok{ value }\SpecialCharTok{/} \FunctionTok{sum}\NormalTok{(value) }\SpecialCharTok{*} \DecValTok{100}\NormalTok{)}
 
-\CommentTok{# Figure 7.1 -----}
-\KeywordTok{ggplot}\NormalTok{(}\DataTypeTok{data =}\NormalTok{ data, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =} \StringTok{""}\NormalTok{, }\DataTypeTok{y =}\NormalTok{ prop, }\DataTypeTok{fill =}\NormalTok{ ABO_Group)) }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{, }\DataTypeTok{width =} \DecValTok{1}\NormalTok{, }\DataTypeTok{color =} \StringTok{"white"}\NormalTok{) }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{coord_polar}\NormalTok{(}\StringTok{"y"}\NormalTok{, }\DataTypeTok{start =} \DecValTok{0}\NormalTok{) }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{theme_void}\NormalTok{()}
+\CommentTok{\# Figure 7.1 {-}{-}{-}{-}{-}}
+\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ data, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =} \StringTok{""}\NormalTok{, }\AttributeTok{y =}\NormalTok{ prop, }\AttributeTok{fill =}\NormalTok{ ABO\_Group)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{stat =} \StringTok{"identity"}\NormalTok{, }\AttributeTok{width =} \DecValTok{1}\NormalTok{, }\AttributeTok{color =} \StringTok{"white"}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{coord\_polar}\NormalTok{(}\StringTok{"y"}\NormalTok{, }\AttributeTok{start =} \DecValTok{0}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{theme\_void}\NormalTok{()}
 
-\CommentTok{# Figure 7.2 -----}
-\KeywordTok{ggplot}\NormalTok{(data, }\KeywordTok{aes}\NormalTok{(ABO_Group, value)) }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{, }\DataTypeTok{fill =} \StringTok{"steelblue"}\NormalTok{) }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"ABO Group"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Frequency"}\NormalTok{)}
+\CommentTok{\# Figure 7.2 {-}{-}{-}{-}{-}}
+\FunctionTok{ggplot}\NormalTok{(data, }\FunctionTok{aes}\NormalTok{(ABO\_Group, value)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{stat =} \StringTok{"identity"}\NormalTok{, }\AttributeTok{fill =} \StringTok{"steelblue"}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"ABO Group"}\NormalTok{, }\AttributeTok{y =} \StringTok{"Frequency"}\NormalTok{)}
 
-\CommentTok{# Figure 7.3 -----}
-\KeywordTok{ggplot}\NormalTok{(data, }\KeywordTok{aes}\NormalTok{(ABO_Group, prop)) }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{, }\DataTypeTok{fill =} \StringTok{"#B4464B"}\NormalTok{) }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"ABO Group"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Percentage"}\NormalTok{)}
+\CommentTok{\# Figure 7.3 {-}{-}{-}{-}{-}}
+\FunctionTok{ggplot}\NormalTok{(data, }\FunctionTok{aes}\NormalTok{(ABO\_Group, prop)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{stat =} \StringTok{"identity"}\NormalTok{, }\AttributeTok{fill =} \StringTok{"\#B4464B"}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"ABO Group"}\NormalTok{, }\AttributeTok{y =} \StringTok{"Percentage"}\NormalTok{)}
 
-\CommentTok{# Figure 7.4 -----}
-\NormalTok{data <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{ABO_Group =} \KeywordTok{c}\NormalTok{(}\StringTok{"A"}\NormalTok{, }\StringTok{"B"}\NormalTok{, }\StringTok{"AB"}\NormalTok{, }\StringTok{"O"}\NormalTok{), }
-                   \DataTypeTok{Albania =} \KeywordTok{c}\NormalTok{(}\FloatTok{36.7}\NormalTok{, }\FloatTok{17.1}\NormalTok{, }\FloatTok{6.1}\NormalTok{, }\FloatTok{40.1}\NormalTok{), }
-                   \DataTypeTok{Australia =} \KeywordTok{c}\NormalTok{(}\DecValTok{38}\NormalTok{, }\DecValTok{10}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{49}\NormalTok{)) }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{pivot_longer}\NormalTok{(}\OperatorTok{!}\NormalTok{ABO_Group, }\DataTypeTok{names_to =} \StringTok{"Country"}\NormalTok{, }\DataTypeTok{values_to =} \StringTok{"Percentage"}\NormalTok{)}
+\CommentTok{\# Figure 7.4 {-}{-}{-}{-}{-}}
+\NormalTok{data }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}\AttributeTok{ABO\_Group =} \FunctionTok{c}\NormalTok{(}\StringTok{"A"}\NormalTok{, }\StringTok{"B"}\NormalTok{, }\StringTok{"AB"}\NormalTok{, }\StringTok{"O"}\NormalTok{), }
+                   \AttributeTok{Albania =} \FunctionTok{c}\NormalTok{(}\FloatTok{36.7}\NormalTok{, }\FloatTok{17.1}\NormalTok{, }\FloatTok{6.1}\NormalTok{, }\FloatTok{40.1}\NormalTok{), }
+                   \AttributeTok{Australia =} \FunctionTok{c}\NormalTok{(}\DecValTok{38}\NormalTok{, }\DecValTok{10}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{49}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{pivot\_longer}\NormalTok{(}\SpecialCharTok{!}\NormalTok{ABO\_Group, }\AttributeTok{names\_to =} \StringTok{"Country"}\NormalTok{, }\AttributeTok{values\_to =} \StringTok{"Percentage"}\NormalTok{)}
 
-\KeywordTok{ggplot}\NormalTok{(data, }\KeywordTok{aes}\NormalTok{(ABO_Group, Percentage, }\DataTypeTok{fill =}\NormalTok{ Country)) }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{, }\DataTypeTok{position =} \StringTok{"dodge"}\NormalTok{, }\DataTypeTok{width =} \FloatTok{0.8}\NormalTok{) }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"ABO Group"}\NormalTok{)}
-  \KeywordTok{coord_flip}\NormalTok{()}
+\FunctionTok{ggplot}\NormalTok{(data, }\FunctionTok{aes}\NormalTok{(ABO\_Group, Percentage, }\AttributeTok{fill =}\NormalTok{ Country)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{stat =} \StringTok{"identity"}\NormalTok{, }\AttributeTok{position =} \StringTok{"dodge"}\NormalTok{, }\AttributeTok{width =} \FloatTok{0.8}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"ABO Group"}\NormalTok{)}
+  \FunctionTok{coord\_flip}\NormalTok{()}
 \end{Highlighting}
 \end{Shaded}
 
@@ -852,38 +856,52 @@ Note: Portions below modeled after content from
 \hypertarget{introduction-1}{%
 \section{Introduction}\label{introduction-1}}
 
-The ``distribution'' of a set of data consists of the set of data values and the
+The ``distribution'' of a set of data consists of the set of possible data values and the
 frequency that the values occur.
 A \textbf{histogram} is a graphical method for displaying the shape of a distribution.
 It is particularly useful when there are a large number of data values, when
-it is not practical to list them all.
+it is not practical to list all values.
 
 We begin with an example consisting of the weights of 371 bags containing a
 substance suspected of being narcotics. The weights of the bags range from
-165 to 313 grams. We begin by creating a frequency table of groupings of scores
+215 to 270 grams. We begin by creating a frequency table of groupings of weights
 as shown in Table 1.
 
-Table 1. Grouped Frequency Distribution of Psychology Test Scores
-Interval's Lower Limit Interval's Upper Limit Class Frequency
-39.5 49.5 3
-49.5 59.5 10
-59.5 69.5 53
-69.5 79.5 107
-79.5 89.5 147
-89.5 99.5 130
-99.5 109.5 78
-109.5 119.5 59
-119.5 129.5 36
-129.5 139.5 11
-139.5 149.5 6
-149.5 159.5 1
-159.5 169.5 1
+\[
+\begin{array}{|c|c|r|} \hline
+\mathrm{Interval} & \mathrm{Interval} & \mathrm{Class}\hspace{.175in}\\
+\text{Lower Limit} & \text{Upper Limit} & \mathrm{Frequency} \\ \hline
+215 & 220 & 4\hspace{.3in} \\  \hline
+220 & 225  & 8\hspace{.3in} \\  \hline
+225 & 230 & 31\hspace{.3in} \\  \hline
+230 & 235 & 74\hspace{.3in} \\  \hline
+235 & 240 & 88\hspace{.3in} \\  \hline
+240 & 245 & 75\hspace{.3in} \\  \hline
+245 & 250 & 57\hspace{.3in} \\  \hline
+250 & 255 & 25\hspace{.3in} \\  \hline
+255 & 260 & 8\hspace{.3in} \\  \hline
+260 & 265 & 1\hspace{.3in} \\  \hline
+\end{array}\\
+\mbox{Table 1: Grouped Frequency Distribution of Weights}
+\]
 
-To create this table, the range of scores was broken into intervals, called class intervals. The first interval is from 39.5 to 49.5, the second from 49.5 to 59.5, etc. Next, the number of scores falling into each interval was counted to obtain the class frequencies. There are three scores in the first interval, 10 in the second, etc.
+To create this table, the range of weights was broken into intervals, called class intervals.
+The first interval is from 215 to 220, the second from 220 to 225, etc. Next, the number of weights
+falling into each interval was counted to obtain the class frequencies. There are four weights\\
+in the first interval, eight in the second, etc.
 
-Class intervals of width 10 provide enough detail about the distribution to be revealing without making the graph too ``choppy.'' More information on choosing the widths of class intervals is presented later in this section. Placing the limits of the class intervals midway between two numbers (e.g., 49.5) ensures that every score will fall in an interval rather than on the boundary between intervals.
+Class intervals of width 5 provide enough detail about the distribution to be revealing without
+making the graph too ``choppy.'' More information on choosing the widths (called ``bin widths'' of
+class intervals is presented later in this section.
 
-In a histogram, the class frequencies are represented by bars. The height of each bar corresponds to its class frequency. A histogram of these data is shown in Figure 1.
+In a histogram, the class frequencies are represented by bars. The height of each bar corresponds
+to its class frequency. A histogram of the weight data is shown in Figure \ref{fig:histogram}.
+
+\begin{figure}
+\centering
+\includegraphics{forensic-statistics-book_files/figure-latex/histogram-1.pdf}
+\caption{\label{fig:histogram}Histogram of weights}
+\end{figure}
 
 Figure 1. Histogram of scores on a psychology test.
 
