@@ -10,68 +10,58 @@ In this chapter we discuss the *box plot* which provides a useful way to grapica
 display information about the distribution of a set of data,
 identify outliers, and compare distributions.
 
-We begin with an example from the previous section on the weights of 371 bags 
-containing a substance suspected of being narcotics.  The weights of the bags 
-range from 215 to 270 grams.  Below are the weights for 10 bags. (It is not
-practical to show them all.)
+To get us started, suppose that we have small pieces of glass from two different
+sources: a broken window at the scene of a burglary and the trunk of a car
+belonging to a suspect.  To compare the glass from the two sources, a trace 
+element present in glass can be measured.  The amount present varies within
+a sheet of glass so measurements are taken from numerous pieces found at the
+crime scene and in the car trunk.  (The specifics of the element and measurement
+units are not important for this discussion.)  The measurements are given below:
 
-$$
-240.91, 234.66, 246.84, 244.24, 253.39, 245.07, 228.75, 237.29, 255.69, 254.64
-$$
-To construct the bot plot, we start by finding the 25th, 50th, and 75th percentiles
-in the distribution of our data.  Recall that the 25th percentile is the quantity such
+Crime Scene: 61.4 64.3 68.0 68.9 67.7 66.5 66.8 59.1 68.0 71.6 60.1 62.0 68.2 62.8 63.5
+
+Car Trunk: 67.9 68.9 69.5 67.6 73.4 64.5 73.0 63.7 66.9 68.2 71.8 64.8 63.3
+
+To construct the box plot, we start by finding the 25th, 50th, and 75th percentiles
+for each of our data sets.  Recall that the 25th percentile is the quantity such
 that 25% of the data values are less than this quantity, and similarly for the
-other percentiles.  Figure \@ref(fig:boxplot) shows how these three percentiles 
-are incorporated into a box plot, with the limits of the box extending from the 
-25th to 75 percentile and a line in between at the 50th percentile.
+other percentiles.  The percentiles for each of our sets of data are shown in
+Table 1.
 
-There are several steps in constructing a box plot. The first relies on the 25th, 50th, and 75th percentiles in the distribution of scores. Figure 1 shows how these three statistics are used. For each gender, we draw a box extending from the 25th percentile to the 75th percentile. The 50th percentile is drawn inside the box. Therefore,
+$$
+\begin{array}{|c|c|c|} \hline
+& \mathrm{Car} & \text{Crime}  \\
+\text{Percentile} & \mathrm{Trunk} & \text{Scene}  \\ \hline
+25^{\text{th}} & 64.80 & 63.65  \\  \hline
+50^{\text{th}}  & 67.90 & 66.50  \\  \hline
+75^{\text{th}} & 69.50 & 68.00  \\  \hline
+\end{array}\\
+\mbox{Table 1: Percentiles}
+$$
 
-the bottom of each box is the 25th percentile,
+Figure \@ref(fig:boxplot1) shows how these percentiles 
+are incorporated into minimal box plots, with the lower and upper limits of the box extending from the 
+25th to 75th percentile and a line between those at the 50th percentile.
 
-the top is the 75th percentile,
+```{r boxplot1, fig.cap="Box plots of glass measurements", echo=FALSE}
 
-and the line in the middle is the 50th percentile.
+data01 = c(62.6, 65.6, 68.0, 68.9, 67.7, 66.5, 66.8, 60.3, 68.0, 71.6, 61.4, 63.2, 68.2, 64.1, 64.8)
+data02 = c(67.9, 68.9, 69.5, 67.6, 73.4, 64.5, 73.0, 63.7, 66.9, 68.2, 71.8, 64.8, 63.3)
 
-The data for the women in our sample are shown in Table 1.
+data01 <- data.frame(Measurement = data01)
+data01['Source'] = 'Crime Scene'
 
-Table 1. Women's times.
+data02 <- data.frame(Measurement = data02)
+data02['Source'] = 'Car Trunk'
 
-14
-15
-16
-16
-17
-17
-17
-17
-17
-18
-18
-18
-18
-18
-18
-19
-19
-19
-20
-20
-20
-20
-20
-20
-21
-21
-22
-23
-24
-24
-29
-For these data, the 25th percentile is 17, the 50th percentile is 19, and the 75th percentile is 20. For the men (whose data are not shown), the 25th percentile is 19, the 50th percentile is 22.5, and the 75th percentile is 25.5.
+data03 = rbind(data01, data02)
 
+ggplot(data03, aes(x=Source, y=Measurement)) + 
+  geom_boxplot(outlier.shape = NA, coef = 0)
 
-Figure 1. The first step in creating box plots.
+```
+
+Most box plots include more information than that shown in Figure \@ref(fig:boxplot1).
 
 Before proceeding, the terminology in Table 2 is helpful.
 
