@@ -14,7 +14,8 @@ it is not practical to list all values.
 
 We begin with an example consisting of the weights of 371 bags containing a
 substance suspected of being narcotics.  The weights of the bags range from
-215 to 270 grams.  Below are the weights for 10 bags.
+215 to 270 grams.  Below are the weights for 10 bags.  (It is not
+practical to show them all.)
 
 $$
 240.91, 234.66, 246.84, 244.24, 253.39, 245.07, 228.75, 237.29, 255.69, 254.64
