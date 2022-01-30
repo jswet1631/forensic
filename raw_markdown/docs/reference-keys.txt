@@ -3,6 +3,7 @@ fig:bar-chart
 fig:bar-chart-percent
 fig:horiz-bar
 fig:histogram
+fig:histogram-perc
 welcome
 an-introductory-example
 introduction-to-probability

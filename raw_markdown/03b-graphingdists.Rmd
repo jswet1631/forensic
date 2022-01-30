@@ -14,8 +14,16 @@ it is not practical to list all values.
 
 We begin with an example consisting of the weights of 371 bags containing a
 substance suspected of being narcotics.  The weights of the bags range from
-215 to 270 grams.  We begin by creating a frequency table of groupings of weights
-as shown in Table 1.
+215 to 270 grams.  Below are the weights for 10 bags.
+
+$$
+240.91, 234.66, 246.84, 244.24, 253.39, 245.07, 228.75, 237.29, 255.69, 254.64
+$$
+
+One way to get a sense of the distribution of the weights is through the
+use of a frequency table, where we organize the data into groups of similar
+weights and the count the number in each group.  The results for this
+data set are shown in Table 1.
 
 $$
 \begin{array}{|c|c|r|} \hline
@@ -35,8 +43,8 @@ $$
 \mbox{Table 1: Grouped Frequency Distribution of Weights}
 $$
 
-To create this table, the range of weights was broken into intervals, called class intervals. 
-The first interval is from 215 to 220, the second from 220 to 225, etc. Next, the number of weights
+To create this table, the range of weights was broken into *class intervals*. 
+The first interval is from 215 to 220, the second from 220 to 225, and so on. Next, the number of weights
 falling into each interval was counted to obtain the class frequencies. There are four weights  
 in the first interval, eight in the second, etc.
 
@@ -44,7 +52,8 @@ Class intervals of width 5 provide enough detail about the distribution to be re
 making the graph too "choppy." How one goes about choosing the widths (called "bin widths") of 
 class intervals is discussed later in this section. 
 
-In a histogram, the class frequencies are represented by bars. The height of each bar corresponds 
+In a histogram the class frequencies are represented by bars, which provides a graphical
+depiction of the data.  The height of each bar corresponds 
 to its class frequency. A histogram of the weight data is shown in Figure \@ref(fig:histogram).
 
 ```{r histogram, fig.cap="Histogram of weights", echo=FALSE}
@@ -68,15 +77,73 @@ with fewer weights in the extremes.  We can also see that the distribution is no
 quite symmetric, the weights extend to the right farther than to the left.  This
 distribution is therefore said to be *skewed*.
 
-Although we cannot see the exact data values, they are measured to two decimal 
-places so it is not likely that we get many "fence-sitters" -- that is, values
-that land right on the border.
+Because the weights are measured to two decimal 
+places, it is not likely that we get many "fence-sitters" -- that is, values
+that land right on the border between two bins.  This allows use to choose
+whole numbers as boundaries, which avoids a cluttered appearance.  Computer
+software generally will use this option when feasible, and sometimes automatically
+labels the middle of each interval instead of the endpoints.
 
-In our example, the observations are whole numbers. Histograms can also be used when the scores are measured on a more continuous scale such as the length of time (in milliseconds) required to perform a task. In this case, there is no need to worry about fence-sitters since they are improbable. (It would be quite a coincidence for a task to require exactly 7 seconds, measured to the nearest thousandth of a second.) We are therefore free to choose whole numbers as boundaries for our class intervals, for example, 4000, 5000, etc. The class frequency is then the number of observations that are greater than or equal to the lower bound, and strictly less than the upper bound. For example, one interval might hold times from 4000 to 4999 milliseconds. Using whole numbers as boundaries avoids a cluttered appearance, and is the practice of many computer programs that create histograms. Note also that some computer programs label the middle of each interval rather than the end points.
+Histograms can be based on relative frequencies instead of actual frequencies,
+showing the proportion (or percentage) of values in each interval instead of
+the exact frequence.  Our weight data is displayed as percentages in 
+Figure \@ref(fig:histogram-perc).  To get the percentages, we divide
+each frequency by the number of data values (that gives the proportion), and
+then multiply by 100 to convert to percentages.
 
-Histograms can be based on relative frequencies instead of actual frequencies. Histograms based on relative frequencies show the proportion of scores in each interval rather than the number of scores. In this case, the Y-axis runs from 0 to 1 (or somewhere in between if there are no extreme proportions). You can change a histogram based on frequencies to one based on relative frequencies by (a) dividing each class frequency by the total number of observations, and then (b) plotting the quotients on the Y-axis (labeled as proportion).
+```{r histogram-perc, fig.cap="Histogram of weights", echo=FALSE}
+set.seed(4)
+data01 = rnorm(371, mean=239, sd=8)
+for (i in 1:371) {
+  if (data01[i] > 239) {
+    data01[i] = 239 + 1.1*(data01[i]-239)
+  }
+}
+data01 <- data.frame(Weights = data01)
+ggplot(data01, aes(x = Weights, y=)) + 
+  geom_histogram(aes(y = 100*(..count..)/(sum(..count..))),
+                 breaks = seq(215, 265, by=5),
+                 fill = "steelblue",
+                 color = "black") + 
+  labs(x="Weights", y="Percentage")
+```
 
-There is more to be said about the widths of the class intervals, sometimes called bin widths. Your choice of bin width determines the number of class intervals. This decision, along with the choice of starting point for the first interval, affects the shape of the histogram. There are some "rules of thumb" that can help you choose an appropriate width. (But keep in mind that none of the rules is perfect.) Sturges' rule is to set the number of intervals as close as possible to 1 + Log2(N), where Log2(N) is the base 2 log of the number of observations. The formula can also be written as 1 + 3.3 Log10(N), where Log10(N) is the log base 10 of the number of observations. According to Sturges' rule, 1000 observations would be graphed with 11 class intervals since 10 is the closest integer to Log2(1000). We prefer the Rice rule, which is to set the number of intervals to twice the cube root of the number of observations. In the case of 1000 observations, the Rice rule yields 20 intervals instead of the 11 recommended by Sturges' rule. For the psychology test example used above, Sturges' rule recommends 10 intervals while the Rice rule recommends 17. In the end, we compromised and chose 13 intervals for Figure 1 to create a histogram that seemed clearest. The best advice is to experiment with different choices of width, and to choose a histogram according to how well it communicates the shape of the distribution.
+We see that the shape of the histogram is unchanged, only the Y-axis is
+different.
+
+The choice of bin width determines the number of class intervals. 
+This decision, along with the choice of starting point for the first interval, 
+affects the shape of the histogram. In Figure \@ref(fig:histogram-two) we see
+histograms for our data using bins of width 1 (left) and width 10 (right).
+These both give a general sense of the distribution, but here bins of width 1
+produce a graph that is too busy while bins of width 10 produce a graph that
+lacks detail.
+
+```{r histogram-two, fig.cap="Histograms with different bin widths", echo=FALSE}
+
+# Joseph: Please create side-by-side histograms using the above data, 
+# bin width 1 on the left, bin width 10 on the right
+```
+
+Most software have defaults for bin widths that might work well for a given set
+of data, or might not.  There are some "rules of thumb" that can help guide
+thed choice of bin width but these are just guidelines that should not be
+regarded as definitive, so do not feel bound to them.  That said, here are
+a couple of general guidelines you can consider:
+
+$\bullet$ Sturges' rule is to set the number of intervals as close as possible to 
+$1 + \log_2(N)$, where $\log_2(N)$ is the base 2 log of the number of 
+observations $N$. For our data set of $N = 371$, we have $1 + \log_2(N) = 9.535$
+which suggests 10 intervals, which happens to match our choice.
+
+$\bullet$ The Rice rule suggests that the number of intervals should be the integer
+nearest to $2\sqrt[3]{N}$, twice the cube root of the number of data values.
+For $N = 371$ this formula gives $2\sqrt[3]{371} = 14.371$, which is somewhat more
+that we chose.
+
+The above rules are just a guide, you are advised to experiment with different 
+numbers of intervals and choose the histogram that you feel best conveys the
+shape of the distribution.
 
 ---
 
