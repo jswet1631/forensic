@@ -4,6 +4,7 @@ fig:bar-chart-percent
 fig:horiz-bar
 fig:histogram
 fig:histogram-perc
+fig:boxplot1
 welcome
 an-introductory-example
 introduction-to-probability
@@ -35,3 +36,5 @@ code-appendix
 graphing-distributions-histograms
 introduction-1
 exercises-3
+graphing-distributions-box-plots
+introduction-2

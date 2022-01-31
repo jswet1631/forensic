@@ -40,8 +40,10 @@ $$
 $$
 
 Figure \@ref(fig:boxplot1) shows how these percentiles 
-are incorporated into minimal box plots, with the lower and upper limits of the box extending from the 
-25th to 75th percentile and a line between those at the 50th percentile.
+are incorporated into box plots.  The lower and upper 
+limits of the box (called "hinges") extend from the 
+25th to 75th percentile and a line between those at the 50th percentile 
+(which is the median).
 
 ```{r boxplot1, fig.cap="Box plots of glass measurements", echo=FALSE}
 
@@ -61,33 +63,12 @@ ggplot(data03, aes(x=Source, y=Measurement)) +
 
 ```
 
-Most box plots include more information than that shown in Figure \@ref(fig:boxplot1).
-
-Before proceeding, the terminology in Table 2 is helpful.
-
-Table 2. Box plot terms and values for women's times.
-
-Name	Formula	Value
-Upper Hinge	75th Percentile	20
-Lower Hinge	25th Percentile	17
-H-Spread	Upper Hinge - Lower Hinge	3
-Step	1.5 x H-Spread	4.5
-Upper Inner Fence	Upper Hinge + 1 Step	24.5
-Lower Inner Fence	Lower Hinge - 1 Step	12.5
-Upper Outer Fence	Upper Hinge + 2 Steps	29
-Lower Outer Fence	Lower Hinge - 2 Steps	8
-Upper Adjacent	Largest value below Upper Inner Fence	24
-Lower Adjacent
-
-Smallest value above Lower Inner Fence	14
-Outside Value	A value beyond an Inner Fence but not beyond an Outer Fence	29
-Far Out Value	A value beyond an Outer Fence	None
-Continuing with the box plots, we put "whiskers" above and below each box to give additional information about the spread of the data. Whiskers are vertical lines that end in a horizontal stroke. Whiskers are drawn from the upper and lower hinges to the upper and lower adjacent values (24 and 14 for the women's data).
+Most box plots have more information than that shown in Figure \@ref(fig:boxplot1)
+and there are a wide variety of options that can be included.  We give a few
+examples below to provide a sense of what is possible but these are by no means
+comprehensive.
 
 
-Figure 2. The box plots with the whiskers drawn.
-
- 
 
 Although we don't draw whiskers all the way to outside or far out values, we still wish to represent them in our box plots. This is achieved by adding additional marks beyond the whiskers. Specifically, outside values are indicated by small "o's" and far out values are indicated by asterisks (*). In our data, there are no far out values and just one outside value. This outside value of 29 is for the women and is shown in Figure 3.
 
@@ -142,26 +123,4 @@ Different styles of box plots are best for different situations, and there are n
 
 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

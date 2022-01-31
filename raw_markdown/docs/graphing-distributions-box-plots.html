@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 9 Graphing Distributions: Box Plots | Forensic Science and Statistics: Version 1.0.0</title>
+<meta name="author" content="Jeff Holt and Joseph Swetonic">
+<meta name="description" content="Note: Portions below modeled after content from Online Statistics Education: A Multimedia Course of Study (http://onlinestatbook.com/) Project Leader: David M. Lane, Rice University  9.1...">
+<meta name="generator" content="bookdown 0.24 with bs4_book()">
+<meta property="og:title" content="Chapter 9 Graphing Distributions: Box Plots | Forensic Science and Statistics: Version 1.0.0">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Note: Portions below modeled after content from Online Statistics Education: A Multimedia Course of Study (http://onlinestatbook.com/) Project Leader: David M. Lane, Rice University  9.1...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 9 Graphing Distributions: Box Plots | Forensic Science and Statistics: Version 1.0.0">
+<meta name="twitter:description" content="Note: Portions below modeled after content from Online Statistics Education: A Multimedia Course of Study (http://onlinestatbook.com/) Project Leader: David M. Lane, Rice University  9.1...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Forensic Science and Statistics: Version 1.0.0</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"><span class="header-section-number">1</span> Welcome</a></li>
+<li><a class="" href="introduction-to-probability.html"><span class="header-section-number">2</span> Introduction to Probability</a></li>
+<li><a class="" href="joint-probability.html"><span class="header-section-number">3</span> Joint Probability</a></li>
+<li><a class="" href="conditional-probability.html"><span class="header-section-number">4</span> Conditional Probability</a></li>
+<li><a class="" href="probability-rules.html"><span class="header-section-number">5</span> Probability Rules</a></li>
+<li><a class="" href="counterintuitive-applications.html"><span class="header-section-number">6</span> Counterintuitive Applications</a></li>
+<li><a class="" href="graphing-distributions-qualitative-variables.html"><span class="header-section-number">7</span> Graphing Distributions: Qualitative Variables</a></li>
+<li><a class="" href="graphing-distributions-histograms.html"><span class="header-section-number">8</span> Graphing Distributions: Histograms</a></li>
+<li><a class="active" href="graphing-distributions-box-plots.html"><span class="header-section-number">9</span> Graphing Distributions: Box Plots</a></li>
+<li><a class="" href="references.html">References</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="graphing-distributions-box-plots" class="section level1" number="9">
+<h1>
+<span class="header-section-number">9</span> Graphing Distributions: Box Plots<a class="anchor" aria-label="anchor" href="#graphing-distributions-box-plots"><i class="fas fa-link"></i></a>
+</h1>
+<p><font size="2"> Note: Portions below modeled after content from
+<em>Online Statistics Education: A Multimedia Course of Study</em>
+(<a href="http://onlinestatbook.com/" class="uri">http://onlinestatbook.com/</a>) Project Leader: David M. Lane, Rice University </font></p>
+<div id="introduction-2" class="section level2" number="9.1">
+<h2>
+<span class="header-section-number">9.1</span> Introduction<a class="anchor" aria-label="anchor" href="#introduction-2"><i class="fas fa-link"></i></a>
+</h2>
+<p>In this chapter we discuss the <em>box plot</em> which provides a useful way to grapically
+display information about the distribution of a set of data,
+identify outliers, and compare distributions.</p>
+<p>To get us started, suppose that we have small pieces of glass from two different
+sources: a broken window at the scene of a burglary and the trunk of a car
+belonging to a suspect. To compare the glass from the two sources, a trace
+element present in glass can be measured. The amount present varies within
+a sheet of glass so measurements are taken from numerous pieces found at the
+crime scene and in the car trunk. (The specifics of the element and measurement
+units are not important for this discussion.) The measurements are given below:</p>
+<p>Crime Scene: 61.4 64.3 68.0 68.9 67.7 66.5 66.8 59.1 68.0 71.6 60.1 62.0 68.2 62.8 63.5</p>
+<p>Car Trunk: 67.9 68.9 69.5 67.6 73.4 64.5 73.0 63.7 66.9 68.2 71.8 64.8 63.3</p>
+<p>To construct the box plot, we start by finding the 25th, 50th, and 75th percentiles
+for each of our data sets. Recall that the 25th percentile is the quantity such
+that 25% of the data values are less than this quantity, and similarly for the
+other percentiles. The percentiles for each of our sets of data are shown in
+Table 1.</p>
+<p><span class="math display">\[
+\begin{array}{|c|c|c|} \hline
+&amp; \mathrm{Car} &amp; \text{Crime}  \\
+\text{Percentile} &amp; \mathrm{Trunk} &amp; \text{Scene}  \\ \hline
+25^{\text{th}} &amp; 64.80 &amp; 63.65  \\  \hline
+50^{\text{th}}  &amp; 67.90 &amp; 66.50  \\  \hline
+75^{\text{th}} &amp; 69.50 &amp; 68.00  \\  \hline
+\end{array}\\
+\mbox{Table 1: Percentiles}
+\]</span></p>
+<p>Figure <a href="graphing-distributions-box-plots.html#fig:boxplot1">9.1</a> shows how these percentiles
+are incorporated into box plots. The lower and upper
+limits of the box (called “hinges”) extend from the
+25th to 75th percentile and a line between those at the 50th percentile
+(which is the median).</p>
+<div class="figure">
+<span style="display:block;" id="fig:boxplot1"></span>
+<img src="forensic-statistics-book_files/figure-html/boxplot1-1.png" alt="Box plots of glass measurements" width="672"><p class="caption">
+Figure 9.1: Box plots of glass measurements
+</p>
+</div>
+<p>Most box plots have more information than that shown in Figure <a href="graphing-distributions-box-plots.html#fig:boxplot1">9.1</a>
+and there are a wide variety of options that can be included. We give a few
+examples below to provide a sense of what is possible.</p>
+<p>Before proceeding, the terminology in Table 2 is helpful.</p>
+<p>Table 2. Box plot terms and values for women’s times.</p>
+<p>Name Formula Value
+Upper Hinge 75th Percentile 20
+Lower Hinge 25th Percentile 17
+H-Spread Upper Hinge - Lower Hinge 3
+Step 1.5 x H-Spread 4.5
+Upper Inner Fence Upper Hinge + 1 Step 24.5
+Lower Inner Fence Lower Hinge - 1 Step 12.5
+Upper Outer Fence Upper Hinge + 2 Steps 29
+Lower Outer Fence Lower Hinge - 2 Steps 8
+Upper Adjacent Largest value below Upper Inner Fence 24
+Lower Adjacent</p>
+<p>Smallest value above Lower Inner Fence 14
+Outside Value A value beyond an Inner Fence but not beyond an Outer Fence 29
+Far Out Value A value beyond an Outer Fence None
+Continuing with the box plots, we put “whiskers” above and below each box to give additional information about the spread of the data. Whiskers are vertical lines that end in a horizontal stroke. Whiskers are drawn from the upper and lower hinges to the upper and lower adjacent values (24 and 14 for the women’s data).</p>
+<p>Figure 2. The box plots with the whiskers drawn.</p>
+<p>Although we don’t draw whiskers all the way to outside or far out values, we still wish to represent them in our box plots. This is achieved by adding additional marks beyond the whiskers. Specifically, outside values are indicated by small “o’s” and far out values are indicated by asterisks (*). In our data, there are no far out values and just one outside value. This outside value of 29 is for the women and is shown in Figure 3.</p>
+<p>Figure 3. The box plots with the outside value shown.</p>
+<p>There is one more mark to include in box plots (although sometimes it is omitted). We indicate the mean score for a group by inserting a plus sign. Figure 4 shows the result of adding means to our box plots.</p>
+<p>Figure 4. The completed box plots.</p>
+<p>Figure 4 provides a revealing summary of the data. Since half the scores in a distribution are between the hinges (recall that the hinges are the 25th and 75th percentiles), we see that half the women’s times are between 17 and 20 seconds, whereas half the men’s times are between 19 and 25.5. We also see that women generally named the colors faster than the men did, although one woman was slower than almost all of the men. Figure 5 shows the box plot for the women’s data with detailed labels.</p>
+<p>Figure 5. The box plot for the women’s data with detailed labels.</p>
+<p>Box plots provide basic information about a distribution. For example, a distribution with a positive skew would have a longer whisker in the positive direction than in the negative direction. A larger mean than median would also indicate a positive skew. Box plots are good at portraying extreme values and are especially good at showing differences between distributions. However, many of the details of a distribution are not revealed in a box plot, and to examine these details one should create a histogram and/or a stem and leaf display.</p>
+<p>Here are some other examples of box plots:
+Time to move the mouse over a target
+Draft lottery</p>
+<p>Variations on box plots</p>
+<p>Statistical analysis programs may offer options on how box plots are created. For example, the box plots in Figure 6 are constructed from our data but differ from the previous box plots in several ways.</p>
+<p>It does not mark outliers.
+The means are indicated by green lines rather than plus signs.
+The mean of all scores is indicated by a gray line.
+Individual scores are represented by dots. Since the scores have been rounded to the nearest second, any given dot might represent more than one score.
+The box for the women is wider than the box for the men because the widths of the boxes are proportional to the number of subjects of each gender (31 women and 16 men).</p>
+<p>Figure 6. Box plots showing the individual scores and the means.</p>
+<p>Each dot in Figure 6 represents a group of subjects with the same score (rounded to the nearest second). An alternative graphing technique is to jitter the points. This means spreading out different dots at the same horizontal position, one dot for each subject. The exact horizontal position of a dot is determined randomly (under the constraint that different dots don’t overlap exactly). Spreading out the dots helps you to see multiple occurrences of a given score. However, depending on the dot size and the screen resolution, some points may be obscured even if the points are jittererd. Figure 7 shows what jittering looks like.</p>
+<p>Figure 7. Box plots with the individual scores jittered.</p>
+<p>Different styles of box plots are best for different situations, and there are no firm rules for which to use. When exploring your data, you should try several ways of visualizing them. Which graphs you include in your report should depend on how well different graphs reveal the aspects of the data you consider most important.</p>
+
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="graphing-distributions-histograms.html"><span class="header-section-number">8</span> Graphing Distributions: Histograms</a></div>
+<div class="next"><a href="references.html">References</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#graphing-distributions-box-plots"><span class="header-section-number">9</span> Graphing Distributions: Box Plots</a></li>
+<li><a class="nav-link" href="#introduction-2"><span class="header-section-number">9.1</span> Introduction</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Forensic Science and Statistics: Version 1.0.0</strong>" was written by Jeff Holt and Joseph Swetonic. It was last built on 2022-01-30.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>
