@@ -3,8 +3,7 @@
  <font size="2"> Note: Portions below modeled after content from
  *Online Statistics Education: A Multimedia Course of Study* 
  (http://onlinestatbook.com/) Project Leader: David M. Lane, Rice University </font>
- 
-## Introduction
+
 
 In the section on qualitative variables, we saw how bar charts can be used 
 to illustrate the frequencies (or relative frequencies) of different categories. 
@@ -33,8 +32,6 @@ presents the number of murders in four large U.S. cities.
 
 data <- data.frame(City = c("Chicago", "Dallas", "Los Angeles", "New York"), 
                    Murders = c(774, 251, 349, 468))
-
-# 
 
 ggplot(data, aes(City, Murders)) + 
   geom_bar(stat = "identity", fill = "steelblue", width = 0.6) + 
@@ -72,7 +69,6 @@ ggplot(data, aes(City, RateChange)) +
   geom_bar(stat = "identity", fill = "steelblue", width = 0.6) + 
   labs(x = "Year", y = "Year-to-year Percent Change, Shootings")
 ```
-
 
 Bar charts are often used to compare the means of different experimental 
 conditions. Figure \@ref(fig:bar-chart5) shows the mean trace element 
