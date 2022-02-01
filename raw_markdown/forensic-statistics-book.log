@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.4.7)  31 JAN 2022 13:04
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.4.7)  1 FEB 2022 10:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -904,7 +904,7 @@ VE VARIABLES
  []
 
 [24]
-Underfull \vbox (badness 10000) detected at line 847
+Underfull \vbox (badness 10000) detected at line 848
  []
 
 
@@ -919,7 +919,7 @@ VE VARIABLES
 [26]
 Chapter 8.
 
-Overfull \hbox (72.27002pt too wide) detected at line 895
+Overfull \hbox (72.27002pt too wide) detected at line 896
 [][] []
  []
 
@@ -934,7 +934,7 @@ file (type pdf)
 <use forensic-statistics-book_files/figure-latex/histogram-perc-1.pdf>
 
 LaTeX Warning: Reference `fig:histogram-two' on page 28 undefined on input line
- 946.
+ 947.
 
 [28] [29] [30]
 Chapter 9.
@@ -961,25 +961,47 @@ type pdf)
 File: forensic-statistics-book_files/figure-latex/boxplot6-1.pdf Graphic file (
 type pdf)
 <use forensic-statistics-book_files/figure-latex/boxplot6-1.pdf>
-[35]
+[35] [36]
+Chapter 10.
+File: forensic-statistics-book_files/figure-latex/bar-chart-percent2-1.pdf Grap
+hic file (type pdf)
+<use forensic-statistics-book_files/figure-latex/bar-chart-percent2-1.pdf>
+File: forensic-statistics-book_files/figure-latex/bar-chart2-1.pdf Graphic file
+ (type pdf)
+<use forensic-statistics-book_files/figure-latex/bar-chart2-1.pdf>
+File: forensic-statistics-book_files/figure-latex/bar-chart3-1.pdf Graphic file
+ (type pdf)
+<use forensic-statistics-book_files/figure-latex/bar-chart3-1.pdf>
+File: forensic-statistics-book_files/figure-latex/bar-chart4-1.pdf Graphic file
+ (type pdf)
+<use forensic-statistics-book_files/figure-latex/bar-chart4-1.pdf>
+File: forensic-statistics-book_files/figure-latex/bar-chart5-1.pdf Graphic file
+ (type pdf)
+<use forensic-statistics-book_files/figure-latex/bar-chart5-1.pdf>
+[37
+
+] [38] [39]
+File: forensic-statistics-book_files/figure-latex/boxplot2a-1.pdf Graphic file 
+(type pdf)
+<use forensic-statistics-book_files/figure-latex/boxplot2a-1.pdf>
 No file forensic-statistics-book.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1147.
-[36]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1147.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1240.
+[40] [41]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1240.
 (./forensic-statistics-book.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1147.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1147.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1240.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1240.
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 19284 strings out of 479418
- 343426 string characters out of 5884586
- 782160 words of memory out of 5000000
- 36493 multiletter control sequences out of 15000+600000
+ 19332 strings out of 479418
+ 345717 string characters out of 5884586
+ 782746 words of memory out of 5000000
+ 36535 multiletter control sequences out of 15000+600000
  538837 words of font info for 83 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  58i,9n,118p,823b,449s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on forensic-statistics-book.pdf (36 pages).
+Output written on forensic-statistics-book.pdf (41 pages).

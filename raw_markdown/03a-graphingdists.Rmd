@@ -69,10 +69,12 @@ a pie chart is several of them."
 ## Bar Charts
 
 Bar charts can also be used to represent frequencies of different categories. 
-A bar chart of the ABO frequencies is shown in Figure \@ref(fig:bar-chart). Frequencies are shown 
+A bar chart of the ABO frequencies is shown in Figure \@ref(fig:bar-chart). 
+Frequencies are shown 
 on the Y-axis and the blood group is shown on the X-axis. 
 
 ```{r bar-chart, fig.cap="Frequencies for ABO Blood Groups", echo=FALSE}
+
 ggplot(data, aes(ABO_Group, value)) + 
   geom_bar(stat = "identity", fill = "steelblue", width = 0.6) + 
   labs(x = "ABO Group", y = "Frequency")
@@ -83,7 +85,7 @@ instead of the number of observations, as in Figure \@ref(fig:bar-chart-percent)
 
 ```{r bar-chart-percent, echo=FALSE, fig.cap="Percentages for ABO Blood Groups"}
 ggplot(data, aes(ABO_Group, prop)) + 
-  geom_bar(stat = "identity", fill = "#B4464B", width = 0.6) + 
+  geom_bar(stat = "identity", fill = "steelblue", width = 0.6) + 
   labs(x = "ABO Group", y = "Percentage")
 ```
 

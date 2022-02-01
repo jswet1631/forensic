@@ -79,10 +79,11 @@ comprehensive.
 
 We next add "whiskers" above and below each box to give additional information 
 about the spread of the data. Whiskers are vertical lines that (optionally)
-end in a horizontal stroke. If we define the "step" to be 1.5 times the
-IQR = 75th percentile - 25th percentile, then the upper whisker extends
+end in a horizontal stroke. Define the "step" to be 1.5 times the
+IQR = 75th percentile - 25th percentile (IQR = "Interquartile range"). 
+The upper whisker extends
 from the upper hinge to the greatest data value that is less than one "step"
-above the upper hinge.  The lower whisker is similarly defined.  (Software
+above the upper hinge, with the lower whisker similarly defined.  (Software
 automates the process so one need not do this by hand.)
 
 Figure \@ref(fig:boxplot2) shows the box plots with whiskers.

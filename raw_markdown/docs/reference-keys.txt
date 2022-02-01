@@ -10,6 +10,12 @@ fig:boxplot3
 fig:boxplot4
 fig:boxplot5
 fig:boxplot6
+fig:bar-chart-percent2
+fig:bar-chart2
+fig:bar-chart3
+fig:bar-chart4
+fig:bar-chart5
+fig:boxplot2a
 welcome
 an-introductory-example
 introduction-to-probability
@@ -45,3 +51,6 @@ graphing-distributions-box-plots
 basic-box-plots
 variations-on-box-plots
 exercises-4
+graphing-distributions-bar-charts
+introduction-2
+exercises-5

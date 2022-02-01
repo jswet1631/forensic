@@ -124,7 +124,7 @@
 
 \title{Forensic Science and Statistics: Version 1.0.0}
 \author{Jeff Holt and Joseph Swetonic}
-\date{2022-01-31}
+\date{2022-02-01}
 
 \begin{document}
 \maketitle
@@ -740,7 +740,8 @@ a pie chart is several of them.''
 \section{Bar Charts}\label{bar-charts}}
 
 Bar charts can also be used to represent frequencies of different categories.
-A bar chart of the ABO frequencies is shown in Figure \ref{fig:bar-chart}. Frequencies are shown
+A bar chart of the ABO frequencies is shown in Figure \ref{fig:bar-chart}.
+Frequencies are shown
 on the Y-axis and the blood group is shown on the X-axis.
 
 \begin{figure}
@@ -1049,10 +1050,11 @@ comprehensive.
 
 We next add ``whiskers'' above and below each box to give additional information
 about the spread of the data. Whiskers are vertical lines that (optionally)
-end in a horizontal stroke. If we define the ``step'' to be 1.5 times the
-IQR = 75th percentile - 25th percentile, then the upper whisker extends
+end in a horizontal stroke. Define the ``step'' to be 1.5 times the
+IQR = 75th percentile - 25th percentile (IQR = ``Interquartile range'').
+The upper whisker extends
 from the upper hinge to the greatest data value that is less than one ``step''
-above the upper hinge. The lower whisker is similarly defined. (Software
+above the upper hinge, with the lower whisker similarly defined. (Software
 automates the process so one need not do this by hand.)
 
 Figure \ref{fig:boxplot2} shows the box plots with whiskers.
@@ -1134,6 +1136,97 @@ important.
 
 \hypertarget{exercises-4}{%
 \section{Exercises}\label{exercises-4}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\text{Put exercises here}\)
+\end{enumerate}
+
+\hypertarget{graphing-distributions-bar-charts}{%
+\chapter{Graphing Distributions: Bar Charts}\label{graphing-distributions-bar-charts}}
+
+Note: Portions below modeled after content from
+\emph{Online Statistics Education: A Multimedia Course of Study}
+(\url{http://onlinestatbook.com/}) Project Leader: David M. Lane, Rice University
+
+\hypertarget{introduction-2}{%
+\section{Introduction}\label{introduction-2}}
+
+In the section on qualitative variables, we saw how bar charts can be used
+to illustrate the frequencies (or relative frequencies) of different categories.
+For example, the bar chart shown in Figure \ref{fig:bar-chart-percent2}
+shows the percentage of people in a population that have each of the four
+possible ABO blood groups.
+
+\begin{figure}
+\centering
+\includegraphics{forensic-statistics-book_files/figure-latex/bar-chart-percent2-1.pdf}
+\caption{\label{fig:bar-chart-percent2}Percentages for ABO Blood Groups}
+\end{figure}
+
+In this chapter we consider how bar charts can be used to present other
+types of quantitative information. The bar chart in Figure \ref{fig:bar-chart2}
+presents the number of murders in four large U.S. cities.
+
+\begin{figure}
+\centering
+\includegraphics{forensic-statistics-book_files/figure-latex/bar-chart2-1.pdf}
+\caption{\label{fig:bar-chart2}Number of murders, selected U.S. cities, year 2000}
+\end{figure}
+
+A case can be made that more relevant than the total number of murders is
+the per capita number of murders. Figure \ref{fig:bar-chart3} gives the
+number of murders per 1,000,000 population for the same cities.
+
+\begin{figure}
+\centering
+\includegraphics{forensic-statistics-book_files/figure-latex/bar-chart3-1.pdf}
+\caption{\label{fig:bar-chart3}Murders per 1,000,000 residents, selected U.S. cities, year 2000}
+\end{figure}
+
+Bar charts can be useful for showing change over time. Figure \ref{fig:bar-chart4},
+shows the year-to-year percent change in the number of shootings in the city of
+Toronto. The considerable variation from one year to the next is clear. Note also
+that negative percentages are possible, the result of the number of shootings
+decreasing from one year to the next.
+
+\begin{figure}
+\centering
+\includegraphics{forensic-statistics-book_files/figure-latex/bar-chart4-1.pdf}
+\caption{\label{fig:bar-chart4}Year-to-year Percent Change, Shootings in Toronto}
+\end{figure}
+
+Bar charts are often used to compare the means of different experimental
+conditions. Figure \ref{fig:bar-chart5} shows the mean trace element
+measurement for collections of glass pieces found at a crime scene and
+in the car trunk of a suspect. (This data is treated more thoroughly
+in the chapter on box plots.)
+
+\begin{figure}
+\centering
+\includegraphics{forensic-statistics-book_files/figure-latex/bar-chart5-1.pdf}
+\caption{\label{fig:bar-chart5}Comparison of mean trace element measurements}
+\end{figure}
+
+The heights of the bars are cery similar, suggesting that there might be
+a common source for the two sets of glass pieces. That might well be the
+case but the means alone are not enough to provide a conclusion one way or
+the other. In this case, box plots can be used instead since they provide
+more information about the distribution. Figure \ref{fig:boxplot2a}
+shows the box plots for this data again.
+
+\begin{figure}
+\centering
+\includegraphics{forensic-statistics-book_files/figure-latex/boxplot2a-1.pdf}
+\caption{\label{fig:boxplot2a}Box plots of glass measurements}
+\end{figure}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{exercises-5}{%
+\section{Exercises}\label{exercises-5}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}

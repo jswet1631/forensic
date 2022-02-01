@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 10 Graphing Distributions: Bar Charts | Forensic Science and Statistics: Version 1.0.0</title>
+<meta name="author" content="Jeff Holt and Joseph Swetonic">
+<meta name="description" content="Note: Portions below modeled after content from Online Statistics Education: A Multimedia Course of Study (http://onlinestatbook.com/) Project Leader: David M. Lane, Rice University  10.1...">
+<meta name="generator" content="bookdown 0.24 with bs4_book()">
+<meta property="og:title" content="Chapter 10 Graphing Distributions: Bar Charts | Forensic Science and Statistics: Version 1.0.0">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Note: Portions below modeled after content from Online Statistics Education: A Multimedia Course of Study (http://onlinestatbook.com/) Project Leader: David M. Lane, Rice University  10.1...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 10 Graphing Distributions: Bar Charts | Forensic Science and Statistics: Version 1.0.0">
+<meta name="twitter:description" content="Note: Portions below modeled after content from Online Statistics Education: A Multimedia Course of Study (http://onlinestatbook.com/) Project Leader: David M. Lane, Rice University  10.1...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.0/transition.js"></script><script src="libs/bs3compat-0.3.0/tabs.js"></script><script src="libs/bs3compat-0.3.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Forensic Science and Statistics: Version 1.0.0</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"><span class="header-section-number">1</span> Welcome</a></li>
+<li><a class="" href="introduction-to-probability.html"><span class="header-section-number">2</span> Introduction to Probability</a></li>
+<li><a class="" href="joint-probability.html"><span class="header-section-number">3</span> Joint Probability</a></li>
+<li><a class="" href="conditional-probability.html"><span class="header-section-number">4</span> Conditional Probability</a></li>
+<li><a class="" href="probability-rules.html"><span class="header-section-number">5</span> Probability Rules</a></li>
+<li><a class="" href="counterintuitive-applications.html"><span class="header-section-number">6</span> Counterintuitive Applications</a></li>
+<li><a class="" href="graphing-distributions-qualitative-variables.html"><span class="header-section-number">7</span> Graphing Distributions: Qualitative Variables</a></li>
+<li><a class="" href="graphing-distributions-histograms.html"><span class="header-section-number">8</span> Graphing Distributions: Histograms</a></li>
+<li><a class="" href="graphing-distributions-box-plots.html"><span class="header-section-number">9</span> Graphing Distributions: Box Plots</a></li>
+<li><a class="active" href="graphing-distributions-bar-charts.html"><span class="header-section-number">10</span> Graphing Distributions: Bar Charts</a></li>
+<li><a class="" href="references.html">References</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="graphing-distributions-bar-charts" class="section level1" number="10">
+<h1>
+<span class="header-section-number">10</span> Graphing Distributions: Bar Charts<a class="anchor" aria-label="anchor" href="#graphing-distributions-bar-charts"><i class="fas fa-link"></i></a>
+</h1>
+<p><font size="2"> Note: Portions below modeled after content from
+<em>Online Statistics Education: A Multimedia Course of Study</em>
+(<a href="http://onlinestatbook.com/" class="uri">http://onlinestatbook.com/</a>) Project Leader: David M. Lane, Rice University </font></p>
+<div id="introduction-2" class="section level2" number="10.1">
+<h2>
+<span class="header-section-number">10.1</span> Introduction<a class="anchor" aria-label="anchor" href="#introduction-2"><i class="fas fa-link"></i></a>
+</h2>
+<p>In the section on qualitative variables, we saw how bar charts can be used
+to illustrate the frequencies (or relative frequencies) of different categories.
+For example, the bar chart shown in Figure <a href="graphing-distributions-bar-charts.html#fig:bar-chart-percent2">10.1</a>
+shows the percentage of people in a population that have each of the four
+possible ABO blood groups.</p>
+<div class="figure">
+<span style="display:block;" id="fig:bar-chart-percent2"></span>
+<img src="forensic-statistics-book_files/figure-html/bar-chart-percent2-1.png" alt="Percentages for ABO Blood Groups" width="672"><p class="caption">
+Figure 10.1: Percentages for ABO Blood Groups
+</p>
+</div>
+<p>In this chapter we consider how bar charts can be used to present other
+types of quantitative information. The bar chart in Figure <a href="graphing-distributions-bar-charts.html#fig:bar-chart2">10.2</a>
+presents the number of murders in four large U.S. cities.</p>
+<div class="figure">
+<span style="display:block;" id="fig:bar-chart2"></span>
+<img src="forensic-statistics-book_files/figure-html/bar-chart2-1.png" alt="Number of murders, selected U.S. cities, year 2000" width="672"><p class="caption">
+Figure 10.2: Number of murders, selected U.S. cities, year 2000
+</p>
+</div>
+<p>A case can be made that more relevant than the total number of murders is
+the per capita number of murders. Figure <a href="graphing-distributions-bar-charts.html#fig:bar-chart3">10.3</a> gives the
+number of murders per 1,000,000 population for the same cities.</p>
+<div class="figure">
+<span style="display:block;" id="fig:bar-chart3"></span>
+<img src="forensic-statistics-book_files/figure-html/bar-chart3-1.png" alt="Murders per 1,000,000 residents, selected U.S. cities, year 2000" width="672"><p class="caption">
+Figure 10.3: Murders per 1,000,000 residents, selected U.S. cities, year 2000
+</p>
+</div>
+<p>Bar charts can be useful for showing change over time. Figure <a href="graphing-distributions-bar-charts.html#fig:bar-chart4">10.4</a>,
+shows the year-to-year percent change in the number of shootings in the city of
+Toronto. The considerable variation from one year to the next is clear. Note also
+that negative percentages are possible, the result of the number of shootings
+decreasing from one year to the next.</p>
+<div class="figure">
+<span style="display:block;" id="fig:bar-chart4"></span>
+<img src="forensic-statistics-book_files/figure-html/bar-chart4-1.png" alt="Year-to-year Percent Change, Shootings in Toronto" width="672"><p class="caption">
+Figure 10.4: Year-to-year Percent Change, Shootings in Toronto
+</p>
+</div>
+<p>Bar charts are often used to compare the means of different experimental
+conditions. Figure <a href="graphing-distributions-bar-charts.html#fig:bar-chart5">10.5</a> shows the mean trace element
+measurement for collections of glass pieces found at a crime scene and
+in the car trunk of a suspect. (This data is treated more thoroughly
+in the chapter on box plots.)</p>
+<div class="figure">
+<span style="display:block;" id="fig:bar-chart5"></span>
+<img src="forensic-statistics-book_files/figure-html/bar-chart5-1.png" alt="Comparison of mean trace element measurements" width="672"><p class="caption">
+Figure 10.5: Comparison of mean trace element measurements
+</p>
+</div>
+<p>The heights of the bars are cery similar, suggesting that there might be
+a common source for the two sets of glass pieces. That might well be the
+case but the means alone are not enough to provide a conclusion one way or
+the other. In this case, box plots can be used instead since they provide
+more information about the distribution. Figure <a href="graphing-distributions-bar-charts.html#fig:boxplot2a">10.6</a>
+shows the box plots for this data again.</p>
+<div class="figure">
+<span style="display:block;" id="fig:boxplot2a"></span>
+<img src="forensic-statistics-book_files/figure-html/boxplot2a-1.png" alt="Box plots of glass measurements" width="672"><p class="caption">
+Figure 10.6: Box plots of glass measurements
+</p>
+</div>
+<hr>
+</div>
+<div id="exercises-5" class="section level2" number="10.2">
+<h2>
+<span class="header-section-number">10.2</span> Exercises<a class="anchor" aria-label="anchor" href="#exercises-5"><i class="fas fa-link"></i></a>
+</h2>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\text{Put exercises here}\)</span></li>
+</ol>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="graphing-distributions-box-plots.html"><span class="header-section-number">9</span> Graphing Distributions: Box Plots</a></div>
+<div class="next"><a href="references.html">References</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#graphing-distributions-bar-charts"><span class="header-section-number">10</span> Graphing Distributions: Bar Charts</a></li>
+<li><a class="nav-link" href="#introduction-2"><span class="header-section-number">10.1</span> Introduction</a></li>
+<li><a class="nav-link" href="#exercises-5"><span class="header-section-number">10.2</span> Exercises</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Forensic Science and Statistics: Version 1.0.0</strong>" was written by Jeff Holt and Joseph Swetonic. It was last built on 2022-02-01.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>
