@@ -120,7 +120,7 @@ ggplot(data03, aes(x=Source, y=Measurement, color=Source)) +
 The box plots have considerable overlap, but at the same time the middle 50%
 of values from the car trunk seem to trend higher than those from the crime
 scene.  This suggests the possibility of different sources for the two sets
-of glass pieces while not ruling out the possibilty of them coming from the
+of glass pieces while not ruling out the possibility of them coming from the
 same source.  We will consider this question more in later chapters.
 
 ---

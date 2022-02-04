@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 11 Sumarizing Distributions: Central Tendency | Forensic Science and Statistics: Version 1.0.0</title>
+<meta name="author" content="Jeff Holt and Joseph Swetonic">
+<meta name="description" content="Note: Portions below modeled after content from Online Statistics Education: A Multimedia Course of Study (http://onlinestatbook.com/) Project Leader: David M. Lane, Rice University What is...">
+<meta name="generator" content="bookdown 0.24 with bs4_book()">
+<meta property="og:title" content="Chapter 11 Sumarizing Distributions: Central Tendency | Forensic Science and Statistics: Version 1.0.0">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Note: Portions below modeled after content from Online Statistics Education: A Multimedia Course of Study (http://onlinestatbook.com/) Project Leader: David M. Lane, Rice University What is...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 11 Sumarizing Distributions: Central Tendency | Forensic Science and Statistics: Version 1.0.0">
+<meta name="twitter:description" content="Note: Portions below modeled after content from Online Statistics Education: A Multimedia Course of Study (http://onlinestatbook.com/) Project Leader: David M. Lane, Rice University What is...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.0/transition.js"></script><script src="libs/bs3compat-0.3.0/tabs.js"></script><script src="libs/bs3compat-0.3.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Forensic Science and Statistics: Version 1.0.0</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"><span class="header-section-number">1</span> Welcome</a></li>
+<li><a class="" href="introduction-to-probability.html"><span class="header-section-number">2</span> Introduction to Probability</a></li>
+<li><a class="" href="joint-probability.html"><span class="header-section-number">3</span> Joint Probability</a></li>
+<li><a class="" href="conditional-probability.html"><span class="header-section-number">4</span> Conditional Probability</a></li>
+<li><a class="" href="probability-rules.html"><span class="header-section-number">5</span> Probability Rules</a></li>
+<li><a class="" href="counterintuitive-applications.html"><span class="header-section-number">6</span> Counterintuitive Applications</a></li>
+<li><a class="" href="graphing-distributions-qualitative-variables.html"><span class="header-section-number">7</span> Graphing Distributions: Qualitative Variables</a></li>
+<li><a class="" href="graphing-distributions-histograms.html"><span class="header-section-number">8</span> Graphing Distributions: Histograms</a></li>
+<li><a class="" href="graphing-distributions-box-plots.html"><span class="header-section-number">9</span> Graphing Distributions: Box Plots</a></li>
+<li><a class="" href="graphing-distributions-bar-charts.html"><span class="header-section-number">10</span> Graphing Distributions: Bar Charts</a></li>
+<li><a class="active" href="sumarizing-distributions-central-tendency.html"><span class="header-section-number">11</span> Sumarizing Distributions: Central Tendency</a></li>
+<li><a class="" href="sumarizing-distributions-measures-of-central-tendency.html"><span class="header-section-number">12</span> Sumarizing Distributions: Measures of Central Tendency</a></li>
+<li><a class="" href="references.html">References</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="sumarizing-distributions-central-tendency" class="section level1" number="11">
+<h1>
+<span class="header-section-number">11</span> Sumarizing Distributions: Central Tendency<a class="anchor" aria-label="anchor" href="#sumarizing-distributions-central-tendency"><i class="fas fa-link"></i></a>
+</h1>
+<p><font size="2"> Note: Portions below modeled after content from
+<em>Online Statistics Education: A Multimedia Course of Study</em>
+(<a href="http://onlinestatbook.com/" class="uri">http://onlinestatbook.com/</a>) Project Leader: David M. Lane, Rice University </font></p>
+<p>What is “central tendency,” and why do we want to know the central tendency of a group of scores? Let us first try to answer these questions intuitively. Then we will proceed to a more formal discussion.</p>
+<p><span class="math inline">\(\Sigma_{n=1}\)</span></p>
+<p>Imagine this situation: You are in a class with just four other students, and the five of you took a 5-point pop quiz. Today your instructor is walking around the room, handing back the quizzes. She stops at your desk and hands you your paper. Written in bold black ink on the front is “3/5.” How do you react? Are you happy with your score of 3 or disappointed? How do you decide? You might calculate your percentage correct, realize it is 60%, and be appalled. But it is more likely that when deciding how to react to your performance, you will want additional information. What additional information would you like?</p>
+<p>If you are like most students, you will immediately ask your neighbors, “Whad’ja get?” and then ask the instructor, “How did the class do?” In other words, the additional information you want is how your quiz score compares to other students’ scores. You therefore understand the importance of comparing your score to the class distribution of scores. Should your score of 3 turn out to be among the higher scores, then you’ll be pleased after all. On the other hand, if 3 is among the lower scores in the class, you won’t be quite so happy.</p>
+<p>This idea of comparing individual scores to a distribution of scores is fundamental to statistics. So let’s explore it further, using the same example (the pop quiz you took with your four classmates). Three possible outcomes are shown in Table 1. They are labeled “Dataset A,” “Dataset B,” and “Dataset C.” Which of the three datasets would make you happiest? In other words, in comparing your score with your fellow students’ scores, in which dataset would your score of 3 be the most impressive?</p>
+<p>In Dataset A, everyone’s score is 3. This puts your score at the exact center of the distribution. You can draw satisfaction from the fact that you did as well as everyone else. But of course it cuts both ways: everyone else did just as well as you.</p>
+<p>Table 1. Three possible datasets for the 5-point make-up quiz.</p>
+<p>Student Dataset A Dataset B Dataset C
+You 3 3 3
+John’s 3 4 2
+Maria’s 3 4 2
+Shareecia’s 3 4 2
+Luther’s 3 5 1
+Now consider the possibility that the scores are described as in Dataset B. This is a depressing outcome even though your score is no different than the one in Dataset A. The problem is that the other four students had higher grades, putting yours below the center of the distribution.</p>
+<p>Finally, let’s look at Dataset C. This is more like it! All of your classmates score lower than you so your score is above the center of the distribution.</p>
+<p>Now let’s change the example in order to develop more insight into the center of a distribution. Figure 1 shows the results of an experiment on memory for chess positions. Subjects were shown a chess position and then asked to reconstruct it on an empty chess board. The number of pieces correctly placed was recorded. This was repeated for two more chess positions. The scores represent the total number of chess pieces correctly placed for the three chess positions. The maximum possible score was 89.</p>
+<p>Two groups are compared. On the left are people who don’t play chess. On the right are people who play a great deal (tournament players). It is clear that the location of the center of the distribution for the non-players is much lower than the center of the distribution for the tournament players.</p>
+<p>Figure 1. Back-to-back stem and leaf display. The left side shows the memory scores of the non-players. The right side shows the scores of the tournament players.</p>
+<p>We’re sure you get the idea now about the center of a distribution. It is time to move beyond intuition. We need a formal definition of the center of a distribution. In fact, we’ll offer you three definitions! This is not just generosity on our part. There turn out to be (at least) three different ways of thinking about the center of a distribution, all of them useful in various contexts. In the remainder of this section we attempt to communicate the idea behind each concept. In the succeeding sections we will give statistical measures for these concepts of central tendency.</p>
+<p>Definitions of Center</p>
+<p>Now we explain the three different ways of defining the center of a distribution. All three are called measures of central tendency.</p>
+<p>Balance Scale</p>
+<p>One definition of central tendency is the point at which the distribution is in balance. Figure 2 shows the distribution of the five numbers 2, 3, 4, 9, 16 placed upon a balance scale. If each number weighs one pound, and is placed at its position along the number line, then it would be possible to balance them by placing a fulcrum at 6.8.</p>
+<p>Figure 2. A balance scale.</p>
+<p>For another example, consider the distribution shown in Figure 3. It is balanced by placing the fulcrum in the geometric middle.</p>
+<p>Figure 3. A distribution balanced on the tip of a triangle.</p>
+<p>Figure 4 illustrates that the same distribution can’t be balanced by placing the fulcrum to the left of center.</p>
+<p>Figure 4. The distribution is not balanced.</p>
+<p>Figure 5 shows an asymmetric distribution. To balance it, we cannot put the fulcrum halfway between the lowest and highest values (as we did in Figure 3). Placing the fulcrum at the “half way” point would cause it to tip towards the left.</p>
+<p>Figure 5. An asymmetric distribution balanced on the tip of a triangle.</p>
+<p>The balance point defines one sense of a distribution’s center. The simulation in the next section “Balance Scale Simulation” shows how to find the point at which the distribution balances.</p>
+<p>Smallest Absolute Deviation</p>
+<p>Another way to define the center of a distribution is based on the concept of the sum of the absolute deviations (differences). Consider the distribution made up of the five numbers 2, 3, 4, 9, 16. Let’s see how far the distribution is from 10 (picking a number arbitrarily). Table 2 shows the sum of the absolute deviations of these numbers from the number 10.</p>
+<p>Table 2. An example of the sum of absolute deviations</p>
+<p>Values Absolute Deviations from 10
+2
+3
+4
+9
+16 8
+7
+6
+1
+6
+Sum 28
+The first row of the table shows that the absolute value of the difference between 2 and 10 is 8; the second row shows that the absolute difference between 3 and 10 is 7, and similarly for the other rows. When we add up the five absolute deviations, we get 28. So, the sum of the absolute deviations from 10 is 28. Likewise, the sum of the absolute deviations from 5 equals 3 + 2 + 1 + 4 + 11 = 21. So, the sum of the absolute deviations from 5 is smaller than the sum of the absolute deviations from 10. In this sense, 5 is closer, overall, to the other numbers than is 10.</p>
+<p>We are now in a position to define a second measure of central tendency, this time in terms of absolute deviations. Specifically, according to our second definition, the center of a distribution is the number for which the sum of the absolute deviations is smallest. As we just saw, the sum of the absolute deviations from 10 is 28 and the sum of the absolute deviations from 5 is 21. Is there a value for which the sum of the absolute deviations is even smaller than 21? Yes. For these data, there is a value for which the sum of absolute deviations is only 20. See if you can find it. A general method for finding the center of a distribution in the sense of absolute deviations is provided in the simulation “Absolute Differences Simulation.”</p>
+<p>Smallest Squared Deviation</p>
+<p>We shall discuss one more way to define the center of a distribution. It is based on the concept of the sum of squared deviations (differences). Again, consider the distribution of the five numbers 2, 3, 4, 9, 16. Table 3 shows the sum of the squared deviations of these numbers from the number 10.</p>
+<p>Table 3. An example of the sum of squared deviations.</p>
+<p>Values Squared Deviations
+from 10
+2
+3
+4
+9
+16 64
+49
+36
+1
+36
+Sum 186
+The first row in the table shows that the squared value of the difference between 2 and 10 is 64; the second row shows that the squared difference between 3 and 10 is 49, and so forth. When we add up all these squared deviations, we get 186. Changing the target from 10 to 5, we calculate the sum of the squared deviations from 5 as 9 + 4 + 1 + 16 + 121 = 151. So, the sum of the squared deviations from 5 is smaller than the sum of the squared deviations from 10. Is there a value for which the sum of the squared deviations is even smaller than 151? Yes, it is possible to reach 134.8. Can you find the target number for which the sum of squared deviations is 134.8?</p>
+<p>The target that minimizes the sum of squared deviations provides another useful definition of central tendency (the last one to be discussed in this section). It can be challenging to find the value that minimizes this sum. You will see how you do it in the upcoming section “Squared Differences Simulation.”</p>
+<hr>
+<div id="exercises-6" class="section level2" number="11.1">
+<h2>
+<span class="header-section-number">11.1</span> Exercises<a class="anchor" aria-label="anchor" href="#exercises-6"><i class="fas fa-link"></i></a>
+</h2>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\text{Put exercises here}\)</span></li>
+</ol>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="graphing-distributions-bar-charts.html"><span class="header-section-number">10</span> Graphing Distributions: Bar Charts</a></div>
+<div class="next"><a href="sumarizing-distributions-measures-of-central-tendency.html"><span class="header-section-number">12</span> Sumarizing Distributions: Measures of Central Tendency</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#sumarizing-distributions-central-tendency"><span class="header-section-number">11</span> Sumarizing Distributions: Central Tendency</a></li>
+<li><a class="nav-link" href="#exercises-6"><span class="header-section-number">11.1</span> Exercises</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Forensic Science and Statistics: Version 1.0.0</strong>" was written by Jeff Holt and Joseph Swetonic. It was last built on 2022-02-01.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

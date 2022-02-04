@@ -1,0 +1,83 @@
+# Sumarizing Distributions: Measures of Central Tendency
+
+ <font size="2"> Note: Portions below modeled after content from
+ *Online Statistics Education: A Multimedia Course of Study* 
+ (http://onlinestatbook.com/) Project Leader: David M. Lane, Rice University </font>
+
+
+In the previous section we saw that there are several ways to define central tendency. This section defines the three most common measures of central tendency: the mean, the median, and the mode. The relationships among these measures of central tendency and the definitions given in the previous section will probably not be obvious to you. Rather than just tell you these relationships, we will allow you to discover them in the simulations in the sections that follow.
+
+This section gives only the basic definitions of the mean, median and mode. A further discussion of the relative merits and proper applications of these statistics is presented in a later section.
+
+Arithmetic Mean
+
+The arithmetic mean is the most common measure of central tendency. It is simply the sum of the numbers divided by the number of numbers. The symbol "μ" is used for the mean of a population. The symbol "M" is used for the mean of a sample. The formula for μ is shown below:
+
+μ = ΣX/N
+where ΣX is the sum of all the numbers in the population and
+N is the number of numbers in the population.
+
+The formula for M is essentially identical:
+
+M = ΣX/N
+where ΣX is the sum of all the numbers in the sample and
+N is the number of numbers in the sample.
+
+As an example, the mean of the numbers 1, 2, 3, 6, 8 is 20/5 = 4 regardless of whether the numbers constitute the entire population or just a sample from the population.
+
+Table 1 shows the number of touchdown (TD) passes thrown by each of the 31 teams in the National Football League in the 2000 season. The mean number of touchdown passes thrown is 20.4516 as shown below.
+
+μ = ΣX/N
+  = 634/31
+  = 20.4516
+Table 1. Number of touchdown passes.
+
+37 33 33 32 29 28 28 23 22 22 22 21 21 21 20 20 19 19 18 18 18 18 16 15 14 14 14 12 12 9 6
+Although the arithmetic mean is not the only "mean" (there is also a geometric mean), it is by far the most commonly used. Therefore, if the term "mean" is used without specifying whether it is the arithmetic mean, the geometric mean, or some other mean, it is assumed to refer to the arithmetic mean.
+
+Median
+
+The median is also a frequently used measure of central tendency. The median is the midpoint of a distribution: the same number of scores is above the median as below it. For the data in Table 1, there are 31 scores. The 16th highest score (which equals 20) is the median because there are 15 scores below the 16th score and 15 scores above the 16th score. The median can also be thought of as the 50th percentile.
+
+Computation of the Median
+
+When there is an odd number of numbers, the median is simply the middle number. For example, the median of 2, 4, and 7 is 4. When there is an even number of numbers, the median is the mean of the two middle numbers. Thus, the median of the numbers 2, 4, 7, 12 is (4+7)/2 = 5.5. When there are numbers with the same values, then the formula for the third definition of the 50th percentile should be used.
+
+Mode
+
+The mode is the most frequently occurring value. For the data in Table 1, the mode is 18 since more teams (4) had 18 touchdown passes than any other number of touchdown passes. With continuous data such as response time measured to many decimals, the frequency of each value is one since no two scores will be exactly the same (see discussion of continuous variables). Therefore the mode of continuous data is normally computed from a grouped frequency distribution. Table 2 shows a grouped frequency distribution for the target response time data. Since the interval with the highest frequency is 600-700, the mode is the middle of that interval (650).
+
+Table 2. Grouped frequency distribution.
+
+Range	Frequency
+500-600
+600-700
+700-800
+800-900
+900-1000
+1000-1100	3
+6
+5
+5
+0
+1
+
+
+---
+
+## Exercises
+
+1. $\text{Put exercises here}$
+
+
+
+
+
+
+
+
+
+
+
+
+

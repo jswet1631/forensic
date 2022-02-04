@@ -1151,13 +1151,10 @@ Note: Portions below modeled after content from
 \emph{Online Statistics Education: A Multimedia Course of Study}
 (\url{http://onlinestatbook.com/}) Project Leader: David M. Lane, Rice University
 
-\hypertarget{introduction-2}{%
-\section{Introduction}\label{introduction-2}}
-
 In the section on qualitative variables, we saw how bar charts can be used
 to illustrate the frequencies (or relative frequencies) of different categories.
 For example, the bar chart shown in Figure \ref{fig:bar-chart-percent2}
-shows the percentage of people in a population that have each of the four
+depicts the percentage of people in a population that have each of the four
 possible ABO blood groups.
 
 \begin{figure}
@@ -1223,10 +1220,210 @@ shows the box plots for this data again.
 \caption{\label{fig:boxplot2a}Box plots of glass measurements}
 \end{figure}
 
+The box plots have considerable overlap, but at the same time the middle 50\%
+of values from the car trunk seem to trend higher than those from the crime
+scene. This suggests the possibility of different sources for the two sets
+of glass pieces while not ruling out the possibility of them coming from the
+same source. We will consider this question more in later chapters.
+
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \hypertarget{exercises-5}{%
 \section{Exercises}\label{exercises-5}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\text{Put exercises here}\)
+\end{enumerate}
+
+\hypertarget{sumarizing-distributions-central-tendency}{%
+\chapter{Sumarizing Distributions: Central Tendency}\label{sumarizing-distributions-central-tendency}}
+
+Note: Portions below modeled after content from
+\emph{Online Statistics Education: A Multimedia Course of Study}
+(\url{http://onlinestatbook.com/}) Project Leader: David M. Lane, Rice University
+
+What is ``central tendency,'' and why do we want to know the central tendency of a group of scores? Let us first try to answer these questions intuitively. Then we will proceed to a more formal discussion.
+
+\(\Sigma_{n=1}\)
+
+Imagine this situation: You are in a class with just four other students, and the five of you took a 5-point pop quiz. Today your instructor is walking around the room, handing back the quizzes. She stops at your desk and hands you your paper. Written in bold black ink on the front is ``3/5.'' How do you react? Are you happy with your score of 3 or disappointed? How do you decide? You might calculate your percentage correct, realize it is 60\%, and be appalled. But it is more likely that when deciding how to react to your performance, you will want additional information. What additional information would you like?
+
+If you are like most students, you will immediately ask your neighbors, ``Whad'ja get?'' and then ask the instructor, ``How did the class do?'' In other words, the additional information you want is how your quiz score compares to other students' scores. You therefore understand the importance of comparing your score to the class distribution of scores. Should your score of 3 turn out to be among the higher scores, then you'll be pleased after all. On the other hand, if 3 is among the lower scores in the class, you won't be quite so happy.
+
+This idea of comparing individual scores to a distribution of scores is fundamental to statistics. So let's explore it further, using the same example (the pop quiz you took with your four classmates). Three possible outcomes are shown in Table 1. They are labeled ``Dataset A,'' ``Dataset B,'' and ``Dataset C.'' Which of the three datasets would make you happiest? In other words, in comparing your score with your fellow students' scores, in which dataset would your score of 3 be the most impressive?
+
+In Dataset A, everyone's score is 3. This puts your score at the exact center of the distribution. You can draw satisfaction from the fact that you did as well as everyone else. But of course it cuts both ways: everyone else did just as well as you.
+
+Table 1. Three possible datasets for the 5-point make-up quiz.
+
+Student Dataset A Dataset B Dataset C
+You 3 3 3
+John's 3 4 2
+Maria's 3 4 2
+Shareecia's 3 4 2
+Luther's 3 5 1
+Now consider the possibility that the scores are described as in Dataset B. This is a depressing outcome even though your score is no different than the one in Dataset A. The problem is that the other four students had higher grades, putting yours below the center of the distribution.
+
+Finally, let's look at Dataset C. This is more like it! All of your classmates score lower than you so your score is above the center of the distribution.
+
+Now let's change the example in order to develop more insight into the center of a distribution. Figure 1 shows the results of an experiment on memory for chess positions. Subjects were shown a chess position and then asked to reconstruct it on an empty chess board. The number of pieces correctly placed was recorded. This was repeated for two more chess positions. The scores represent the total number of chess pieces correctly placed for the three chess positions. The maximum possible score was 89.
+
+Two groups are compared. On the left are people who don't play chess. On the right are people who play a great deal (tournament players). It is clear that the location of the center of the distribution for the non-players is much lower than the center of the distribution for the tournament players.
+
+Figure 1. Back-to-back stem and leaf display. The left side shows the memory scores of the non-players. The right side shows the scores of the tournament players.
+
+We're sure you get the idea now about the center of a distribution. It is time to move beyond intuition. We need a formal definition of the center of a distribution. In fact, we'll offer you three definitions! This is not just generosity on our part. There turn out to be (at least) three different ways of thinking about the center of a distribution, all of them useful in various contexts. In the remainder of this section we attempt to communicate the idea behind each concept. In the succeeding sections we will give statistical measures for these concepts of central tendency.
+
+Definitions of Center
+
+Now we explain the three different ways of defining the center of a distribution. All three are called measures of central tendency.
+
+Balance Scale
+
+One definition of central tendency is the point at which the distribution is in balance. Figure 2 shows the distribution of the five numbers 2, 3, 4, 9, 16 placed upon a balance scale. If each number weighs one pound, and is placed at its position along the number line, then it would be possible to balance them by placing a fulcrum at 6.8.
+
+Figure 2. A balance scale.
+
+For another example, consider the distribution shown in Figure 3. It is balanced by placing the fulcrum in the geometric middle.
+
+Figure 3. A distribution balanced on the tip of a triangle.
+
+Figure 4 illustrates that the same distribution can't be balanced by placing the fulcrum to the left of center.
+
+Figure 4. The distribution is not balanced.
+
+Figure 5 shows an asymmetric distribution. To balance it, we cannot put the fulcrum halfway between the lowest and highest values (as we did in Figure 3). Placing the fulcrum at the ``half way'' point would cause it to tip towards the left.
+
+Figure 5. An asymmetric distribution balanced on the tip of a triangle.
+
+The balance point defines one sense of a distribution's center. The simulation in the next section ``Balance Scale Simulation'' shows how to find the point at which the distribution balances.
+
+Smallest Absolute Deviation
+
+Another way to define the center of a distribution is based on the concept of the sum of the absolute deviations (differences). Consider the distribution made up of the five numbers 2, 3, 4, 9, 16. Let's see how far the distribution is from 10 (picking a number arbitrarily). Table 2 shows the sum of the absolute deviations of these numbers from the number 10.
+
+Table 2. An example of the sum of absolute deviations
+
+Values Absolute Deviations from 10
+2
+3
+4
+9
+16 8
+7
+6
+1
+6
+Sum 28
+The first row of the table shows that the absolute value of the difference between 2 and 10 is 8; the second row shows that the absolute difference between 3 and 10 is 7, and similarly for the other rows. When we add up the five absolute deviations, we get 28. So, the sum of the absolute deviations from 10 is 28. Likewise, the sum of the absolute deviations from 5 equals 3 + 2 + 1 + 4 + 11 = 21. So, the sum of the absolute deviations from 5 is smaller than the sum of the absolute deviations from 10. In this sense, 5 is closer, overall, to the other numbers than is 10.
+
+We are now in a position to define a second measure of central tendency, this time in terms of absolute deviations. Specifically, according to our second definition, the center of a distribution is the number for which the sum of the absolute deviations is smallest. As we just saw, the sum of the absolute deviations from 10 is 28 and the sum of the absolute deviations from 5 is 21. Is there a value for which the sum of the absolute deviations is even smaller than 21? Yes. For these data, there is a value for which the sum of absolute deviations is only 20. See if you can find it. A general method for finding the center of a distribution in the sense of absolute deviations is provided in the simulation ``Absolute Differences Simulation.''
+
+Smallest Squared Deviation
+
+We shall discuss one more way to define the center of a distribution. It is based on the concept of the sum of squared deviations (differences). Again, consider the distribution of the five numbers 2, 3, 4, 9, 16. Table 3 shows the sum of the squared deviations of these numbers from the number 10.
+
+Table 3. An example of the sum of squared deviations.
+
+Values Squared Deviations
+from 10
+2
+3
+4
+9
+16 64
+49
+36
+1
+36
+Sum 186
+The first row in the table shows that the squared value of the difference between 2 and 10 is 64; the second row shows that the squared difference between 3 and 10 is 49, and so forth. When we add up all these squared deviations, we get 186. Changing the target from 10 to 5, we calculate the sum of the squared deviations from 5 as 9 + 4 + 1 + 16 + 121 = 151. So, the sum of the squared deviations from 5 is smaller than the sum of the squared deviations from 10. Is there a value for which the sum of the squared deviations is even smaller than 151? Yes, it is possible to reach 134.8. Can you find the target number for which the sum of squared deviations is 134.8?
+
+The target that minimizes the sum of squared deviations provides another useful definition of central tendency (the last one to be discussed in this section). It can be challenging to find the value that minimizes this sum. You will see how you do it in the upcoming section ``Squared Differences Simulation.''
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{exercises-6}{%
+\section{Exercises}\label{exercises-6}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\text{Put exercises here}\)
+\end{enumerate}
+
+\hypertarget{sumarizing-distributions-measures-of-central-tendency}{%
+\chapter{Sumarizing Distributions: Measures of Central Tendency}\label{sumarizing-distributions-measures-of-central-tendency}}
+
+Note: Portions below modeled after content from
+\emph{Online Statistics Education: A Multimedia Course of Study}
+(\url{http://onlinestatbook.com/}) Project Leader: David M. Lane, Rice University
+
+In the previous section we saw that there are several ways to define central tendency. This section defines the three most common measures of central tendency: the mean, the median, and the mode. The relationships among these measures of central tendency and the definitions given in the previous section will probably not be obvious to you. Rather than just tell you these relationships, we will allow you to discover them in the simulations in the sections that follow.
+
+This section gives only the basic definitions of the mean, median and mode. A further discussion of the relative merits and proper applications of these statistics is presented in a later section.
+
+Arithmetic Mean
+
+The arithmetic mean is the most common measure of central tendency. It is simply the sum of the numbers divided by the number of numbers. The symbol ``μ'' is used for the mean of a population. The symbol ``M'' is used for the mean of a sample. The formula for μ is shown below:
+
+μ = ΣX/N
+where ΣX is the sum of all the numbers in the population and
+N is the number of numbers in the population.
+
+The formula for M is essentially identical:
+
+M = ΣX/N
+where ΣX is the sum of all the numbers in the sample and
+N is the number of numbers in the sample.
+
+As an example, the mean of the numbers 1, 2, 3, 6, 8 is 20/5 = 4 regardless of whether the numbers constitute the entire population or just a sample from the population.
+
+Table 1 shows the number of touchdown (TD) passes thrown by each of the 31 teams in the National Football League in the 2000 season. The mean number of touchdown passes thrown is 20.4516 as shown below.
+
+μ = ΣX/N
+= 634/31
+= 20.4516
+Table 1. Number of touchdown passes.
+
+37 33 33 32 29 28 28 23 22 22 22 21 21 21 20 20 19 19 18 18 18 18 16 15 14 14 14 12 12 9 6
+Although the arithmetic mean is not the only ``mean'' (there is also a geometric mean), it is by far the most commonly used. Therefore, if the term ``mean'' is used without specifying whether it is the arithmetic mean, the geometric mean, or some other mean, it is assumed to refer to the arithmetic mean.
+
+Median
+
+The median is also a frequently used measure of central tendency. The median is the midpoint of a distribution: the same number of scores is above the median as below it. For the data in Table 1, there are 31 scores. The 16th highest score (which equals 20) is the median because there are 15 scores below the 16th score and 15 scores above the 16th score. The median can also be thought of as the 50th percentile.
+
+Computation of the Median
+
+When there is an odd number of numbers, the median is simply the middle number. For example, the median of 2, 4, and 7 is 4. When there is an even number of numbers, the median is the mean of the two middle numbers. Thus, the median of the numbers 2, 4, 7, 12 is (4+7)/2 = 5.5. When there are numbers with the same values, then the formula for the third definition of the 50th percentile should be used.
+
+Mode
+
+The mode is the most frequently occurring value. For the data in Table 1, the mode is 18 since more teams (4) had 18 touchdown passes than any other number of touchdown passes. With continuous data such as response time measured to many decimals, the frequency of each value is one since no two scores will be exactly the same (see discussion of continuous variables). Therefore the mode of continuous data is normally computed from a grouped frequency distribution. Table 2 shows a grouped frequency distribution for the target response time data. Since the interval with the highest frequency is 600-700, the mode is the middle of that interval (650).
+
+Table 2. Grouped frequency distribution.
+
+Range Frequency
+500-600
+600-700
+700-800
+800-900
+900-1000
+1000-1100 3
+6
+5
+5
+0
+1
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{exercises-7}{%
+\section{Exercises}\label{exercises-7}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}

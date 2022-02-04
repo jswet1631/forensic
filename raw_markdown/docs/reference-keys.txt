@@ -52,5 +52,8 @@ basic-box-plots
 variations-on-box-plots
 exercises-4
 graphing-distributions-bar-charts
-introduction-2
 exercises-5
+sumarizing-distributions-central-tendency
+exercises-6
+sumarizing-distributions-measures-of-central-tendency
+exercises-7
