@@ -1,5 +1,5 @@
 --- 
-title: "Forensic Science and Statistics: Version 1.0.0"
+title: "Forensic Science and Statistics: Version 1.0.1"
 author: "Jeff Holt and Joseph Swetonic"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site

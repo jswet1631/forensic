@@ -32,6 +32,12 @@ $$
 \mbox{Table 1: Hair Color Counts}
 $$
 
+```{r, warning=FALSE, echo=FALSE}
+library(kableExtra)
+table <- data.frame(Color = c("Brown", "Blond", "Red", "Green"), Count = c(670, 200, 110, 20))
+table %>% kbl(caption = "Hair Color Counts") %>% kable_styling(full_width = FALSE)
+```
+
 A **probability** is a number between 0 and 1 that provides a measure of the 
 likelihood that something occurs, 
 with a larger number indicating greater likelihood. 

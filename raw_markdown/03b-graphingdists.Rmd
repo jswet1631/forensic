@@ -57,20 +57,14 @@ In a histogram the class frequencies are represented by bars, which provides a g
 depiction of the data.  The height of each bar corresponds 
 to its class frequency. A histogram of the weight data is shown in Figure \@ref(fig:histogram).
 
-```{r histogram, fig.cap="Histogram of weights", echo=FALSE}
+```{r histogram, fig.cap="Histogram of Weights", echo=FALSE}
 set.seed(4)
-data01 = rnorm(371, mean=239, sd=8)
-for (i in 1:371) {
-  if (data01[i] > 239) {
-    data01[i] = 239 + 1.1*(data01[i]-239)
-  }
-}
-data01 <- data.frame(Weights = data01)
-ggplot(data01, aes(Weights)) + 
-  geom_histogram(breaks = seq(215, 265, by=5),
-                 fill = "steelblue",
-                 color = "black") + 
-  labs(x="Weights", y="Frequency")
+data01 <- rnorm(371, mean = 239, sd = 8)
+data01 <- data.frame(Weights = ifelse(data01 > 239, 239 + 1.1 * (data01 - 239), data01))
+
+data01 %>% ggplot() + 
+  geom_histogram(aes(x = Weights), breaks = seq(215, 265, by = 5), fill = "steelblue", color = "black") + 
+  labs(y = "Frequency")
 ```
 
 We can see from the histogram that most of the weights are between 230 and 250 grams,
@@ -92,21 +86,12 @@ Figure \@ref(fig:histogram-perc).  To get the percentages, we divide
 each frequency by the number of data values (that gives the proportion), and
 then multiply by 100 to convert to percentages.
 
-```{r histogram-perc, fig.cap="Histogram of weights", echo=FALSE}
-set.seed(4)
-data01 = rnorm(371, mean=239, sd=8)
-for (i in 1:371) {
-  if (data01[i] > 239) {
-    data01[i] = 239 + 1.1*(data01[i]-239)
-  }
-}
-data01 <- data.frame(Weights = data01)
-ggplot(data01, aes(x = Weights, y=)) + 
-  geom_histogram(aes(y = 100*(..count..)/(sum(..count..))),
-                 breaks = seq(215, 265, by=5),
-                 fill = "steelblue",
-                 color = "black") + 
-  labs(x="Weights", y="Percentage")
+```{r histogram-perc, fig.cap="Histogram of Weights", echo=FALSE}
+data01 %>% ggplot() + 
+  geom_histogram(aes(x = Weights, y = 100 * ..count.. / sum(count)), 
+                 breaks = seq(215, 265, by = 5), 
+                 fill = "steelblue", color = "black") + 
+  labs(y = "Percentage")
 ```
 
 We see that the shape of the histogram is unchanged, only the Y-axis is
@@ -120,15 +105,19 @@ These both give a general sense of the distribution, but here bins of width 1
 produce a graph that is too busy while bins of width 10 produce a graph that
 lacks detail.
 
-```{r histogram-two, fig.cap="Histograms with different bin widths", echo=FALSE}
+```{r histogram-two, fig.cap="Histograms with Different Bin Widths", echo=FALSE, fig.show='hold', out.width="50%"}
+data01 %>% ggplot() + 
+  geom_histogram(aes(x = Weights), binwidth = 1, fill = "steelblue", color = "black") + 
+  labs(y = "Frequency")
 
-# Joseph: Please create side-by-side histograms using the above data, 
-# bin width 1 on the left, bin width 10 on the right
+data01 %>% ggplot() + 
+  geom_histogram(aes(x = Weights), binwidth = 10, fill = "steelblue", color = "black") + 
+  labs(y = "Frequency")
 ```
 
 Most software have defaults for bin widths that might work well for a given set
 of data, or might not.  There are some "rules of thumb" that can help guide
-thed choice of bin width but these are just guidelines that should not be
+the choice of bin width but these are just guidelines that should not be
 regarded as definitive, so do not feel bound to them.  That said, here are
 a couple of general guidelines you can consider:
 
@@ -151,3 +140,34 @@ shape of the distribution.
 ## Exercises
 
 1. $\text{Put exercises here}$
+
+## Code Appendix
+
+```{r, eval=FALSE}
+set.seed(4)
+data01 <- rnorm(371, mean = 239, sd = 8)
+data01 <- data.frame(Weights = ifelse(data01 > 239, 239 + 1.1 * (data01 - 239), data01))
+
+# Figure 8.1 -----
+data01 %>% ggplot() + 
+  geom_histogram(aes(x = Weights), breaks = seq(215, 265, by = 5), 
+                 fill = "steelblue", color = "black") + 
+  labs(y = "Frequency")
+
+# Figure 8.2 -----
+data01 %>% ggplot() + 
+  geom_histogram(aes(x = Weights, y = 100 * ..count.. / sum(count)), 
+                 breaks = seq(215, 265, by = 5), 
+                 fill = "steelblue", color = "black") + 
+  labs(y = "Percentage")
+
+# Figure 8.3 -----
+data01 %>% ggplot() + 
+  geom_histogram(aes(x = Weights), binwidth = 1, fill = "steelblue", color = "black") + 
+  labs(y = "Frequency")
+
+data01 %>% ggplot() + 
+  geom_histogram(aes(x = Weights), binwidth = 10, fill = "steelblue", color = "black") + 
+  labs(y = "Frequency")
+```
+

@@ -6,21 +6,18 @@ Blood plays a role in many forensic science applications, with the "blood
 type" determined by a combination of two different blood group systems:
 
 > *Blood types are inherited and represent contributions from both parents. 
-> As of 2019, a total of 41 human blood group systems are recognized by the 
-> International Society of Blood Transfusion (ISBT). The two most 
-> important blood group systems are ABO and Rh; they determine someone's 
-> blood type (A, B, AB, and O, with +, − or null denoting RhD status) 
-> for suitability in blood transfusion.*
->
-> Source: https://en.wikipedia.org/wiki/Blood_type
+As of 2019, a total of 41 human blood group systems are recognized by the 
+International Society of Blood Transfusion (ISBT). The two most 
+important blood group systems are ABO and Rh; they determine someone's 
+blood type (A, B, AB, and O, with +, − or null denoting RhD status) 
+for suitability in blood transfusion.*^[Blood type - Wikipedia: https://en.wikipedia.org/wiki/Blood_type]
 
 <!-- ![Source: https://www.blood.ca/en/blood/donating-blood/whats-my-blood-type](images/BloodType-PieGraph_0.jpg) -->
 
 Suppose that we have a collection of 1000 people, with each classified based on both
 ABO (A, B, AB, or O) and Rh ($+$ or $-$). 
 The number of people of each combination of ABO and Rh class (the "blood type") is shown 
-in the table below.  (This table is based on the distribution of blood types in 
-Canada, reported at https://www.blood.ca/en/blood/donating-blood/whats-my-blood-type)
+in the table below. ^[This table is based on the distribution of blood types in Canada, reported at https://www.blood.ca/en/blood/donating-blood/whats-my-blood-type]
 
 $$
 \begin{array}{c|c|c}

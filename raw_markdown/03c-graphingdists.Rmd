@@ -45,25 +45,19 @@ limits of the box (called "hinges") extend from the
 25th to 75th percentile and a line between those at the 50th percentile 
 (which is the median).
 
-```{r boxplot1, fig.cap="Box plots of glass measurements", echo=FALSE}
-
+```{r boxplot1, fig.cap="Box Plots of Glass Measurements", echo=FALSE}
 ## Joseph: The legend runs off the side of the page in the HTML output.
 ##         Can you see if you can figure out a way to fix that?
 
-data01 = c(55.6, 65.6, 68.0, 68.9, 67.7, 66.5, 66.8, 60.3, 68.0, 71.6, 61.4, 63.2, 68.2, 64.1, 64.8)
-data02 = c(67.9, 68.9, 69.5, 67.6, 73.4, 64.5, 73.0, 59.7, 66.9, 68.2, 71.8, 64.8, 56.3)
+data01 <- c(55.6, 65.6, 68.0, 68.9, 67.7, 66.5, 66.8, 60.3, 68.0, 71.6, 61.4, 63.2, 68.2, 64.1, 64.8)
+data02 <- c(67.9, 68.9, 69.5, 67.6, 73.4, 64.5, 73.0, 59.7, 66.9, 68.2, 71.8, 64.8, 56.3)
 
-data01 <- data.frame(Measurement = data01)
-data01['Source'] = 'Crime Scene'
+data01 <- data.frame(Measurement = data01, Source = "Crime Scence")
+data02 <- data.frame(Measurement = data02, Source = "Car Trunk")
+data03 <- rbind(data01, data02)
 
-data02 <- data.frame(Measurement = data02)
-data02['Source'] = 'Car Trunk'
-
-data03 = rbind(data01, data02)
-
-ggplot(data03, aes(x=Source, y=Measurement, color=Source)) + 
+data03 %>% ggplot(aes(x = Source, y = Measurement)) +
   geom_boxplot(outlier.shape = NA, coef = 0)
-
 ```
 
 Comparing box plots, we see that the percentiles for the car trunk data
@@ -88,26 +82,12 @@ automates the process so one need not do this by hand.)
 
 Figure \@ref(fig:boxplot2) shows the box plots with whiskers.
 
-```{r boxplot2, fig.cap="Box plots of glass measurements", echo=FALSE}
-
+```{r boxplot2, fig.cap="Box Plots of Glass Measurements", echo=FALSE}
 ## Joseph: The legend runs off the side of the page in the HTML output.
 ##         Can you see if you can figure out a way to fix that?
-## Joseph: Can you add the horizontal line to the end of the whiskers?
 
-data01 = c(55.6, 65.6, 68.0, 68.9, 67.7, 66.5, 66.8, 60.3, 68.0, 71.6, 61.4, 63.2, 68.2, 64.1, 64.8)
-data02 = c(67.9, 68.9, 69.5, 67.6, 73.4, 64.5, 73.0, 59.7, 66.9, 68.2, 71.8, 64.8, 56.3)
-
-data01 <- data.frame(Measurement = data01)
-data01['Source'] = 'Crime Scene'
-
-data02 <- data.frame(Measurement = data02)
-data02['Source'] = 'Car Trunk'
-
-data03 = rbind(data01, data02)
-
-ggplot(data03, aes(x=Source, y=Measurement, color=Source)) + 
+data03 %>% ggplot(aes(x = Source, y = Measurement)) + stat_boxplot(geom = "errorbar") + 
   geom_boxplot(outlier.shape = NA)
-
 ```
 
 The whiskers add additional information about the spread of data, but do
@@ -115,53 +95,25 @@ not extend to all values.  We indicate these with dots that are beyond
 the whiskers in positions corresponding to data values.  This is shown in
 Figure \@ref(fig:boxplot3).
 
-```{r boxplot3, fig.cap="Box plots of glass measurements", echo=FALSE}
-
+```{r boxplot3, fig.cap="Box Plots of Glass Measurements", echo=FALSE}
 ## Joseph: The legend runs off the side of the page in the HTML output.
 ##         Can you see if you can figure out a way to fix that?
-## Joseph: Can you add the horizontal line to the end of the whiskers?
 
-data01 = c(55.6, 65.6, 68.0, 68.9, 67.7, 66.5, 66.8, 60.3, 68.0, 71.6, 61.4, 63.2, 68.2, 64.1, 64.8)
-data02 = c(67.9, 68.9, 69.5, 67.6, 73.4, 64.5, 73.0, 59.7, 66.9, 68.2, 71.8, 64.8, 56.3)
-
-data01 <- data.frame(Measurement = data01)
-data01['Source'] = 'Crime Scene'
-
-data02 <- data.frame(Measurement = data02)
-data02['Source'] = 'Car Trunk'
-
-data03 = rbind(data01, data02)
-
-ggplot(data03, aes(x=Source, y=Measurement, color=Source)) + 
-  geom_boxplot(outlier.colour="black", outlier.shape=16, outlier.size=2)
-
+data03 %>% ggplot(aes(x = Source, y = Measurement)) + stat_boxplot(geom = "errorbar") + 
+  geom_boxplot(outlier.size = 2)
 ```
 
 Some (but not all!) box plots also include a mark indicating the location of
 the mean.  This is added in Figure \@ref(fig:boxplot4) as a red dot in each
 box plot.
 
-```{r boxplot4, fig.cap="Box plots of glass measurements", echo=FALSE}
-
+```{r boxplot4, fig.cap="Box Plots of Glass Measurements", echo=FALSE}
 ## Joseph: The legend runs off the side of the page in the HTML output.
 ##         Can you see if you can figure out a way to fix that?
-## Joseph: Can you add the horizontal line to the end of the whiskers?
 
-data01 = c(55.6, 65.6, 68.0, 68.9, 67.7, 66.5, 66.8, 60.3, 68.0, 71.6, 61.4, 63.2, 68.2, 64.1, 64.8)
-data02 = c(67.9, 68.9, 69.5, 67.6, 73.4, 64.5, 73.0, 59.7, 66.9, 68.2, 71.8, 64.8, 56.3)
-
-data01 <- data.frame(Measurement = data01)
-data01['Source'] = 'Crime Scene'
-
-data02 <- data.frame(Measurement = data02)
-data02['Source'] = 'Car Trunk'
-
-data03 = rbind(data01, data02)
-
-ggplot(data03, aes(x=Source, y=Measurement, color=Source)) + 
-  geom_boxplot(outlier.colour="black", outlier.shape=16, outlier.size=2) +
-  stat_summary(fun=mean, geom="point", shape=20, size=3, color="red", fill="red")
-
+data03 %>% ggplot(aes(x = Source, y = Measurement)) + stat_boxplot(geom = "errorbar") +
+  geom_boxplot(outlier.size = 2) + 
+  stat_summary(fun = mean, geom = "point", color = "red", size = 2)
 ```
 
 Figure \@ref(fig:boxplot4) provides a good summary of the data. Half of 
@@ -184,28 +136,13 @@ This provides more detail on our data -- note the points that specify
 the ends of the whiskers as well as the difference in how the points are
 distributed within the boxes.
 
-```{r boxplot5, fig.cap="Box plots of glass measurements", echo=FALSE}
-
+```{r boxplot5, fig.cap="Box Plots of Glass Measurements", echo=FALSE}
 ## Joseph: The legend runs off the side of the page in the HTML output.
 ##         Can you see if you can figure out a way to fix that?
-## Joseph: Can you add the horizontal line to the end of the whiskers?
 
-data01 = c(55.6, 65.6, 68.0, 68.9, 67.7, 66.5, 66.8, 60.3, 68.0, 71.6, 61.4, 63.2, 68.2, 64.1, 64.8)
-data02 = c(67.9, 68.9, 69.5, 67.6, 73.4, 64.5, 73.0, 59.7, 66.9, 68.2, 71.8, 64.8, 56.3)
-
-data01 <- data.frame(Measurement = data01)
-data01['Source'] = 'Crime Scene'
-
-data02 <- data.frame(Measurement = data02)
-data02['Source'] = 'Car Trunk'
-
-data03 = rbind(data01, data02)
-
-ggplot(data03, aes(x=Source, y=Measurement, color=Source)) + 
-  geom_boxplot() +
-  stat_summary(fun=mean, geom="point", shape=20, size=3, color="red", fill="red") +
-  geom_jitter(color="black", size=2, alpha=0.9, width=0)
-
+data03 %>% ggplot(aes(x = Source, y = Measurement)) + stat_boxplot(geom = "errorbar") + 
+  geom_boxplot() + geom_jitter(width = 0, alpha = 0.9) + 
+  stat_summary(fun = mean, geom = "point", color = "red", size = 2)
 ```
 
 Showing the specific data values on the vertical axis works well as long as there 
@@ -215,28 +152,13 @@ work is "jittering" which adds a horizontal offset so that points can be
 distinguished. Figure \@ref(fig:boxplot6) shows our data with a modest 
 amount of jitter added.
 
-```{r boxplot6, fig.cap="Box plots of glass measurements", echo=FALSE}
-
+```{r boxplot6, fig.cap="Box Plots of Glass Measurements", echo=FALSE}
 ## Joseph: The legend runs off the side of the page in the HTML output.
 ##         Can you see if you can figure out a way to fix that?
-## Joseph: Can you add the horizontal line to the end of the whiskers?
 
-data01 = c(55.6, 65.6, 68.0, 68.9, 67.7, 66.5, 66.8, 60.3, 68.0, 71.6, 61.4, 63.2, 68.2, 64.1, 64.8)
-data02 = c(67.9, 68.9, 69.5, 67.6, 73.4, 64.5, 73.0, 59.7, 66.9, 68.2, 71.8, 64.8, 56.3)
-
-data01 <- data.frame(Measurement = data01)
-data01['Source'] = 'Crime Scene'
-
-data02 <- data.frame(Measurement = data02)
-data02['Source'] = 'Car Trunk'
-
-data03 = rbind(data01, data02)
-
-ggplot(data03, aes(x=Source, y=Measurement, color=Source)) + 
-  geom_boxplot(outlier.shape = NA) +
-  stat_summary(fun=mean, geom="point", shape=20, size=3, color="red", fill="red") +
-  geom_jitter(color="black", size=2, alpha=0.9, width=0.1)
-
+data03 %>% ggplot(aes(x = Source, y = Measurement)) + stat_boxplot(geom = "errorbar") + 
+  geom_boxplot() + geom_jitter(width = 0.1, alpha = 0.9) + 
+  stat_summary(fun = mean, geom = "point", color = "red", size = 2)
 ```
 
 Different styles of box plots are best for different situations, and there are 
@@ -251,15 +173,40 @@ important.
 
 1. $\text{Put exercises here}$
 
+## Code Appendix
 
+```{r, eval=FALSE}
+data01 <- c(55.6, 65.6, 68.0, 68.9, 67.7, 66.5, 66.8, 60.3, 68.0, 71.6, 61.4, 63.2, 68.2, 64.1, 64.8)
+data02 <- c(67.9, 68.9, 69.5, 67.6, 73.4, 64.5, 73.0, 59.7, 66.9, 68.2, 71.8, 64.8, 56.3)
 
+data01 <- data.frame(Measurement = data01, Source = "Crime Scence")
+data02 <- data.frame(Measurement = data02, Source = "Car Trunk")
+data03 <- rbind(data01, data02)
 
+# Figure 9.1 -----
+data03 %>% ggplot(aes(x = Source, y = Measurement)) +
+  geom_boxplot(outlier.shape = NA, coef = 0)
 
+# Figure 9.2 -----
+data03 %>% ggplot(aes(x = Source, y = Measurement)) + stat_boxplot(geom = "errorbar") + 
+  geom_boxplot(outlier.shape = NA)
 
+# Figure 9.3 -----
+data03 %>% ggplot(aes(x = Source, y = Measurement)) + stat_boxplot(geom = "errorbar") + 
+  geom_boxplot()
 
+# Figure 9.4 -----
+data03 %>% ggplot(aes(x = Source, y = Measurement)) + stat_boxplot(geom = "errorbar") +
+  geom_boxplot(outlier.size = 2) + 
+  stat_summary(fun = mean, geom = "point", color = "red", size = 2)
 
+# Figure 9.5 -----
+data03 %>% ggplot(aes(x = Source, y = Measurement)) + stat_boxplot(geom = "errorbar") + 
+  geom_boxplot() + geom_jitter(width = 0, alpha = 0.9) + 
+  stat_summary(fun = mean, geom = "point", color = "red", size = 2)
 
-
-
-
-
+# Figure 9.6 -----
+data03 %>% ggplot(aes(x = Source, y = Measurement)) + stat_boxplot(geom = "errorbar") + 
+  geom_boxplot() + geom_jitter(width = 0.1, alpha = 0.9) + 
+  stat_summary(fun = mean, geom = "point", color = "red", size = 2)
+```

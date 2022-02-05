@@ -12,10 +12,6 @@ depicts the percentage of people in a population that have each of the four
 possible ABO blood groups.
 
 ```{r bar-chart-percent2, fig.cap="Percentages for ABO Blood Groups", echo=FALSE}
-
-library(dplyr)
-library(ggplot2)
-
 data <- data.frame(ABO_Group = c("A", "B", "AB", "O"), value = c(210, 45, 15, 230)) %>%
   mutate(prop = value / sum(value) * 100)
 
@@ -29,7 +25,6 @@ types of quantitative information.  The bar chart in Figure \@ref(fig:bar-chart2
 presents the number of murders in four large U.S. cities. 
 
 ```{r bar-chart2, fig.cap="Number of murders, selected U.S. cities, year 2000", warning=FALSE, echo=FALSE, message=FALSE}
-
 data <- data.frame(City = c("Chicago", "Dallas", "Los Angeles", "New York"), 
                    Murders = c(774, 251, 349, 468))
 
@@ -43,7 +38,6 @@ the per capita number of murders.  Figure \@ref(fig:bar-chart3) gives the
 number of murders per 1,000,000 population for the same cities.
 
 ```{r bar-chart3, fig.cap="Murders per 1,000,000 residents, selected U.S. cities, year 2000", warning=FALSE, echo=FALSE, message=FALSE}
-
 data <- data.frame(City = c("Chicago", "Dallas", "Los Angeles", "New York"), 
                    Murders = c(281.8645, 192.4847, 89.51013, 53.15766)) 
 
@@ -59,7 +53,6 @@ that negative percentages are possible, the result of the number of shootings
 decreasing from one year to the next.
 
 ```{r bar-chart4, fig.cap="Year-to-year Percent Change, Shootings in Toronto", warning=FALSE, echo=FALSE, message=FALSE}
-
 data <- data.frame(City = c("1995", "1996", "1997", "1998", "1999", "2000"), 
                    RateChange = c(62.7, 41.3, -2.9, 7.3, 16.7, -6.7)) 
 
@@ -77,7 +70,6 @@ in the car trunk of a suspect.  (This data is treated more thoroughly
 in the chapter on box plots.)
 
 ```{r bar-chart5, fig.cap="Comparison of mean trace element measurements", warning=FALSE, echo=FALSE, message=FALSE}
-
 data01 = c(55.6, 65.6, 68.0, 68.9, 67.7, 66.5, 66.8, 60.3, 68.0, 71.6, 61.4, 63.2, 68.2, 64.1, 64.8)
 data02 = c(67.9, 68.9, 69.5, 67.6, 73.4, 64.5, 73.0, 59.7, 66.9, 68.2, 71.8, 64.8, 56.3)
 data <- data.frame(Source = c("Car Trunk", "Crime Scene"), 
@@ -88,7 +80,7 @@ ggplot(data, aes(Source, Mean)) +
   labs(x = "Source", y = "Mean trace element measurement")
 ```
 
-The heights of the bars are cery similar, suggesting that there might be 
+The heights of the bars are very similar, suggesting that there might be 
 a common source for the two sets of glass pieces.  That might well be the
 case but the means alone are not enough to provide a conclusion one way or
 the other.  In this case, box plots can be used instead since they provide 
@@ -96,25 +88,12 @@ more information about the distribution.  Figure \@ref(fig:boxplot2a)
 shows the box plots for this data again.
 
 ```{r boxplot2a, fig.cap="Box plots of glass measurements", echo=FALSE}
-
-## Joseph: The legend runs off the side of the page in the HTML output.
-##         Can you see if you can figure out a way to fix that?
-## Joseph: Can you add the horizontal line to the end of the whiskers?
-
-data01 = c(55.6, 65.6, 68.0, 68.9, 67.7, 66.5, 66.8, 60.3, 68.0, 71.6, 61.4, 63.2, 68.2, 64.1, 64.8)
-data02 = c(67.9, 68.9, 69.5, 67.6, 73.4, 64.5, 73.0, 59.7, 66.9, 68.2, 71.8, 64.8, 56.3)
-
-data01 <- data.frame(Measurement = data01)
-data01['Source'] = 'Crime Scene'
-
-data02 <- data.frame(Measurement = data02)
-data02['Source'] = 'Car Trunk'
-
+data01 <- data.frame(Measurement = data01, Source = "Crime Scene")
+data02 <- data.frame(Measurement = data02, Source = "Car Trunk")
 data03 = rbind(data01, data02)
 
 ggplot(data03, aes(x=Source, y=Measurement, color=Source)) + 
-  geom_boxplot(outlier.shape = NA)
-
+  stat_boxplot(geom = "errorbar") + geom_boxplot(outlier.shape = NA)
 ```
 
 The box plots have considerable overlap, but at the same time the middle 50%
@@ -129,15 +108,58 @@ same source.  We will consider this question more in later chapters.
 
 1. $\text{Put exercises here}$
 
+## Code Appendix
 
+```{r, eval=FALSE}
+# Figure 10.1 -----
+data <- data.frame(ABO_Group = c("A", "B", "AB", "O"), value = c(210, 45, 15, 230)) %>%
+  mutate(prop = value / sum(value) * 100)
 
+ggplot(data, aes(ABO_Group, prop)) + 
+  geom_bar(stat = "identity", fill = "steelblue", width = 0.6) + 
+  labs(x = "ABO Group", y = "Percentage")
 
+# Figure 10.2 -----
+data <- data.frame(City = c("Chicago", "Dallas", "Los Angeles", "New York"), 
+                   Murders = c(774, 251, 349, 468))
 
+ggplot(data, aes(City, Murders)) + 
+  geom_bar(stat = "identity", fill = "steelblue", width = 0.6) + 
+  labs(x = "City", y = "Murders")
 
+# Figure 10.3 -----
+data <- data.frame(City = c("Chicago", "Dallas", "Los Angeles", "New York"), 
+                   Murders = c(281.8645, 192.4847, 89.51013, 53.15766)) 
 
+ggplot(data, aes(City, Murders)) + 
+  geom_bar(stat = "identity", fill = "steelblue", width = 0.6) + 
+  labs(x = "City", y = "Murders per 1,000,000 residents")
 
+# Figure 10.4 -----
+data <- data.frame(City = c("1995", "1996", "1997", "1998", "1999", "2000"), 
+                   RateChange = c(62.7, 41.3, -2.9, 7.3, 16.7, -6.7)) 
 
+# 2014-2020: 177, 288, 407, 395, 424, 495, 462 Shootings in Toronto (Wikipedia)
 
+ggplot(data, aes(City, RateChange)) + 
+  geom_bar(stat = "identity", fill = "steelblue", width = 0.6) + 
+  labs(x = "Year", y = "Year-to-year Percent Change, Shootings")
 
+# Figure 10.5 -----
+data01 = c(55.6, 65.6, 68.0, 68.9, 67.7, 66.5, 66.8, 60.3, 68.0, 71.6, 61.4, 63.2, 68.2, 64.1, 64.8)
+data02 = c(67.9, 68.9, 69.5, 67.6, 73.4, 64.5, 73.0, 59.7, 66.9, 68.2, 71.8, 64.8, 56.3)
+data <- data.frame(Source = c("Car Trunk", "Crime Scene"), 
+                   Mean = c(mean(data02), mean(data01)))
 
+ggplot(data, aes(Source, Mean)) + 
+  geom_bar(stat = "identity", fill = "steelblue", width = 0.6) + 
+  labs(x = "Source", y = "Mean trace element measurement")
 
+# Figure 10.6 -----
+data01 <- data.frame(Measurement = data01, Source = "Crime Scene")
+data02 <- data.frame(Measurement = data02, Source = "Car Trunk")
+data03 = rbind(data01, data02)
+
+ggplot(data03, aes(x=Source, y=Measurement, color=Source)) + 
+  stat_boxplot(geom = "errorbar") + geom_boxplot(outlier.shape = NA)
+```

@@ -34,8 +34,7 @@ $$P(\beta) = 1 - P(\beta') = 1 - \frac{365!}{365^{23}(365 - 23)!} = 0.507$$
 
 ## Monty Hall Problem
 
-The original problem was popularized as a letter by Craig F. Whitaker sent to Marilyn vos Savant's column in Parade magazine in 1990.
-You can read more about the article here: https://web.archive.org/web/20130121183432/http://marilynvossavant.com/game-show-problem/
+The original problem was popularized as a letter by Craig F. Whitaker sent to Marilyn vos Savant's column in Parade magazine in 1990.^[You can read more about the article here: https://web.archive.org/web/20130121183432/http://marilynvossavant.com/game-show-problem/]
 
 Suppose you're on a game show, and you're given the choice of three doors. Behind one door is a car, behind the others, goats.
 You pick a door, say #1, and the host, who knows what's behind the doors, opens another door, say #3, which has a goat. 

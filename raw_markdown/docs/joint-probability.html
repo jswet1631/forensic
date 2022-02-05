@@ -1,72 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="" xml:lang="">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 3 Joint Probability | Forensic Science and Statistics: Version 1.0.0</title>
-<meta name="author" content="Jeff Holt and Joseph Swetonic">
-<meta name="description" content="3.1 Blood Types Blood plays a role in many forensic science applications, with the “blood type” determined by a combination of two different blood group systems: Blood types are inherited and...">
-<meta name="generator" content="bookdown 0.24 with bs4_book()">
-<meta property="og:title" content="Chapter 3 Joint Probability | Forensic Science and Statistics: Version 1.0.0">
-<meta property="og:type" content="book">
-<meta property="og:description" content="3.1 Blood Types Blood plays a role in many forensic science applications, with the “blood type” determined by a combination of two different blood group systems: Blood types are inherited and...">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 3 Joint Probability | Forensic Science and Statistics: Version 1.0.0">
-<meta name="twitter:description" content="3.1 Blood Types Blood plays a role in many forensic science applications, with the “blood type” determined by a combination of two different blood group systems: Blood types are inherited and...">
-<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.0/transition.js"></script><script src="libs/bs3compat-0.3.0/tabs.js"></script><script src="libs/bs3compat-0.3.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Joint Probability | Forensic Science and Statistics: Version 1.0.1</title>
+  <meta name="description" content="This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Joint Probability | Forensic Science and Statistics: Version 1.0.1" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Joint Probability | Forensic Science and Statistics: Version 1.0.1" />
+  
+  <meta name="twitter:description" content="This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Jeff Holt and Joseph Swetonic" />
+
+
+<meta name="date" content="2022-02-04" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introduction-to-probability.html"/>
+<link rel="next" href="conditional-probability.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
-<body data-spy="scroll" data-target="#toc">
 
-<div class="container-fluid">
-<div class="row">
-  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+<body>
 
-    <div class="d-flex align-items-start justify-content-between">
-      <h1>
-        <a href="index.html" title="">Forensic Science and Statistics: Version 1.0.0</a>
-      </h1>
-      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
-    </div>
 
-    <div id="main-nav" class="collapse-lg">
-      <form role="search">
-        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
-</form>
 
-      <nav aria-label="Table of contents"><h2>Table of contents</h2>
-        <ul class="book-toc list-unstyled">
-<li><a class="" href="index.html"><span class="header-section-number">1</span> Welcome</a></li>
-<li><a class="" href="introduction-to-probability.html"><span class="header-section-number">2</span> Introduction to Probability</a></li>
-<li><a class="active" href="joint-probability.html"><span class="header-section-number">3</span> Joint Probability</a></li>
-<li><a class="" href="conditional-probability.html"><span class="header-section-number">4</span> Conditional Probability</a></li>
-<li><a class="" href="probability-rules.html"><span class="header-section-number">5</span> Probability Rules</a></li>
-<li><a class="" href="counterintuitive-applications.html"><span class="header-section-number">6</span> Counterintuitive Applications</a></li>
-<li><a class="" href="graphing-distributions-qualitative-variables.html"><span class="header-section-number">7</span> Graphing Distributions: Qualitative Variables</a></li>
-<li><a class="" href="graphing-distributions-histograms.html"><span class="header-section-number">8</span> Graphing Distributions: Histograms</a></li>
-<li><a class="" href="graphing-distributions-box-plots.html"><span class="header-section-number">9</span> Graphing Distributions: Box Plots</a></li>
-<li><a class="" href="graphing-distributions-bar-charts.html"><span class="header-section-number">10</span> Graphing Distributions: Bar Charts</a></li>
-<li><a class="" href="sumarizing-distributions-central-tendency.html"><span class="header-section-number">11</span> Sumarizing Distributions: Central Tendency</a></li>
-<li><a class="" href="sumarizing-distributions-measures-of-central-tendency.html"><span class="header-section-number">12</span> Sumarizing Distributions: Measures of Central Tendency</a></li>
-<li><a class="" href="references.html">References</a></li>
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Forensic Science and Statistics</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#an-introductory-example"><i class="fa fa-check"></i><b>1.1</b> An Introductory Example</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html"><i class="fa fa-check"></i><b>2</b> Introduction to Probability</a><ul>
+<li class="chapter" data-level="2.1" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#the-previous-example"><i class="fa fa-check"></i><b>2.1</b> The Previous Example</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#sample-questions"><i class="fa fa-check"></i><b>2.1.1</b> Sample Questions</a></li>
+<li class="chapter" data-level="2.1.2" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#sample-questions-1"><i class="fa fa-check"></i><b>2.1.2</b> Sample Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#exercises"><i class="fa fa-check"></i><b>2.2</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="joint-probability.html"><a href="joint-probability.html"><i class="fa fa-check"></i><b>3</b> Joint Probability</a><ul>
+<li class="chapter" data-level="3.1" data-path="joint-probability.html"><a href="joint-probability.html#blood-types"><i class="fa fa-check"></i><b>3.1</b> Blood Types</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="joint-probability.html"><a href="joint-probability.html#sample-questions-2"><i class="fa fa-check"></i><b>3.1.1</b> Sample Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="joint-probability.html"><a href="joint-probability.html#and-vs-or"><i class="fa fa-check"></i><b>3.2</b> And vs Or</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="joint-probability.html"><a href="joint-probability.html#sample-questions-3"><i class="fa fa-check"></i><b>3.2.1</b> Sample Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="joint-probability.html"><a href="joint-probability.html#probability-tables"><i class="fa fa-check"></i><b>3.3</b> Probability Tables</a></li>
+<li class="chapter" data-level="3.4" data-path="joint-probability.html"><a href="joint-probability.html#exercises-1"><i class="fa fa-check"></i><b>3.4</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="conditional-probability.html"><a href="conditional-probability.html"><i class="fa fa-check"></i><b>4</b> Conditional Probability</a><ul>
+<li class="chapter" data-level="4.0.1" data-path="conditional-probability.html"><a href="conditional-probability.html#sample-questions-4"><i class="fa fa-check"></i><b>4.0.1</b> Sample Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="probability-rules.html"><a href="probability-rules.html"><i class="fa fa-check"></i><b>5</b> Probability Rules</a></li>
+<li class="chapter" data-level="6" data-path="counterintuitive-applications.html"><a href="counterintuitive-applications.html"><i class="fa fa-check"></i><b>6</b> Counterintuitive Applications</a><ul>
+<li class="chapter" data-level="6.1" data-path="counterintuitive-applications.html"><a href="counterintuitive-applications.html#birthday-paradox"><i class="fa fa-check"></i><b>6.1</b> Birthday Paradox</a></li>
+<li class="chapter" data-level="6.2" data-path="counterintuitive-applications.html"><a href="counterintuitive-applications.html#monty-hall-problem"><i class="fa fa-check"></i><b>6.2</b> Monty Hall Problem</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html"><i class="fa fa-check"></i><b>7</b> Graphing Distributions: Qualitative Variables</a><ul>
+<li class="chapter" data-level="7.1" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html#introduction"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
+<li class="chapter" data-level="7.2" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html#frequency-tables"><i class="fa fa-check"></i><b>7.2</b> Frequency Tables</a></li>
+<li class="chapter" data-level="7.3" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html#pie-charts"><i class="fa fa-check"></i><b>7.3</b> Pie Charts</a></li>
+<li class="chapter" data-level="7.4" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html#bar-charts"><i class="fa fa-check"></i><b>7.4</b> Bar Charts</a></li>
+<li class="chapter" data-level="7.5" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html#comparing-distributions"><i class="fa fa-check"></i><b>7.5</b> Comparing Distributions</a></li>
+<li class="chapter" data-level="7.6" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html#exercises-2"><i class="fa fa-check"></i><b>7.6</b> Exercises</a></li>
+<li class="chapter" data-level="7.7" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html#code-appendix"><i class="fa fa-check"></i><b>7.7</b> Code Appendix</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="graphing-distributions-histograms.html"><a href="graphing-distributions-histograms.html"><i class="fa fa-check"></i><b>8</b> Graphing Distributions: Histograms</a><ul>
+<li class="chapter" data-level="8.1" data-path="graphing-distributions-histograms.html"><a href="graphing-distributions-histograms.html#introduction-1"><i class="fa fa-check"></i><b>8.1</b> Introduction</a></li>
+<li class="chapter" data-level="8.2" data-path="graphing-distributions-histograms.html"><a href="graphing-distributions-histograms.html#exercises-3"><i class="fa fa-check"></i><b>8.2</b> Exercises</a></li>
+<li class="chapter" data-level="8.3" data-path="graphing-distributions-histograms.html"><a href="graphing-distributions-histograms.html#code-appendix-1"><i class="fa fa-check"></i><b>8.3</b> Code Appendix</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="graphing-distributions-box-plots.html"><a href="graphing-distributions-box-plots.html"><i class="fa fa-check"></i><b>9</b> Graphing Distributions: Box Plots</a><ul>
+<li class="chapter" data-level="9.1" data-path="graphing-distributions-box-plots.html"><a href="graphing-distributions-box-plots.html#basic-box-plots"><i class="fa fa-check"></i><b>9.1</b> Basic box plots</a></li>
+<li class="chapter" data-level="9.2" data-path="graphing-distributions-box-plots.html"><a href="graphing-distributions-box-plots.html#variations-on-box-plots"><i class="fa fa-check"></i><b>9.2</b> Variations on box plots</a></li>
+<li class="chapter" data-level="9.3" data-path="graphing-distributions-box-plots.html"><a href="graphing-distributions-box-plots.html#exercises-4"><i class="fa fa-check"></i><b>9.3</b> Exercises</a></li>
+<li class="chapter" data-level="9.4" data-path="graphing-distributions-box-plots.html"><a href="graphing-distributions-box-plots.html#code-appendix-2"><i class="fa fa-check"></i><b>9.4</b> Code Appendix</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="graphing-distributions-bar-charts.html"><a href="graphing-distributions-bar-charts.html"><i class="fa fa-check"></i><b>10</b> Graphing Distributions: Bar Charts</a><ul>
+<li class="chapter" data-level="10.1" data-path="graphing-distributions-bar-charts.html"><a href="graphing-distributions-bar-charts.html#exercises-5"><i class="fa fa-check"></i><b>10.1</b> Exercises</a></li>
+<li class="chapter" data-level="10.2" data-path="graphing-distributions-bar-charts.html"><a href="graphing-distributions-bar-charts.html#code-appendix-3"><i class="fa fa-check"></i><b>10.2</b> Code Appendix</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="sumarizing-distributions-central-tendency.html"><a href="sumarizing-distributions-central-tendency.html"><i class="fa fa-check"></i><b>11</b> Sumarizing Distributions: Central Tendency</a><ul>
+<li class="chapter" data-level="11.1" data-path="sumarizing-distributions-central-tendency.html"><a href="sumarizing-distributions-central-tendency.html#exercises-6"><i class="fa fa-check"></i><b>11.1</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="sumarizing-distributions-measures-of-central-tendency.html"><a href="sumarizing-distributions-measures-of-central-tendency.html"><i class="fa fa-check"></i><b>12</b> Sumarizing Distributions: Measures of Central Tendency</a><ul>
+<li class="chapter" data-level="12.1" data-path="sumarizing-distributions-measures-of-central-tendency.html"><a href="sumarizing-distributions-measures-of-central-tendency.html#exercises-7"><i class="fa fa-check"></i><b>12.1</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
 </ul>
 
-        <div class="book-extra">
-          
-        </div>
       </nav>
-</div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="joint-probability" class="section level1" number="3">
-<h1>
-<span class="header-section-number">3</span> Joint Probability<a class="anchor" aria-label="anchor" href="#joint-probability"><i class="fas fa-link"></i></a>
-</h1>
-<div id="blood-types" class="section level2" number="3.1">
-<h2>
-<span class="header-section-number">3.1</span> Blood Types<a class="anchor" aria-label="anchor" href="#blood-types"><i class="fas fa-link"></i></a>
-</h2>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Forensic Science and Statistics: Version 1.0.1</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="joint-probability" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Joint Probability</h1>
+<div id="blood-types" class="section level2">
+<h2><span class="header-section-number">3.1</span> Blood Types</h2>
 <p>Blood plays a role in many forensic science applications, with the “blood
 type” determined by a combination of two different blood group systems:</p>
 <blockquote>
@@ -75,15 +232,13 @@ As of 2019, a total of 41 human blood group systems are recognized by the
 International Society of Blood Transfusion (ISBT). The two most
 important blood group systems are ABO and Rh; they determine someone’s
 blood type (A, B, AB, and O, with +, − or null denoting RhD status)
-for suitability in blood transfusion.</em></p>
-<p>Source: <a href="https://en.wikipedia.org/wiki/Blood_type" class="uri">https://en.wikipedia.org/wiki/Blood_type</a></p>
+for suitability in blood transfusion.</em><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
 </blockquote>
 <!-- ![Source: https://www.blood.ca/en/blood/donating-blood/whats-my-blood-type](images/BloodType-PieGraph_0.jpg) -->
 <p>Suppose that we have a collection of 1000 people, with each classified based on both
 ABO (A, B, AB, or O) and Rh (<span class="math inline">\(+\)</span> or <span class="math inline">\(-\)</span>).
 The number of people of each combination of ABO and Rh class (the “blood type”) is shown
-in the table below. (This table is based on the distribution of blood types in
-Canada, reported at <a href="https://www.blood.ca/en/blood/donating-blood/whats-my-blood-type" class="uri">https://www.blood.ca/en/blood/donating-blood/whats-my-blood-type</a>)</p>
+in the table below.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
 <p><span class="math display">\[
 \begin{array}{c|c|c}
        &amp; + &amp; - \\ \hline
@@ -122,10 +277,8 @@ a person with Rh group <span class="math inline">\(+\)</span> is</p>
 <p><span class="math display">\[
 \mbox{P(+)} = \frac{360 + 76 + 25 + 390}{1000} = \frac{851}{1000} = 0.851
 \]</span></p>
-<div id="sample-questions-2" class="section level3" number="3.1.1">
-<h3>
-<span class="header-section-number">3.1.1</span> Sample Questions<a class="anchor" aria-label="anchor" href="#sample-questions-2"><i class="fas fa-link"></i></a>
-</h3>
+<div id="sample-questions-2" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Sample Questions</h3>
 <style>
 hide {
   background-color: #d6d6d6;
@@ -138,21 +291,19 @@ hide:hover {
 </style>
 <p><strong>1.</strong> Find the probability that a randomly selected person has blood
 groups A and <span class="math inline">\(-\)</span>.</p>
-<p><strong>Answer:</strong> <hide><span class="math inline">\(\text{P(A and }-) = \frac{60}{1000} = 0.06\)</span>.<hide></hide></hide></p>
+<p><strong>Answer:</strong> <hide><span class="math inline">\(\text{P(A and }-) = \frac{60}{1000} = 0.06\)</span>.<hide></p>
 <p><strong>2.</strong> Find the probability that a randomly selected person has ABO group AB.</p>
 <p><strong>Answer:</strong> <hide>There are <span class="math inline">\(25 + 5 = 30\)</span> people that have ABO group AB, so that
-<span class="math inline">\(\mbox{P(AB)} = \frac{30}{1000} = 0.03\)</span>.<hide></hide></hide></p>
+<span class="math inline">\(\mbox{P(AB)} = \frac{30}{1000} = 0.03\)</span>.<hide></p>
 <p><strong>3.</strong> Find the probability that a randomly selected person has ABO group A and
 ABO group B and Rh group <span class="math inline">\(+\)</span>.</p>
 <p><strong>Answer:</strong> <hide>The is no person that has ABO group A <em>and</em> ABO group B, so
-<span class="math inline">\(P(\text{A and O and +}) = \frac{0}{1000} = 0\)</span>. <hide></hide></hide></p>
-<hr>
+<span class="math inline">\(P(\text{A and O and +}) = \frac{0}{1000} = 0\)</span>. <hide></p>
+<hr />
 </div>
 </div>
-<div id="and-vs-or" class="section level2" number="3.2">
-<h2>
-<span class="header-section-number">3.2</span> And vs Or<a class="anchor" aria-label="anchor" href="#and-vs-or"><i class="fas fa-link"></i></a>
-</h2>
+<div id="and-vs-or" class="section level2">
+<h2><span class="header-section-number">3.2</span> And vs Or</h2>
 <p>Above we saw that <span class="math inline">\(\text{P(B and }+) = 0.076\)</span>. Suppose we instead would like
 to know <span class="math inline">\(\text{P(B or }+)\)</span>?
 That is, we want to know the probability that a randomly selected person
@@ -173,38 +324,34 @@ is
 <p><span class="math display">\[
 \mbox{P(A or B)} = \frac{510}{1000} = 0.51
 \]</span></p>
-<div id="sample-questions-3" class="section level3" number="3.2.1">
-<h3>
-<span class="header-section-number">3.2.1</span> Sample Questions<a class="anchor" aria-label="anchor" href="#sample-questions-3"><i class="fas fa-link"></i></a>
-</h3>
+<div id="sample-questions-3" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> Sample Questions</h3>
 <p><strong>1.</strong> Find the probability that a randomly selected person has ABO group AB
 or Rh group <span class="math inline">\(-\)</span> blood.</p>
 <p><strong>Answer:</strong> <hide>The number of people who have ABO group AB <strong>or</strong> Rh group <span class="math inline">\(-\)</span> is
 <span class="math inline">\(25 + 5 + 60 + 14 + 70 = 174\)</span> so that
-<span class="math inline">\(\text{P(AB or }-) = \frac{174}{1000} = 0.174\)</span><hide></hide></hide></p>
+<span class="math inline">\(\text{P(AB or }-) = \frac{174}{1000} = 0.174\)</span><hide></p>
 <p><strong>2.</strong> Find the probability that a randomly selected person has ABO group O
 or Rh group <span class="math inline">\(+\)</span> blood.</p>
 <p><strong>Answer:</strong> <hide>The number of people who have ABO group O <strong>or</strong> Rh group <span class="math inline">\(+\)</span> is
 <span class="math inline">\(390 + 70 + 360 + 76 + 25 = 921\)</span> so that
-<span class="math inline">\(\text{P(O or }+) = \frac{921}{1000} = 0.921\)</span><hide></hide></hide></p>
+<span class="math inline">\(\text{P(O or }+) = \frac{921}{1000} = 0.921\)</span><hide></p>
 <p><strong>3.</strong> Find the probability that a randomly selected person has ABO group AB or O.</p>
 <p><strong>Answer:</strong> <hide>The number of people who have ABO group AB <strong>or</strong> ABO group O is
 <span class="math inline">\(25 + 5 + 390 + 70 = 490\)</span> so that
-<span class="math inline">\(\text{P(AB or O)} = \frac{490}{1000} = 0.49\)</span><hide></hide></hide></p>
+<span class="math inline">\(\text{P(AB or O)} = \frac{490}{1000} = 0.49\)</span><hide></p>
 <p><strong>4.</strong> Find the probability that a randomly selected person has ABO group A or AB,
 and also Rh group <span class="math inline">\(-\)</span>.</p>
 <p><strong>Answer:</strong> <hide>
 We have <span class="math inline">\(\text{(A or AB) and }(-) = (\text{A and }-) \text{ or } (\text{AB and }-)\)</span>.
 The number of people who are <span class="math inline">\((\text{A and }-)\)</span> is 60, and the number of
 people who are <span class="math inline">\((\text{AB and }-)\)</span> is 5, so that
-<span class="math inline">\(P(\text{(A or AB) and }(-)) = \frac{60+5}{1000} = 0.065\)</span>.</hide></p>
-<hr>
+<span class="math inline">\(P(\text{(A or AB) and }(-)) = \frac{60+5}{1000} = 0.065\)</span>.</p>
+<hr />
 </div>
 </div>
-<div id="probability-tables" class="section level2" number="3.3">
-<h2>
-<span class="header-section-number">3.3</span> Probability Tables<a class="anchor" aria-label="anchor" href="#probability-tables"><i class="fas fa-link"></i></a>
-</h2>
+<div id="probability-tables" class="section level2">
+<h2><span class="header-section-number">3.3</span> Probability Tables</h2>
 <p>Frequently, tables provide probabilities (or percentages) instead of counts.
 To make the conversion from counts to probabilities, all we do is divide each table entry by the total.
 Thus, for our table, we divide each entry by 1000 to arrive at</p>
@@ -222,7 +369,7 @@ Thus, for our table, we divide each entry by 1000 to arrive at</p>
 <p><span class="math display">\[
 \mbox{P(Female and Type O)} = 0.202
 \]</span></p>
-<p>We can add entries in this table to compute other probabilities.<br>
+<p>We can add entries in this table to compute other probabilities.<br />
 For example, suppose we want to compute the probability that a randomly selected person has type O blood.
 Based on the table, this can happen if a person is female and has type O blood, or if a person is male and has type O blood.
 Because these two groups are disjoint, we can add the probabilities to arrive at</p>
@@ -234,57 +381,85 @@ Because these two groups are disjoint, we can add the probabilities to arrive at
 <p><span class="math display">\[
 \mbox{Pr(Female)} = 0.175 + 0.016 + 0.037 + 0.202 = 0.43 
 \]</span></p>
-<hr>
+<hr />
 </div>
-<div id="exercises-1" class="section level2" number="3.4">
-<h2>
-<span class="header-section-number">3.4</span> Exercises<a class="anchor" aria-label="anchor" href="#exercises-1"><i class="fas fa-link"></i></a>
-</h2>
+<div id="exercises-1" class="section level2">
+<h2><span class="header-section-number">3.4</span> Exercises</h2>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\text{Put exercises here}\)</span></li>
 </ol>
-</div>
-</div>
-  <div class="chapter-nav">
-<div class="prev"><a href="introduction-to-probability.html"><span class="header-section-number">2</span> Introduction to Probability</a></div>
-<div class="next"><a href="conditional-probability.html"><span class="header-section-number">4</span> Conditional Probability</a></div>
-</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
-    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#joint-probability"><span class="header-section-number">3</span> Joint Probability</a></li>
-<li>
-<a class="nav-link" href="#blood-types"><span class="header-section-number">3.1</span> Blood Types</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#sample-questions-2"><span class="header-section-number">3.1.1</span> Sample Questions</a></li></ul>
-</li>
-<li>
-<a class="nav-link" href="#and-vs-or"><span class="header-section-number">3.2</span> And vs Or</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#sample-questions-3"><span class="header-section-number">3.2.1</span> Sample Questions</a></li></ul>
-</li>
-<li><a class="nav-link" href="#probability-tables"><span class="header-section-number">3.3</span> Probability Tables</a></li>
-<li><a class="nav-link" href="#exercises-1"><span class="header-section-number">3.4</span> Exercises</a></li>
-</ul>
-
-      <div class="book-extra">
-        <ul class="list-unstyled">
-          
-        </ul>
-</div>
-    </nav>
-</div>
 
 </div>
-</div> <!-- .container -->
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>Blood type - Wikipedia: <a href="https://en.wikipedia.org/wiki/Blood_type" class="uri">https://en.wikipedia.org/wiki/Blood_type</a><a href="joint-probability.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>This table is based on the distribution of blood types in Canada, reported at <a href="https://www.blood.ca/en/blood/donating-blood/whats-my-blood-type" class="uri">https://www.blood.ca/en/blood/donating-blood/whats-my-blood-type</a><a href="joint-probability.html#fnref2" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
 
-<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
-
-  <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Forensic Science and Statistics: Version 1.0.0</strong>" was written by Jeff Holt and Joseph Swetonic. It was last built on 2022-02-01.</p>
+          </div>
+        </div>
+      </div>
+<a href="introduction-to-probability.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="conditional-probability.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
   </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["forensic-statistics-book.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
 
-  <div class="col-12 col-md-6 mt-3">
-    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
-  </div>
-
-</div></div>
-</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
@@ -296,22 +471,7 @@ Because these two groups are disjoint, we can add the probabilities to arrive at
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
-</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
-for (let popover of popovers) {
-  const div = document.createElement('div');
-  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
-  div.innerHTML = popover.getAttribute('data-content');
-
-  var has_math = div.querySelector("span.math");
-  if (has_math) {
-    document.body.appendChild(div);
-    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
-    MathJax.Hub.Queue(function() {
-      popover.setAttribute('data-content', div.innerHTML);
-      document.body.removeChild(div);
-    })
-  }
-}
 </script>
 </body>
+
 </html>

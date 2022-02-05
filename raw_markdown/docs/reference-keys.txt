@@ -1,9 +1,11 @@
+tab:unnamed-chunk-1
 fig:pie-chart
 fig:bar-chart
 fig:bar-chart-percent
 fig:horiz-bar
 fig:histogram
 fig:histogram-perc
+fig:histogram-two
 fig:boxplot1
 fig:boxplot2
 fig:boxplot3
@@ -47,12 +49,15 @@ code-appendix
 graphing-distributions-histograms
 introduction-1
 exercises-3
+code-appendix-1
 graphing-distributions-box-plots
 basic-box-plots
 variations-on-box-plots
 exercises-4
+code-appendix-2
 graphing-distributions-bar-charts
 exercises-5
+code-appendix-3
 sumarizing-distributions-central-tendency
 exercises-6
 sumarizing-distributions-measures-of-central-tendency

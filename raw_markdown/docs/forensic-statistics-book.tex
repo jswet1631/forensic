@@ -4,8 +4,8 @@
 %
 \documentclass[
 ]{book}
-\usepackage{amsmath,amssymb}
 \usepackage{lmodern}
+\usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
@@ -36,7 +36,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-  pdftitle={Forensic Science and Statistics: Version 1.0.0},
+  pdftitle={Forensic Science and Statistics: Version 1.0.1},
   pdfauthor={Jeff Holt and Joseph Swetonic},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
@@ -81,8 +81,7 @@
 \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
 \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\usepackage{longtable,booktabs,array}
-\usepackage{calc} % for calculating minipage widths
+\usepackage{longtable,booktabs}
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
 \makeatletter
@@ -91,7 +90,7 @@
 % Allow footnotes in longtable head/foot
 \IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
 \makesavenoteenv{longtable}
-\usepackage{graphicx}
+\usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
 \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
@@ -116,15 +115,26 @@
   \thm@postskip=\thm@preskip
 }
 \makeatother
-\ifluatex
-  \usepackage{selnolig}  % disable illegal ligatures
-\fi
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
 
-\title{Forensic Science and Statistics: Version 1.0.0}
+\title{Forensic Science and Statistics: Version 1.0.1}
 \author{Jeff Holt and Joseph Swetonic}
-\date{2022-02-01}
+\date{2022-02-04}
 
 \begin{document}
 \maketitle
@@ -241,6 +251,25 @@ The number of these people with each hair color is given in the table below.
 \mbox{Table 1: Hair Color Counts}
 \]
 
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-1}Hair Color Counts}
+\centering
+\begin{tabular}[t]{l|r}
+\hline
+Color & Count\\
+\hline
+Brown & 670\\
+\hline
+Blond & 200\\
+\hline
+Red & 110\\
+\hline
+Green & 20\\
+\hline
+\end{tabular}
+\end{table}
+
 A \textbf{probability} is a number between 0 and 1 that provides a measure of the
 likelihood that something occurs,
 with a larger number indicating greater likelihood.
@@ -334,16 +363,13 @@ As of 2019, a total of 41 human blood group systems are recognized by the
 International Society of Blood Transfusion (ISBT). The two most
 important blood group systems are ABO and Rh; they determine someone's
 blood type (A, B, AB, and O, with +, − or null denoting RhD status)
-for suitability in blood transfusion.}
-
-Source: \url{https://en.wikipedia.org/wiki/Blood_type}
+for suitability in blood transfusion.}\footnote{Blood type - Wikipedia: \url{https://en.wikipedia.org/wiki/Blood_type}}
 \end{quote}
 
 Suppose that we have a collection of 1000 people, with each classified based on both
 ABO (A, B, AB, or O) and Rh (\(+\) or \(-\)).
 The number of people of each combination of ABO and Rh class (the ``blood type'') is shown
-in the table below. (This table is based on the distribution of blood types in
-Canada, reported at \url{https://www.blood.ca/en/blood/donating-blood/whats-my-blood-type})
+in the table below. \footnote{This table is based on the distribution of blood types in Canada, reported at \url{https://www.blood.ca/en/blood/donating-blood/whats-my-blood-type}}
 
 \[
 \begin{array}{c|c|c}
@@ -665,8 +691,7 @@ Iteratively increasing the group size from five, it is clear to see that at a gr
 \hypertarget{monty-hall-problem}{%
 \section{Monty Hall Problem}\label{monty-hall-problem}}
 
-The original problem was popularized as a letter by Craig F. Whitaker sent to Marilyn vos Savant's column in Parade magazine in 1990.
-You can read more about the article here: \url{https://web.archive.org/web/20130121183432/http://marilynvossavant.com/game-show-problem/}
+The original problem was popularized as a letter by Craig F. Whitaker sent to Marilyn vos Savant's column in Parade magazine in 1990.\footnote{You can read more about the article here: \url{https://web.archive.org/web/20130121183432/http://marilynvossavant.com/game-show-problem/}}
 
 Suppose you're on a game show, and you're given the choice of three doors. Behind one door is a car, behind the others, goats.
 You pick a door, say \#1, and the host, who knows what's behind the doors, opens another door, say \#3, which has a goat.
@@ -811,39 +836,39 @@ room for the category labels.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{library}\NormalTok{(dplyr)}
-\FunctionTok{library}\NormalTok{(ggplot2)}
-\FunctionTok{library}\NormalTok{(tidyr)}
+\KeywordTok{library}\NormalTok{(dplyr)}
+\KeywordTok{library}\NormalTok{(ggplot2)}
+\KeywordTok{library}\NormalTok{(tidyr)}
 
-\NormalTok{data }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}\AttributeTok{ABO\_Group =} \FunctionTok{c}\NormalTok{(}\StringTok{"A"}\NormalTok{, }\StringTok{"B"}\NormalTok{, }\StringTok{"AB"}\NormalTok{, }\StringTok{"O"}\NormalTok{), }\AttributeTok{value =} \FunctionTok{c}\NormalTok{(}\DecValTok{210}\NormalTok{, }\DecValTok{45}\NormalTok{, }\DecValTok{15}\NormalTok{, }\DecValTok{230}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{prop =}\NormalTok{ value }\SpecialCharTok{/} \FunctionTok{sum}\NormalTok{(value) }\SpecialCharTok{*} \DecValTok{100}\NormalTok{)}
+\NormalTok{data <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{ABO_Group =} \KeywordTok{c}\NormalTok{(}\StringTok{"A"}\NormalTok{, }\StringTok{"B"}\NormalTok{, }\StringTok{"AB"}\NormalTok{, }\StringTok{"O"}\NormalTok{), }\DataTypeTok{value =} \KeywordTok{c}\NormalTok{(}\DecValTok{210}\NormalTok{, }\DecValTok{45}\NormalTok{, }\DecValTok{15}\NormalTok{, }\DecValTok{230}\NormalTok{)) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{prop =}\NormalTok{ value }\OperatorTok{/}\StringTok{ }\KeywordTok{sum}\NormalTok{(value) }\OperatorTok{*}\StringTok{ }\DecValTok{100}\NormalTok{)}
 
-\CommentTok{\# Figure 7.1 {-}{-}{-}{-}{-}}
-\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ data, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =} \StringTok{""}\NormalTok{, }\AttributeTok{y =}\NormalTok{ prop, }\AttributeTok{fill =}\NormalTok{ ABO\_Group)) }\SpecialCharTok{+} 
-  \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{stat =} \StringTok{"identity"}\NormalTok{, }\AttributeTok{width =} \DecValTok{1}\NormalTok{, }\AttributeTok{color =} \StringTok{"white"}\NormalTok{) }\SpecialCharTok{+} 
-  \FunctionTok{coord\_polar}\NormalTok{(}\StringTok{"y"}\NormalTok{, }\AttributeTok{start =} \DecValTok{0}\NormalTok{) }\SpecialCharTok{+} 
-  \FunctionTok{theme\_void}\NormalTok{()}
+\CommentTok{# Figure 7.1 -----}
+\KeywordTok{ggplot}\NormalTok{(}\DataTypeTok{data =}\NormalTok{ data, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =} \StringTok{""}\NormalTok{, }\DataTypeTok{y =}\NormalTok{ prop, }\DataTypeTok{fill =}\NormalTok{ ABO_Group)) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{, }\DataTypeTok{width =} \DecValTok{1}\NormalTok{, }\DataTypeTok{color =} \StringTok{"white"}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{coord_polar}\NormalTok{(}\StringTok{"y"}\NormalTok{, }\DataTypeTok{start =} \DecValTok{0}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{theme_void}\NormalTok{()}
 
-\CommentTok{\# Figure 7.2 {-}{-}{-}{-}{-}}
-\FunctionTok{ggplot}\NormalTok{(data, }\FunctionTok{aes}\NormalTok{(ABO\_Group, value)) }\SpecialCharTok{+} 
-  \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{stat =} \StringTok{"identity"}\NormalTok{, }\AttributeTok{fill =} \StringTok{"steelblue"}\NormalTok{) }\SpecialCharTok{+} 
-  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"ABO Group"}\NormalTok{, }\AttributeTok{y =} \StringTok{"Frequency"}\NormalTok{)}
+\CommentTok{# Figure 7.2 -----}
+\KeywordTok{ggplot}\NormalTok{(data, }\KeywordTok{aes}\NormalTok{(ABO_Group, value)) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{, }\DataTypeTok{fill =} \StringTok{"steelblue"}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"ABO Group"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Frequency"}\NormalTok{)}
 
-\CommentTok{\# Figure 7.3 {-}{-}{-}{-}{-}}
-\FunctionTok{ggplot}\NormalTok{(data, }\FunctionTok{aes}\NormalTok{(ABO\_Group, prop)) }\SpecialCharTok{+} 
-  \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{stat =} \StringTok{"identity"}\NormalTok{, }\AttributeTok{fill =} \StringTok{"\#B4464B"}\NormalTok{) }\SpecialCharTok{+} 
-  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"ABO Group"}\NormalTok{, }\AttributeTok{y =} \StringTok{"Percentage"}\NormalTok{)}
+\CommentTok{# Figure 7.3 -----}
+\KeywordTok{ggplot}\NormalTok{(data, }\KeywordTok{aes}\NormalTok{(ABO_Group, prop)) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{, }\DataTypeTok{fill =} \StringTok{"#B4464B"}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"ABO Group"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Percentage"}\NormalTok{)}
 
-\CommentTok{\# Figure 7.4 {-}{-}{-}{-}{-}}
-\NormalTok{data }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}\AttributeTok{ABO\_Group =} \FunctionTok{c}\NormalTok{(}\StringTok{"A"}\NormalTok{, }\StringTok{"B"}\NormalTok{, }\StringTok{"AB"}\NormalTok{, }\StringTok{"O"}\NormalTok{), }
-                   \AttributeTok{Albania =} \FunctionTok{c}\NormalTok{(}\FloatTok{36.7}\NormalTok{, }\FloatTok{17.1}\NormalTok{, }\FloatTok{6.1}\NormalTok{, }\FloatTok{40.1}\NormalTok{), }
-                   \AttributeTok{Australia =} \FunctionTok{c}\NormalTok{(}\DecValTok{38}\NormalTok{, }\DecValTok{10}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{49}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{pivot\_longer}\NormalTok{(}\SpecialCharTok{!}\NormalTok{ABO\_Group, }\AttributeTok{names\_to =} \StringTok{"Country"}\NormalTok{, }\AttributeTok{values\_to =} \StringTok{"Percentage"}\NormalTok{)}
+\CommentTok{# Figure 7.4 -----}
+\NormalTok{data <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{ABO_Group =} \KeywordTok{c}\NormalTok{(}\StringTok{"A"}\NormalTok{, }\StringTok{"B"}\NormalTok{, }\StringTok{"AB"}\NormalTok{, }\StringTok{"O"}\NormalTok{), }
+                   \DataTypeTok{Albania =} \KeywordTok{c}\NormalTok{(}\FloatTok{36.7}\NormalTok{, }\FloatTok{17.1}\NormalTok{, }\FloatTok{6.1}\NormalTok{, }\FloatTok{40.1}\NormalTok{), }
+                   \DataTypeTok{Australia =} \KeywordTok{c}\NormalTok{(}\DecValTok{38}\NormalTok{, }\DecValTok{10}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{49}\NormalTok{)) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{pivot_longer}\NormalTok{(}\OperatorTok{!}\NormalTok{ABO_Group, }\DataTypeTok{names_to =} \StringTok{"Country"}\NormalTok{, }\DataTypeTok{values_to =} \StringTok{"Percentage"}\NormalTok{)}
 
-\FunctionTok{ggplot}\NormalTok{(data, }\FunctionTok{aes}\NormalTok{(ABO\_Group, Percentage, }\AttributeTok{fill =}\NormalTok{ Country)) }\SpecialCharTok{+} 
-  \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{stat =} \StringTok{"identity"}\NormalTok{, }\AttributeTok{position =} \StringTok{"dodge"}\NormalTok{, }\AttributeTok{width =} \FloatTok{0.8}\NormalTok{) }\SpecialCharTok{+} 
-  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"ABO Group"}\NormalTok{)}
-  \FunctionTok{coord\_flip}\NormalTok{()}
+\KeywordTok{ggplot}\NormalTok{(data, }\KeywordTok{aes}\NormalTok{(ABO_Group, Percentage, }\DataTypeTok{fill =}\NormalTok{ Country)) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{, }\DataTypeTok{position =} \StringTok{"dodge"}\NormalTok{, }\DataTypeTok{width =} \FloatTok{0.8}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"ABO Group"}\NormalTok{)}
+  \KeywordTok{coord_flip}\NormalTok{()}
 \end{Highlighting}
 \end{Shaded}
 
@@ -911,7 +936,7 @@ to its class frequency. A histogram of the weight data is shown in Figure \ref{f
 \begin{figure}
 \centering
 \includegraphics{forensic-statistics-book_files/figure-latex/histogram-1.pdf}
-\caption{\label{fig:histogram}Histogram of weights}
+\caption{\label{fig:histogram}Histogram of Weights}
 \end{figure}
 
 We can see from the histogram that most of the weights are between 230 and 250 grams,
@@ -936,7 +961,7 @@ then multiply by 100 to convert to percentages.
 \begin{figure}
 \centering
 \includegraphics{forensic-statistics-book_files/figure-latex/histogram-perc-1.pdf}
-\caption{\label{fig:histogram-perc}Histogram of weights}
+\caption{\label{fig:histogram-perc}Histogram of Weights}
 \end{figure}
 
 We see that the shape of the histogram is unchanged, only the Y-axis is
@@ -950,9 +975,13 @@ These both give a general sense of the distribution, but here bins of width 1
 produce a graph that is too busy while bins of width 10 produce a graph that
 lacks detail.
 
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{forensic-statistics-book_files/figure-latex/histogram-two-1} \includegraphics[width=0.5\linewidth]{forensic-statistics-book_files/figure-latex/histogram-two-2} \caption{Histograms with Different Bin Widths}\label{fig:histogram-two}
+\end{figure}
+
 Most software have defaults for bin widths that might work well for a given set
 of data, or might not. There are some ``rules of thumb'' that can help guide
-thed choice of bin width but these are just guidelines that should not be
+the choice of bin width but these are just guidelines that should not be
 regarded as definitive, so do not feel bound to them. That said, here are
 a couple of general guidelines you can consider:
 
@@ -981,6 +1010,39 @@ shape of the distribution.
 \item
   \(\text{Put exercises here}\)
 \end{enumerate}
+
+\hypertarget{code-appendix-1}{%
+\section{Code Appendix}\label{code-appendix-1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{set.seed}\NormalTok{(}\DecValTok{4}\NormalTok{)}
+\NormalTok{data01 <-}\StringTok{ }\KeywordTok{rnorm}\NormalTok{(}\DecValTok{371}\NormalTok{, }\DataTypeTok{mean =} \DecValTok{239}\NormalTok{, }\DataTypeTok{sd =} \DecValTok{8}\NormalTok{)}
+\NormalTok{data01 <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{Weights =} \KeywordTok{ifelse}\NormalTok{(data01 }\OperatorTok{>}\StringTok{ }\DecValTok{239}\NormalTok{, }\DecValTok{239} \OperatorTok{+}\StringTok{ }\FloatTok{1.1} \OperatorTok{*}\StringTok{ }\NormalTok{(data01 }\OperatorTok{-}\StringTok{ }\DecValTok{239}\NormalTok{), data01))}
+
+\CommentTok{# Figure 8.1 -----}
+\NormalTok{data01 }\OperatorTok{%>%}\StringTok{ }\KeywordTok{ggplot}\NormalTok{() }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_histogram}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ Weights), }\DataTypeTok{breaks =} \KeywordTok{seq}\NormalTok{(}\DecValTok{215}\NormalTok{, }\DecValTok{265}\NormalTok{, }\DataTypeTok{by =} \DecValTok{5}\NormalTok{), }
+                 \DataTypeTok{fill =} \StringTok{"steelblue"}\NormalTok{, }\DataTypeTok{color =} \StringTok{"black"}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{y =} \StringTok{"Frequency"}\NormalTok{)}
+
+\CommentTok{# Figure 8.2 -----}
+\NormalTok{data01 }\OperatorTok{%>%}\StringTok{ }\KeywordTok{ggplot}\NormalTok{() }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_histogram}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ Weights, }\DataTypeTok{y =} \DecValTok{100} \OperatorTok{*}\StringTok{ }\NormalTok{..count.. }\OperatorTok{/}\StringTok{ }\KeywordTok{sum}\NormalTok{(count)), }
+                 \DataTypeTok{breaks =} \KeywordTok{seq}\NormalTok{(}\DecValTok{215}\NormalTok{, }\DecValTok{265}\NormalTok{, }\DataTypeTok{by =} \DecValTok{5}\NormalTok{), }
+                 \DataTypeTok{fill =} \StringTok{"steelblue"}\NormalTok{, }\DataTypeTok{color =} \StringTok{"black"}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{y =} \StringTok{"Percentage"}\NormalTok{)}
+
+\CommentTok{# Figure 8.3 -----}
+\NormalTok{data01 }\OperatorTok{%>%}\StringTok{ }\KeywordTok{ggplot}\NormalTok{() }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_histogram}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ Weights), }\DataTypeTok{binwidth =} \DecValTok{1}\NormalTok{, }\DataTypeTok{fill =} \StringTok{"steelblue"}\NormalTok{, }\DataTypeTok{color =} \StringTok{"black"}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{y =} \StringTok{"Frequency"}\NormalTok{)}
+
+\NormalTok{data01 }\OperatorTok{%>%}\StringTok{ }\KeywordTok{ggplot}\NormalTok{() }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_histogram}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ Weights), }\DataTypeTok{binwidth =} \DecValTok{10}\NormalTok{, }\DataTypeTok{fill =} \StringTok{"steelblue"}\NormalTok{, }\DataTypeTok{color =} \StringTok{"black"}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{y =} \StringTok{"Frequency"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
 \hypertarget{graphing-distributions-box-plots}{%
 \chapter{Graphing Distributions: Box Plots}\label{graphing-distributions-box-plots}}
@@ -1034,7 +1096,7 @@ limits of the box (called ``hinges'') extend from the
 \begin{figure}
 \centering
 \includegraphics{forensic-statistics-book_files/figure-latex/boxplot1-1.pdf}
-\caption{\label{fig:boxplot1}Box plots of glass measurements}
+\caption{\label{fig:boxplot1}Box Plots of Glass Measurements}
 \end{figure}
 
 Comparing box plots, we see that the percentiles for the car trunk data
@@ -1062,7 +1124,7 @@ Figure \ref{fig:boxplot2} shows the box plots with whiskers.
 \begin{figure}
 \centering
 \includegraphics{forensic-statistics-book_files/figure-latex/boxplot2-1.pdf}
-\caption{\label{fig:boxplot2}Box plots of glass measurements}
+\caption{\label{fig:boxplot2}Box Plots of Glass Measurements}
 \end{figure}
 
 The whiskers add additional information about the spread of data, but do
@@ -1073,7 +1135,7 @@ Figure \ref{fig:boxplot3}.
 \begin{figure}
 \centering
 \includegraphics{forensic-statistics-book_files/figure-latex/boxplot3-1.pdf}
-\caption{\label{fig:boxplot3}Box plots of glass measurements}
+\caption{\label{fig:boxplot3}Box Plots of Glass Measurements}
 \end{figure}
 
 Some (but not all!) box plots also include a mark indicating the location of
@@ -1083,7 +1145,7 @@ box plot.
 \begin{figure}
 \centering
 \includegraphics{forensic-statistics-book_files/figure-latex/boxplot4-1.pdf}
-\caption{\label{fig:boxplot4}Box plots of glass measurements}
+\caption{\label{fig:boxplot4}Box Plots of Glass Measurements}
 \end{figure}
 
 Figure \ref{fig:boxplot4} provides a good summary of the data. Half of
@@ -1110,7 +1172,7 @@ distributed within the boxes.
 \begin{figure}
 \centering
 \includegraphics{forensic-statistics-book_files/figure-latex/boxplot5-1.pdf}
-\caption{\label{fig:boxplot5}Box plots of glass measurements}
+\caption{\label{fig:boxplot5}Box Plots of Glass Measurements}
 \end{figure}
 
 Showing the specific data values on the vertical axis works well as long as there
@@ -1123,7 +1185,7 @@ amount of jitter added.
 \begin{figure}
 \centering
 \includegraphics{forensic-statistics-book_files/figure-latex/boxplot6-1.pdf}
-\caption{\label{fig:boxplot6}Box plots of glass measurements}
+\caption{\label{fig:boxplot6}Box Plots of Glass Measurements}
 \end{figure}
 
 Different styles of box plots are best for different situations, and there are
@@ -1143,6 +1205,47 @@ important.
 \item
   \(\text{Put exercises here}\)
 \end{enumerate}
+
+\hypertarget{code-appendix-2}{%
+\section{Code Appendix}\label{code-appendix-2}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{data01 <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\FloatTok{55.6}\NormalTok{, }\FloatTok{65.6}\NormalTok{, }\FloatTok{68.0}\NormalTok{, }\FloatTok{68.9}\NormalTok{, }\FloatTok{67.7}\NormalTok{, }\FloatTok{66.5}\NormalTok{, }\FloatTok{66.8}\NormalTok{, }\FloatTok{60.3}\NormalTok{, }\FloatTok{68.0}\NormalTok{, }\FloatTok{71.6}\NormalTok{, }\FloatTok{61.4}\NormalTok{, }\FloatTok{63.2}\NormalTok{, }\FloatTok{68.2}\NormalTok{, }\FloatTok{64.1}\NormalTok{, }\FloatTok{64.8}\NormalTok{)}
+\NormalTok{data02 <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\FloatTok{67.9}\NormalTok{, }\FloatTok{68.9}\NormalTok{, }\FloatTok{69.5}\NormalTok{, }\FloatTok{67.6}\NormalTok{, }\FloatTok{73.4}\NormalTok{, }\FloatTok{64.5}\NormalTok{, }\FloatTok{73.0}\NormalTok{, }\FloatTok{59.7}\NormalTok{, }\FloatTok{66.9}\NormalTok{, }\FloatTok{68.2}\NormalTok{, }\FloatTok{71.8}\NormalTok{, }\FloatTok{64.8}\NormalTok{, }\FloatTok{56.3}\NormalTok{)}
+
+\NormalTok{data01 <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{Measurement =}\NormalTok{ data01, }\DataTypeTok{Source =} \StringTok{"Crime Scence"}\NormalTok{)}
+\NormalTok{data02 <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{Measurement =}\NormalTok{ data02, }\DataTypeTok{Source =} \StringTok{"Car Trunk"}\NormalTok{)}
+\NormalTok{data03 <-}\StringTok{ }\KeywordTok{rbind}\NormalTok{(data01, data02)}
+
+\CommentTok{# Figure 9.1 -----}
+\NormalTok{data03 }\OperatorTok{%>%}\StringTok{ }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ Source, }\DataTypeTok{y =}\NormalTok{ Measurement)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_boxplot}\NormalTok{(}\DataTypeTok{outlier.shape =} \OtherTok{NA}\NormalTok{, }\DataTypeTok{coef =} \DecValTok{0}\NormalTok{)}
+
+\CommentTok{# Figure 9.2 -----}
+\NormalTok{data03 }\OperatorTok{%>%}\StringTok{ }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ Source, }\DataTypeTok{y =}\NormalTok{ Measurement)) }\OperatorTok{+}\StringTok{ }\KeywordTok{stat_boxplot}\NormalTok{(}\DataTypeTok{geom =} \StringTok{"errorbar"}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_boxplot}\NormalTok{(}\DataTypeTok{outlier.shape =} \OtherTok{NA}\NormalTok{)}
+
+\CommentTok{# Figure 9.3 -----}
+\NormalTok{data03 }\OperatorTok{%>%}\StringTok{ }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ Source, }\DataTypeTok{y =}\NormalTok{ Measurement)) }\OperatorTok{+}\StringTok{ }\KeywordTok{stat_boxplot}\NormalTok{(}\DataTypeTok{geom =} \StringTok{"errorbar"}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_boxplot}\NormalTok{()}
+
+\CommentTok{# Figure 9.4 -----}
+\NormalTok{data03 }\OperatorTok{%>%}\StringTok{ }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ Source, }\DataTypeTok{y =}\NormalTok{ Measurement)) }\OperatorTok{+}\StringTok{ }\KeywordTok{stat_boxplot}\NormalTok{(}\DataTypeTok{geom =} \StringTok{"errorbar"}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_boxplot}\NormalTok{(}\DataTypeTok{outlier.size =} \DecValTok{2}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{stat_summary}\NormalTok{(}\DataTypeTok{fun =}\NormalTok{ mean, }\DataTypeTok{geom =} \StringTok{"point"}\NormalTok{, }\DataTypeTok{color =} \StringTok{"red"}\NormalTok{, }\DataTypeTok{size =} \DecValTok{2}\NormalTok{)}
+
+\CommentTok{# Figure 9.5 -----}
+\NormalTok{data03 }\OperatorTok{%>%}\StringTok{ }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ Source, }\DataTypeTok{y =}\NormalTok{ Measurement)) }\OperatorTok{+}\StringTok{ }\KeywordTok{stat_boxplot}\NormalTok{(}\DataTypeTok{geom =} \StringTok{"errorbar"}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_boxplot}\NormalTok{() }\OperatorTok{+}\StringTok{ }\KeywordTok{geom_jitter}\NormalTok{(}\DataTypeTok{width =} \DecValTok{0}\NormalTok{, }\DataTypeTok{alpha =} \FloatTok{0.9}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{stat_summary}\NormalTok{(}\DataTypeTok{fun =}\NormalTok{ mean, }\DataTypeTok{geom =} \StringTok{"point"}\NormalTok{, }\DataTypeTok{color =} \StringTok{"red"}\NormalTok{, }\DataTypeTok{size =} \DecValTok{2}\NormalTok{)}
+
+\CommentTok{# Figure 9.6 -----}
+\NormalTok{data03 }\OperatorTok{%>%}\StringTok{ }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ Source, }\DataTypeTok{y =}\NormalTok{ Measurement)) }\OperatorTok{+}\StringTok{ }\KeywordTok{stat_boxplot}\NormalTok{(}\DataTypeTok{geom =} \StringTok{"errorbar"}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_boxplot}\NormalTok{() }\OperatorTok{+}\StringTok{ }\KeywordTok{geom_jitter}\NormalTok{(}\DataTypeTok{width =} \FloatTok{0.1}\NormalTok{, }\DataTypeTok{alpha =} \FloatTok{0.9}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{stat_summary}\NormalTok{(}\DataTypeTok{fun =}\NormalTok{ mean, }\DataTypeTok{geom =} \StringTok{"point"}\NormalTok{, }\DataTypeTok{color =} \StringTok{"red"}\NormalTok{, }\DataTypeTok{size =} \DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
 \hypertarget{graphing-distributions-bar-charts}{%
 \chapter{Graphing Distributions: Bar Charts}\label{graphing-distributions-bar-charts}}
@@ -1207,7 +1310,7 @@ in the chapter on box plots.)
 \caption{\label{fig:bar-chart5}Comparison of mean trace element measurements}
 \end{figure}
 
-The heights of the bars are cery similar, suggesting that there might be
+The heights of the bars are very similar, suggesting that there might be
 a common source for the two sets of glass pieces. That might well be the
 case but the means alone are not enough to provide a conclusion one way or
 the other. In this case, box plots can be used instead since they provide
@@ -1237,6 +1340,65 @@ same source. We will consider this question more in later chapters.
 \item
   \(\text{Put exercises here}\)
 \end{enumerate}
+
+\hypertarget{code-appendix-3}{%
+\section{Code Appendix}\label{code-appendix-3}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Figure 10.1 -----}
+\NormalTok{data <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{ABO_Group =} \KeywordTok{c}\NormalTok{(}\StringTok{"A"}\NormalTok{, }\StringTok{"B"}\NormalTok{, }\StringTok{"AB"}\NormalTok{, }\StringTok{"O"}\NormalTok{), }\DataTypeTok{value =} \KeywordTok{c}\NormalTok{(}\DecValTok{210}\NormalTok{, }\DecValTok{45}\NormalTok{, }\DecValTok{15}\NormalTok{, }\DecValTok{230}\NormalTok{)) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{prop =}\NormalTok{ value }\OperatorTok{/}\StringTok{ }\KeywordTok{sum}\NormalTok{(value) }\OperatorTok{*}\StringTok{ }\DecValTok{100}\NormalTok{)}
+
+\KeywordTok{ggplot}\NormalTok{(data, }\KeywordTok{aes}\NormalTok{(ABO_Group, prop)) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{, }\DataTypeTok{fill =} \StringTok{"steelblue"}\NormalTok{, }\DataTypeTok{width =} \FloatTok{0.6}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"ABO Group"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Percentage"}\NormalTok{)}
+
+\CommentTok{# Figure 10.2 -----}
+\NormalTok{data <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{City =} \KeywordTok{c}\NormalTok{(}\StringTok{"Chicago"}\NormalTok{, }\StringTok{"Dallas"}\NormalTok{, }\StringTok{"Los Angeles"}\NormalTok{, }\StringTok{"New York"}\NormalTok{), }
+                   \DataTypeTok{Murders =} \KeywordTok{c}\NormalTok{(}\DecValTok{774}\NormalTok{, }\DecValTok{251}\NormalTok{, }\DecValTok{349}\NormalTok{, }\DecValTok{468}\NormalTok{))}
+
+\KeywordTok{ggplot}\NormalTok{(data, }\KeywordTok{aes}\NormalTok{(City, Murders)) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{, }\DataTypeTok{fill =} \StringTok{"steelblue"}\NormalTok{, }\DataTypeTok{width =} \FloatTok{0.6}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"City"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Murders"}\NormalTok{)}
+
+\CommentTok{# Figure 10.3 -----}
+\NormalTok{data <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{City =} \KeywordTok{c}\NormalTok{(}\StringTok{"Chicago"}\NormalTok{, }\StringTok{"Dallas"}\NormalTok{, }\StringTok{"Los Angeles"}\NormalTok{, }\StringTok{"New York"}\NormalTok{), }
+                   \DataTypeTok{Murders =} \KeywordTok{c}\NormalTok{(}\FloatTok{281.8645}\NormalTok{, }\FloatTok{192.4847}\NormalTok{, }\FloatTok{89.51013}\NormalTok{, }\FloatTok{53.15766}\NormalTok{)) }
+
+\KeywordTok{ggplot}\NormalTok{(data, }\KeywordTok{aes}\NormalTok{(City, Murders)) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{, }\DataTypeTok{fill =} \StringTok{"steelblue"}\NormalTok{, }\DataTypeTok{width =} \FloatTok{0.6}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"City"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Murders per 1,000,000 residents"}\NormalTok{)}
+
+\CommentTok{# Figure 10.4 -----}
+\NormalTok{data <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{City =} \KeywordTok{c}\NormalTok{(}\StringTok{"1995"}\NormalTok{, }\StringTok{"1996"}\NormalTok{, }\StringTok{"1997"}\NormalTok{, }\StringTok{"1998"}\NormalTok{, }\StringTok{"1999"}\NormalTok{, }\StringTok{"2000"}\NormalTok{), }
+                   \DataTypeTok{RateChange =} \KeywordTok{c}\NormalTok{(}\FloatTok{62.7}\NormalTok{, }\FloatTok{41.3}\NormalTok{, }\FloatTok{-2.9}\NormalTok{, }\FloatTok{7.3}\NormalTok{, }\FloatTok{16.7}\NormalTok{, }\FloatTok{-6.7}\NormalTok{)) }
+
+\CommentTok{# 2014-2020: 177, 288, 407, 395, 424, 495, 462 Shootings in Toronto (Wikipedia)}
+
+\KeywordTok{ggplot}\NormalTok{(data, }\KeywordTok{aes}\NormalTok{(City, RateChange)) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{, }\DataTypeTok{fill =} \StringTok{"steelblue"}\NormalTok{, }\DataTypeTok{width =} \FloatTok{0.6}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Year"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Year-to-year Percent Change, Shootings"}\NormalTok{)}
+
+\CommentTok{# Figure 10.5 -----}
+\NormalTok{data01 =}\StringTok{ }\KeywordTok{c}\NormalTok{(}\FloatTok{55.6}\NormalTok{, }\FloatTok{65.6}\NormalTok{, }\FloatTok{68.0}\NormalTok{, }\FloatTok{68.9}\NormalTok{, }\FloatTok{67.7}\NormalTok{, }\FloatTok{66.5}\NormalTok{, }\FloatTok{66.8}\NormalTok{, }\FloatTok{60.3}\NormalTok{, }\FloatTok{68.0}\NormalTok{, }\FloatTok{71.6}\NormalTok{, }\FloatTok{61.4}\NormalTok{, }\FloatTok{63.2}\NormalTok{, }\FloatTok{68.2}\NormalTok{, }\FloatTok{64.1}\NormalTok{, }\FloatTok{64.8}\NormalTok{)}
+\NormalTok{data02 =}\StringTok{ }\KeywordTok{c}\NormalTok{(}\FloatTok{67.9}\NormalTok{, }\FloatTok{68.9}\NormalTok{, }\FloatTok{69.5}\NormalTok{, }\FloatTok{67.6}\NormalTok{, }\FloatTok{73.4}\NormalTok{, }\FloatTok{64.5}\NormalTok{, }\FloatTok{73.0}\NormalTok{, }\FloatTok{59.7}\NormalTok{, }\FloatTok{66.9}\NormalTok{, }\FloatTok{68.2}\NormalTok{, }\FloatTok{71.8}\NormalTok{, }\FloatTok{64.8}\NormalTok{, }\FloatTok{56.3}\NormalTok{)}
+\NormalTok{data <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{Source =} \KeywordTok{c}\NormalTok{(}\StringTok{"Car Trunk"}\NormalTok{, }\StringTok{"Crime Scene"}\NormalTok{), }
+                   \DataTypeTok{Mean =} \KeywordTok{c}\NormalTok{(}\KeywordTok{mean}\NormalTok{(data02), }\KeywordTok{mean}\NormalTok{(data01)))}
+
+\KeywordTok{ggplot}\NormalTok{(data, }\KeywordTok{aes}\NormalTok{(Source, Mean)) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{, }\DataTypeTok{fill =} \StringTok{"steelblue"}\NormalTok{, }\DataTypeTok{width =} \FloatTok{0.6}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Source"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Mean trace element measurement"}\NormalTok{)}
+
+\CommentTok{# Figure 10.6 -----}
+\NormalTok{data01 <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{Measurement =}\NormalTok{ data01, }\DataTypeTok{Source =} \StringTok{"Crime Scene"}\NormalTok{)}
+\NormalTok{data02 <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{Measurement =}\NormalTok{ data02, }\DataTypeTok{Source =} \StringTok{"Car Trunk"}\NormalTok{)}
+\NormalTok{data03 =}\StringTok{ }\KeywordTok{rbind}\NormalTok{(data01, data02)}
+
+\KeywordTok{ggplot}\NormalTok{(data03, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{Source, }\DataTypeTok{y=}\NormalTok{Measurement, }\DataTypeTok{color=}\NormalTok{Source)) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{stat_boxplot}\NormalTok{(}\DataTypeTok{geom =} \StringTok{"errorbar"}\NormalTok{) }\OperatorTok{+}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{(}\DataTypeTok{outlier.shape =} \OtherTok{NA}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
 \hypertarget{sumarizing-distributions-central-tendency}{%
 \chapter{Sumarizing Distributions: Central Tendency}\label{sumarizing-distributions-central-tendency}}
