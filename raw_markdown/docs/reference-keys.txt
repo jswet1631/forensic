@@ -48,6 +48,9 @@ exercises-2
 code-appendix
 graphing-distributions-histograms
 introduction-1
+frequency-tables-1
+histograms
+bin-widths
 exercises-3
 code-appendix-1
 graphing-distributions-box-plots

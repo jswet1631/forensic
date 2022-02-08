@@ -1,6 +1,6 @@
 # Graphing Distributions: Qualitative Variables
 
- <font size="2"> Note: Portions below modeled after content from
+ <font size="2"> Note: Portions below draw on content from
  *Online Statistics Education: A Multimedia Course of Study* 
  (http://onlinestatbook.com/) Project Leader: David M. Lane, Rice University </font>
 
@@ -12,11 +12,14 @@ graphical methods for displaying the results of the blood group classifications.
 This starts with tables, and then continues on to how to graph data that 
 fall into a small number of categories. 
 
-This is an example of *qualitative data*.  One characteristic of such data is
+This is an example of **qualitative data** (also known as **categorical data**).  
+One characteristic of such data is
 that the different values do not come with any pre-established ordering.
 This can be contrasted with quantitative data, such as the weight of a bag of an 
 unknown substance, which does have a natural ordering with respect to 
-different weights.
+different weights. (Another way to think about the distinction: it makes sense
+to compute the average of quantitative data but usually it does not for
+qualitative data.)
 
 ## Frequency Tables
 
@@ -123,7 +126,8 @@ data <- data.frame(ABO_Group = c("A", "B", "AB", "O"),
 
 ggplot(data, aes(ABO_Group, Percentage, fill = Country)) + 
   geom_bar(stat = "identity", position = "dodge", width = 0.8) + 
-  coord_flip()
+  coord_flip() +
+  labs(x = "ABO Group", y = "Percentage")
 ```
 
 The bars in Figure \@ref(fig:horiz-bar) are oriented horizontally rather than vertically. The 

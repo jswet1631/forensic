@@ -1,6 +1,6 @@
 # Sumarizing Distributions: Central Tendency
 
- <font size="2"> Note: Portions below modeled after content from
+ <font size="2"> Note: Portions below draw on content from
  *Online Statistics Education: A Multimedia Course of Study* 
  (http://onlinestatbook.com/) Project Leader: David M. Lane, Rice University </font>
 
