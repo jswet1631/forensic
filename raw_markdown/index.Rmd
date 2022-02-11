@@ -28,7 +28,7 @@ highly nuanced we do not attempt to
 provide a deep treatment of forensic methods here. However, when possible we will 
 try to provide references to more information.
 
-There are portions of this book that borrow from the treatment of statistics 
+There are portions of this content that borrow from the treatment of statistics 
 given in the online materials:
 
 > Online Statistics Education: A Multimedia Course of Study (http://onlinestatbook.com/) 
@@ -71,19 +71,18 @@ than that in Version 1:
 Brown-haired people are relatively common, so in Version 1 the likelihood of 
 arresting the correct brown-haired person is probably low. 
 On the other hand, green-haired people are relatively rare, so in Version 2 
-the likelihood of arresting the correct person is higher.
+the likelihood of arresting the correct person is higher than in Version 1.
 
-Two important points:
-
-1) Although the likelihood of the correct arrest is greater in Version 2 
-than in Version 1 does not mean that the likelihood in Version 2 is high.
-It is possible that there are more brown-haired people than green-haired people 
-while still having a lot of green-haird people, making the correct arrest 
-unlikely in either case.
-
-2) While the above discussion is interesting, the word "likelihood" is 
+While the above discussion might be interesting, the word "likelihood" is 
 imprecise.  Going forward we will develop "probability" which
-will allow us to quantify the notion of likelihood, so that we will be able 
+allows us to quantify the notion of likelihood. 
+This will allow us 
 to specify (for instance) how much more likely a correct arrest is in
-Version 1 than in Version 2.
+Version 1 than in Version 2.  We take this up in the next chapter.
+
+## Exercises
+
+1. $\text{Put exercises here}$
+
+
 

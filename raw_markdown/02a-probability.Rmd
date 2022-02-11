@@ -11,7 +11,7 @@ hide:hover {
 }
 </style>
 
-## The Previous Example
+## Frequency Tables
 
 The example from the previous section involves the "likelihood" of arresting the
 correct person based on their hair color.  Here we begin the development of
@@ -19,7 +19,8 @@ correct person based on their hair color.  Here we begin the development of
 
 Let's start by providing some additional context for our example: 
 Suppose that the crime described takes place on an island of 1000 people. 
-The number of these people with each hair color is given in the table below.
+The number of these people with each hair color is given in the table below,
+called a **frequency table.**
 
 $$
 \begin{array}{c|c}
@@ -66,25 +67,35 @@ solutions to these questions are hidden.  Before looking at the solution
 
 **Answer:** <hide>$P(\text{Red}) = \frac{110}{1000} = 0.11$.<hide>
 
-These examples are fine but do not answer the question from the previous section.
+---
+
+## The Previous Example
+
+The above examples are fine but they do not address the question from the 
+previous section.
 In Version 1, we have a brown-haired person on the CCTV and one of the
 670 brown-haired people randomly arrested.
 Thus the probability that the correct person is arrested is
 
 $$\mbox{P(correct arrest)} = \frac{1}{670} = 0.00149$$
 
-In Version 2 of the example we have a green-haired person on CCTV, so this 
+In Version 2 of the example we have a green-haired person on CCTV.
+There are only 20 such people so this 
 time the probability that the correct person is arrested is
 
 $$\mbox{P(correct arrest)} = \frac{1}{20} = 0.05$$
 
-Dividing the two probabilities
+We see that the probability of arresting the correct person if the suspect
+has green hair is greater than the probability of a correct arrest if the
+suspect has brown hair.  To measure how much greater, we divide
+the two probabilities
 
 $$\frac{0.05}{0.00149} = 33.5$$
 
-we see that a correct arrest in Version 2 is 33.5 times as likely as in Version 1.
+Thus we see that a correct arrest in Version 2 is 33.5 times as likely as in Version 1.
 However, even in Version 2 there is only a 0.05 probability that the police have
-the correct person!
+the correct person, so randomly arresting people based only on hair color is
+not likely to produce the correct outcome in either case!
 
 ### Sample Questions
 
@@ -97,7 +108,6 @@ arrest in this instance?
 **2.** Determine the number of times greater the likelihood of a correct arrest
 if the culprit has red hair vs having blond hair.
 
-
 **Answer:** <hide>In the case of a blond-haired person, we have
 $P(\text{correct arrest}) = \frac{1}{200} = 0.005$.  Therefore the ratio
 of probabilities is
@@ -106,6 +116,7 @@ so a correct arrest for a red-haired culprit is 1.81818 times as likely
 as for a blond-haired culprit.
 <hide>
 
+---
 
 ## Exercises
 

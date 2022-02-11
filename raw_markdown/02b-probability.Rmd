@@ -27,7 +27,7 @@ $$
 \mathrm{AB} & 25 & 5 \\ 
 \mathrm{O} & 390 & 70 \\ 
 \end{array}\\
-\mbox{Counts by ABO and Rh groups}
+\mbox{Table 1: Frequencies by ABO and Rh groups}
 $$
 
 Suppose that one of these people is selected at random and note that person's groups. 
@@ -109,11 +109,17 @@ From our table we see that the total number of people satisfying one or both
 conditions is $360 + 76 + 24 + 390 + 14 = 864$ so that
 
 $$
+\underbrace{(14)}_\text{ABO group B} \hspace{-.15in}+ \hspace{.05in}\underbrace{(360 + 25 + 390)}_\text{Rh group +} 
++ \underbrace{(76)}_\text{Both}= 864
+$$
+The corresponding probability is 
+
+$$
 \text{P(B or +)} = \frac{864}{1000} = 0.864
 $$
 
-Other combinations are also possible. 
-For instance, number of people with ABO group A blood or ABO group B blood
+Other combinations are possible. 
+For instance, the number of people with ABO group A blood or ABO group B blood
 is
 $$
 \underbrace{(360 + 60)}_\text{ABO group A} + \underbrace{(76 + 14)}_\text{ABO group B} = 510
@@ -161,41 +167,48 @@ $P(\text{(A or AB) and }(-)) = \frac{60+5}{1000} = 0.065$.
 ## Probability Tables
 
 Frequently, tables provide probabilities (or percentages) instead of counts. 
-To make the conversion from counts to probabilities, all we do is divide each table entry by the total. 
-Thus, for our table, we divide each entry by 1000 to arrive at
+To make the conversion from counts to probabilities, 
+all we do is divide each table entry by the total. 
+Thus for our table of blood type counts above, 
+we divide each entry by 1000 to arrive at Table 2.
 
 $$
 \begin{array}{c|c|c}
-           & \mathrm{F} & \mathrm{M}\\ \hline
-\mathrm{A} & 0.175 & 0.235 \\ 
-\mathrm{AB} & 0.016 & 0.024 \\ 
-\mathrm{B} & 0.037 & 0.063 \\ 
-\mathrm{O} & 0.202 & 0.248 \\ 
+       & + & - \\ \hline
+\mathrm{A} & 0.360 & 0.060 \\ 
+\mathrm{B} & 0.076 & 0.014 \\ 
+\mathrm{AB} & 0.025 & 0.005 \\ 
+\mathrm{O} & 0.390 & 0.070 \\ 
 \end{array}\\
-\mbox{Gender and blood type counts}
+\mbox{Table 2: Probabilities by ABO and Rh groups}
 $$
 
-Table 2 entries give the probability of selecting each combination. For instance
+Table 2 entries give the probability of selecting each blood type
+(determined by the combination of ABO and Rh).  For instance
 
 $$
-\mbox{P(Female and Type O)} = 0.202
+\mbox{P(AB}-) = 0.014
 $$
 
-We can add entries in this table to compute other probabilities.  
-For example, suppose we want to compute the probability that a randomly selected person has type O blood. 
-Based on the table, this can happen if a person is female and has type O blood, or if a person is male and has type O blood. 
+We can add entries in Table 2 to compute other probabilities.  
+For example, suppose we want to compute the probability that a randomly 
+selected person has ABO group O blood. 
+Based on the table, this can happen if a person is either O$+$ or O$-$. 
 Because these two groups are disjoint, we can add the probabilities to arrive at
 
 $$
-\mbox{P(Type O)} = \mbox{P(Female and Type O)} + \mbox{P(Male and Type O)}
-= 0.202 + 0.248 = 0.45
+\mbox{P(O}) = \mbox{P(O}+) + \mbox{P(O}-)
+= 0.390 + 0.070 = 0.460
 $$
 
-If instead (for instance), we want to compute P(Female) then we add the entries in the corresponding column, giving us
+If instead (for instance) we want to compute P($+$) then we add the entries in 
+the corresponding column, giving us
 
 $$
-\mbox{Pr(Female)} = 0.175 + 0.016 + 0.037 + 0.202 = 0.43 
+\mbox{Pr(+}) = 0.360 + 0.076 + 0.025 + 0.390 = 0.851 
 $$
+
+Note that this matches what we saw earlier.
 
 ---
 
