@@ -1,50 +1,70 @@
 # Probability Rules
 
-Earlier we computed the conditional probability
+## Multiplication Rule
+
+In this section we again use the blood type data in Table 1 below.
 
 $$
-\mbox{P(Type O | Female)} = \frac{202}{430} 
+\begin{array}{c|c|c}
+       & + & - \\ \hline
+\mathrm{A} & 360 & 60 \\ 
+\mathrm{B} & 76 & 14 \\ 
+\mathrm{AB} & 25 & 5 \\ 
+\mathrm{O} & 390 & 70 \\ 
+\end{array}\\
+\mbox{Table 1: Frequencies by ABO and Rh groups}
 $$
 
-The numerator 202 came from the count of Females who have blood Type B, and the denominator 430 is the total number of Females. 
-If we divide the numerator and denominator by 1000, then the quotient is not changed, so that
+In the previous section we computed the conditional probability
 
 $$
-\mbox{P(Type O | Female)} = \frac{202/1000}{430/1000} 
-= \frac{0.202}{0.43} = \frac{\mbox{P(Type O and Female)}}{\mbox{P(Female)}}
+\mbox{P(A | }-) = \frac{60}{149} = 0.403
 $$
 
-This illustrates a general property of probability: If A and B represent possible outcomes, then the probability of A given B is
+based on the data in Table 1.  
+The numerator 60 came from the number of Rh $-$ people who are also ABO group A, 
+and the denominator 149 is the total number of Rh $-$ people. 
+If we divide the numerator and denominator by 1000, then the quotient is not changed
+so that we have
 
 $$
-\mbox{P(A | B)} = \frac{\mbox{P(A and B)}}{\mbox{P(B)}}
+\mbox{P(A | }-) = \frac{60/1000}{149/1000} 
+= \frac{0.060}{0.149} = \frac{\mbox{P(A and }-)}{\mbox{P(}-)}
 $$
 
-Multiplying on both sides of the above equation by P(B) gives
+This illustrates a general property of probability: If X and Y represent possible 
+outcomes from a random event, then the probability of X given Y is
 
 $$
-\mbox{P(A and B)} = \mbox{P(A | B)}\mbox{P(B)}  
+\mbox{P(X | Y)} = \frac{\mbox{P(X and Y)}}{\mbox{P(Y)}}
 $$
 
-This is called the **multiplication rule**. Reversing the order of A and B above gives
+Multiplying on both sides of the above equation by P(Y) gives
 
 $$
-\mbox{P(B and A)} = \mbox{P(B | A)}\mbox{P(A)}  
+\mbox{P(X and Y)} = \mbox{P(X | Y)}\mbox{P(Y)}  
 $$
 
-In the blood type example, it is clear that P(Female and Type O) is the same as P(Type O and Female). 
-This is true in general: P(A and B) = P(B and A), it follows that
+This is called the **multiplication rule**, and it allows us to move back and forth
+between joint probabilities and conditional probabilities.  
+
+Let's try this out, using Table 2 (which we saw previously).  
+
 $$
-\mbox{Pr(A | B)}\mbox{Pr(B)}  = \mbox{Pr(B | A)}\mbox{Pr(A)} 
-$$
-so that 
-$$
-\mbox{Pr(A | B)}  = \mbox{Pr(B | A)}\frac{\mbox{Pr(A)}}{\mbox{Pr(B)}}
-$$
-This formula is called $\textbf{Bayes Rule}$. Applied to our earlier population, we have
-$$
-\mbox{Pr(Type O | Female)} = \mbox{Pr(Female | Type O)}\frac{\mbox{Pr(Type O)}}{\mbox{Pr(Female)}}
+\begin{array}{c|c|c}
+       & + & - \\ \hline
+\mathrm{A} & 0.360 & 0.060 \\ 
+\mathrm{B} & 0.076 & 0.014 \\ 
+\mathrm{AB} & 0.025 & 0.005 \\ 
+\mathrm{O} & 0.390 & 0.070 \\ 
+\end{array}\\
+\mbox{Table 2: Probabilities by ABO and Rh groups}
 $$
 
-Two outcomes A and B are $\textbf{independent}$ when $\mbox{Pr(A | B)} = \mbox{Pr(A)}$, 
-which implies that knowing if B has occurred has no effect on the probability of A.
+
+
+---
+
+## Exercises
+
+1. $\text{Put exercises here}$

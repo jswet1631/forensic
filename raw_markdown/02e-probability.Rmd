@@ -1,0 +1,32 @@
+# Bayes Rule
+
+## Restricting the Population
+
+Reversing the order of X and Y above gives
+
+$$
+\mbox{P(Y and X)} = \mbox{P(Y | X)}\mbox{P(A)}  
+$$
+
+In the blood type example, it is clear that P(Female and Type O) is the same as P(Type O and Female). 
+This is true in general: P(A and B) = P(B and A), it follows that
+$$
+\mbox{Pr(A | B)}\mbox{Pr(B)}  = \mbox{Pr(B | A)}\mbox{Pr(A)} 
+$$
+so that 
+$$
+\mbox{Pr(A | B)}  = \mbox{Pr(B | A)}\frac{\mbox{Pr(A)}}{\mbox{Pr(B)}}
+$$
+This formula is called $\textbf{Bayes Rule}$. Applied to our earlier population, we have
+$$
+\mbox{Pr(Type O | Female)} = \mbox{Pr(Female | Type O)}\frac{\mbox{Pr(Type O)}}{\mbox{Pr(Female)}}
+$$
+
+Two outcomes A and B are $\textbf{independent}$ when $\mbox{Pr(A | B)} = \mbox{Pr(A)}$, 
+which implies that knowing if B has occurred has no effect on the probability of A.
+
+---
+
+## Exercises
+
+1. $\text{Put exercises here}$

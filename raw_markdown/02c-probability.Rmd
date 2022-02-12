@@ -1,6 +1,6 @@
 # Conditional Probability
 
-## Restricting the Pool
+## Restricting the Population
 
 Let's continue with the blood type example from the preceding sections.  For
 convenience the frequency table is included again below.
@@ -32,14 +32,17 @@ $$
 $$
 
 There is no reason why we cannot compute probabilities based on this one column
-of data, provided we specify that is what we are doing.  
+of data, provided we specify that is what we are doing.  This is an example of
+*conditional probability*.
 
 ## Conditional Probability
 
 Let's compute a probability based on the data in Table 2.  For instance, suppose
 that a person from the Rh $-$ group is selected at random.
 The probability that this person has ABO group A is an 
-example of a **conditional probability**.  There are a total of 149 people in the
+example of a **conditional probability**.  
+
+There are a total of 149 people in the
 Rh group $-$, with 60 of those having ABO group A.
 Therefore the probability that an Rh group $-$ person selected at random is 
 ABO group A is
@@ -52,41 +55,25 @@ The vertical bar in the notation means "given that"
 so that $\mbox{P(ABO group A | Rh group }-)$ is read as 
 
 $$
-\mbox{The probability of ABO group A, given the person is Rh group }-.
+\mbox{The probability of ABO group A, given that the person is Rh group }-.
 $$
-Note that we might abbreviate the notation to
+Note that we can abbreviate the notation to
 $\mbox{P(A | }-)$ for compactness in cases where the brevity is not confusing.
 Conditional probabilities arise all the time when evaluating forensic evidence.
 (In fact almost all probabilities encountered are conditional.)
 
-For another example, suppose that we want to determine P($+$ | AB), 
+For another example, suppose that we want to determine 
 the probability that someone is Rh $+$ given that they are ABO group AB.
+The notation for this is P($+$ | AB). 
+
 Referring back to Table 1, we see that there are $25 + 5 = 30$ people 
-who are ABO group AB, and among those there are 25 who are also Rh $+$.
+who are ABO group AB, and among those there are 25 who are Rh $+$.
 Thus we have
 
 $$
 \mbox{P(}+\mbox{ | AB)} = \frac{25}{30} = 0.833
 $$
 
-In a similar manner, we can compute
-
-$$
-\mbox{P(}+\mbox{ | O)} = \frac{390}{460} = 0.833
-$$
-
-The probability the person is female, given Type B blood:
-
-$$
-\mbox{P(Female | Type B)} = \frac{37}{100} = 0.37
-$$
-
-The probability the person is male, given Type A blood:
-
-$$
-\mbox{P(Male | Type A)} = \frac{235}{410} = 0.573
-$$
-   
 ### Sample Questions
 
 <style>
@@ -100,6 +87,38 @@ hide:hover {
 }
 </style>
 
-**1.** What is the probability of blood type AB or B given the person selected is female?
+**1.** Determine $\mbox{P(O | }+)$
 
-**Answer:** <hide>$P(\text{AB or B | Female}) = (16 + 37) / 430 = 0.123$<hide>
+**Answer:** <hide>From Table 1 we see that there are a total of
+$360 + 76 + 25 + 390 = 851$ in the Rh $+$ group.  Among these are
+390 that are ABO group O.  Therefore 
+$\mbox{P(O | }+) = \frac{390}{851} = 0.458$.<hide>
+
+**2.** Determine $\mbox{P(+ | O})$
+
+**Answer:** <hide>From Table 1 we see that there are a total of
+$390 + 70 = 460$ that are ABO group O.  Among these are
+390 that are Rh $+$.  Thus we have 
+$\mbox{P(}+\mbox{ | O)} = \frac{390}{460} = 0.848$.<hide>
+
+**3.** Determine the probability that a random person is ABO group A, given that
+the person is either ABO group A or ABO group B.
+   
+**Answer:** <hide>From Table 1 we see that there are a total of
+$360 + 60 + 76 + 14 = 510$ that are ABO group A or ABO group B.  Among these are
+$360 + 60 = 420$ that are ABO group A.  Thus we have 
+$\mbox{P(A | A or B)} = \frac{420}{510} = 0.824$.<hide>
+
+**4.** Determine the probability that a random person is ABO group AB, given that
+the person is either ABO group AB or Rh $-$.
+   
+**Answer:** <hide>From Table 1 we see that there are a total of
+$60 + 14 + 5 + 70 + 25 = 174$ that are ABO group AB or Rh $-$.  Among these are
+$25 + 5 = 30$ that are ABO group AB.  Thus we have 
+P(AB | AB or $-$) = $\frac{30}{174}$ = 0.172.<hide>
+
+---
+
+## Exercises
+
+1. $\text{Put exercises here}$
