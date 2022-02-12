@@ -3,7 +3,9 @@ title: "Forensic Science and Statistics: Version 1.0.1"
 author: "Jeff Holt and Joseph Swetonic"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-output: bookdown::gitbook
+output:
+  bookdown::gitbook:
+    toc_depth: 1
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
