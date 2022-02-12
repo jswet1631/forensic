@@ -1,0 +1,5 @@
+# Introduction to Normal Distribution
+
+<font size="2"> Note: Portions below modeled after content from
+ *Online Statistics Education: A Multimedia Course of Study* 
+ (http://onlinestatbook.com/) Project Leader: David M. Lane, Rice University </font>

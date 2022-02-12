@@ -36,6 +36,7 @@ probability-tables
 exercises-2
 conditional-probability
 restricting-the-pool
+conditional-probability-1
 sample-questions-4
 probability-rules
 counterintuitive-applications
@@ -68,3 +69,18 @@ sumarizing-distributions-central-tendency
 exercises-7
 sumarizing-distributions-measures-of-central-tendency
 exercises-8
+mean-and-median
+variability
+measures-of-variability
+shapes-of-distributions
+bivariate-data
+correlation
+properties-of-r
+computing-r
+introduction-to-normal-distribution
+areas-of-normal-distributions
+standard-normal
+sampling-distributions
+sampling-distribution-mean
+difference-between-means
+sampling-distribution-of-p
