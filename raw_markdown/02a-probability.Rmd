@@ -22,17 +22,6 @@ Suppose that the crime described takes place on an island of 1000 people.
 The number of these people with each hair color is given in the table below,
 called a **frequency table.**
 
-$$
-\begin{array}{c|c}
- \mathrm{Color} & \mathrm{Count} \\ \hline
-\mathrm{Brown} & 670  \\ 
-\mathrm{Blond} & 200  \\ 
-\mathrm{Red} & 110  \\ 
-\mathrm{Green} & 20  \\ 
-\end{array}\\
-\mbox{Table 1: Hair Color Counts}
-$$
-
 ```{r, warning=FALSE, echo=FALSE}
 library(kableExtra)
 table <- data.frame(Color = c("Brown", "Blond", "Red", "Green"), Count = c(670, 200, 110, 20))

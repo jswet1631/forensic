@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 25 Sampling Distributions | Forensic Science and Statistics: Version 1.0.1</title>
+  <title>Chapter 6 Bayes Rule | Forensic Science and Statistics: Version 1.0.1</title>
   <meta name="description" content="This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 25 Sampling Distributions | Forensic Science and Statistics: Version 1.0.1" />
+  <meta property="og:title" content="Chapter 6 Bayes Rule | Forensic Science and Statistics: Version 1.0.1" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 25 Sampling Distributions | Forensic Science and Statistics: Version 1.0.1" />
+  <meta name="twitter:title" content="Chapter 6 Bayes Rule | Forensic Science and Statistics: Version 1.0.1" />
   
   <meta name="twitter:description" content="This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="standard-normal.html"/>
-<link rel="next" href="sampling-distribution-mean.html"/>
+<link rel="prev" href="probability-rules.html"/>
+<link rel="next" href="counterintuitive-applications.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -188,20 +188,46 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="sampling-distributions" class="section level1">
-<h1><span class="header-section-number">Chapter 25</span> Sampling Distributions</h1>
-<p><font size="2"> Note: Portions below modeled after content from
-<em>Online Statistics Education: A Multimedia Course of Study</em>
-(<a href="http://onlinestatbook.com/" class="uri">http://onlinestatbook.com/</a>) Project Leader: David M. Lane, Rice University </font></p>
+<div id="bayes-rule" class="section level1">
+<h1><span class="header-section-number">Chapter 6</span> Bayes Rule</h1>
+<div id="restricting-the-population-1" class="section level2">
+<h2><span class="header-section-number">6.1</span> Restricting the Population</h2>
+<p>Reversing the order of X and Y above gives</p>
+<p><span class="math display">\[
+\mbox{P(Y and X)} = \mbox{P(Y | X)}\mbox{P(A)}  
+\]</span></p>
+<p>In the blood type example, it is clear that P(Female and Type O) is the same as P(Type O and Female).
+This is true in general: P(A and B) = P(B and A), it follows that
+<span class="math display">\[
+\mbox{Pr(A | B)}\mbox{Pr(B)}  = \mbox{Pr(B | A)}\mbox{Pr(A)} 
+\]</span>
+so that
+<span class="math display">\[
+\mbox{Pr(A | B)}  = \mbox{Pr(B | A)}\frac{\mbox{Pr(A)}}{\mbox{Pr(B)}}
+\]</span>
+This formula is called <span class="math inline">\(\textbf{Bayes Rule}\)</span>. Applied to our earlier population, we have
+<span class="math display">\[
+\mbox{Pr(Type O | Female)} = \mbox{Pr(Female | Type O)}\frac{\mbox{Pr(Type O)}}{\mbox{Pr(Female)}}
+\]</span></p>
+<p>Two outcomes A and B are <span class="math inline">\(\textbf{independent}\)</span> when <span class="math inline">\(\mbox{Pr(A | B)} = \mbox{Pr(A)}\)</span>,
+which implies that knowing if B has occurred has no effect on the probability of A.</p>
+<hr />
+</div>
+<div id="exercises-5" class="section level2">
+<h2><span class="header-section-number">6.2</span> Exercises</h2>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\text{Put exercises here}\)</span></li>
+</ol>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="standard-normal.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="sampling-distribution-mean.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="probability-rules.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="counterintuitive-applications.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

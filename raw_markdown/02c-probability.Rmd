@@ -5,31 +5,20 @@
 Let's continue with the blood type example from the preceding sections.  For
 convenience the frequency table is included again below.
 
-$$
-\begin{array}{c|c|c}
-       & + & - \\ \hline
-\mathrm{A} & 360 & 60 \\ 
-\mathrm{B} & 76 & 14 \\ 
-\mathrm{AB} & 25 & 5 \\ 
-\mathrm{O} & 390 & 70 \\ 
-\end{array}\\
-\mbox{Table 1: Frequencies by ABO and Rh groups}
-$$
+```{r, echo=FALSE}
+table <- data.frame(a = c("A", "B", "AB", "O"), b = c(360, 76, 25, 390), d = c(60, 14, 5, 70))
+table %>% kbl(caption = "Frequencies by ABO and Rh Groups", col.names = c("Group", "$+$", "$-$")) %>% kable_styling(full_width = FALSE)
+```
 
 Now suppose that we focus only on those in our the population that have Rh group
 $-$.  The frequency table for this subpopulation is just the $-$ column from 
-Table 1.
+Table 4.1.
 
-$$
-\begin{array}{c|c}
-       & - \\ \hline
-\mathrm{A} &  60 \\ 
-\mathrm{B} &  14 \\ 
-\mathrm{AB} &  5 \\ 
-\mathrm{O} &  70 \\ 
-\end{array}\\
-\mbox{Table 2: Frequencies by ABO groups among those in Rh} - \mbox{group}
-$$
+```{r, echo=FALSE}
+table <- data.frame(a = c("A", "B", "AB", "O"), b = c(60, 14, 5, 70))
+table %>% kbl(caption = "Frequencies by ABO group among those in Rh$-$ group", col.names = c("Group", "$-$")) %>% kable_styling(full_width = FALSE)
+```
+
 
 There is no reason why we cannot compute probabilities based on this one column
 of data, provided we specify that is what we are doing.  This is an example of
@@ -37,7 +26,7 @@ of data, provided we specify that is what we are doing.  This is an example of
 
 ## Conditional Probability
 
-Let's compute a probability based on the data in Table 2.  For instance, suppose
+Let's compute a probability based on the data in Table 4.2.  For instance, suppose
 that a person from the Rh $-$ group is selected at random.
 The probability that this person has ABO group A is an 
 example of a **conditional probability**.  
