@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 9 Graphing Distributions: Box Plots | Forensic Science and Statistics: Version 1.0.1</title>
+  <title>Chapter 10 Graphing Distributions: Box Plots | Forensic Science and Statistics: Version 1.0.2</title>
   <meta name="description" content="This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 9 Graphing Distributions: Box Plots | Forensic Science and Statistics: Version 1.0.1" />
+  <meta property="og:title" content="Chapter 10 Graphing Distributions: Box Plots | Forensic Science and Statistics: Version 1.0.2" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 9 Graphing Distributions: Box Plots | Forensic Science and Statistics: Version 1.0.1" />
+  <meta name="twitter:title" content="Chapter 10 Graphing Distributions: Box Plots | Forensic Science and Statistics: Version 1.0.2" />
   
   <meta name="twitter:description" content="This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook." />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Jeff Holt and Joseph Swetonic" />
 
 
-<meta name="date" content="2022-02-04" />
+<meta name="date" content="2022-02-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -55,8 +55,6 @@
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
-<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
 <style type="text/css">
@@ -141,64 +139,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">Forensic Science and Statistics</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#an-introductory-example"><i class="fa fa-check"></i><b>1.1</b> An Introductory Example</a></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html"><i class="fa fa-check"></i><b>2</b> Introduction to Probability</a><ul>
-<li class="chapter" data-level="2.1" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#the-previous-example"><i class="fa fa-check"></i><b>2.1</b> The Previous Example</a><ul>
-<li class="chapter" data-level="2.1.1" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#sample-questions"><i class="fa fa-check"></i><b>2.1.1</b> Sample Questions</a></li>
-<li class="chapter" data-level="2.1.2" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#sample-questions-1"><i class="fa fa-check"></i><b>2.1.2</b> Sample Questions</a></li>
-</ul></li>
-<li class="chapter" data-level="2.2" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#exercises"><i class="fa fa-check"></i><b>2.2</b> Exercises</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="joint-probability.html"><a href="joint-probability.html"><i class="fa fa-check"></i><b>3</b> Joint Probability</a><ul>
-<li class="chapter" data-level="3.1" data-path="joint-probability.html"><a href="joint-probability.html#blood-types"><i class="fa fa-check"></i><b>3.1</b> Blood Types</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="joint-probability.html"><a href="joint-probability.html#sample-questions-2"><i class="fa fa-check"></i><b>3.1.1</b> Sample Questions</a></li>
-</ul></li>
-<li class="chapter" data-level="3.2" data-path="joint-probability.html"><a href="joint-probability.html#and-vs-or"><i class="fa fa-check"></i><b>3.2</b> And vs Or</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="joint-probability.html"><a href="joint-probability.html#sample-questions-3"><i class="fa fa-check"></i><b>3.2.1</b> Sample Questions</a></li>
-</ul></li>
-<li class="chapter" data-level="3.3" data-path="joint-probability.html"><a href="joint-probability.html#probability-tables"><i class="fa fa-check"></i><b>3.3</b> Probability Tables</a></li>
-<li class="chapter" data-level="3.4" data-path="joint-probability.html"><a href="joint-probability.html#exercises-1"><i class="fa fa-check"></i><b>3.4</b> Exercises</a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="conditional-probability.html"><a href="conditional-probability.html"><i class="fa fa-check"></i><b>4</b> Conditional Probability</a><ul>
-<li class="chapter" data-level="4.0.1" data-path="conditional-probability.html"><a href="conditional-probability.html#sample-questions-4"><i class="fa fa-check"></i><b>4.0.1</b> Sample Questions</a></li>
-</ul></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
+<li class="chapter" data-level="2" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html"><i class="fa fa-check"></i><b>2</b> Introduction to Probability</a></li>
+<li class="chapter" data-level="3" data-path="joint-probability.html"><a href="joint-probability.html"><i class="fa fa-check"></i><b>3</b> Joint Probability</a></li>
+<li class="chapter" data-level="4" data-path="conditional-probability.html"><a href="conditional-probability.html"><i class="fa fa-check"></i><b>4</b> Conditional Probability</a></li>
 <li class="chapter" data-level="5" data-path="probability-rules.html"><a href="probability-rules.html"><i class="fa fa-check"></i><b>5</b> Probability Rules</a></li>
-<li class="chapter" data-level="6" data-path="counterintuitive-applications.html"><a href="counterintuitive-applications.html"><i class="fa fa-check"></i><b>6</b> Counterintuitive Applications</a><ul>
-<li class="chapter" data-level="6.1" data-path="counterintuitive-applications.html"><a href="counterintuitive-applications.html#birthday-paradox"><i class="fa fa-check"></i><b>6.1</b> Birthday Paradox</a></li>
-<li class="chapter" data-level="6.2" data-path="counterintuitive-applications.html"><a href="counterintuitive-applications.html#monty-hall-problem"><i class="fa fa-check"></i><b>6.2</b> Monty Hall Problem</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html"><i class="fa fa-check"></i><b>7</b> Graphing Distributions: Qualitative Variables</a><ul>
-<li class="chapter" data-level="7.1" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html#introduction"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
-<li class="chapter" data-level="7.2" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html#frequency-tables"><i class="fa fa-check"></i><b>7.2</b> Frequency Tables</a></li>
-<li class="chapter" data-level="7.3" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html#pie-charts"><i class="fa fa-check"></i><b>7.3</b> Pie Charts</a></li>
-<li class="chapter" data-level="7.4" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html#bar-charts"><i class="fa fa-check"></i><b>7.4</b> Bar Charts</a></li>
-<li class="chapter" data-level="7.5" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html#comparing-distributions"><i class="fa fa-check"></i><b>7.5</b> Comparing Distributions</a></li>
-<li class="chapter" data-level="7.6" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html#exercises-2"><i class="fa fa-check"></i><b>7.6</b> Exercises</a></li>
-<li class="chapter" data-level="7.7" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html#code-appendix"><i class="fa fa-check"></i><b>7.7</b> Code Appendix</a></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="graphing-distributions-histograms.html"><a href="graphing-distributions-histograms.html"><i class="fa fa-check"></i><b>8</b> Graphing Distributions: Histograms</a><ul>
-<li class="chapter" data-level="8.1" data-path="graphing-distributions-histograms.html"><a href="graphing-distributions-histograms.html#introduction-1"><i class="fa fa-check"></i><b>8.1</b> Introduction</a></li>
-<li class="chapter" data-level="8.2" data-path="graphing-distributions-histograms.html"><a href="graphing-distributions-histograms.html#exercises-3"><i class="fa fa-check"></i><b>8.2</b> Exercises</a></li>
-<li class="chapter" data-level="8.3" data-path="graphing-distributions-histograms.html"><a href="graphing-distributions-histograms.html#code-appendix-1"><i class="fa fa-check"></i><b>8.3</b> Code Appendix</a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="graphing-distributions-box-plots.html"><a href="graphing-distributions-box-plots.html"><i class="fa fa-check"></i><b>9</b> Graphing Distributions: Box Plots</a><ul>
-<li class="chapter" data-level="9.1" data-path="graphing-distributions-box-plots.html"><a href="graphing-distributions-box-plots.html#basic-box-plots"><i class="fa fa-check"></i><b>9.1</b> Basic box plots</a></li>
-<li class="chapter" data-level="9.2" data-path="graphing-distributions-box-plots.html"><a href="graphing-distributions-box-plots.html#variations-on-box-plots"><i class="fa fa-check"></i><b>9.2</b> Variations on box plots</a></li>
-<li class="chapter" data-level="9.3" data-path="graphing-distributions-box-plots.html"><a href="graphing-distributions-box-plots.html#exercises-4"><i class="fa fa-check"></i><b>9.3</b> Exercises</a></li>
-<li class="chapter" data-level="9.4" data-path="graphing-distributions-box-plots.html"><a href="graphing-distributions-box-plots.html#code-appendix-2"><i class="fa fa-check"></i><b>9.4</b> Code Appendix</a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="graphing-distributions-bar-charts.html"><a href="graphing-distributions-bar-charts.html"><i class="fa fa-check"></i><b>10</b> Graphing Distributions: Bar Charts</a><ul>
-<li class="chapter" data-level="10.1" data-path="graphing-distributions-bar-charts.html"><a href="graphing-distributions-bar-charts.html#exercises-5"><i class="fa fa-check"></i><b>10.1</b> Exercises</a></li>
-<li class="chapter" data-level="10.2" data-path="graphing-distributions-bar-charts.html"><a href="graphing-distributions-bar-charts.html#code-appendix-3"><i class="fa fa-check"></i><b>10.2</b> Code Appendix</a></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="sumarizing-distributions-central-tendency.html"><a href="sumarizing-distributions-central-tendency.html"><i class="fa fa-check"></i><b>11</b> Sumarizing Distributions: Central Tendency</a><ul>
-<li class="chapter" data-level="11.1" data-path="sumarizing-distributions-central-tendency.html"><a href="sumarizing-distributions-central-tendency.html#exercises-6"><i class="fa fa-check"></i><b>11.1</b> Exercises</a></li>
-</ul></li>
-<li class="chapter" data-level="12" data-path="sumarizing-distributions-measures-of-central-tendency.html"><a href="sumarizing-distributions-measures-of-central-tendency.html"><i class="fa fa-check"></i><b>12</b> Sumarizing Distributions: Measures of Central Tendency</a><ul>
-<li class="chapter" data-level="12.1" data-path="sumarizing-distributions-measures-of-central-tendency.html"><a href="sumarizing-distributions-measures-of-central-tendency.html#exercises-7"><i class="fa fa-check"></i><b>12.1</b> Exercises</a></li>
-</ul></li>
+<li class="chapter" data-level="6" data-path="bayes-rule.html"><a href="bayes-rule.html"><i class="fa fa-check"></i><b>6</b> Bayes Rule</a></li>
+<li class="chapter" data-level="7" data-path="counterintuitive-applications.html"><a href="counterintuitive-applications.html"><i class="fa fa-check"></i><b>7</b> Counterintuitive Applications</a></li>
+<li class="chapter" data-level="8" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html"><i class="fa fa-check"></i><b>8</b> Graphing Distributions: Qualitative Variables</a></li>
+<li class="chapter" data-level="9" data-path="graphing-distributions-histograms.html"><a href="graphing-distributions-histograms.html"><i class="fa fa-check"></i><b>9</b> Graphing Distributions: Histograms</a></li>
+<li class="chapter" data-level="10" data-path="graphing-distributions-box-plots.html"><a href="graphing-distributions-box-plots.html"><i class="fa fa-check"></i><b>10</b> Graphing Distributions: Box Plots</a></li>
+<li class="chapter" data-level="11" data-path="graphing-distributions-bar-charts.html"><a href="graphing-distributions-bar-charts.html"><i class="fa fa-check"></i><b>11</b> Graphing Distributions: Bar Charts</a></li>
+<li class="chapter" data-level="12" data-path="sumarizing-distributions-central-tendency.html"><a href="sumarizing-distributions-central-tendency.html"><i class="fa fa-check"></i><b>12</b> Sumarizing Distributions: Central Tendency</a></li>
+<li class="chapter" data-level="13" data-path="sumarizing-distributions-measures-of-central-tendency.html"><a href="sumarizing-distributions-measures-of-central-tendency.html"><i class="fa fa-check"></i><b>13</b> Sumarizing Distributions: Measures of Central Tendency</a></li>
+<li class="chapter" data-level="14" data-path="mean-and-median.html"><a href="mean-and-median.html"><i class="fa fa-check"></i><b>14</b> Mean and Median</a></li>
+<li class="chapter" data-level="15" data-path="variability.html"><a href="variability.html"><i class="fa fa-check"></i><b>15</b> Variability</a></li>
+<li class="chapter" data-level="16" data-path="measures-of-variability.html"><a href="measures-of-variability.html"><i class="fa fa-check"></i><b>16</b> Measures of Variability</a></li>
+<li class="chapter" data-level="17" data-path="shapes-of-distributions.html"><a href="shapes-of-distributions.html"><i class="fa fa-check"></i><b>17</b> Shapes of Distributions</a></li>
+<li class="chapter" data-level="18" data-path="bivariate-data.html"><a href="bivariate-data.html"><i class="fa fa-check"></i><b>18</b> Bivariate Data</a></li>
+<li class="chapter" data-level="19" data-path="correlation.html"><a href="correlation.html"><i class="fa fa-check"></i><b>19</b> Correlation</a></li>
+<li class="chapter" data-level="20" data-path="properties-of-r.html"><a href="properties-of-r.html"><i class="fa fa-check"></i><b>20</b> Properties of <em>r</em></a></li>
+<li class="chapter" data-level="21" data-path="computing-r.html"><a href="computing-r.html"><i class="fa fa-check"></i><b>21</b> Computing <em>r</em></a></li>
+<li class="chapter" data-level="22" data-path="introduction-to-normal-distribution.html"><a href="introduction-to-normal-distribution.html"><i class="fa fa-check"></i><b>22</b> Introduction to Normal Distribution</a></li>
+<li class="chapter" data-level="23" data-path="areas-of-normal-distributions.html"><a href="areas-of-normal-distributions.html"><i class="fa fa-check"></i><b>23</b> Areas of Normal Distributions</a></li>
+<li class="chapter" data-level="24" data-path="standard-normal.html"><a href="standard-normal.html"><i class="fa fa-check"></i><b>24</b> Standard Normal</a></li>
+<li class="chapter" data-level="25" data-path="sampling-distributions.html"><a href="sampling-distributions.html"><i class="fa fa-check"></i><b>25</b> Sampling Distributions</a></li>
+<li class="chapter" data-level="26" data-path="sampling-distribution-mean.html"><a href="sampling-distribution-mean.html"><i class="fa fa-check"></i><b>26</b> Sampling Distribution, Mean</a></li>
+<li class="chapter" data-level="27" data-path="difference-between-means.html"><a href="difference-between-means.html"><i class="fa fa-check"></i><b>27</b> Difference Between Means</a></li>
+<li class="chapter" data-level="28" data-path="sampling-distribution-of-p.html"><a href="sampling-distribution-of-p.html"><i class="fa fa-check"></i><b>28</b> Sampling Distribution of <em>p</em></a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -212,7 +180,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Forensic Science and Statistics: Version 1.0.1</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Forensic Science and Statistics: Version 1.0.2</a>
           </h1>
         </div>
 
@@ -221,12 +189,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="graphing-distributions-box-plots" class="section level1">
-<h1><span class="header-section-number">Chapter 9</span> Graphing Distributions: Box Plots</h1>
+<h1><span class="header-section-number">Chapter 10</span> Graphing Distributions: Box Plots</h1>
 <p><font size="2"> Note: Portions below modeled after content from
 <em>Online Statistics Education: A Multimedia Course of Study</em>
 (<a href="http://onlinestatbook.com/" class="uri">http://onlinestatbook.com/</a>) Project Leader: David M. Lane, Rice University </font></p>
 <div id="basic-box-plots" class="section level2">
-<h2><span class="header-section-number">9.1</span> Basic box plots</h2>
+<h2><span class="header-section-number">10.1</span> Basic box plots</h2>
 <p>In this chapter we discuss the <em>box plot</em> which provides a useful way to graphically
 display information about the distribution of a set of data,
 identify outliers, and compare distributions.</p>
@@ -237,24 +205,69 @@ element present in glass can be measured. The amount present varies within
 a sheet of glass so measurements are taken from numerous pieces found at the
 crime scene and in the car trunk. (The specifics of the element and measurement
 units are not important for this discussion.) The measurements are given below:</p>
-<p>Car Trunk: 67.9, 68.9, 69.5, 67.6, 73.4, 64.5, 73.0, 59.7, 66.9, 68.2, 71.8, 64.8, 56.3</p>
-<p>Crime Scene: 55.6, 65.6, 68.0, 68.9, 67.7, 66.5, 66.8, 60.3, 68.0, 71.6, 61.4, 63.2, 68.2, 64.1, 64.8</p>
+<p>Car Trunk:</p>
+<pre><code>##  [1] 67.9 68.9 69.5 67.6 73.4 64.5 73.0 59.7 66.9 68.2 71.8 64.8 56.3</code></pre>
+<p>Crime Scene:</p>
+<pre><code>##  [1] 55.6 65.6 68.0 68.9 67.7 66.5 66.8 60.3 68.0 71.6 61.4 63.2 68.2 64.1 64.8</code></pre>
 <p>To construct the box plot, we start by finding the 25th, 50th, and 75th percentiles
 for each of our data sets. Recall that the 25th percentile is the quantity such
 that 25% of the data values are less than this quantity, and similarly for the
 other percentiles. The percentiles for each of our data sets are shown in
-Table 1.</p>
-<p><span class="math display">\[
-\begin{array}{|c|c|c|} \hline
-&amp; \mathrm{Car} &amp; \text{Crime}  \\
-\text{Percentile} &amp; \mathrm{Trunk} &amp; \text{Scene}  \\ \hline
-25^{\text{th}} &amp; 64.80 &amp; 63.65  \\  \hline
-50^{\text{th}}  &amp; 67.90 &amp; 66.50  \\  \hline
-75^{\text{th}} &amp; 69.50 &amp; 68.00  \\  \hline
-\end{array}\\
-\mbox{Table 1: Percentiles}
-\]</span></p>
-<p>Figure <a href="graphing-distributions-box-plots.html#fig:boxplot1">9.1</a> shows how these percentiles
+Table 10.1.</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-16">Table 10.1: </span>Percentiles
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Percentile
+</th>
+<th style="text-align:right;">
+Car Trunk
+</th>
+<th style="text-align:right;">
+Crime Scene
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(25^{th}\)</span>
+</td>
+<td style="text-align:right;">
+64.8
+</td>
+<td style="text-align:right;">
+63.65
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(50^{th}\)</span>
+</td>
+<td style="text-align:right;">
+67.9
+</td>
+<td style="text-align:right;">
+66.50
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span class="math inline">\(75^{th}\)</span>
+</td>
+<td style="text-align:right;">
+69.5
+</td>
+<td style="text-align:right;">
+68.00
+</td>
+</tr>
+</tbody>
+</table>
+<p>Figure <a href="graphing-distributions-box-plots.html#fig:boxplot1">10.1</a> shows how these percentiles
 are incorporated into box plots. The lower and upper
 limits of the box (called “hinges”) extend from the
 25th to 75th percentile and a line between those at the 50th percentile
@@ -262,7 +275,7 @@ limits of the box (called “hinges”) extend from the
 <div class="figure"><span style="display:block;" id="fig:boxplot1"></span>
 <img src="forensic-statistics-book_files/figure-html/boxplot1-1.png" alt="Box Plots of Glass Measurements" width="672" />
 <p class="caption">
-Figure 9.1: Box Plots of Glass Measurements
+Figure 10.1: Box Plots of Glass Measurements
 </p>
 </div>
 <p>Comparing box plots, we see that the percentiles for the car trunk data
@@ -270,7 +283,7 @@ are somewhat greater than for the crime scene data but there is considerable
 overlap between them. Based on this, it is difficult to say whether the
 glass pieces from car trunk and crime scene are from the same
 original source or different sources.</p>
-<p>Most box plots have more information than that shown in Figure <a href="graphing-distributions-box-plots.html#fig:boxplot1">9.1</a>
+<p>Most box plots have more information than that shown in Figure <a href="graphing-distributions-box-plots.html#fig:boxplot1">10.1</a>
 and there are a wide variety of options that can be included. We give a few
 examples below to provide a sense of what is possible but these are by no means
 comprehensive.</p>
@@ -282,33 +295,33 @@ The upper whisker extends
 from the upper hinge to the greatest data value that is less than one “step”
 above the upper hinge, with the lower whisker similarly defined. (Software
 automates the process so one need not do this by hand.)</p>
-<p>Figure <a href="graphing-distributions-box-plots.html#fig:boxplot2">9.2</a> shows the box plots with whiskers.</p>
+<p>Figure <a href="graphing-distributions-box-plots.html#fig:boxplot2">10.2</a> shows the box plots with whiskers.</p>
 <div class="figure"><span style="display:block;" id="fig:boxplot2"></span>
 <img src="forensic-statistics-book_files/figure-html/boxplot2-1.png" alt="Box Plots of Glass Measurements" width="672" />
 <p class="caption">
-Figure 9.2: Box Plots of Glass Measurements
+Figure 10.2: Box Plots of Glass Measurements
 </p>
 </div>
 <p>The whiskers add additional information about the spread of data, but do
 not extend to all values. We indicate these with dots that are beyond
 the whiskers in positions corresponding to data values. This is shown in
-Figure <a href="graphing-distributions-box-plots.html#fig:boxplot3">9.3</a>.</p>
+Figure <a href="graphing-distributions-box-plots.html#fig:boxplot3">10.3</a>.</p>
 <div class="figure"><span style="display:block;" id="fig:boxplot3"></span>
 <img src="forensic-statistics-book_files/figure-html/boxplot3-1.png" alt="Box Plots of Glass Measurements" width="672" />
 <p class="caption">
-Figure 9.3: Box Plots of Glass Measurements
+Figure 10.3: Box Plots of Glass Measurements
 </p>
 </div>
 <p>Some (but not all!) box plots also include a mark indicating the location of
-the mean. This is added in Figure <a href="graphing-distributions-box-plots.html#fig:boxplot4">9.4</a> as a red dot in each
+the mean. This is added in Figure <a href="graphing-distributions-box-plots.html#fig:boxplot4">10.4</a> as a red dot in each
 box plot.</p>
 <div class="figure"><span style="display:block;" id="fig:boxplot4"></span>
 <img src="forensic-statistics-book_files/figure-html/boxplot4-1.png" alt="Box Plots of Glass Measurements" width="672" />
 <p class="caption">
-Figure 9.4: Box Plots of Glass Measurements
+Figure 10.4: Box Plots of Glass Measurements
 </p>
 </div>
-<p>Figure <a href="graphing-distributions-box-plots.html#fig:boxplot4">9.4</a> provides a good summary of the data. Half of
+<p>Figure <a href="graphing-distributions-box-plots.html#fig:boxplot4">10.4</a> provides a good summary of the data. Half of
 the scores in a distribution are between the hinges (recall that the hinges are
 the 25th and 75th percentiles), we see that half the measurements for the glass
 from the car trunk are between about 65 and 69, while the measurements from the
@@ -316,12 +329,12 @@ crime scene are between about 63.5 and 68. The IQR for each is about the same
 but the overall range for the car trunk measurements is somewhat greater
 then the crime scene measurements. For both data sets the mean is less than
 the median, which is to be expected due to the extreme small values displayed
-in Figure <a href="graphing-distributions-box-plots.html#fig:boxplot4">9.4</a>.</p>
+in Figure <a href="graphing-distributions-box-plots.html#fig:boxplot4">10.4</a>.</p>
 </div>
 <div id="variations-on-box-plots" class="section level2">
-<h2><span class="header-section-number">9.2</span> Variations on box plots</h2>
+<h2><span class="header-section-number">10.2</span> Variations on box plots</h2>
 <p>Statistical analysis programs typically offer numerous options for creating
-box plots. For instance, Figure <a href="graphing-distributions-box-plots.html#fig:boxplot5">9.5</a> shows the box plots
+box plots. For instance, Figure <a href="graphing-distributions-box-plots.html#fig:boxplot5">10.5</a> shows the box plots
 as above but also includes the individual measurements along the vertical
 axis. (The means are still red to distinguish it from the data values.)
 This provides more detail on our data – note the points that specify
@@ -330,19 +343,19 @@ distributed within the boxes.</p>
 <div class="figure"><span style="display:block;" id="fig:boxplot5"></span>
 <img src="forensic-statistics-book_files/figure-html/boxplot5-1.png" alt="Box Plots of Glass Measurements" width="672" />
 <p class="caption">
-Figure 9.5: Box Plots of Glass Measurements
+Figure 10.5: Box Plots of Glass Measurements
 </p>
 </div>
 <p>Showing the specific data values on the vertical axis works well as long as there
 are not too many points and they do not tend to stack on top of each other.
 In the case of more points and more repetition of values, an option that can
 work is “jittering” which adds a horizontal offset so that points can be
-distinguished. Figure <a href="graphing-distributions-box-plots.html#fig:boxplot6">9.6</a> shows our data with a modest
+distinguished. Figure <a href="graphing-distributions-box-plots.html#fig:boxplot6">10.6</a> shows our data with a modest
 amount of jitter added.</p>
 <div class="figure"><span style="display:block;" id="fig:boxplot6"></span>
 <img src="forensic-statistics-book_files/figure-html/boxplot6-1.png" alt="Box Plots of Glass Measurements" width="672" />
 <p class="caption">
-Figure 9.6: Box Plots of Glass Measurements
+Figure 10.6: Box Plots of Glass Measurements
 </p>
 </div>
 <p>Different styles of box plots are best for different situations, and there are
@@ -352,47 +365,47 @@ on how well different graphs reveal the aspects of the data you consider most
 important.</p>
 <hr />
 </div>
-<div id="exercises-4" class="section level2">
-<h2><span class="header-section-number">9.3</span> Exercises</h2>
+<div id="exercises-8" class="section level2">
+<h2><span class="header-section-number">10.3</span> Exercises</h2>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\text{Put exercises here}\)</span></li>
 </ol>
 </div>
 <div id="code-appendix-2" class="section level2">
-<h2><span class="header-section-number">9.4</span> Code Appendix</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="graphing-distributions-box-plots.html#cb3-1"></a>data01 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">55.6</span>, <span class="fl">65.6</span>, <span class="fl">68.0</span>, <span class="fl">68.9</span>, <span class="fl">67.7</span>, <span class="fl">66.5</span>, <span class="fl">66.8</span>, <span class="fl">60.3</span>, <span class="fl">68.0</span>, <span class="fl">71.6</span>, <span class="fl">61.4</span>, <span class="fl">63.2</span>, <span class="fl">68.2</span>, <span class="fl">64.1</span>, <span class="fl">64.8</span>)</span>
-<span id="cb3-2"><a href="graphing-distributions-box-plots.html#cb3-2"></a>data02 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">67.9</span>, <span class="fl">68.9</span>, <span class="fl">69.5</span>, <span class="fl">67.6</span>, <span class="fl">73.4</span>, <span class="fl">64.5</span>, <span class="fl">73.0</span>, <span class="fl">59.7</span>, <span class="fl">66.9</span>, <span class="fl">68.2</span>, <span class="fl">71.8</span>, <span class="fl">64.8</span>, <span class="fl">56.3</span>)</span>
-<span id="cb3-3"><a href="graphing-distributions-box-plots.html#cb3-3"></a></span>
-<span id="cb3-4"><a href="graphing-distributions-box-plots.html#cb3-4"></a>data01 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">Measurement =</span> data01, <span class="dt">Source =</span> <span class="st">&quot;Crime Scence&quot;</span>)</span>
-<span id="cb3-5"><a href="graphing-distributions-box-plots.html#cb3-5"></a>data02 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">Measurement =</span> data02, <span class="dt">Source =</span> <span class="st">&quot;Car Trunk&quot;</span>)</span>
-<span id="cb3-6"><a href="graphing-distributions-box-plots.html#cb3-6"></a>data03 &lt;-<span class="st"> </span><span class="kw">rbind</span>(data01, data02)</span>
-<span id="cb3-7"><a href="graphing-distributions-box-plots.html#cb3-7"></a></span>
-<span id="cb3-8"><a href="graphing-distributions-box-plots.html#cb3-8"></a><span class="co"># Figure 9.1 -----</span></span>
-<span id="cb3-9"><a href="graphing-distributions-box-plots.html#cb3-9"></a>data03 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> Source, <span class="dt">y =</span> Measurement)) <span class="op">+</span></span>
-<span id="cb3-10"><a href="graphing-distributions-box-plots.html#cb3-10"></a><span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">outlier.shape =</span> <span class="ot">NA</span>, <span class="dt">coef =</span> <span class="dv">0</span>)</span>
-<span id="cb3-11"><a href="graphing-distributions-box-plots.html#cb3-11"></a></span>
-<span id="cb3-12"><a href="graphing-distributions-box-plots.html#cb3-12"></a><span class="co"># Figure 9.2 -----</span></span>
-<span id="cb3-13"><a href="graphing-distributions-box-plots.html#cb3-13"></a>data03 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> Source, <span class="dt">y =</span> Measurement)) <span class="op">+</span><span class="st"> </span><span class="kw">stat_boxplot</span>(<span class="dt">geom =</span> <span class="st">&quot;errorbar&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb3-14"><a href="graphing-distributions-box-plots.html#cb3-14"></a><span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">outlier.shape =</span> <span class="ot">NA</span>)</span>
-<span id="cb3-15"><a href="graphing-distributions-box-plots.html#cb3-15"></a></span>
-<span id="cb3-16"><a href="graphing-distributions-box-plots.html#cb3-16"></a><span class="co"># Figure 9.3 -----</span></span>
-<span id="cb3-17"><a href="graphing-distributions-box-plots.html#cb3-17"></a>data03 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> Source, <span class="dt">y =</span> Measurement)) <span class="op">+</span><span class="st"> </span><span class="kw">stat_boxplot</span>(<span class="dt">geom =</span> <span class="st">&quot;errorbar&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb3-18"><a href="graphing-distributions-box-plots.html#cb3-18"></a><span class="st">  </span><span class="kw">geom_boxplot</span>()</span>
-<span id="cb3-19"><a href="graphing-distributions-box-plots.html#cb3-19"></a></span>
-<span id="cb3-20"><a href="graphing-distributions-box-plots.html#cb3-20"></a><span class="co"># Figure 9.4 -----</span></span>
-<span id="cb3-21"><a href="graphing-distributions-box-plots.html#cb3-21"></a>data03 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> Source, <span class="dt">y =</span> Measurement)) <span class="op">+</span><span class="st"> </span><span class="kw">stat_boxplot</span>(<span class="dt">geom =</span> <span class="st">&quot;errorbar&quot;</span>) <span class="op">+</span></span>
-<span id="cb3-22"><a href="graphing-distributions-box-plots.html#cb3-22"></a><span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">outlier.size =</span> <span class="dv">2</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb3-23"><a href="graphing-distributions-box-plots.html#cb3-23"></a><span class="st">  </span><span class="kw">stat_summary</span>(<span class="dt">fun =</span> mean, <span class="dt">geom =</span> <span class="st">&quot;point&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">size =</span> <span class="dv">2</span>)</span>
-<span id="cb3-24"><a href="graphing-distributions-box-plots.html#cb3-24"></a></span>
-<span id="cb3-25"><a href="graphing-distributions-box-plots.html#cb3-25"></a><span class="co"># Figure 9.5 -----</span></span>
-<span id="cb3-26"><a href="graphing-distributions-box-plots.html#cb3-26"></a>data03 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> Source, <span class="dt">y =</span> Measurement)) <span class="op">+</span><span class="st"> </span><span class="kw">stat_boxplot</span>(<span class="dt">geom =</span> <span class="st">&quot;errorbar&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb3-27"><a href="graphing-distributions-box-plots.html#cb3-27"></a><span class="st">  </span><span class="kw">geom_boxplot</span>() <span class="op">+</span><span class="st"> </span><span class="kw">geom_jitter</span>(<span class="dt">width =</span> <span class="dv">0</span>, <span class="dt">alpha =</span> <span class="fl">0.9</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb3-28"><a href="graphing-distributions-box-plots.html#cb3-28"></a><span class="st">  </span><span class="kw">stat_summary</span>(<span class="dt">fun =</span> mean, <span class="dt">geom =</span> <span class="st">&quot;point&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">size =</span> <span class="dv">2</span>)</span>
-<span id="cb3-29"><a href="graphing-distributions-box-plots.html#cb3-29"></a></span>
-<span id="cb3-30"><a href="graphing-distributions-box-plots.html#cb3-30"></a><span class="co"># Figure 9.6 -----</span></span>
-<span id="cb3-31"><a href="graphing-distributions-box-plots.html#cb3-31"></a>data03 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> Source, <span class="dt">y =</span> Measurement)) <span class="op">+</span><span class="st"> </span><span class="kw">stat_boxplot</span>(<span class="dt">geom =</span> <span class="st">&quot;errorbar&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb3-32"><a href="graphing-distributions-box-plots.html#cb3-32"></a><span class="st">  </span><span class="kw">geom_boxplot</span>() <span class="op">+</span><span class="st"> </span><span class="kw">geom_jitter</span>(<span class="dt">width =</span> <span class="fl">0.1</span>, <span class="dt">alpha =</span> <span class="fl">0.9</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb3-33"><a href="graphing-distributions-box-plots.html#cb3-33"></a><span class="st">  </span><span class="kw">stat_summary</span>(<span class="dt">fun =</span> mean, <span class="dt">geom =</span> <span class="st">&quot;point&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">size =</span> <span class="dv">2</span>)</span></code></pre></div>
+<h2><span class="header-section-number">10.4</span> Code Appendix</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="graphing-distributions-box-plots.html#cb6-1"></a>data01 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">55.6</span>, <span class="fl">65.6</span>, <span class="fl">68.0</span>, <span class="fl">68.9</span>, <span class="fl">67.7</span>, <span class="fl">66.5</span>, <span class="fl">66.8</span>, <span class="fl">60.3</span>, <span class="fl">68.0</span>, <span class="fl">71.6</span>, <span class="fl">61.4</span>, <span class="fl">63.2</span>, <span class="fl">68.2</span>, <span class="fl">64.1</span>, <span class="fl">64.8</span>)</span>
+<span id="cb6-2"><a href="graphing-distributions-box-plots.html#cb6-2"></a>data02 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">67.9</span>, <span class="fl">68.9</span>, <span class="fl">69.5</span>, <span class="fl">67.6</span>, <span class="fl">73.4</span>, <span class="fl">64.5</span>, <span class="fl">73.0</span>, <span class="fl">59.7</span>, <span class="fl">66.9</span>, <span class="fl">68.2</span>, <span class="fl">71.8</span>, <span class="fl">64.8</span>, <span class="fl">56.3</span>)</span>
+<span id="cb6-3"><a href="graphing-distributions-box-plots.html#cb6-3"></a></span>
+<span id="cb6-4"><a href="graphing-distributions-box-plots.html#cb6-4"></a>data01 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">Measurement =</span> data01, <span class="dt">Source =</span> <span class="st">&quot;Crime Scene&quot;</span>)</span>
+<span id="cb6-5"><a href="graphing-distributions-box-plots.html#cb6-5"></a>data02 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">Measurement =</span> data02, <span class="dt">Source =</span> <span class="st">&quot;Car Trunk&quot;</span>)</span>
+<span id="cb6-6"><a href="graphing-distributions-box-plots.html#cb6-6"></a>data03 &lt;-<span class="st"> </span><span class="kw">rbind</span>(data01, data02)</span>
+<span id="cb6-7"><a href="graphing-distributions-box-plots.html#cb6-7"></a></span>
+<span id="cb6-8"><a href="graphing-distributions-box-plots.html#cb6-8"></a><span class="co"># Figure 9.1 -----</span></span>
+<span id="cb6-9"><a href="graphing-distributions-box-plots.html#cb6-9"></a>data03 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> Source, <span class="dt">y =</span> Measurement)) <span class="op">+</span></span>
+<span id="cb6-10"><a href="graphing-distributions-box-plots.html#cb6-10"></a><span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">outlier.shape =</span> <span class="ot">NA</span>, <span class="dt">coef =</span> <span class="dv">0</span>)</span>
+<span id="cb6-11"><a href="graphing-distributions-box-plots.html#cb6-11"></a></span>
+<span id="cb6-12"><a href="graphing-distributions-box-plots.html#cb6-12"></a><span class="co"># Figure 9.2 -----</span></span>
+<span id="cb6-13"><a href="graphing-distributions-box-plots.html#cb6-13"></a>data03 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> Source, <span class="dt">y =</span> Measurement)) <span class="op">+</span><span class="st"> </span><span class="kw">stat_boxplot</span>(<span class="dt">geom =</span> <span class="st">&quot;errorbar&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb6-14"><a href="graphing-distributions-box-plots.html#cb6-14"></a><span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">outlier.shape =</span> <span class="ot">NA</span>)</span>
+<span id="cb6-15"><a href="graphing-distributions-box-plots.html#cb6-15"></a></span>
+<span id="cb6-16"><a href="graphing-distributions-box-plots.html#cb6-16"></a><span class="co"># Figure 9.3 -----</span></span>
+<span id="cb6-17"><a href="graphing-distributions-box-plots.html#cb6-17"></a>data03 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> Source, <span class="dt">y =</span> Measurement)) <span class="op">+</span><span class="st"> </span><span class="kw">stat_boxplot</span>(<span class="dt">geom =</span> <span class="st">&quot;errorbar&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb6-18"><a href="graphing-distributions-box-plots.html#cb6-18"></a><span class="st">  </span><span class="kw">geom_boxplot</span>()</span>
+<span id="cb6-19"><a href="graphing-distributions-box-plots.html#cb6-19"></a></span>
+<span id="cb6-20"><a href="graphing-distributions-box-plots.html#cb6-20"></a><span class="co"># Figure 9.4 -----</span></span>
+<span id="cb6-21"><a href="graphing-distributions-box-plots.html#cb6-21"></a>data03 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> Source, <span class="dt">y =</span> Measurement)) <span class="op">+</span><span class="st"> </span><span class="kw">stat_boxplot</span>(<span class="dt">geom =</span> <span class="st">&quot;errorbar&quot;</span>) <span class="op">+</span></span>
+<span id="cb6-22"><a href="graphing-distributions-box-plots.html#cb6-22"></a><span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">outlier.size =</span> <span class="dv">2</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb6-23"><a href="graphing-distributions-box-plots.html#cb6-23"></a><span class="st">  </span><span class="kw">stat_summary</span>(<span class="dt">fun =</span> mean, <span class="dt">geom =</span> <span class="st">&quot;point&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">size =</span> <span class="dv">2</span>)</span>
+<span id="cb6-24"><a href="graphing-distributions-box-plots.html#cb6-24"></a></span>
+<span id="cb6-25"><a href="graphing-distributions-box-plots.html#cb6-25"></a><span class="co"># Figure 9.5 -----</span></span>
+<span id="cb6-26"><a href="graphing-distributions-box-plots.html#cb6-26"></a>data03 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> Source, <span class="dt">y =</span> Measurement)) <span class="op">+</span><span class="st"> </span><span class="kw">stat_boxplot</span>(<span class="dt">geom =</span> <span class="st">&quot;errorbar&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb6-27"><a href="graphing-distributions-box-plots.html#cb6-27"></a><span class="st">  </span><span class="kw">geom_boxplot</span>() <span class="op">+</span><span class="st"> </span><span class="kw">geom_jitter</span>(<span class="dt">width =</span> <span class="dv">0</span>, <span class="dt">alpha =</span> <span class="fl">0.9</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb6-28"><a href="graphing-distributions-box-plots.html#cb6-28"></a><span class="st">  </span><span class="kw">stat_summary</span>(<span class="dt">fun =</span> mean, <span class="dt">geom =</span> <span class="st">&quot;point&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">size =</span> <span class="dv">2</span>)</span>
+<span id="cb6-29"><a href="graphing-distributions-box-plots.html#cb6-29"></a></span>
+<span id="cb6-30"><a href="graphing-distributions-box-plots.html#cb6-30"></a><span class="co"># Figure 9.6 -----</span></span>
+<span id="cb6-31"><a href="graphing-distributions-box-plots.html#cb6-31"></a>data03 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> Source, <span class="dt">y =</span> Measurement)) <span class="op">+</span><span class="st"> </span><span class="kw">stat_boxplot</span>(<span class="dt">geom =</span> <span class="st">&quot;errorbar&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb6-32"><a href="graphing-distributions-box-plots.html#cb6-32"></a><span class="st">  </span><span class="kw">geom_boxplot</span>() <span class="op">+</span><span class="st"> </span><span class="kw">geom_jitter</span>(<span class="dt">width =</span> <span class="fl">0.1</span>, <span class="dt">alpha =</span> <span class="fl">0.9</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb6-33"><a href="graphing-distributions-box-plots.html#cb6-33"></a><span class="st">  </span><span class="kw">stat_summary</span>(<span class="dt">fun =</span> mean, <span class="dt">geom =</span> <span class="st">&quot;point&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">size =</span> <span class="dv">2</span>)</span></code></pre></div>
 
 </div>
 </div>

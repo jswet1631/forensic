@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 11 Graphing Distributions: Bar Charts | Forensic Science and Statistics: Version 1.0.1</title>
+  <title>Chapter 11 Graphing Distributions: Bar Charts | Forensic Science and Statistics: Version 1.0.2</title>
   <meta name="description" content="This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 11 Graphing Distributions: Bar Charts | Forensic Science and Statistics: Version 1.0.1" />
+  <meta property="og:title" content="Chapter 11 Graphing Distributions: Bar Charts | Forensic Science and Statistics: Version 1.0.2" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 11 Graphing Distributions: Bar Charts | Forensic Science and Statistics: Version 1.0.1" />
+  <meta name="twitter:title" content="Chapter 11 Graphing Distributions: Bar Charts | Forensic Science and Statistics: Version 1.0.2" />
   
   <meta name="twitter:description" content="This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook." />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Jeff Holt and Joseph Swetonic" />
 
 
-<meta name="date" content="2022-02-12" />
+<meta name="date" content="2022-02-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -180,7 +180,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Forensic Science and Statistics: Version 1.0.1</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Forensic Science and Statistics: Version 1.0.2</a>
           </h1>
         </div>
 
@@ -270,57 +270,57 @@ same source. We will consider this question more in later chapters.</p>
 </div>
 <div id="code-appendix-3" class="section level2">
 <h2><span class="header-section-number">11.2</span> Code Appendix</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="graphing-distributions-bar-charts.html#cb4-1"></a><span class="co"># Figure 10.1 -----</span></span>
-<span id="cb4-2"><a href="graphing-distributions-bar-charts.html#cb4-2"></a>data &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">ABO_Group =</span> <span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;AB&quot;</span>, <span class="st">&quot;O&quot;</span>), <span class="dt">value =</span> <span class="kw">c</span>(<span class="dv">210</span>, <span class="dv">45</span>, <span class="dv">15</span>, <span class="dv">230</span>)) <span class="op">%&gt;%</span></span>
-<span id="cb4-3"><a href="graphing-distributions-bar-charts.html#cb4-3"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">prop =</span> value <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(value) <span class="op">*</span><span class="st"> </span><span class="dv">100</span>)</span>
-<span id="cb4-4"><a href="graphing-distributions-bar-charts.html#cb4-4"></a></span>
-<span id="cb4-5"><a href="graphing-distributions-bar-charts.html#cb4-5"></a><span class="kw">ggplot</span>(data, <span class="kw">aes</span>(ABO_Group, prop)) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb4-6"><a href="graphing-distributions-bar-charts.html#cb4-6"></a><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;steelblue&quot;</span>, <span class="dt">width =</span> <span class="fl">0.6</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb4-7"><a href="graphing-distributions-bar-charts.html#cb4-7"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;ABO Group&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Percentage&quot;</span>)</span>
-<span id="cb4-8"><a href="graphing-distributions-bar-charts.html#cb4-8"></a></span>
-<span id="cb4-9"><a href="graphing-distributions-bar-charts.html#cb4-9"></a><span class="co"># Figure 10.2 -----</span></span>
-<span id="cb4-10"><a href="graphing-distributions-bar-charts.html#cb4-10"></a>data &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">City =</span> <span class="kw">c</span>(<span class="st">&quot;Chicago&quot;</span>, <span class="st">&quot;Dallas&quot;</span>, <span class="st">&quot;Los Angeles&quot;</span>, <span class="st">&quot;New York&quot;</span>), </span>
-<span id="cb4-11"><a href="graphing-distributions-bar-charts.html#cb4-11"></a>                   <span class="dt">Murders =</span> <span class="kw">c</span>(<span class="dv">774</span>, <span class="dv">251</span>, <span class="dv">349</span>, <span class="dv">468</span>))</span>
-<span id="cb4-12"><a href="graphing-distributions-bar-charts.html#cb4-12"></a></span>
-<span id="cb4-13"><a href="graphing-distributions-bar-charts.html#cb4-13"></a><span class="kw">ggplot</span>(data, <span class="kw">aes</span>(City, Murders)) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb4-14"><a href="graphing-distributions-bar-charts.html#cb4-14"></a><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;steelblue&quot;</span>, <span class="dt">width =</span> <span class="fl">0.6</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb4-15"><a href="graphing-distributions-bar-charts.html#cb4-15"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;City&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Murders&quot;</span>)</span>
-<span id="cb4-16"><a href="graphing-distributions-bar-charts.html#cb4-16"></a></span>
-<span id="cb4-17"><a href="graphing-distributions-bar-charts.html#cb4-17"></a><span class="co"># Figure 10.3 -----</span></span>
-<span id="cb4-18"><a href="graphing-distributions-bar-charts.html#cb4-18"></a>data &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">City =</span> <span class="kw">c</span>(<span class="st">&quot;Chicago&quot;</span>, <span class="st">&quot;Dallas&quot;</span>, <span class="st">&quot;Los Angeles&quot;</span>, <span class="st">&quot;New York&quot;</span>), </span>
-<span id="cb4-19"><a href="graphing-distributions-bar-charts.html#cb4-19"></a>                   <span class="dt">Murders =</span> <span class="kw">c</span>(<span class="fl">281.8645</span>, <span class="fl">192.4847</span>, <span class="fl">89.51013</span>, <span class="fl">53.15766</span>)) </span>
-<span id="cb4-20"><a href="graphing-distributions-bar-charts.html#cb4-20"></a></span>
-<span id="cb4-21"><a href="graphing-distributions-bar-charts.html#cb4-21"></a><span class="kw">ggplot</span>(data, <span class="kw">aes</span>(City, Murders)) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb4-22"><a href="graphing-distributions-bar-charts.html#cb4-22"></a><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;steelblue&quot;</span>, <span class="dt">width =</span> <span class="fl">0.6</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb4-23"><a href="graphing-distributions-bar-charts.html#cb4-23"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;City&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Murders per 1,000,000 residents&quot;</span>)</span>
-<span id="cb4-24"><a href="graphing-distributions-bar-charts.html#cb4-24"></a></span>
-<span id="cb4-25"><a href="graphing-distributions-bar-charts.html#cb4-25"></a><span class="co"># Figure 10.4 -----</span></span>
-<span id="cb4-26"><a href="graphing-distributions-bar-charts.html#cb4-26"></a>data &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">City =</span> <span class="kw">c</span>(<span class="st">&quot;1995&quot;</span>, <span class="st">&quot;1996&quot;</span>, <span class="st">&quot;1997&quot;</span>, <span class="st">&quot;1998&quot;</span>, <span class="st">&quot;1999&quot;</span>, <span class="st">&quot;2000&quot;</span>), </span>
-<span id="cb4-27"><a href="graphing-distributions-bar-charts.html#cb4-27"></a>                   <span class="dt">RateChange =</span> <span class="kw">c</span>(<span class="fl">62.7</span>, <span class="fl">41.3</span>, <span class="fl">-2.9</span>, <span class="fl">7.3</span>, <span class="fl">16.7</span>, <span class="fl">-6.7</span>)) </span>
-<span id="cb4-28"><a href="graphing-distributions-bar-charts.html#cb4-28"></a></span>
-<span id="cb4-29"><a href="graphing-distributions-bar-charts.html#cb4-29"></a><span class="co"># 2014-2020: 177, 288, 407, 395, 424, 495, 462 Shootings in Toronto (Wikipedia)</span></span>
-<span id="cb4-30"><a href="graphing-distributions-bar-charts.html#cb4-30"></a></span>
-<span id="cb4-31"><a href="graphing-distributions-bar-charts.html#cb4-31"></a><span class="kw">ggplot</span>(data, <span class="kw">aes</span>(City, RateChange)) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb4-32"><a href="graphing-distributions-bar-charts.html#cb4-32"></a><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;steelblue&quot;</span>, <span class="dt">width =</span> <span class="fl">0.6</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb4-33"><a href="graphing-distributions-bar-charts.html#cb4-33"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Year&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Year-to-year Percent Change, Shootings&quot;</span>)</span>
-<span id="cb4-34"><a href="graphing-distributions-bar-charts.html#cb4-34"></a></span>
-<span id="cb4-35"><a href="graphing-distributions-bar-charts.html#cb4-35"></a><span class="co"># Figure 10.5 -----</span></span>
-<span id="cb4-36"><a href="graphing-distributions-bar-charts.html#cb4-36"></a>data01 =<span class="st"> </span><span class="kw">c</span>(<span class="fl">55.6</span>, <span class="fl">65.6</span>, <span class="fl">68.0</span>, <span class="fl">68.9</span>, <span class="fl">67.7</span>, <span class="fl">66.5</span>, <span class="fl">66.8</span>, <span class="fl">60.3</span>, <span class="fl">68.0</span>, <span class="fl">71.6</span>, <span class="fl">61.4</span>, <span class="fl">63.2</span>, <span class="fl">68.2</span>, <span class="fl">64.1</span>, <span class="fl">64.8</span>)</span>
-<span id="cb4-37"><a href="graphing-distributions-bar-charts.html#cb4-37"></a>data02 =<span class="st"> </span><span class="kw">c</span>(<span class="fl">67.9</span>, <span class="fl">68.9</span>, <span class="fl">69.5</span>, <span class="fl">67.6</span>, <span class="fl">73.4</span>, <span class="fl">64.5</span>, <span class="fl">73.0</span>, <span class="fl">59.7</span>, <span class="fl">66.9</span>, <span class="fl">68.2</span>, <span class="fl">71.8</span>, <span class="fl">64.8</span>, <span class="fl">56.3</span>)</span>
-<span id="cb4-38"><a href="graphing-distributions-bar-charts.html#cb4-38"></a>data &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">Source =</span> <span class="kw">c</span>(<span class="st">&quot;Car Trunk&quot;</span>, <span class="st">&quot;Crime Scene&quot;</span>), </span>
-<span id="cb4-39"><a href="graphing-distributions-bar-charts.html#cb4-39"></a>                   <span class="dt">Mean =</span> <span class="kw">c</span>(<span class="kw">mean</span>(data02), <span class="kw">mean</span>(data01)))</span>
-<span id="cb4-40"><a href="graphing-distributions-bar-charts.html#cb4-40"></a></span>
-<span id="cb4-41"><a href="graphing-distributions-bar-charts.html#cb4-41"></a><span class="kw">ggplot</span>(data, <span class="kw">aes</span>(Source, Mean)) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb4-42"><a href="graphing-distributions-bar-charts.html#cb4-42"></a><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;steelblue&quot;</span>, <span class="dt">width =</span> <span class="fl">0.6</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb4-43"><a href="graphing-distributions-bar-charts.html#cb4-43"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Source&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Mean trace element measurement&quot;</span>)</span>
-<span id="cb4-44"><a href="graphing-distributions-bar-charts.html#cb4-44"></a></span>
-<span id="cb4-45"><a href="graphing-distributions-bar-charts.html#cb4-45"></a><span class="co"># Figure 10.6 -----</span></span>
-<span id="cb4-46"><a href="graphing-distributions-bar-charts.html#cb4-46"></a>data01 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">Measurement =</span> data01, <span class="dt">Source =</span> <span class="st">&quot;Crime Scene&quot;</span>)</span>
-<span id="cb4-47"><a href="graphing-distributions-bar-charts.html#cb4-47"></a>data02 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">Measurement =</span> data02, <span class="dt">Source =</span> <span class="st">&quot;Car Trunk&quot;</span>)</span>
-<span id="cb4-48"><a href="graphing-distributions-bar-charts.html#cb4-48"></a>data03 =<span class="st"> </span><span class="kw">rbind</span>(data01, data02)</span>
-<span id="cb4-49"><a href="graphing-distributions-bar-charts.html#cb4-49"></a></span>
-<span id="cb4-50"><a href="graphing-distributions-bar-charts.html#cb4-50"></a><span class="kw">ggplot</span>(data03, <span class="kw">aes</span>(<span class="dt">x=</span>Source, <span class="dt">y=</span>Measurement, <span class="dt">color=</span>Source)) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb4-51"><a href="graphing-distributions-bar-charts.html#cb4-51"></a><span class="st">  </span><span class="kw">stat_boxplot</span>(<span class="dt">geom =</span> <span class="st">&quot;errorbar&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>(<span class="dt">outlier.shape =</span> <span class="ot">NA</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="graphing-distributions-bar-charts.html#cb7-1"></a><span class="co"># Figure 10.1 -----</span></span>
+<span id="cb7-2"><a href="graphing-distributions-bar-charts.html#cb7-2"></a>data &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">ABO_Group =</span> <span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;AB&quot;</span>, <span class="st">&quot;O&quot;</span>), <span class="dt">value =</span> <span class="kw">c</span>(<span class="dv">210</span>, <span class="dv">45</span>, <span class="dv">15</span>, <span class="dv">230</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb7-3"><a href="graphing-distributions-bar-charts.html#cb7-3"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">prop =</span> value <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(value) <span class="op">*</span><span class="st"> </span><span class="dv">100</span>)</span>
+<span id="cb7-4"><a href="graphing-distributions-bar-charts.html#cb7-4"></a></span>
+<span id="cb7-5"><a href="graphing-distributions-bar-charts.html#cb7-5"></a><span class="kw">ggplot</span>(data, <span class="kw">aes</span>(ABO_Group, prop)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb7-6"><a href="graphing-distributions-bar-charts.html#cb7-6"></a><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;steelblue&quot;</span>, <span class="dt">width =</span> <span class="fl">0.6</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb7-7"><a href="graphing-distributions-bar-charts.html#cb7-7"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;ABO Group&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Percentage&quot;</span>)</span>
+<span id="cb7-8"><a href="graphing-distributions-bar-charts.html#cb7-8"></a></span>
+<span id="cb7-9"><a href="graphing-distributions-bar-charts.html#cb7-9"></a><span class="co"># Figure 10.2 -----</span></span>
+<span id="cb7-10"><a href="graphing-distributions-bar-charts.html#cb7-10"></a>data &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">City =</span> <span class="kw">c</span>(<span class="st">&quot;Chicago&quot;</span>, <span class="st">&quot;Dallas&quot;</span>, <span class="st">&quot;Los Angeles&quot;</span>, <span class="st">&quot;New York&quot;</span>), </span>
+<span id="cb7-11"><a href="graphing-distributions-bar-charts.html#cb7-11"></a>                   <span class="dt">Murders =</span> <span class="kw">c</span>(<span class="dv">774</span>, <span class="dv">251</span>, <span class="dv">349</span>, <span class="dv">468</span>))</span>
+<span id="cb7-12"><a href="graphing-distributions-bar-charts.html#cb7-12"></a></span>
+<span id="cb7-13"><a href="graphing-distributions-bar-charts.html#cb7-13"></a><span class="kw">ggplot</span>(data, <span class="kw">aes</span>(City, Murders)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb7-14"><a href="graphing-distributions-bar-charts.html#cb7-14"></a><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;steelblue&quot;</span>, <span class="dt">width =</span> <span class="fl">0.6</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb7-15"><a href="graphing-distributions-bar-charts.html#cb7-15"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;City&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Murders&quot;</span>)</span>
+<span id="cb7-16"><a href="graphing-distributions-bar-charts.html#cb7-16"></a></span>
+<span id="cb7-17"><a href="graphing-distributions-bar-charts.html#cb7-17"></a><span class="co"># Figure 10.3 -----</span></span>
+<span id="cb7-18"><a href="graphing-distributions-bar-charts.html#cb7-18"></a>data &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">City =</span> <span class="kw">c</span>(<span class="st">&quot;Chicago&quot;</span>, <span class="st">&quot;Dallas&quot;</span>, <span class="st">&quot;Los Angeles&quot;</span>, <span class="st">&quot;New York&quot;</span>), </span>
+<span id="cb7-19"><a href="graphing-distributions-bar-charts.html#cb7-19"></a>                   <span class="dt">Murders =</span> <span class="kw">c</span>(<span class="fl">281.8645</span>, <span class="fl">192.4847</span>, <span class="fl">89.51013</span>, <span class="fl">53.15766</span>)) </span>
+<span id="cb7-20"><a href="graphing-distributions-bar-charts.html#cb7-20"></a></span>
+<span id="cb7-21"><a href="graphing-distributions-bar-charts.html#cb7-21"></a><span class="kw">ggplot</span>(data, <span class="kw">aes</span>(City, Murders)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb7-22"><a href="graphing-distributions-bar-charts.html#cb7-22"></a><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;steelblue&quot;</span>, <span class="dt">width =</span> <span class="fl">0.6</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb7-23"><a href="graphing-distributions-bar-charts.html#cb7-23"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;City&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Murders per 1,000,000 residents&quot;</span>)</span>
+<span id="cb7-24"><a href="graphing-distributions-bar-charts.html#cb7-24"></a></span>
+<span id="cb7-25"><a href="graphing-distributions-bar-charts.html#cb7-25"></a><span class="co"># Figure 10.4 -----</span></span>
+<span id="cb7-26"><a href="graphing-distributions-bar-charts.html#cb7-26"></a>data &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">City =</span> <span class="kw">c</span>(<span class="st">&quot;1995&quot;</span>, <span class="st">&quot;1996&quot;</span>, <span class="st">&quot;1997&quot;</span>, <span class="st">&quot;1998&quot;</span>, <span class="st">&quot;1999&quot;</span>, <span class="st">&quot;2000&quot;</span>), </span>
+<span id="cb7-27"><a href="graphing-distributions-bar-charts.html#cb7-27"></a>                   <span class="dt">RateChange =</span> <span class="kw">c</span>(<span class="fl">62.7</span>, <span class="fl">41.3</span>, <span class="fl">-2.9</span>, <span class="fl">7.3</span>, <span class="fl">16.7</span>, <span class="fl">-6.7</span>)) </span>
+<span id="cb7-28"><a href="graphing-distributions-bar-charts.html#cb7-28"></a></span>
+<span id="cb7-29"><a href="graphing-distributions-bar-charts.html#cb7-29"></a><span class="co"># 2014-2020: 177, 288, 407, 395, 424, 495, 462 Shootings in Toronto (Wikipedia)</span></span>
+<span id="cb7-30"><a href="graphing-distributions-bar-charts.html#cb7-30"></a></span>
+<span id="cb7-31"><a href="graphing-distributions-bar-charts.html#cb7-31"></a><span class="kw">ggplot</span>(data, <span class="kw">aes</span>(City, RateChange)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb7-32"><a href="graphing-distributions-bar-charts.html#cb7-32"></a><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;steelblue&quot;</span>, <span class="dt">width =</span> <span class="fl">0.6</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb7-33"><a href="graphing-distributions-bar-charts.html#cb7-33"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Year&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Year-to-year Percent Change, Shootings&quot;</span>)</span>
+<span id="cb7-34"><a href="graphing-distributions-bar-charts.html#cb7-34"></a></span>
+<span id="cb7-35"><a href="graphing-distributions-bar-charts.html#cb7-35"></a><span class="co"># Figure 10.5 -----</span></span>
+<span id="cb7-36"><a href="graphing-distributions-bar-charts.html#cb7-36"></a>data01 =<span class="st"> </span><span class="kw">c</span>(<span class="fl">55.6</span>, <span class="fl">65.6</span>, <span class="fl">68.0</span>, <span class="fl">68.9</span>, <span class="fl">67.7</span>, <span class="fl">66.5</span>, <span class="fl">66.8</span>, <span class="fl">60.3</span>, <span class="fl">68.0</span>, <span class="fl">71.6</span>, <span class="fl">61.4</span>, <span class="fl">63.2</span>, <span class="fl">68.2</span>, <span class="fl">64.1</span>, <span class="fl">64.8</span>)</span>
+<span id="cb7-37"><a href="graphing-distributions-bar-charts.html#cb7-37"></a>data02 =<span class="st"> </span><span class="kw">c</span>(<span class="fl">67.9</span>, <span class="fl">68.9</span>, <span class="fl">69.5</span>, <span class="fl">67.6</span>, <span class="fl">73.4</span>, <span class="fl">64.5</span>, <span class="fl">73.0</span>, <span class="fl">59.7</span>, <span class="fl">66.9</span>, <span class="fl">68.2</span>, <span class="fl">71.8</span>, <span class="fl">64.8</span>, <span class="fl">56.3</span>)</span>
+<span id="cb7-38"><a href="graphing-distributions-bar-charts.html#cb7-38"></a>data &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">Source =</span> <span class="kw">c</span>(<span class="st">&quot;Car Trunk&quot;</span>, <span class="st">&quot;Crime Scene&quot;</span>), </span>
+<span id="cb7-39"><a href="graphing-distributions-bar-charts.html#cb7-39"></a>                   <span class="dt">Mean =</span> <span class="kw">c</span>(<span class="kw">mean</span>(data02), <span class="kw">mean</span>(data01)))</span>
+<span id="cb7-40"><a href="graphing-distributions-bar-charts.html#cb7-40"></a></span>
+<span id="cb7-41"><a href="graphing-distributions-bar-charts.html#cb7-41"></a><span class="kw">ggplot</span>(data, <span class="kw">aes</span>(Source, Mean)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb7-42"><a href="graphing-distributions-bar-charts.html#cb7-42"></a><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;steelblue&quot;</span>, <span class="dt">width =</span> <span class="fl">0.6</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb7-43"><a href="graphing-distributions-bar-charts.html#cb7-43"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Source&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Mean trace element measurement&quot;</span>)</span>
+<span id="cb7-44"><a href="graphing-distributions-bar-charts.html#cb7-44"></a></span>
+<span id="cb7-45"><a href="graphing-distributions-bar-charts.html#cb7-45"></a><span class="co"># Figure 10.6 -----</span></span>
+<span id="cb7-46"><a href="graphing-distributions-bar-charts.html#cb7-46"></a>data01 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">Measurement =</span> data01, <span class="dt">Source =</span> <span class="st">&quot;Crime Scene&quot;</span>)</span>
+<span id="cb7-47"><a href="graphing-distributions-bar-charts.html#cb7-47"></a>data02 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">Measurement =</span> data02, <span class="dt">Source =</span> <span class="st">&quot;Car Trunk&quot;</span>)</span>
+<span id="cb7-48"><a href="graphing-distributions-bar-charts.html#cb7-48"></a>data03 =<span class="st"> </span><span class="kw">rbind</span>(data01, data02)</span>
+<span id="cb7-49"><a href="graphing-distributions-bar-charts.html#cb7-49"></a></span>
+<span id="cb7-50"><a href="graphing-distributions-bar-charts.html#cb7-50"></a><span class="kw">ggplot</span>(data03, <span class="kw">aes</span>(<span class="dt">x=</span>Source, <span class="dt">y=</span>Measurement, <span class="dt">color=</span>Source)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb7-51"><a href="graphing-distributions-bar-charts.html#cb7-51"></a><span class="st">  </span><span class="kw">stat_boxplot</span>(<span class="dt">geom =</span> <span class="st">&quot;errorbar&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>(<span class="dt">outlier.shape =</span> <span class="ot">NA</span>)</span></code></pre></div>
 
 </div>
 </div>

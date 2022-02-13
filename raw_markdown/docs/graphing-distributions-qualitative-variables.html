@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 8 Graphing Distributions: Qualitative Variables | Forensic Science and Statistics: Version 1.0.1</title>
+  <title>Chapter 8 Graphing Distributions: Qualitative Variables | Forensic Science and Statistics: Version 1.0.2</title>
   <meta name="description" content="This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 8 Graphing Distributions: Qualitative Variables | Forensic Science and Statistics: Version 1.0.1" />
+  <meta property="og:title" content="Chapter 8 Graphing Distributions: Qualitative Variables | Forensic Science and Statistics: Version 1.0.2" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 8 Graphing Distributions: Qualitative Variables | Forensic Science and Statistics: Version 1.0.1" />
+  <meta name="twitter:title" content="Chapter 8 Graphing Distributions: Qualitative Variables | Forensic Science and Statistics: Version 1.0.2" />
   
   <meta name="twitter:description" content="This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook." />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Jeff Holt and Joseph Swetonic" />
 
 
-<meta name="date" content="2022-02-12" />
+<meta name="date" content="2022-02-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -180,7 +180,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Forensic Science and Statistics: Version 1.0.1</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Forensic Science and Statistics: Version 1.0.2</a>
           </h1>
         </div>
 
@@ -212,21 +212,74 @@ qualitative data.)</p>
 <div id="frequency-tables-1" class="section level2">
 <h2><span class="header-section-number">8.2</span> Frequency Tables</h2>
 <p>All of the graphical methods shown in this section are derived from frequency
-tables. Table 1 shows a frequency table for the results of the ABO blood group
+tables. Table 8.1 shows a frequency table for the results of the ABO blood group
 classification. It also shows the
 relative frequencies, which are the proportion classified in each category.
 For example, the relative frequency for group B is 45/500 = 0.09.</p>
-<p><span class="math display">\[
-\begin{array}{|c|c|c|} \hline
-\mathrm{ABO} &amp; &amp; \mathrm{Relative} \\
-\mathrm{Group} &amp; \mathrm{Frequency} &amp; \mathrm{Frequency} \\ \hline
-\mathrm{A} &amp; 210 &amp; 0.42 \\  \hline
-\mathrm{B} &amp; 45  &amp; 0.09 \\  \hline
-\mathrm{AB} &amp; 15 &amp; 0.03 \\  \hline
-\mathrm{O} &amp; 230 &amp; 0.46 \\  \hline
-\end{array}\\
-\mbox{Table 1: Frequency Table for ABO Group Data}
-\]</span></p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-8">Table 8.1: </span>Frequency Table for ABO Group Data
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+ABO Group
+</th>
+<th style="text-align:right;">
+Frequency
+</th>
+<th style="text-align:right;">
+Relative Frequency
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:right;">
+210
+</td>
+<td style="text-align:right;">
+0.42
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+0.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AB
+</td>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+0.03
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+O
+</td>
+<td style="text-align:right;">
+230
+</td>
+<td style="text-align:right;">
+0.46
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="pie-charts" class="section level2">
 <h2><span class="header-section-number">8.3</span> Pie Charts</h2>
@@ -274,20 +327,73 @@ Figure 8.3: Percentages for ABO Blood Groups
 within the same overall data set In this case, we are comparing the
 “distributions” of outcomes or responses. Bar charts are
 often excellent for illustrating differences between two distributions. Table
-2 shows the distribution (in percentages) of ABO blood groups for those in
+8.2 shows the distribution (in percentages) of ABO blood groups for those in
 Albania and Australia.</p>
-<p><span class="math display">\[
-\begin{array}{|c|c|c|} \hline
-\text{ABO} &amp;&amp; \\
-\text{Group} &amp; \text{Albania} &amp; \text{Australia} \\ \hline
-\mathrm{A} &amp; 36.7 &amp; 38.0 \\  \hline
-\mathrm{B} &amp; 17.1 &amp; 10.0 \\  \hline
-\mathrm{AB} &amp; 6.1 &amp; 3.0 \\  \hline
-\mathrm{O} &amp; 40.1 &amp; 49.0 \\  \hline
-\end{array}\\
-\mbox{Table 2: ABO Blood Group Percentages}
-\]</span>
-From Table 2 we see that ABO groups B and AB are more common in Albania,
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-9">Table 8.2: </span>ABO Blood Group Percentages
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+ABO Group
+</th>
+<th style="text-align:right;">
+Albania
+</th>
+<th style="text-align:right;">
+Australia
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:right;">
+36.7
+</td>
+<td style="text-align:right;">
+38
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:right;">
+17.1
+</td>
+<td style="text-align:right;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AB
+</td>
+<td style="text-align:right;">
+6.1
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+O
+</td>
+<td style="text-align:right;">
+40.1
+</td>
+<td style="text-align:right;">
+49
+</td>
+</tr>
+</tbody>
+</table>
+<p>From Table 8.2 we see that ABO groups B and AB are more common in Albania,
 group O is more common in Australia, and group A is similar for both.
 This can be seen in the bar chart in Figure <a href="graphing-distributions-qualitative-variables.html#fig:horiz-bar">8.4</a>.</p>
 <div class="figure"><span style="display:block;" id="fig:horiz-bar"></span>

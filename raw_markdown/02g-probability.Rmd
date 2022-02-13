@@ -28,9 +28,23 @@ the probability that at least two share the same birthday is
 $$P(\beta) = 1 - \frac{365!}{365^n(365 - n)!}$$
 
 Finally, to solve the original question: 
-How many people are needed in a classroom so that the probability of them sharing a birthday is at least $\frac{1}{2}$?
+how many people are needed in a classroom so that the probability of them sharing a birthday is at least $\frac{1}{2}$?
 Iteratively increasing the group size from five, it is clear to see that at a group size of 23, $P(\beta) > \frac{1}{2}$
 $$P(\beta) = 1 - P(\beta') = 1 - \frac{365!}{365^{23}(365 - 23)!} = 0.507$$
+
+```{r birthday-prob, echo=FALSE, fig.cap="Probability of Sharing the Same Birthday", warning=FALSE}
+library(ggplot2)
+
+probs <- rep(0, 60)
+for (i in 1:60) {
+  probs[i] <- 1 - prod(seq(365, 365 - i + 1, by = -1)) / 365 ** i
+}
+data <- data.frame(sequence = seq(1, 60, by = 1), probs = probs)
+data %>% ggplot(aes(x = sequence, y = probs)) + geom_line() + 
+  xlab("Number of People in a Room") + ylab("Probability")
+```
+
+Figure \@ref(fig:birthday-prob) shows the probability increasing while the number of people in a room increases from one to sixty. Notice with only 60 people in a room, the probability of at least two people sharing a birthday is almost one!
 
 ## Monty Hall Problem
 

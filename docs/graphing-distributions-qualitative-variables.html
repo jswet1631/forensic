@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 7 Graphing Distributions: Qualitative Variables | Forensic Science and Statistics: Version 1.0.1</title>
+  <title>Chapter 8 Graphing Distributions: Qualitative Variables | Forensic Science and Statistics: Version 1.0.2</title>
   <meta name="description" content="This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 7 Graphing Distributions: Qualitative Variables | Forensic Science and Statistics: Version 1.0.1" />
+  <meta property="og:title" content="Chapter 8 Graphing Distributions: Qualitative Variables | Forensic Science and Statistics: Version 1.0.2" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 7 Graphing Distributions: Qualitative Variables | Forensic Science and Statistics: Version 1.0.1" />
+  <meta name="twitter:title" content="Chapter 8 Graphing Distributions: Qualitative Variables | Forensic Science and Statistics: Version 1.0.2" />
   
   <meta name="twitter:description" content="This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook." />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Jeff Holt and Joseph Swetonic" />
 
 
-<meta name="date" content="2022-02-04" />
+<meta name="date" content="2022-02-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -55,8 +55,6 @@
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
-<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
 <style type="text/css">
@@ -141,64 +139,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">Forensic Science and Statistics</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#an-introductory-example"><i class="fa fa-check"></i><b>1.1</b> An Introductory Example</a></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html"><i class="fa fa-check"></i><b>2</b> Introduction to Probability</a><ul>
-<li class="chapter" data-level="2.1" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#the-previous-example"><i class="fa fa-check"></i><b>2.1</b> The Previous Example</a><ul>
-<li class="chapter" data-level="2.1.1" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#sample-questions"><i class="fa fa-check"></i><b>2.1.1</b> Sample Questions</a></li>
-<li class="chapter" data-level="2.1.2" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#sample-questions-1"><i class="fa fa-check"></i><b>2.1.2</b> Sample Questions</a></li>
-</ul></li>
-<li class="chapter" data-level="2.2" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#exercises"><i class="fa fa-check"></i><b>2.2</b> Exercises</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="joint-probability.html"><a href="joint-probability.html"><i class="fa fa-check"></i><b>3</b> Joint Probability</a><ul>
-<li class="chapter" data-level="3.1" data-path="joint-probability.html"><a href="joint-probability.html#blood-types"><i class="fa fa-check"></i><b>3.1</b> Blood Types</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="joint-probability.html"><a href="joint-probability.html#sample-questions-2"><i class="fa fa-check"></i><b>3.1.1</b> Sample Questions</a></li>
-</ul></li>
-<li class="chapter" data-level="3.2" data-path="joint-probability.html"><a href="joint-probability.html#and-vs-or"><i class="fa fa-check"></i><b>3.2</b> And vs Or</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="joint-probability.html"><a href="joint-probability.html#sample-questions-3"><i class="fa fa-check"></i><b>3.2.1</b> Sample Questions</a></li>
-</ul></li>
-<li class="chapter" data-level="3.3" data-path="joint-probability.html"><a href="joint-probability.html#probability-tables"><i class="fa fa-check"></i><b>3.3</b> Probability Tables</a></li>
-<li class="chapter" data-level="3.4" data-path="joint-probability.html"><a href="joint-probability.html#exercises-1"><i class="fa fa-check"></i><b>3.4</b> Exercises</a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="conditional-probability.html"><a href="conditional-probability.html"><i class="fa fa-check"></i><b>4</b> Conditional Probability</a><ul>
-<li class="chapter" data-level="4.0.1" data-path="conditional-probability.html"><a href="conditional-probability.html#sample-questions-4"><i class="fa fa-check"></i><b>4.0.1</b> Sample Questions</a></li>
-</ul></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
+<li class="chapter" data-level="2" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html"><i class="fa fa-check"></i><b>2</b> Introduction to Probability</a></li>
+<li class="chapter" data-level="3" data-path="joint-probability.html"><a href="joint-probability.html"><i class="fa fa-check"></i><b>3</b> Joint Probability</a></li>
+<li class="chapter" data-level="4" data-path="conditional-probability.html"><a href="conditional-probability.html"><i class="fa fa-check"></i><b>4</b> Conditional Probability</a></li>
 <li class="chapter" data-level="5" data-path="probability-rules.html"><a href="probability-rules.html"><i class="fa fa-check"></i><b>5</b> Probability Rules</a></li>
-<li class="chapter" data-level="6" data-path="counterintuitive-applications.html"><a href="counterintuitive-applications.html"><i class="fa fa-check"></i><b>6</b> Counterintuitive Applications</a><ul>
-<li class="chapter" data-level="6.1" data-path="counterintuitive-applications.html"><a href="counterintuitive-applications.html#birthday-paradox"><i class="fa fa-check"></i><b>6.1</b> Birthday Paradox</a></li>
-<li class="chapter" data-level="6.2" data-path="counterintuitive-applications.html"><a href="counterintuitive-applications.html#monty-hall-problem"><i class="fa fa-check"></i><b>6.2</b> Monty Hall Problem</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html"><i class="fa fa-check"></i><b>7</b> Graphing Distributions: Qualitative Variables</a><ul>
-<li class="chapter" data-level="7.1" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html#introduction"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
-<li class="chapter" data-level="7.2" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html#frequency-tables"><i class="fa fa-check"></i><b>7.2</b> Frequency Tables</a></li>
-<li class="chapter" data-level="7.3" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html#pie-charts"><i class="fa fa-check"></i><b>7.3</b> Pie Charts</a></li>
-<li class="chapter" data-level="7.4" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html#bar-charts"><i class="fa fa-check"></i><b>7.4</b> Bar Charts</a></li>
-<li class="chapter" data-level="7.5" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html#comparing-distributions"><i class="fa fa-check"></i><b>7.5</b> Comparing Distributions</a></li>
-<li class="chapter" data-level="7.6" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html#exercises-2"><i class="fa fa-check"></i><b>7.6</b> Exercises</a></li>
-<li class="chapter" data-level="7.7" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html#code-appendix"><i class="fa fa-check"></i><b>7.7</b> Code Appendix</a></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="graphing-distributions-histograms.html"><a href="graphing-distributions-histograms.html"><i class="fa fa-check"></i><b>8</b> Graphing Distributions: Histograms</a><ul>
-<li class="chapter" data-level="8.1" data-path="graphing-distributions-histograms.html"><a href="graphing-distributions-histograms.html#introduction-1"><i class="fa fa-check"></i><b>8.1</b> Introduction</a></li>
-<li class="chapter" data-level="8.2" data-path="graphing-distributions-histograms.html"><a href="graphing-distributions-histograms.html#exercises-3"><i class="fa fa-check"></i><b>8.2</b> Exercises</a></li>
-<li class="chapter" data-level="8.3" data-path="graphing-distributions-histograms.html"><a href="graphing-distributions-histograms.html#code-appendix-1"><i class="fa fa-check"></i><b>8.3</b> Code Appendix</a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="graphing-distributions-box-plots.html"><a href="graphing-distributions-box-plots.html"><i class="fa fa-check"></i><b>9</b> Graphing Distributions: Box Plots</a><ul>
-<li class="chapter" data-level="9.1" data-path="graphing-distributions-box-plots.html"><a href="graphing-distributions-box-plots.html#basic-box-plots"><i class="fa fa-check"></i><b>9.1</b> Basic box plots</a></li>
-<li class="chapter" data-level="9.2" data-path="graphing-distributions-box-plots.html"><a href="graphing-distributions-box-plots.html#variations-on-box-plots"><i class="fa fa-check"></i><b>9.2</b> Variations on box plots</a></li>
-<li class="chapter" data-level="9.3" data-path="graphing-distributions-box-plots.html"><a href="graphing-distributions-box-plots.html#exercises-4"><i class="fa fa-check"></i><b>9.3</b> Exercises</a></li>
-<li class="chapter" data-level="9.4" data-path="graphing-distributions-box-plots.html"><a href="graphing-distributions-box-plots.html#code-appendix-2"><i class="fa fa-check"></i><b>9.4</b> Code Appendix</a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="graphing-distributions-bar-charts.html"><a href="graphing-distributions-bar-charts.html"><i class="fa fa-check"></i><b>10</b> Graphing Distributions: Bar Charts</a><ul>
-<li class="chapter" data-level="10.1" data-path="graphing-distributions-bar-charts.html"><a href="graphing-distributions-bar-charts.html#exercises-5"><i class="fa fa-check"></i><b>10.1</b> Exercises</a></li>
-<li class="chapter" data-level="10.2" data-path="graphing-distributions-bar-charts.html"><a href="graphing-distributions-bar-charts.html#code-appendix-3"><i class="fa fa-check"></i><b>10.2</b> Code Appendix</a></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="sumarizing-distributions-central-tendency.html"><a href="sumarizing-distributions-central-tendency.html"><i class="fa fa-check"></i><b>11</b> Sumarizing Distributions: Central Tendency</a><ul>
-<li class="chapter" data-level="11.1" data-path="sumarizing-distributions-central-tendency.html"><a href="sumarizing-distributions-central-tendency.html#exercises-6"><i class="fa fa-check"></i><b>11.1</b> Exercises</a></li>
-</ul></li>
-<li class="chapter" data-level="12" data-path="sumarizing-distributions-measures-of-central-tendency.html"><a href="sumarizing-distributions-measures-of-central-tendency.html"><i class="fa fa-check"></i><b>12</b> Sumarizing Distributions: Measures of Central Tendency</a><ul>
-<li class="chapter" data-level="12.1" data-path="sumarizing-distributions-measures-of-central-tendency.html"><a href="sumarizing-distributions-measures-of-central-tendency.html#exercises-7"><i class="fa fa-check"></i><b>12.1</b> Exercises</a></li>
-</ul></li>
+<li class="chapter" data-level="6" data-path="bayes-rule.html"><a href="bayes-rule.html"><i class="fa fa-check"></i><b>6</b> Bayes Rule</a></li>
+<li class="chapter" data-level="7" data-path="counterintuitive-applications.html"><a href="counterintuitive-applications.html"><i class="fa fa-check"></i><b>7</b> Counterintuitive Applications</a></li>
+<li class="chapter" data-level="8" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html"><i class="fa fa-check"></i><b>8</b> Graphing Distributions: Qualitative Variables</a></li>
+<li class="chapter" data-level="9" data-path="graphing-distributions-histograms.html"><a href="graphing-distributions-histograms.html"><i class="fa fa-check"></i><b>9</b> Graphing Distributions: Histograms</a></li>
+<li class="chapter" data-level="10" data-path="graphing-distributions-box-plots.html"><a href="graphing-distributions-box-plots.html"><i class="fa fa-check"></i><b>10</b> Graphing Distributions: Box Plots</a></li>
+<li class="chapter" data-level="11" data-path="graphing-distributions-bar-charts.html"><a href="graphing-distributions-bar-charts.html"><i class="fa fa-check"></i><b>11</b> Graphing Distributions: Bar Charts</a></li>
+<li class="chapter" data-level="12" data-path="sumarizing-distributions-central-tendency.html"><a href="sumarizing-distributions-central-tendency.html"><i class="fa fa-check"></i><b>12</b> Sumarizing Distributions: Central Tendency</a></li>
+<li class="chapter" data-level="13" data-path="sumarizing-distributions-measures-of-central-tendency.html"><a href="sumarizing-distributions-measures-of-central-tendency.html"><i class="fa fa-check"></i><b>13</b> Sumarizing Distributions: Measures of Central Tendency</a></li>
+<li class="chapter" data-level="14" data-path="mean-and-median.html"><a href="mean-and-median.html"><i class="fa fa-check"></i><b>14</b> Mean and Median</a></li>
+<li class="chapter" data-level="15" data-path="variability.html"><a href="variability.html"><i class="fa fa-check"></i><b>15</b> Variability</a></li>
+<li class="chapter" data-level="16" data-path="measures-of-variability.html"><a href="measures-of-variability.html"><i class="fa fa-check"></i><b>16</b> Measures of Variability</a></li>
+<li class="chapter" data-level="17" data-path="shapes-of-distributions.html"><a href="shapes-of-distributions.html"><i class="fa fa-check"></i><b>17</b> Shapes of Distributions</a></li>
+<li class="chapter" data-level="18" data-path="bivariate-data.html"><a href="bivariate-data.html"><i class="fa fa-check"></i><b>18</b> Bivariate Data</a></li>
+<li class="chapter" data-level="19" data-path="correlation.html"><a href="correlation.html"><i class="fa fa-check"></i><b>19</b> Correlation</a></li>
+<li class="chapter" data-level="20" data-path="properties-of-r.html"><a href="properties-of-r.html"><i class="fa fa-check"></i><b>20</b> Properties of <em>r</em></a></li>
+<li class="chapter" data-level="21" data-path="computing-r.html"><a href="computing-r.html"><i class="fa fa-check"></i><b>21</b> Computing <em>r</em></a></li>
+<li class="chapter" data-level="22" data-path="introduction-to-normal-distribution.html"><a href="introduction-to-normal-distribution.html"><i class="fa fa-check"></i><b>22</b> Introduction to Normal Distribution</a></li>
+<li class="chapter" data-level="23" data-path="areas-of-normal-distributions.html"><a href="areas-of-normal-distributions.html"><i class="fa fa-check"></i><b>23</b> Areas of Normal Distributions</a></li>
+<li class="chapter" data-level="24" data-path="standard-normal.html"><a href="standard-normal.html"><i class="fa fa-check"></i><b>24</b> Standard Normal</a></li>
+<li class="chapter" data-level="25" data-path="sampling-distributions.html"><a href="sampling-distributions.html"><i class="fa fa-check"></i><b>25</b> Sampling Distributions</a></li>
+<li class="chapter" data-level="26" data-path="sampling-distribution-mean.html"><a href="sampling-distribution-mean.html"><i class="fa fa-check"></i><b>26</b> Sampling Distribution, Mean</a></li>
+<li class="chapter" data-level="27" data-path="difference-between-means.html"><a href="difference-between-means.html"><i class="fa fa-check"></i><b>27</b> Difference Between Means</a></li>
+<li class="chapter" data-level="28" data-path="sampling-distribution-of-p.html"><a href="sampling-distribution-of-p.html"><i class="fa fa-check"></i><b>28</b> Sampling Distribution of <em>p</em></a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -212,7 +180,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Forensic Science and Statistics: Version 1.0.1</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Forensic Science and Statistics: Version 1.0.2</a>
           </h1>
         </div>
 
@@ -221,52 +189,108 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="graphing-distributions-qualitative-variables" class="section level1">
-<h1><span class="header-section-number">Chapter 7</span> Graphing Distributions: Qualitative Variables</h1>
-<p><font size="2"> Note: Portions below modeled after content from
+<h1><span class="header-section-number">Chapter 8</span> Graphing Distributions: Qualitative Variables</h1>
+<p><font size="2"> Note: Portions below draw on content from
 <em>Online Statistics Education: A Multimedia Course of Study</em>
 (<a href="http://onlinestatbook.com/" class="uri">http://onlinestatbook.com/</a>) Project Leader: David M. Lane, Rice University </font></p>
 <div id="introduction" class="section level2">
-<h2><span class="header-section-number">7.1</span> Introduction</h2>
+<h2><span class="header-section-number">8.1</span> Introduction</h2>
 <p>Suppose that we have a community of 500 people. Each is classified based on
 their ABO blood group, which is one of A, B, AB, or O. Below we consider
 graphical methods for displaying the results of the blood group classifications.
 This starts with tables, and then continues on to how to graph data that
 fall into a small number of categories.</p>
-<p>This is an example of <em>qualitative data</em>. One characteristic of such data is
+<p>This is an example of <strong>qualitative data</strong> (also known as <strong>categorical data</strong>).<br />
+One characteristic of such data is
 that the different values do not come with any pre-established ordering.
 This can be contrasted with quantitative data, such as the weight of a bag of an
 unknown substance, which does have a natural ordering with respect to
-different weights.</p>
+different weights. (Another way to think about the distinction: it makes sense
+to compute the average of quantitative data but usually it does not for
+qualitative data.)</p>
 </div>
-<div id="frequency-tables" class="section level2">
-<h2><span class="header-section-number">7.2</span> Frequency Tables</h2>
+<div id="frequency-tables-1" class="section level2">
+<h2><span class="header-section-number">8.2</span> Frequency Tables</h2>
 <p>All of the graphical methods shown in this section are derived from frequency
-tables. Table 1 shows a frequency table for the results of the ABO blood group
+tables. Table 8.1 shows a frequency table for the results of the ABO blood group
 classification. It also shows the
 relative frequencies, which are the proportion classified in each category.
 For example, the relative frequency for group B is 45/500 = 0.09.</p>
-<p><span class="math display">\[
-\begin{array}{|c|c|c|} \hline
-\mathrm{ABO} &amp; &amp; \mathrm{Relative} \\
-\mathrm{Group} &amp; \mathrm{Frequency} &amp; \mathrm{Frequency} \\ \hline
-\mathrm{A} &amp; 210 &amp; 0.42 \\  \hline
-\mathrm{B} &amp; 45  &amp; 0.09 \\  \hline
-\mathrm{AB} &amp; 15 &amp; 0.03 \\  \hline
-\mathrm{O} &amp; 230 &amp; 0.46 \\  \hline
-\end{array}\\
-\mbox{Table 1: Frequency Table for ABO Group Data}
-\]</span></p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-8">Table 8.1: </span>Frequency Table for ABO Group Data
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+ABO Group
+</th>
+<th style="text-align:right;">
+Frequency
+</th>
+<th style="text-align:right;">
+Relative Frequency
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:right;">
+210
+</td>
+<td style="text-align:right;">
+0.42
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+0.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AB
+</td>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+0.03
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+O
+</td>
+<td style="text-align:right;">
+230
+</td>
+<td style="text-align:right;">
+0.46
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="pie-charts" class="section level2">
-<h2><span class="header-section-number">7.3</span> Pie Charts</h2>
-<p>The pie chart in Figure <a href="graphing-distributions-qualitative-variables.html#fig:pie-chart">7.1</a> depicts the ABO group data. In a pie chart,
+<h2><span class="header-section-number">8.3</span> Pie Charts</h2>
+<p>The pie chart in Figure <a href="graphing-distributions-qualitative-variables.html#fig:pie-chart">8.1</a> depicts the ABO group data. In a pie chart,
 each category is represented by a slice of the pie. The area of the slice is
 proportional to the percentage of items in the category – that is, the
 relative frequency multiplied by 100.</p>
 <div class="figure"><span style="display:block;" id="fig:pie-chart"></span>
 <img src="forensic-statistics-book_files/figure-html/pie-chart-1.png" alt="Relative Frequencies for ABO Blood Groups" width="672" />
 <p class="caption">
-Figure 7.1: Relative Frequencies for ABO Blood Groups
+Figure 8.1: Relative Frequencies for ABO Blood Groups
 </p>
 </div>
 <p>Pie charts are effective for displaying the relative frequencies of a small
@@ -277,67 +301,120 @@ book on the use of graphs, Edward Tufte asserted, “The only worse design than
 a pie chart is several of them.”</p>
 </div>
 <div id="bar-charts" class="section level2">
-<h2><span class="header-section-number">7.4</span> Bar Charts</h2>
+<h2><span class="header-section-number">8.4</span> Bar Charts</h2>
 <p>Bar charts can also be used to represent frequencies of different categories.
-A bar chart of the ABO frequencies is shown in Figure <a href="graphing-distributions-qualitative-variables.html#fig:bar-chart">7.2</a>.
+A bar chart of the ABO frequencies is shown in Figure <a href="graphing-distributions-qualitative-variables.html#fig:bar-chart">8.2</a>.
 Frequencies are shown
 on the Y-axis and the blood group is shown on the X-axis.</p>
 <div class="figure"><span style="display:block;" id="fig:bar-chart"></span>
 <img src="forensic-statistics-book_files/figure-html/bar-chart-1.png" alt="Frequencies for ABO Blood Groups" width="672" />
 <p class="caption">
-Figure 7.2: Frequencies for ABO Blood Groups
+Figure 8.2: Frequencies for ABO Blood Groups
 </p>
 </div>
 <p>The Y-axis also can show the percentage of observations
-instead of the number of observations, as in Figure <a href="graphing-distributions-qualitative-variables.html#fig:bar-chart-percent">7.3</a>.</p>
+instead of the number of observations, as in Figure <a href="graphing-distributions-qualitative-variables.html#fig:bar-chart-percent">8.3</a>.</p>
 <div class="figure"><span style="display:block;" id="fig:bar-chart-percent"></span>
 <img src="forensic-statistics-book_files/figure-html/bar-chart-percent-1.png" alt="Percentages for ABO Blood Groups" width="672" />
 <p class="caption">
-Figure 7.3: Percentages for ABO Blood Groups
+Figure 8.3: Percentages for ABO Blood Groups
 </p>
 </div>
 </div>
 <div id="comparing-distributions" class="section level2">
-<h2><span class="header-section-number">7.5</span> Comparing Distributions</h2>
+<h2><span class="header-section-number">8.5</span> Comparing Distributions</h2>
 <p>Often we need to compare different sets of data, or different subsets
 within the same overall data set In this case, we are comparing the
 “distributions” of outcomes or responses. Bar charts are
 often excellent for illustrating differences between two distributions. Table
-2 shows the distribution (in percentages) of ABO blood groups for those in
+8.2 shows the distribution (in percentages) of ABO blood groups for those in
 Albania and Australia.</p>
-<p><span class="math display">\[
-\begin{array}{|c|c|c|} \hline
-\text{ABO} &amp;&amp; \\
-\text{Group} &amp; \text{Albania} &amp; \text{Australia} \\ \hline
-\mathrm{A} &amp; 36.7 &amp; 38.0 \\  \hline
-\mathrm{B} &amp; 17.1 &amp; 10.0 \\  \hline
-\mathrm{AB} &amp; 6.1 &amp; 3.0 \\  \hline
-\mathrm{O} &amp; 40.1 &amp; 49.0 \\  \hline
-\end{array}\\
-\mbox{Table 2: ABO Blood Group Percentages}
-\]</span>
-From Table 2 we see that ABO groups B and AB are more common in Albania,
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-9">Table 8.2: </span>ABO Blood Group Percentages
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+ABO Group
+</th>
+<th style="text-align:right;">
+Albania
+</th>
+<th style="text-align:right;">
+Australia
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:right;">
+36.7
+</td>
+<td style="text-align:right;">
+38
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:right;">
+17.1
+</td>
+<td style="text-align:right;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AB
+</td>
+<td style="text-align:right;">
+6.1
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+O
+</td>
+<td style="text-align:right;">
+40.1
+</td>
+<td style="text-align:right;">
+49
+</td>
+</tr>
+</tbody>
+</table>
+<p>From Table 8.2 we see that ABO groups B and AB are more common in Albania,
 group O is more common in Australia, and group A is similar for both.
-This can be seen in the bar chart in Figure <a href="graphing-distributions-qualitative-variables.html#fig:horiz-bar">7.4</a>.</p>
+This can be seen in the bar chart in Figure <a href="graphing-distributions-qualitative-variables.html#fig:horiz-bar">8.4</a>.</p>
 <div class="figure"><span style="display:block;" id="fig:horiz-bar"></span>
 <img src="forensic-statistics-book_files/figure-html/horiz-bar-1.png" alt="Percentages for ABO Blood Groups by Country" width="672" />
 <p class="caption">
-Figure 7.4: Percentages for ABO Blood Groups by Country
+Figure 8.4: Percentages for ABO Blood Groups by Country
 </p>
 </div>
-<p>The bars in Figure <a href="graphing-distributions-qualitative-variables.html#fig:horiz-bar">7.4</a> are oriented horizontally rather than vertically. The
+<p>The bars in Figure <a href="graphing-distributions-qualitative-variables.html#fig:horiz-bar">8.4</a> are oriented horizontally rather than vertically. The
 horizontal format is useful when you have many categories because there is more
 room for the category labels.</p>
 <hr />
 </div>
-<div id="exercises-2" class="section level2">
-<h2><span class="header-section-number">7.6</span> Exercises</h2>
+<div id="exercises-6" class="section level2">
+<h2><span class="header-section-number">8.6</span> Exercises</h2>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\text{Put exercises here}\)</span></li>
 </ol>
 </div>
 <div id="code-appendix" class="section level2">
-<h2><span class="header-section-number">7.7</span> Code Appendix</h2>
+<h2><span class="header-section-number">8.7</span> Code Appendix</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="graphing-distributions-qualitative-variables.html#cb1-1"></a><span class="kw">library</span>(dplyr)</span>
 <span id="cb1-2"><a href="graphing-distributions-qualitative-variables.html#cb1-2"></a><span class="kw">library</span>(ggplot2)</span>
 <span id="cb1-3"><a href="graphing-distributions-qualitative-variables.html#cb1-3"></a><span class="kw">library</span>(tidyr)</span>

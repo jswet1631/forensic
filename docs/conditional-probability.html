@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Conditional Probability | Forensic Science and Statistics: Version 1.0.1</title>
+  <title>Chapter 4 Conditional Probability | Forensic Science and Statistics: Version 1.0.2</title>
   <meta name="description" content="This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Conditional Probability | Forensic Science and Statistics: Version 1.0.1" />
+  <meta property="og:title" content="Chapter 4 Conditional Probability | Forensic Science and Statistics: Version 1.0.2" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Conditional Probability | Forensic Science and Statistics: Version 1.0.1" />
+  <meta name="twitter:title" content="Chapter 4 Conditional Probability | Forensic Science and Statistics: Version 1.0.2" />
   
   <meta name="twitter:description" content="This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook." />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Jeff Holt and Joseph Swetonic" />
 
 
-<meta name="date" content="2022-02-04" />
+<meta name="date" content="2022-02-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -55,8 +55,6 @@
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
-<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
 <style type="text/css">
@@ -141,64 +139,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">Forensic Science and Statistics</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#an-introductory-example"><i class="fa fa-check"></i><b>1.1</b> An Introductory Example</a></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html"><i class="fa fa-check"></i><b>2</b> Introduction to Probability</a><ul>
-<li class="chapter" data-level="2.1" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#the-previous-example"><i class="fa fa-check"></i><b>2.1</b> The Previous Example</a><ul>
-<li class="chapter" data-level="2.1.1" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#sample-questions"><i class="fa fa-check"></i><b>2.1.1</b> Sample Questions</a></li>
-<li class="chapter" data-level="2.1.2" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#sample-questions-1"><i class="fa fa-check"></i><b>2.1.2</b> Sample Questions</a></li>
-</ul></li>
-<li class="chapter" data-level="2.2" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#exercises"><i class="fa fa-check"></i><b>2.2</b> Exercises</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="joint-probability.html"><a href="joint-probability.html"><i class="fa fa-check"></i><b>3</b> Joint Probability</a><ul>
-<li class="chapter" data-level="3.1" data-path="joint-probability.html"><a href="joint-probability.html#blood-types"><i class="fa fa-check"></i><b>3.1</b> Blood Types</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="joint-probability.html"><a href="joint-probability.html#sample-questions-2"><i class="fa fa-check"></i><b>3.1.1</b> Sample Questions</a></li>
-</ul></li>
-<li class="chapter" data-level="3.2" data-path="joint-probability.html"><a href="joint-probability.html#and-vs-or"><i class="fa fa-check"></i><b>3.2</b> And vs Or</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="joint-probability.html"><a href="joint-probability.html#sample-questions-3"><i class="fa fa-check"></i><b>3.2.1</b> Sample Questions</a></li>
-</ul></li>
-<li class="chapter" data-level="3.3" data-path="joint-probability.html"><a href="joint-probability.html#probability-tables"><i class="fa fa-check"></i><b>3.3</b> Probability Tables</a></li>
-<li class="chapter" data-level="3.4" data-path="joint-probability.html"><a href="joint-probability.html#exercises-1"><i class="fa fa-check"></i><b>3.4</b> Exercises</a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="conditional-probability.html"><a href="conditional-probability.html"><i class="fa fa-check"></i><b>4</b> Conditional Probability</a><ul>
-<li class="chapter" data-level="4.0.1" data-path="conditional-probability.html"><a href="conditional-probability.html#sample-questions-4"><i class="fa fa-check"></i><b>4.0.1</b> Sample Questions</a></li>
-</ul></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
+<li class="chapter" data-level="2" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html"><i class="fa fa-check"></i><b>2</b> Introduction to Probability</a></li>
+<li class="chapter" data-level="3" data-path="joint-probability.html"><a href="joint-probability.html"><i class="fa fa-check"></i><b>3</b> Joint Probability</a></li>
+<li class="chapter" data-level="4" data-path="conditional-probability.html"><a href="conditional-probability.html"><i class="fa fa-check"></i><b>4</b> Conditional Probability</a></li>
 <li class="chapter" data-level="5" data-path="probability-rules.html"><a href="probability-rules.html"><i class="fa fa-check"></i><b>5</b> Probability Rules</a></li>
-<li class="chapter" data-level="6" data-path="counterintuitive-applications.html"><a href="counterintuitive-applications.html"><i class="fa fa-check"></i><b>6</b> Counterintuitive Applications</a><ul>
-<li class="chapter" data-level="6.1" data-path="counterintuitive-applications.html"><a href="counterintuitive-applications.html#birthday-paradox"><i class="fa fa-check"></i><b>6.1</b> Birthday Paradox</a></li>
-<li class="chapter" data-level="6.2" data-path="counterintuitive-applications.html"><a href="counterintuitive-applications.html#monty-hall-problem"><i class="fa fa-check"></i><b>6.2</b> Monty Hall Problem</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html"><i class="fa fa-check"></i><b>7</b> Graphing Distributions: Qualitative Variables</a><ul>
-<li class="chapter" data-level="7.1" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html#introduction"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
-<li class="chapter" data-level="7.2" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html#frequency-tables"><i class="fa fa-check"></i><b>7.2</b> Frequency Tables</a></li>
-<li class="chapter" data-level="7.3" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html#pie-charts"><i class="fa fa-check"></i><b>7.3</b> Pie Charts</a></li>
-<li class="chapter" data-level="7.4" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html#bar-charts"><i class="fa fa-check"></i><b>7.4</b> Bar Charts</a></li>
-<li class="chapter" data-level="7.5" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html#comparing-distributions"><i class="fa fa-check"></i><b>7.5</b> Comparing Distributions</a></li>
-<li class="chapter" data-level="7.6" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html#exercises-2"><i class="fa fa-check"></i><b>7.6</b> Exercises</a></li>
-<li class="chapter" data-level="7.7" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html#code-appendix"><i class="fa fa-check"></i><b>7.7</b> Code Appendix</a></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="graphing-distributions-histograms.html"><a href="graphing-distributions-histograms.html"><i class="fa fa-check"></i><b>8</b> Graphing Distributions: Histograms</a><ul>
-<li class="chapter" data-level="8.1" data-path="graphing-distributions-histograms.html"><a href="graphing-distributions-histograms.html#introduction-1"><i class="fa fa-check"></i><b>8.1</b> Introduction</a></li>
-<li class="chapter" data-level="8.2" data-path="graphing-distributions-histograms.html"><a href="graphing-distributions-histograms.html#exercises-3"><i class="fa fa-check"></i><b>8.2</b> Exercises</a></li>
-<li class="chapter" data-level="8.3" data-path="graphing-distributions-histograms.html"><a href="graphing-distributions-histograms.html#code-appendix-1"><i class="fa fa-check"></i><b>8.3</b> Code Appendix</a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="graphing-distributions-box-plots.html"><a href="graphing-distributions-box-plots.html"><i class="fa fa-check"></i><b>9</b> Graphing Distributions: Box Plots</a><ul>
-<li class="chapter" data-level="9.1" data-path="graphing-distributions-box-plots.html"><a href="graphing-distributions-box-plots.html#basic-box-plots"><i class="fa fa-check"></i><b>9.1</b> Basic box plots</a></li>
-<li class="chapter" data-level="9.2" data-path="graphing-distributions-box-plots.html"><a href="graphing-distributions-box-plots.html#variations-on-box-plots"><i class="fa fa-check"></i><b>9.2</b> Variations on box plots</a></li>
-<li class="chapter" data-level="9.3" data-path="graphing-distributions-box-plots.html"><a href="graphing-distributions-box-plots.html#exercises-4"><i class="fa fa-check"></i><b>9.3</b> Exercises</a></li>
-<li class="chapter" data-level="9.4" data-path="graphing-distributions-box-plots.html"><a href="graphing-distributions-box-plots.html#code-appendix-2"><i class="fa fa-check"></i><b>9.4</b> Code Appendix</a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="graphing-distributions-bar-charts.html"><a href="graphing-distributions-bar-charts.html"><i class="fa fa-check"></i><b>10</b> Graphing Distributions: Bar Charts</a><ul>
-<li class="chapter" data-level="10.1" data-path="graphing-distributions-bar-charts.html"><a href="graphing-distributions-bar-charts.html#exercises-5"><i class="fa fa-check"></i><b>10.1</b> Exercises</a></li>
-<li class="chapter" data-level="10.2" data-path="graphing-distributions-bar-charts.html"><a href="graphing-distributions-bar-charts.html#code-appendix-3"><i class="fa fa-check"></i><b>10.2</b> Code Appendix</a></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="sumarizing-distributions-central-tendency.html"><a href="sumarizing-distributions-central-tendency.html"><i class="fa fa-check"></i><b>11</b> Sumarizing Distributions: Central Tendency</a><ul>
-<li class="chapter" data-level="11.1" data-path="sumarizing-distributions-central-tendency.html"><a href="sumarizing-distributions-central-tendency.html#exercises-6"><i class="fa fa-check"></i><b>11.1</b> Exercises</a></li>
-</ul></li>
-<li class="chapter" data-level="12" data-path="sumarizing-distributions-measures-of-central-tendency.html"><a href="sumarizing-distributions-measures-of-central-tendency.html"><i class="fa fa-check"></i><b>12</b> Sumarizing Distributions: Measures of Central Tendency</a><ul>
-<li class="chapter" data-level="12.1" data-path="sumarizing-distributions-measures-of-central-tendency.html"><a href="sumarizing-distributions-measures-of-central-tendency.html#exercises-7"><i class="fa fa-check"></i><b>12.1</b> Exercises</a></li>
-</ul></li>
+<li class="chapter" data-level="6" data-path="bayes-rule.html"><a href="bayes-rule.html"><i class="fa fa-check"></i><b>6</b> Bayes Rule</a></li>
+<li class="chapter" data-level="7" data-path="counterintuitive-applications.html"><a href="counterintuitive-applications.html"><i class="fa fa-check"></i><b>7</b> Counterintuitive Applications</a></li>
+<li class="chapter" data-level="8" data-path="graphing-distributions-qualitative-variables.html"><a href="graphing-distributions-qualitative-variables.html"><i class="fa fa-check"></i><b>8</b> Graphing Distributions: Qualitative Variables</a></li>
+<li class="chapter" data-level="9" data-path="graphing-distributions-histograms.html"><a href="graphing-distributions-histograms.html"><i class="fa fa-check"></i><b>9</b> Graphing Distributions: Histograms</a></li>
+<li class="chapter" data-level="10" data-path="graphing-distributions-box-plots.html"><a href="graphing-distributions-box-plots.html"><i class="fa fa-check"></i><b>10</b> Graphing Distributions: Box Plots</a></li>
+<li class="chapter" data-level="11" data-path="graphing-distributions-bar-charts.html"><a href="graphing-distributions-bar-charts.html"><i class="fa fa-check"></i><b>11</b> Graphing Distributions: Bar Charts</a></li>
+<li class="chapter" data-level="12" data-path="sumarizing-distributions-central-tendency.html"><a href="sumarizing-distributions-central-tendency.html"><i class="fa fa-check"></i><b>12</b> Sumarizing Distributions: Central Tendency</a></li>
+<li class="chapter" data-level="13" data-path="sumarizing-distributions-measures-of-central-tendency.html"><a href="sumarizing-distributions-measures-of-central-tendency.html"><i class="fa fa-check"></i><b>13</b> Sumarizing Distributions: Measures of Central Tendency</a></li>
+<li class="chapter" data-level="14" data-path="mean-and-median.html"><a href="mean-and-median.html"><i class="fa fa-check"></i><b>14</b> Mean and Median</a></li>
+<li class="chapter" data-level="15" data-path="variability.html"><a href="variability.html"><i class="fa fa-check"></i><b>15</b> Variability</a></li>
+<li class="chapter" data-level="16" data-path="measures-of-variability.html"><a href="measures-of-variability.html"><i class="fa fa-check"></i><b>16</b> Measures of Variability</a></li>
+<li class="chapter" data-level="17" data-path="shapes-of-distributions.html"><a href="shapes-of-distributions.html"><i class="fa fa-check"></i><b>17</b> Shapes of Distributions</a></li>
+<li class="chapter" data-level="18" data-path="bivariate-data.html"><a href="bivariate-data.html"><i class="fa fa-check"></i><b>18</b> Bivariate Data</a></li>
+<li class="chapter" data-level="19" data-path="correlation.html"><a href="correlation.html"><i class="fa fa-check"></i><b>19</b> Correlation</a></li>
+<li class="chapter" data-level="20" data-path="properties-of-r.html"><a href="properties-of-r.html"><i class="fa fa-check"></i><b>20</b> Properties of <em>r</em></a></li>
+<li class="chapter" data-level="21" data-path="computing-r.html"><a href="computing-r.html"><i class="fa fa-check"></i><b>21</b> Computing <em>r</em></a></li>
+<li class="chapter" data-level="22" data-path="introduction-to-normal-distribution.html"><a href="introduction-to-normal-distribution.html"><i class="fa fa-check"></i><b>22</b> Introduction to Normal Distribution</a></li>
+<li class="chapter" data-level="23" data-path="areas-of-normal-distributions.html"><a href="areas-of-normal-distributions.html"><i class="fa fa-check"></i><b>23</b> Areas of Normal Distributions</a></li>
+<li class="chapter" data-level="24" data-path="standard-normal.html"><a href="standard-normal.html"><i class="fa fa-check"></i><b>24</b> Standard Normal</a></li>
+<li class="chapter" data-level="25" data-path="sampling-distributions.html"><a href="sampling-distributions.html"><i class="fa fa-check"></i><b>25</b> Sampling Distributions</a></li>
+<li class="chapter" data-level="26" data-path="sampling-distribution-mean.html"><a href="sampling-distribution-mean.html"><i class="fa fa-check"></i><b>26</b> Sampling Distribution, Mean</a></li>
+<li class="chapter" data-level="27" data-path="difference-between-means.html"><a href="difference-between-means.html"><i class="fa fa-check"></i><b>27</b> Difference Between Means</a></li>
+<li class="chapter" data-level="28" data-path="sampling-distribution-of-p.html"><a href="sampling-distribution-of-p.html"><i class="fa fa-check"></i><b>28</b> Sampling Distribution of <em>p</em></a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -212,7 +180,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Forensic Science and Statistics: Version 1.0.1</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Forensic Science and Statistics: Version 1.0.2</a>
           </h1>
         </div>
 
@@ -222,32 +190,163 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="conditional-probability" class="section level1">
 <h1><span class="header-section-number">Chapter 4</span> Conditional Probability</h1>
-<p>Now suppose that we just focus on the females in the population, which forms a subset of the population.
-The probability that a randomly selected female has blood type O is an example of a <strong>conditional probability</strong>.</p>
-<p>There are 430 females in the population, and 202 of those have type O blood.
-Hence, the probability that female chosen at random has type O blood is</p>
+<div id="restricting-the-population" class="section level2">
+<h2><span class="header-section-number">4.1</span> Restricting the Population</h2>
+<p>Let’s continue with the blood type example from the preceding sections. For
+convenience the frequency table is included again below.</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-4">Table 4.1: </span>Frequencies by ABO and Rh Groups
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Group
+</th>
+<th style="text-align:right;">
+<span class="math inline">\(+\)</span>
+</th>
+<th style="text-align:right;">
+<span class="math inline">\(-\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:right;">
+360
+</td>
+<td style="text-align:right;">
+60
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:right;">
+76
+</td>
+<td style="text-align:right;">
+14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AB
+</td>
+<td style="text-align:right;">
+25
+</td>
+<td style="text-align:right;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+O
+</td>
+<td style="text-align:right;">
+390
+</td>
+<td style="text-align:right;">
+70
+</td>
+</tr>
+</tbody>
+</table>
+<p>Now suppose that we focus only on those in our the population that have Rh group
+<span class="math inline">\(-\)</span>. The frequency table for this subpopulation is just the <span class="math inline">\(-\)</span> column from
+Table 4.1.</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-5">Table 4.2: </span>Frequencies by ABO group among those in Rh<span class="math inline">\(-\)</span> group
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Group
+</th>
+<th style="text-align:right;">
+<span class="math inline">\(-\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:right;">
+60
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:right;">
+14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AB
+</td>
+<td style="text-align:right;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+O
+</td>
+<td style="text-align:right;">
+70
+</td>
+</tr>
+</tbody>
+</table>
+<p>There is no reason why we cannot compute probabilities based on this one column
+of data, provided we specify that is what we are doing. This is an example of
+<em>conditional probability</em>.</p>
+</div>
+<div id="conditional-probability-1" class="section level2">
+<h2><span class="header-section-number">4.2</span> Conditional Probability</h2>
+<p>Let’s compute a probability based on the data in Table 4.2. For instance, suppose
+that a person from the Rh <span class="math inline">\(-\)</span> group is selected at random.
+The probability that this person has ABO group A is an
+example of a <strong>conditional probability</strong>.</p>
+<p>There are a total of 149 people in the
+Rh group <span class="math inline">\(-\)</span>, with 60 of those having ABO group A.
+Therefore the probability that an Rh group <span class="math inline">\(-\)</span> person selected at random is
+ABO group A is</p>
 <p><span class="math display">\[
-\mbox{P(Type O | Female)} = \frac{202}{430} = 0.470
+\mbox{P(ABO group A | Rh group }-) = \frac{60}{149} = 0.403
 \]</span></p>
-<p>The vertical bar in the notation is interpreted as <em>given that</em>, so that <span class="math inline">\(\mbox{P(Type O | Female)}\)</span> is read as</p>
+<p>The vertical bar in the notation means “given that”
+so that <span class="math inline">\(\mbox{P(ABO group A | Rh group }-)\)</span> is read as</p>
 <p><span class="math display">\[
-\mbox{The probability of blood type O, given the person is female.}
-\]</span></p>
-<p>Conditional probabilities arise all the time when evaluating forensic evidence. Other examples of conditional probabilities:</p>
-<p>The probability of Type AB, given that the person is male:</p>
+\mbox{The probability of ABO group A, given that the person is Rh group }-.
+\]</span>
+Note that we can abbreviate the notation to
+<span class="math inline">\(\mbox{P(A | }-)\)</span> for compactness in cases where the brevity is not confusing.
+Conditional probabilities arise all the time when evaluating forensic evidence.
+(In fact almost all probabilities encountered are conditional.)</p>
+<p>For another example, suppose that we want to determine
+the probability that someone is Rh <span class="math inline">\(+\)</span> given that they are ABO group AB.
+The notation for this is P(<span class="math inline">\(+\)</span> | AB).</p>
+<p>Referring back to Table 1, we see that there are <span class="math inline">\(25 + 5 = 30\)</span> people
+who are ABO group AB, and among those there are 25 who are Rh <span class="math inline">\(+\)</span>.
+Thus we have</p>
 <p><span class="math display">\[
-\mbox{P(Type AB | Male)} = \frac{24}{570} = 0.042
-\]</span></p>
-<p>The probability the person is female, given Type B blood:</p>
-<p><span class="math display">\[
-\mbox{P(Female | Type B)} = \frac{37}{100} = 0.37
-\]</span></p>
-<p>The probability the person is male, given Type A blood:</p>
-<p><span class="math display">\[
-\mbox{P(Male | Type A)} = \frac{235}{410} = 0.573
+\mbox{P(}+\mbox{ | AB)} = \frac{25}{30} = 0.833
 \]</span></p>
 <div id="sample-questions-4" class="section level3">
-<h3><span class="header-section-number">4.0.1</span> Sample Questions</h3>
+<h3><span class="header-section-number">4.2.1</span> Sample Questions</h3>
 <style>
 hide {
   background-color: #d6d6d6;
@@ -258,8 +357,36 @@ hide:hover {
   color: black;
 }
 </style>
-<p><strong>1.</strong> What is the probability of blood type AB or B given the person selected is female?</p>
-<p><strong>Answer:</strong> <hide><span class="math inline">\(P(\text{AB or B | Female}) = (16 + 37) / 430 = 0.123\)</span><hide></p>
+<p><strong>1.</strong> Determine <span class="math inline">\(\mbox{P(O | }+)\)</span></p>
+<p><strong>Answer:</strong> <hide>From Table 1 we see that there are a total of
+<span class="math inline">\(360 + 76 + 25 + 390 = 851\)</span> in the Rh <span class="math inline">\(+\)</span> group. Among these are
+390 that are ABO group O. Therefore
+<span class="math inline">\(\mbox{P(O | }+) = \frac{390}{851} = 0.458\)</span>.<hide></p>
+<p><strong>2.</strong> Determine <span class="math inline">\(\mbox{P(+ | O})\)</span></p>
+<p><strong>Answer:</strong> <hide>From Table 1 we see that there are a total of
+<span class="math inline">\(390 + 70 = 460\)</span> that are ABO group O. Among these are
+390 that are Rh <span class="math inline">\(+\)</span>. Thus we have
+<span class="math inline">\(\mbox{P(}+\mbox{ | O)} = \frac{390}{460} = 0.848\)</span>.<hide></p>
+<p><strong>3.</strong> Determine the probability that a random person is ABO group A, given that
+the person is either ABO group A or ABO group B.</p>
+<p><strong>Answer:</strong> <hide>From Table 1 we see that there are a total of
+<span class="math inline">\(360 + 60 + 76 + 14 = 510\)</span> that are ABO group A or ABO group B. Among these are
+<span class="math inline">\(360 + 60 = 420\)</span> that are ABO group A. Thus we have
+<span class="math inline">\(\mbox{P(A | A or B)} = \frac{420}{510} = 0.824\)</span>.<hide></p>
+<p><strong>4.</strong> Determine the probability that a random person is ABO group AB, given that
+the person is either ABO group AB or Rh <span class="math inline">\(-\)</span>.</p>
+<p><strong>Answer:</strong> <hide>From Table 1 we see that there are a total of
+<span class="math inline">\(60 + 14 + 5 + 70 + 25 = 174\)</span> that are ABO group AB or Rh <span class="math inline">\(-\)</span>. Among these are
+<span class="math inline">\(25 + 5 = 30\)</span> that are ABO group AB. Thus we have
+P(AB | AB or <span class="math inline">\(-\)</span>) = <span class="math inline">\(\frac{30}{174}\)</span> = 0.172.<hide></p>
+<hr />
+</div>
+</div>
+<div id="exercises-3" class="section level2">
+<h2><span class="header-section-number">4.3</span> Exercises</h2>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\text{Put exercises here}\)</span></li>
+</ol>
 
 </div>
 </div>

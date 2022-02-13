@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 7 Counterintuitive Applications | Forensic Science and Statistics: Version 1.0.1</title>
+  <title>Chapter 7 Counterintuitive Applications | Forensic Science and Statistics: Version 1.0.2</title>
   <meta name="description" content="This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 7 Counterintuitive Applications | Forensic Science and Statistics: Version 1.0.1" />
+  <meta property="og:title" content="Chapter 7 Counterintuitive Applications | Forensic Science and Statistics: Version 1.0.2" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 7 Counterintuitive Applications | Forensic Science and Statistics: Version 1.0.1" />
+  <meta name="twitter:title" content="Chapter 7 Counterintuitive Applications | Forensic Science and Statistics: Version 1.0.2" />
   
   <meta name="twitter:description" content="This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook." />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Jeff Holt and Joseph Swetonic" />
 
 
-<meta name="date" content="2022-02-12" />
+<meta name="date" content="2022-02-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -180,7 +180,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Forensic Science and Statistics: Version 1.0.1</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Forensic Science and Statistics: Version 1.0.2</a>
           </h1>
         </div>
 
@@ -212,9 +212,16 @@ In this case, it is much simpler to calculate the probability that no one in the
 the probability that at least two share the same birthday is
 <span class="math display">\[P(\beta) = 1 - \frac{365!}{365^n(365 - n)!}\]</span></p>
 <p>Finally, to solve the original question:
-How many people are needed in a classroom so that the probability of them sharing a birthday is at least <span class="math inline">\(\frac{1}{2}\)</span>?
+how many people are needed in a classroom so that the probability of them sharing a birthday is at least <span class="math inline">\(\frac{1}{2}\)</span>?
 Iteratively increasing the group size from five, it is clear to see that at a group size of 23, <span class="math inline">\(P(\beta) &gt; \frac{1}{2}\)</span>
 <span class="math display">\[P(\beta) = 1 - P(\beta&#39;) = 1 - \frac{365!}{365^{23}(365 - 23)!} = 0.507\]</span></p>
+<div class="figure"><span style="display:block;" id="fig:birthday-prob"></span>
+<img src="forensic-statistics-book_files/figure-html/birthday-prob-1.png" alt="Probability of Sharing the Same Birthday" width="672" />
+<p class="caption">
+Figure 7.1: Probability of Sharing the Same Birthday
+</p>
+</div>
+<p>Figure <a href="counterintuitive-applications.html#fig:birthday-prob">7.1</a> shows the probability increasing while the number of people in a room increases from one to sixty. Notice with only 60 people in a room, the probability of at least two people sharing a birthday is almost one!</p>
 </div>
 <div id="monty-hall-problem" class="section level2">
 <h2><span class="header-section-number">7.2</span> Monty Hall Problem</h2>

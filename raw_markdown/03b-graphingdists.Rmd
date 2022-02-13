@@ -25,32 +25,25 @@ substance suspected of being narcotics.  The weights of the bags range from
 215 to 270 grams.  Below are the weights for 10 random bags.  (There are too many
 values for it to be practical or useful to show them all.)
 
-$$
-240.91, 234.66, 246.84, 244.24, 253.39, 245.07, 228.75, 237.29, 255.69, 254.64
-$$
+```{r, echo=FALSE}
+set.seed(4)
+data01 <- rnorm(371, mean = 239, sd = 8)
+data01 <- data.frame(Weights = ifelse(data01 > 239, 239 + 1.1 * (data01 - 239), data01))
+round(data01, 2)[1:10, 1]
+```
 
 One way to get a sense of the distribution of the weights is through the
 use of a **frequency table,** where we organize the data into groups of similar
 weights and give the count the number in each group.  The results for this
-data set are shown in Table 1.
+data set are shown in Table 9.1.
 
-$$
-\begin{array}{|c|c|r|} \hline
-\mathrm{Interval} & \mathrm{Interval} & \mathrm{Class}\hspace{.175in}\\
-\text{Lower Limit} & \text{Upper Limit} & \mathrm{Frequency} \\ \hline
-215 & 220 & 4\hspace{.3in} \\  \hline
-220 & 225  & 8\hspace{.3in} \\  \hline
-225 & 230 & 31\hspace{.3in} \\  \hline
-230 & 235 & 74\hspace{.3in} \\  \hline
-235 & 240 & 88\hspace{.3in} \\  \hline
-240 & 245 & 75\hspace{.3in} \\  \hline
-245 & 250 & 57\hspace{.3in} \\  \hline
-250 & 255 & 25\hspace{.3in} \\  \hline
-255 & 260 & 8\hspace{.3in} \\  \hline
-260 & 265 & 1\hspace{.3in} \\  \hline
-\end{array}\\
-\mbox{Table 1: Grouped Frequency Distribution of Weights}
-$$
+```{r, echo=FALSE}
+table <- data.frame(a = seq(215, 260, by = 5), b = seq(220, 265, by = 5), f = c(4, 8, 31, 74, 88, 75, 57, 25, 8, 1))
+table %>% 
+  kbl(caption = "Grouped Frequency Distribution of Weights", 
+      col.names = c("Interval Lower Limit", "Interval Upper Limit", "Class Frequency")) %>% 
+  kable_styling(full_width = FALSE)
+```
 
 To create this table, the range of weights was broken into *class intervals*. 
 The first interval is from 215 to 220, the second from 220 to 225, and so on. 
@@ -72,10 +65,6 @@ to its class frequency. A histogram of the weight data is shown in
 Figure \@ref(fig:histogram).
 
 ```{r histogram, fig.cap="Histogram of Weights", echo=FALSE}
-set.seed(4)
-data01 <- rnorm(371, mean = 239, sd = 8)
-data01 <- data.frame(Weights = ifelse(data01 > 239, 239 + 1.1 * (data01 - 239), data01))
-
 data01 %>% ggplot() + 
   geom_histogram(aes(x = Weights), breaks = seq(215, 265, by = 5), fill = "steelblue", color = "black") + 
   labs(y = "Frequency")

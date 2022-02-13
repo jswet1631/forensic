@@ -2,18 +2,12 @@
 
 ## Multiplication Rule
 
-In this section we again use the blood type data in Table 1 below.
+In this section we again use the blood type data in Table 5.1 below.
 
-$$
-\begin{array}{c|c|c}
-       & + & - \\ \hline
-\mathrm{A} & 360 & 60 \\ 
-\mathrm{B} & 76 & 14 \\ 
-\mathrm{AB} & 25 & 5 \\ 
-\mathrm{O} & 390 & 70 \\ 
-\end{array}\\
-\mbox{Table 1: Frequencies by ABO and Rh groups}
-$$
+```{r, echo=FALSE}
+table <- data.frame(a = c("A", "B", "AB", "O"), b = c(360, 76, 25, 390), d = c(60, 14, 5, 70))
+table %>% kbl(caption = "Frequencies by ABO and Rh Groups", col.names = c("Group", "$+$", "$-$")) %>% kable_styling(full_width = FALSE)
+```
 
 In the previous section we computed the conditional probability
 
@@ -48,20 +42,12 @@ $$
 This is called the **multiplication rule**, and it allows us to move back and forth
 between joint probabilities and conditional probabilities.  
 
-Let's try this out, using Table 2 (which we saw previously).  
+Let's try this out, using Table 5.2 (which we saw previously).  
 
-$$
-\begin{array}{c|c|c}
-       & + & - \\ \hline
-\mathrm{A} & 0.360 & 0.060 \\ 
-\mathrm{B} & 0.076 & 0.014 \\ 
-\mathrm{AB} & 0.025 & 0.005 \\ 
-\mathrm{O} & 0.390 & 0.070 \\ 
-\end{array}\\
-\mbox{Table 2: Probabilities by ABO and Rh groups}
-$$
-
-
+```{r, echo=FALSE}
+table <- data.frame(a = c("A", "B", "AB", "O"), b = c(0.360, 0.076, 0.025, 0.390), d = c(0.060, 0.014, 0.005, 0.070))
+table %>% kbl(caption = "Probabilities by ABO and Rh Groups", col.names = c("Group", "$+$", "$-$")) %>% kable_styling(full_width = FALSE)
+```
 
 ---
 

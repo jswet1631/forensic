@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 Probability Rules | Forensic Science and Statistics: Version 1.0.1</title>
+  <title>Chapter 5 Probability Rules | Forensic Science and Statistics: Version 1.0.2</title>
   <meta name="description" content="This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 Probability Rules | Forensic Science and Statistics: Version 1.0.1" />
+  <meta property="og:title" content="Chapter 5 Probability Rules | Forensic Science and Statistics: Version 1.0.2" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 Probability Rules | Forensic Science and Statistics: Version 1.0.1" />
+  <meta name="twitter:title" content="Chapter 5 Probability Rules | Forensic Science and Statistics: Version 1.0.2" />
   
   <meta name="twitter:description" content="This is the first pass at the forensic science and statistics book. The output format for this example is bookdown::gitbook." />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Jeff Holt and Joseph Swetonic" />
 
 
-<meta name="date" content="2022-02-12" />
+<meta name="date" content="2022-02-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -180,7 +180,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Forensic Science and Statistics: Version 1.0.1</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Forensic Science and Statistics: Version 1.0.2</a>
           </h1>
         </div>
 
@@ -192,17 +192,71 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Chapter 5</span> Probability Rules</h1>
 <div id="multiplication-rule" class="section level2">
 <h2><span class="header-section-number">5.1</span> Multiplication Rule</h2>
-<p>In this section we again use the blood type data in Table 1 below.</p>
-<p><span class="math display">\[
-\begin{array}{c|c|c}
-       &amp; + &amp; - \\ \hline
-\mathrm{A} &amp; 360 &amp; 60 \\ 
-\mathrm{B} &amp; 76 &amp; 14 \\ 
-\mathrm{AB} &amp; 25 &amp; 5 \\ 
-\mathrm{O} &amp; 390 &amp; 70 \\ 
-\end{array}\\
-\mbox{Table 1: Frequencies by ABO and Rh groups}
-\]</span></p>
+<p>In this section we again use the blood type data in Table 5.1 below.</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-6">Table 5.1: </span>Frequencies by ABO and Rh Groups
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Group
+</th>
+<th style="text-align:right;">
+<span class="math inline">\(+\)</span>
+</th>
+<th style="text-align:right;">
+<span class="math inline">\(-\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:right;">
+360
+</td>
+<td style="text-align:right;">
+60
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:right;">
+76
+</td>
+<td style="text-align:right;">
+14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AB
+</td>
+<td style="text-align:right;">
+25
+</td>
+<td style="text-align:right;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+O
+</td>
+<td style="text-align:right;">
+390
+</td>
+<td style="text-align:right;">
+70
+</td>
+</tr>
+</tbody>
+</table>
 <p>In the previous section we computed the conditional probability</p>
 <p><span class="math display">\[
 \mbox{P(A | }-) = \frac{60}{149} = 0.403
@@ -227,17 +281,71 @@ outcomes from a random event, then the probability of X given Y is</p>
 \]</span></p>
 <p>This is called the <strong>multiplication rule</strong>, and it allows us to move back and forth
 between joint probabilities and conditional probabilities.</p>
-<p>Let’s try this out, using Table 2 (which we saw previously).</p>
-<p><span class="math display">\[
-\begin{array}{c|c|c}
-       &amp; + &amp; - \\ \hline
-\mathrm{A} &amp; 0.360 &amp; 0.060 \\ 
-\mathrm{B} &amp; 0.076 &amp; 0.014 \\ 
-\mathrm{AB} &amp; 0.025 &amp; 0.005 \\ 
-\mathrm{O} &amp; 0.390 &amp; 0.070 \\ 
-\end{array}\\
-\mbox{Table 2: Probabilities by ABO and Rh groups}
-\]</span></p>
+<p>Let’s try this out, using Table 5.2 (which we saw previously).</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-7">Table 5.2: </span>Probabilities by ABO and Rh Groups
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Group
+</th>
+<th style="text-align:right;">
+<span class="math inline">\(+\)</span>
+</th>
+<th style="text-align:right;">
+<span class="math inline">\(-\)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:right;">
+0.360
+</td>
+<td style="text-align:right;">
+0.060
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:right;">
+0.076
+</td>
+<td style="text-align:right;">
+0.014
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AB
+</td>
+<td style="text-align:right;">
+0.025
+</td>
+<td style="text-align:right;">
+0.005
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+O
+</td>
+<td style="text-align:right;">
+0.390
+</td>
+<td style="text-align:right;">
+0.070
+</td>
+</tr>
+</tbody>
+</table>
 <hr />
 </div>
 <div id="exercises-4" class="section level2">
