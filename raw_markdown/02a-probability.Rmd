@@ -86,6 +86,10 @@ However, even in Version 2 there is only a 0.05 probability that the police have
 the correct person, so randomly arresting people based only on hair color is
 not likely to produce the correct outcome in either case!
 
+(A comparable situation: You buy a lottery ticket, and your friend buys 5 lotter tickets.
+Is your friend 5 times more likely than you to win the lottery?  Yes.  
+Is your friend likely to win the lottery?  No!)
+
 ### Sample Questions
 
 **1.** Suppose CCTV shows a red-haired person committed the robbery, and that

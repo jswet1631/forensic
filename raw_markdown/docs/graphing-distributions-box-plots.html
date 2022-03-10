@@ -24,7 +24,7 @@
 <meta name="author" content="Jeff Holt and Joseph Swetonic" />
 
 
-<meta name="date" content="2022-02-13" />
+<meta name="date" content="2022-03-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,6 +33,7 @@
   
 <link rel="prev" href="graphing-distributions-histograms.html"/>
 <link rel="next" href="graphing-distributions-bar-charts.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -50,7 +51,6 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
@@ -58,18 +58,18 @@
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -89,7 +89,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -188,12 +188,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="graphing-distributions-box-plots" class="section level1">
+<div id="graphing-distributions-box-plots" class="section level1" number="10">
 <h1><span class="header-section-number">Chapter 10</span> Graphing Distributions: Box Plots</h1>
 <p><font size="2"> Note: Portions below modeled after content from
 <em>Online Statistics Education: A Multimedia Course of Study</em>
 (<a href="http://onlinestatbook.com/" class="uri">http://onlinestatbook.com/</a>) Project Leader: David M. Lane, Rice University </font></p>
-<div id="basic-box-plots" class="section level2">
+<div id="basic-box-plots" class="section level2" number="10.1">
 <h2><span class="header-section-number">10.1</span> Basic box plots</h2>
 <p>In this chapter we discuss the <em>box plot</em> which provides a useful way to graphically
 display information about the distribution of a set of data,
@@ -331,7 +331,7 @@ then the crime scene measurements. For both data sets the mean is less than
 the median, which is to be expected due to the extreme small values displayed
 in Figure <a href="graphing-distributions-box-plots.html#fig:boxplot4">10.4</a>.</p>
 </div>
-<div id="variations-on-box-plots" class="section level2">
+<div id="variations-on-box-plots" class="section level2" number="10.2">
 <h2><span class="header-section-number">10.2</span> Variations on box plots</h2>
 <p>Statistical analysis programs typically offer numerous options for creating
 box plots. For instance, Figure <a href="graphing-distributions-box-plots.html#fig:boxplot5">10.5</a> shows the box plots
@@ -365,47 +365,47 @@ on how well different graphs reveal the aspects of the data you consider most
 important.</p>
 <hr />
 </div>
-<div id="exercises-8" class="section level2">
+<div id="exercises-8" class="section level2" number="10.3">
 <h2><span class="header-section-number">10.3</span> Exercises</h2>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\text{Put exercises here}\)</span></li>
 </ol>
 </div>
-<div id="code-appendix-2" class="section level2">
+<div id="code-appendix-2" class="section level2" number="10.4">
 <h2><span class="header-section-number">10.4</span> Code Appendix</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="graphing-distributions-box-plots.html#cb6-1"></a>data01 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">55.6</span>, <span class="fl">65.6</span>, <span class="fl">68.0</span>, <span class="fl">68.9</span>, <span class="fl">67.7</span>, <span class="fl">66.5</span>, <span class="fl">66.8</span>, <span class="fl">60.3</span>, <span class="fl">68.0</span>, <span class="fl">71.6</span>, <span class="fl">61.4</span>, <span class="fl">63.2</span>, <span class="fl">68.2</span>, <span class="fl">64.1</span>, <span class="fl">64.8</span>)</span>
-<span id="cb6-2"><a href="graphing-distributions-box-plots.html#cb6-2"></a>data02 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">67.9</span>, <span class="fl">68.9</span>, <span class="fl">69.5</span>, <span class="fl">67.6</span>, <span class="fl">73.4</span>, <span class="fl">64.5</span>, <span class="fl">73.0</span>, <span class="fl">59.7</span>, <span class="fl">66.9</span>, <span class="fl">68.2</span>, <span class="fl">71.8</span>, <span class="fl">64.8</span>, <span class="fl">56.3</span>)</span>
-<span id="cb6-3"><a href="graphing-distributions-box-plots.html#cb6-3"></a></span>
-<span id="cb6-4"><a href="graphing-distributions-box-plots.html#cb6-4"></a>data01 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">Measurement =</span> data01, <span class="dt">Source =</span> <span class="st">&quot;Crime Scene&quot;</span>)</span>
-<span id="cb6-5"><a href="graphing-distributions-box-plots.html#cb6-5"></a>data02 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">Measurement =</span> data02, <span class="dt">Source =</span> <span class="st">&quot;Car Trunk&quot;</span>)</span>
-<span id="cb6-6"><a href="graphing-distributions-box-plots.html#cb6-6"></a>data03 &lt;-<span class="st"> </span><span class="kw">rbind</span>(data01, data02)</span>
-<span id="cb6-7"><a href="graphing-distributions-box-plots.html#cb6-7"></a></span>
-<span id="cb6-8"><a href="graphing-distributions-box-plots.html#cb6-8"></a><span class="co"># Figure 9.1 -----</span></span>
-<span id="cb6-9"><a href="graphing-distributions-box-plots.html#cb6-9"></a>data03 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> Source, <span class="dt">y =</span> Measurement)) <span class="op">+</span></span>
-<span id="cb6-10"><a href="graphing-distributions-box-plots.html#cb6-10"></a><span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">outlier.shape =</span> <span class="ot">NA</span>, <span class="dt">coef =</span> <span class="dv">0</span>)</span>
-<span id="cb6-11"><a href="graphing-distributions-box-plots.html#cb6-11"></a></span>
-<span id="cb6-12"><a href="graphing-distributions-box-plots.html#cb6-12"></a><span class="co"># Figure 9.2 -----</span></span>
-<span id="cb6-13"><a href="graphing-distributions-box-plots.html#cb6-13"></a>data03 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> Source, <span class="dt">y =</span> Measurement)) <span class="op">+</span><span class="st"> </span><span class="kw">stat_boxplot</span>(<span class="dt">geom =</span> <span class="st">&quot;errorbar&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb6-14"><a href="graphing-distributions-box-plots.html#cb6-14"></a><span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">outlier.shape =</span> <span class="ot">NA</span>)</span>
-<span id="cb6-15"><a href="graphing-distributions-box-plots.html#cb6-15"></a></span>
-<span id="cb6-16"><a href="graphing-distributions-box-plots.html#cb6-16"></a><span class="co"># Figure 9.3 -----</span></span>
-<span id="cb6-17"><a href="graphing-distributions-box-plots.html#cb6-17"></a>data03 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> Source, <span class="dt">y =</span> Measurement)) <span class="op">+</span><span class="st"> </span><span class="kw">stat_boxplot</span>(<span class="dt">geom =</span> <span class="st">&quot;errorbar&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb6-18"><a href="graphing-distributions-box-plots.html#cb6-18"></a><span class="st">  </span><span class="kw">geom_boxplot</span>()</span>
-<span id="cb6-19"><a href="graphing-distributions-box-plots.html#cb6-19"></a></span>
-<span id="cb6-20"><a href="graphing-distributions-box-plots.html#cb6-20"></a><span class="co"># Figure 9.4 -----</span></span>
-<span id="cb6-21"><a href="graphing-distributions-box-plots.html#cb6-21"></a>data03 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> Source, <span class="dt">y =</span> Measurement)) <span class="op">+</span><span class="st"> </span><span class="kw">stat_boxplot</span>(<span class="dt">geom =</span> <span class="st">&quot;errorbar&quot;</span>) <span class="op">+</span></span>
-<span id="cb6-22"><a href="graphing-distributions-box-plots.html#cb6-22"></a><span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">outlier.size =</span> <span class="dv">2</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb6-23"><a href="graphing-distributions-box-plots.html#cb6-23"></a><span class="st">  </span><span class="kw">stat_summary</span>(<span class="dt">fun =</span> mean, <span class="dt">geom =</span> <span class="st">&quot;point&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">size =</span> <span class="dv">2</span>)</span>
-<span id="cb6-24"><a href="graphing-distributions-box-plots.html#cb6-24"></a></span>
-<span id="cb6-25"><a href="graphing-distributions-box-plots.html#cb6-25"></a><span class="co"># Figure 9.5 -----</span></span>
-<span id="cb6-26"><a href="graphing-distributions-box-plots.html#cb6-26"></a>data03 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> Source, <span class="dt">y =</span> Measurement)) <span class="op">+</span><span class="st"> </span><span class="kw">stat_boxplot</span>(<span class="dt">geom =</span> <span class="st">&quot;errorbar&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb6-27"><a href="graphing-distributions-box-plots.html#cb6-27"></a><span class="st">  </span><span class="kw">geom_boxplot</span>() <span class="op">+</span><span class="st"> </span><span class="kw">geom_jitter</span>(<span class="dt">width =</span> <span class="dv">0</span>, <span class="dt">alpha =</span> <span class="fl">0.9</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb6-28"><a href="graphing-distributions-box-plots.html#cb6-28"></a><span class="st">  </span><span class="kw">stat_summary</span>(<span class="dt">fun =</span> mean, <span class="dt">geom =</span> <span class="st">&quot;point&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">size =</span> <span class="dv">2</span>)</span>
-<span id="cb6-29"><a href="graphing-distributions-box-plots.html#cb6-29"></a></span>
-<span id="cb6-30"><a href="graphing-distributions-box-plots.html#cb6-30"></a><span class="co"># Figure 9.6 -----</span></span>
-<span id="cb6-31"><a href="graphing-distributions-box-plots.html#cb6-31"></a>data03 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> Source, <span class="dt">y =</span> Measurement)) <span class="op">+</span><span class="st"> </span><span class="kw">stat_boxplot</span>(<span class="dt">geom =</span> <span class="st">&quot;errorbar&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb6-32"><a href="graphing-distributions-box-plots.html#cb6-32"></a><span class="st">  </span><span class="kw">geom_boxplot</span>() <span class="op">+</span><span class="st"> </span><span class="kw">geom_jitter</span>(<span class="dt">width =</span> <span class="fl">0.1</span>, <span class="dt">alpha =</span> <span class="fl">0.9</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb6-33"><a href="graphing-distributions-box-plots.html#cb6-33"></a><span class="st">  </span><span class="kw">stat_summary</span>(<span class="dt">fun =</span> mean, <span class="dt">geom =</span> <span class="st">&quot;point&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">size =</span> <span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="graphing-distributions-box-plots.html#cb6-1" aria-hidden="true" tabindex="-1"></a>data01 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">55.6</span>, <span class="fl">65.6</span>, <span class="fl">68.0</span>, <span class="fl">68.9</span>, <span class="fl">67.7</span>, <span class="fl">66.5</span>, <span class="fl">66.8</span>, <span class="fl">60.3</span>, <span class="fl">68.0</span>, <span class="fl">71.6</span>, <span class="fl">61.4</span>, <span class="fl">63.2</span>, <span class="fl">68.2</span>, <span class="fl">64.1</span>, <span class="fl">64.8</span>)</span>
+<span id="cb6-2"><a href="graphing-distributions-box-plots.html#cb6-2" aria-hidden="true" tabindex="-1"></a>data02 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">67.9</span>, <span class="fl">68.9</span>, <span class="fl">69.5</span>, <span class="fl">67.6</span>, <span class="fl">73.4</span>, <span class="fl">64.5</span>, <span class="fl">73.0</span>, <span class="fl">59.7</span>, <span class="fl">66.9</span>, <span class="fl">68.2</span>, <span class="fl">71.8</span>, <span class="fl">64.8</span>, <span class="fl">56.3</span>)</span>
+<span id="cb6-3"><a href="graphing-distributions-box-plots.html#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="graphing-distributions-box-plots.html#cb6-4" aria-hidden="true" tabindex="-1"></a>data01 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Measurement =</span> data01, <span class="at">Source =</span> <span class="st">&quot;Crime Scene&quot;</span>)</span>
+<span id="cb6-5"><a href="graphing-distributions-box-plots.html#cb6-5" aria-hidden="true" tabindex="-1"></a>data02 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Measurement =</span> data02, <span class="at">Source =</span> <span class="st">&quot;Car Trunk&quot;</span>)</span>
+<span id="cb6-6"><a href="graphing-distributions-box-plots.html#cb6-6" aria-hidden="true" tabindex="-1"></a>data03 <span class="ot">&lt;-</span> <span class="fu">rbind</span>(data01, data02)</span>
+<span id="cb6-7"><a href="graphing-distributions-box-plots.html#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="graphing-distributions-box-plots.html#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure 9.1 -----</span></span>
+<span id="cb6-9"><a href="graphing-distributions-box-plots.html#cb6-9" aria-hidden="true" tabindex="-1"></a>data03 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Source, <span class="at">y =</span> Measurement)) <span class="sc">+</span></span>
+<span id="cb6-10"><a href="graphing-distributions-box-plots.html#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">outlier.shape =</span> <span class="cn">NA</span>, <span class="at">coef =</span> <span class="dv">0</span>)</span>
+<span id="cb6-11"><a href="graphing-distributions-box-plots.html#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="graphing-distributions-box-plots.html#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure 9.2 -----</span></span>
+<span id="cb6-13"><a href="graphing-distributions-box-plots.html#cb6-13" aria-hidden="true" tabindex="-1"></a>data03 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Source, <span class="at">y =</span> Measurement)) <span class="sc">+</span> <span class="fu">stat_boxplot</span>(<span class="at">geom =</span> <span class="st">&quot;errorbar&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb6-14"><a href="graphing-distributions-box-plots.html#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">outlier.shape =</span> <span class="cn">NA</span>)</span>
+<span id="cb6-15"><a href="graphing-distributions-box-plots.html#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="graphing-distributions-box-plots.html#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure 9.3 -----</span></span>
+<span id="cb6-17"><a href="graphing-distributions-box-plots.html#cb6-17" aria-hidden="true" tabindex="-1"></a>data03 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Source, <span class="at">y =</span> Measurement)) <span class="sc">+</span> <span class="fu">stat_boxplot</span>(<span class="at">geom =</span> <span class="st">&quot;errorbar&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb6-18"><a href="graphing-distributions-box-plots.html#cb6-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span>
+<span id="cb6-19"><a href="graphing-distributions-box-plots.html#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-20"><a href="graphing-distributions-box-plots.html#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure 9.4 -----</span></span>
+<span id="cb6-21"><a href="graphing-distributions-box-plots.html#cb6-21" aria-hidden="true" tabindex="-1"></a>data03 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Source, <span class="at">y =</span> Measurement)) <span class="sc">+</span> <span class="fu">stat_boxplot</span>(<span class="at">geom =</span> <span class="st">&quot;errorbar&quot;</span>) <span class="sc">+</span></span>
+<span id="cb6-22"><a href="graphing-distributions-box-plots.html#cb6-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">outlier.size =</span> <span class="dv">2</span>) <span class="sc">+</span> </span>
+<span id="cb6-23"><a href="graphing-distributions-box-plots.html#cb6-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun =</span> mean, <span class="at">geom =</span> <span class="st">&quot;point&quot;</span>, <span class="at">color =</span> <span class="st">&quot;red&quot;</span>, <span class="at">size =</span> <span class="dv">2</span>)</span>
+<span id="cb6-24"><a href="graphing-distributions-box-plots.html#cb6-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-25"><a href="graphing-distributions-box-plots.html#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure 9.5 -----</span></span>
+<span id="cb6-26"><a href="graphing-distributions-box-plots.html#cb6-26" aria-hidden="true" tabindex="-1"></a>data03 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Source, <span class="at">y =</span> Measurement)) <span class="sc">+</span> <span class="fu">stat_boxplot</span>(<span class="at">geom =</span> <span class="st">&quot;errorbar&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb6-27"><a href="graphing-distributions-box-plots.html#cb6-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span> <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="dv">0</span>, <span class="at">alpha =</span> <span class="fl">0.9</span>) <span class="sc">+</span> </span>
+<span id="cb6-28"><a href="graphing-distributions-box-plots.html#cb6-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun =</span> mean, <span class="at">geom =</span> <span class="st">&quot;point&quot;</span>, <span class="at">color =</span> <span class="st">&quot;red&quot;</span>, <span class="at">size =</span> <span class="dv">2</span>)</span>
+<span id="cb6-29"><a href="graphing-distributions-box-plots.html#cb6-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-30"><a href="graphing-distributions-box-plots.html#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure 9.6 -----</span></span>
+<span id="cb6-31"><a href="graphing-distributions-box-plots.html#cb6-31" aria-hidden="true" tabindex="-1"></a>data03 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Source, <span class="at">y =</span> Measurement)) <span class="sc">+</span> <span class="fu">stat_boxplot</span>(<span class="at">geom =</span> <span class="st">&quot;errorbar&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb6-32"><a href="graphing-distributions-box-plots.html#cb6-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span> <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.1</span>, <span class="at">alpha =</span> <span class="fl">0.9</span>) <span class="sc">+</span> </span>
+<span id="cb6-33"><a href="graphing-distributions-box-plots.html#cb6-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun =</span> mean, <span class="at">geom =</span> <span class="st">&quot;point&quot;</span>, <span class="at">color =</span> <span class="st">&quot;red&quot;</span>, <span class="at">size =</span> <span class="dv">2</span>)</span></code></pre></div>
 
 </div>
 </div>

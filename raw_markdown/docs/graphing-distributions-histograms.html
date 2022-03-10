@@ -24,7 +24,7 @@
 <meta name="author" content="Jeff Holt and Joseph Swetonic" />
 
 
-<meta name="date" content="2022-02-13" />
+<meta name="date" content="2022-03-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,6 +33,7 @@
   
 <link rel="prev" href="graphing-distributions-qualitative-variables.html"/>
 <link rel="next" href="graphing-distributions-box-plots.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -50,7 +51,6 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
@@ -58,18 +58,18 @@
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -89,7 +89,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -188,12 +188,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="graphing-distributions-histograms" class="section level1">
+<div id="graphing-distributions-histograms" class="section level1" number="9">
 <h1><span class="header-section-number">Chapter 9</span> Graphing Distributions: Histograms</h1>
 <p><font size="2"> Note: Portions below draw on content from
 <em>Online Statistics Education: A Multimedia Course of Study</em>
 (<a href="http://onlinestatbook.com/" class="uri">http://onlinestatbook.com/</a>) Project Leader: David M. Lane, Rice University </font></p>
-<div id="introduction-1" class="section level2">
+<div id="introduction-1" class="section level2" number="9.1">
 <h2><span class="header-section-number">9.1</span> Introduction</h2>
 <p>The “distribution” of a set of data consists of the set of possible data values and the
 frequency that the values occur. Understanding how data is distributed is a
@@ -206,7 +206,7 @@ It is useful when there are a large number of data values, providing information
 about the number of values in different groupings. Histograms are widely used
 and are fairly easy to produce with software.</p>
 </div>
-<div id="frequency-tables-2" class="section level2">
+<div id="frequency-tables-2" class="section level2" number="9.2">
 <h2><span class="header-section-number">9.2</span> Frequency Tables</h2>
 <p>We begin with an example consisting of the weights of 371 bags containing a
 substance suspected of being narcotics. The weights of the bags range from
@@ -356,7 +356,7 @@ in the first interval, eight in the second, and so on.</p>
 making the graph too “choppy.” How one goes about choosing the widths (called <em>bin widths</em>) of
 class intervals is discussed later in this section.</p>
 </div>
-<div id="histograms" class="section level2">
+<div id="histograms" class="section level2" number="9.3">
 <h2><span class="header-section-number">9.3</span> Histograms</h2>
 <p>In a histogram the class frequencies are represented by bars with
 the height of each bar corresponds to its class frequency,
@@ -396,7 +396,7 @@ Figure 9.2: Histogram of Weights
 <p>We see that the shape of the histogram is unchanged, only the Y-axis is
 different.</p>
 </div>
-<div id="bin-widths" class="section level2">
+<div id="bin-widths" class="section level2" number="9.4">
 <h2><span class="header-section-number">9.4</span> Bin Widths</h2>
 <p>The choice of bin width determines the number of class intervals.
 This decision, along with the choice of starting point for the first interval,
@@ -429,39 +429,39 @@ numbers of intervals and choose the histogram that you feel best conveys the
 shape of the distribution.</p>
 <hr />
 </div>
-<div id="exercises-7" class="section level2">
+<div id="exercises-7" class="section level2" number="9.5">
 <h2><span class="header-section-number">9.5</span> Exercises</h2>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\text{Put exercises here}\)</span></li>
 </ol>
 </div>
-<div id="code-appendix-1" class="section level2">
+<div id="code-appendix-1" class="section level2" number="9.6">
 <h2><span class="header-section-number">9.6</span> Code Appendix</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="graphing-distributions-histograms.html#cb3-1"></a><span class="kw">set.seed</span>(<span class="dv">4</span>)</span>
-<span id="cb3-2"><a href="graphing-distributions-histograms.html#cb3-2"></a>data01 &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">371</span>, <span class="dt">mean =</span> <span class="dv">239</span>, <span class="dt">sd =</span> <span class="dv">8</span>)</span>
-<span id="cb3-3"><a href="graphing-distributions-histograms.html#cb3-3"></a>data01 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">Weights =</span> <span class="kw">ifelse</span>(data01 <span class="op">&gt;</span><span class="st"> </span><span class="dv">239</span>, <span class="dv">239</span> <span class="op">+</span><span class="st"> </span><span class="fl">1.1</span> <span class="op">*</span><span class="st"> </span>(data01 <span class="op">-</span><span class="st"> </span><span class="dv">239</span>), data01))</span>
-<span id="cb3-4"><a href="graphing-distributions-histograms.html#cb3-4"></a></span>
-<span id="cb3-5"><a href="graphing-distributions-histograms.html#cb3-5"></a><span class="co"># Figure 8.1 -----</span></span>
-<span id="cb3-6"><a href="graphing-distributions-histograms.html#cb3-6"></a>data01 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>() <span class="op">+</span><span class="st"> </span></span>
-<span id="cb3-7"><a href="graphing-distributions-histograms.html#cb3-7"></a><span class="st">  </span><span class="kw">geom_histogram</span>(<span class="kw">aes</span>(<span class="dt">x =</span> Weights), <span class="dt">breaks =</span> <span class="kw">seq</span>(<span class="dv">215</span>, <span class="dv">265</span>, <span class="dt">by =</span> <span class="dv">5</span>), </span>
-<span id="cb3-8"><a href="graphing-distributions-histograms.html#cb3-8"></a>                 <span class="dt">fill =</span> <span class="st">&quot;steelblue&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb3-9"><a href="graphing-distributions-histograms.html#cb3-9"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="st">&quot;Frequency&quot;</span>)</span>
-<span id="cb3-10"><a href="graphing-distributions-histograms.html#cb3-10"></a></span>
-<span id="cb3-11"><a href="graphing-distributions-histograms.html#cb3-11"></a><span class="co"># Figure 8.2 -----</span></span>
-<span id="cb3-12"><a href="graphing-distributions-histograms.html#cb3-12"></a>data01 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>() <span class="op">+</span><span class="st"> </span></span>
-<span id="cb3-13"><a href="graphing-distributions-histograms.html#cb3-13"></a><span class="st">  </span><span class="kw">geom_histogram</span>(<span class="kw">aes</span>(<span class="dt">x =</span> Weights, <span class="dt">y =</span> <span class="dv">100</span> <span class="op">*</span><span class="st"> </span>..count.. <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(count)), </span>
-<span id="cb3-14"><a href="graphing-distributions-histograms.html#cb3-14"></a>                 <span class="dt">breaks =</span> <span class="kw">seq</span>(<span class="dv">215</span>, <span class="dv">265</span>, <span class="dt">by =</span> <span class="dv">5</span>), </span>
-<span id="cb3-15"><a href="graphing-distributions-histograms.html#cb3-15"></a>                 <span class="dt">fill =</span> <span class="st">&quot;steelblue&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb3-16"><a href="graphing-distributions-histograms.html#cb3-16"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="st">&quot;Percentage&quot;</span>)</span>
-<span id="cb3-17"><a href="graphing-distributions-histograms.html#cb3-17"></a></span>
-<span id="cb3-18"><a href="graphing-distributions-histograms.html#cb3-18"></a><span class="co"># Figure 8.3 -----</span></span>
-<span id="cb3-19"><a href="graphing-distributions-histograms.html#cb3-19"></a>data01 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>() <span class="op">+</span><span class="st"> </span></span>
-<span id="cb3-20"><a href="graphing-distributions-histograms.html#cb3-20"></a><span class="st">  </span><span class="kw">geom_histogram</span>(<span class="kw">aes</span>(<span class="dt">x =</span> Weights), <span class="dt">binwidth =</span> <span class="dv">1</span>, <span class="dt">fill =</span> <span class="st">&quot;steelblue&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb3-21"><a href="graphing-distributions-histograms.html#cb3-21"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="st">&quot;Frequency&quot;</span>)</span>
-<span id="cb3-22"><a href="graphing-distributions-histograms.html#cb3-22"></a></span>
-<span id="cb3-23"><a href="graphing-distributions-histograms.html#cb3-23"></a>data01 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>() <span class="op">+</span><span class="st"> </span></span>
-<span id="cb3-24"><a href="graphing-distributions-histograms.html#cb3-24"></a><span class="st">  </span><span class="kw">geom_histogram</span>(<span class="kw">aes</span>(<span class="dt">x =</span> Weights), <span class="dt">binwidth =</span> <span class="dv">10</span>, <span class="dt">fill =</span> <span class="st">&quot;steelblue&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb3-25"><a href="graphing-distributions-histograms.html#cb3-25"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="st">&quot;Frequency&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="graphing-distributions-histograms.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">4</span>)</span>
+<span id="cb3-2"><a href="graphing-distributions-histograms.html#cb3-2" aria-hidden="true" tabindex="-1"></a>data01 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">371</span>, <span class="at">mean =</span> <span class="dv">239</span>, <span class="at">sd =</span> <span class="dv">8</span>)</span>
+<span id="cb3-3"><a href="graphing-distributions-histograms.html#cb3-3" aria-hidden="true" tabindex="-1"></a>data01 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Weights =</span> <span class="fu">ifelse</span>(data01 <span class="sc">&gt;</span> <span class="dv">239</span>, <span class="dv">239</span> <span class="sc">+</span> <span class="fl">1.1</span> <span class="sc">*</span> (data01 <span class="sc">-</span> <span class="dv">239</span>), data01))</span>
+<span id="cb3-4"><a href="graphing-distributions-histograms.html#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="graphing-distributions-histograms.html#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure 8.1 -----</span></span>
+<span id="cb3-6"><a href="graphing-distributions-histograms.html#cb3-6" aria-hidden="true" tabindex="-1"></a>data01 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb3-7"><a href="graphing-distributions-histograms.html#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> Weights), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">215</span>, <span class="dv">265</span>, <span class="at">by =</span> <span class="dv">5</span>), </span>
+<span id="cb3-8"><a href="graphing-distributions-histograms.html#cb3-8" aria-hidden="true" tabindex="-1"></a>                 <span class="at">fill =</span> <span class="st">&quot;steelblue&quot;</span>, <span class="at">color =</span> <span class="st">&quot;black&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb3-9"><a href="graphing-distributions-histograms.html#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">&quot;Frequency&quot;</span>)</span>
+<span id="cb3-10"><a href="graphing-distributions-histograms.html#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="graphing-distributions-histograms.html#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure 8.2 -----</span></span>
+<span id="cb3-12"><a href="graphing-distributions-histograms.html#cb3-12" aria-hidden="true" tabindex="-1"></a>data01 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb3-13"><a href="graphing-distributions-histograms.html#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> Weights, <span class="at">y =</span> <span class="dv">100</span> <span class="sc">*</span> ..count.. <span class="sc">/</span> <span class="fu">sum</span>(count)), </span>
+<span id="cb3-14"><a href="graphing-distributions-histograms.html#cb3-14" aria-hidden="true" tabindex="-1"></a>                 <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">215</span>, <span class="dv">265</span>, <span class="at">by =</span> <span class="dv">5</span>), </span>
+<span id="cb3-15"><a href="graphing-distributions-histograms.html#cb3-15" aria-hidden="true" tabindex="-1"></a>                 <span class="at">fill =</span> <span class="st">&quot;steelblue&quot;</span>, <span class="at">color =</span> <span class="st">&quot;black&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb3-16"><a href="graphing-distributions-histograms.html#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">&quot;Percentage&quot;</span>)</span>
+<span id="cb3-17"><a href="graphing-distributions-histograms.html#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="graphing-distributions-histograms.html#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure 8.3 -----</span></span>
+<span id="cb3-19"><a href="graphing-distributions-histograms.html#cb3-19" aria-hidden="true" tabindex="-1"></a>data01 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb3-20"><a href="graphing-distributions-histograms.html#cb3-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> Weights), <span class="at">binwidth =</span> <span class="dv">1</span>, <span class="at">fill =</span> <span class="st">&quot;steelblue&quot;</span>, <span class="at">color =</span> <span class="st">&quot;black&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb3-21"><a href="graphing-distributions-histograms.html#cb3-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">&quot;Frequency&quot;</span>)</span>
+<span id="cb3-22"><a href="graphing-distributions-histograms.html#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="graphing-distributions-histograms.html#cb3-23" aria-hidden="true" tabindex="-1"></a>data01 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb3-24"><a href="graphing-distributions-histograms.html#cb3-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> Weights), <span class="at">binwidth =</span> <span class="dv">10</span>, <span class="at">fill =</span> <span class="st">&quot;steelblue&quot;</span>, <span class="at">color =</span> <span class="st">&quot;black&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb3-25"><a href="graphing-distributions-histograms.html#cb3-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">&quot;Frequency&quot;</span>)</span></code></pre></div>
 
 </div>
 </div>

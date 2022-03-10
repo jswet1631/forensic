@@ -15,8 +15,8 @@ $$
 \mbox{P(A | }-) = \frac{60}{149} = 0.403
 $$
 
-based on the data in Table 1.  
-The numerator 60 came from the number of Rh $-$ people who are also ABO group A, 
+based on the data in Table 1.  The numerator 60 came from the number of Rh $-$ 
+people who are also ABO group A, 
 and the denominator 149 is the total number of Rh $-$ people. 
 If we divide the numerator and denominator by 1000, then the quotient is not changed
 so that we have
@@ -42,14 +42,61 @@ $$
 This is called the **multiplication rule**, and it allows us to move back and forth
 between joint probabilities and conditional probabilities.  
 
-Let's try this out, using Table 5.2 (which we saw previously).  
+Let's try the multiplicatioon rule out, using the probabilities in 
+Table 5.2 (which we saw previously).  
 
 ```{r, echo=FALSE}
 table <- data.frame(a = c("A", "B", "AB", "O"), b = c(0.360, 0.076, 0.025, 0.390), d = c(0.060, 0.014, 0.005, 0.070))
 table %>% kbl(caption = "Probabilities by ABO and Rh Groups", col.names = c("Group", "$+$", "$-$")) %>% kable_styling(full_width = FALSE)
 ```
 
+Let's start by finding $\mbox{P(B}|+)$.  Apply the above formula, we have
+
+$$
+\mbox{P(B}|+) = \frac{\mbox{P(B and }+)}{\mbox{P}(+)} = \frac{0.076}{0.36+0.076+0.025+0.39}
+= \frac{0.076}{0.851} = 0.0893
+$$
+
+In a similar manner, we compute $\mbox{P(B}|-)$ with
+
+$$
+\mbox{P(B}|-) = \frac{\mbox{P(B and }-)}{\mbox{P}(-)} = \frac{0.014}{0.06+0.014+0.005+0.07}
+= \frac{0.014}{0.149} = 0.0940
+$$
+
+We see that $\mbox{P(B}|+)$ and $\mbox{P(B}|-)$ are not the same.  Thus
+the probability of being ABO blood group B depends on whether one is Rh group
+$+$ or $-$.
+
+### Sample Questions
+
+<style>
+hide {
+  background-color: #d6d6d6;
+  color: #d6d6d6;
+}
+hide:hover {
+  background-color: white;
+  color: black;
+}
+</style>
+
+**1.** Use the probabilities in Table 5.2 to compute $\mbox{P(O | }+)$
+
+**Answer:** <hide>From Table 1 we see that there are a total of
+$360 + 76 + 25 + 390 = 851$ in the Rh $+$ group.  Among these are
+390 that are ABO group O.  Therefore 
+$\mbox{P(O | }+) = \frac{390}{851} = 0.458$.<hide>
+
+**2.** Update
+
+**Answer:** <hide>Update..<hide>
+
 ---
+
+## Independence
+
+Section on independence here
 
 ## Exercises
 

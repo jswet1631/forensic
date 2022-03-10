@@ -178,8 +178,8 @@ $$
 \mbox{P(B}-) = 0.014
 $$
 
-We can add entries in Table 3.2 to compute other probabilities.  
-For example, suppose we want to compute the probability that a randomly 
+We can add entries in Table 3.2 to compute other probabilities.  For example, 
+suppose we want to compute the probability that a randomly 
 selected person has ABO group O blood. 
 Based on the table, this can happen if a person is either O$+$ or O$-$. 
 Because these two groups are disjoint, we can add the probabilities to arrive at
@@ -196,7 +196,7 @@ $$
 \mbox{Pr(+}) = 0.360 + 0.076 + 0.025 + 0.390 = 0.851 
 $$
 
-Note that this matches what we saw earlier.
+Note that this matches what we found earlier.
 
 ---
 
